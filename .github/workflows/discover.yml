@@ -1,0 +1,41 @@
+name: Discover Trinidad finds
+
+on:
+  schedule:
+    - cron: "17 13 * * *" # 9:17 AM in Trinidad (UTC-04:00)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discover-trinidad-finds
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Find and validate new content
+        run: npm run discover
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-5.6-luna
+      - name: Commit changed finds
+        run: |
+          git config user.name "cheap-thrills-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/finds
+          if git diff --cached --quiet; then
+            echo "No content changes to publish."
+            exit 0
+          fi
+          git commit -m "chore(content): refresh Trinidad finds"
+          git push

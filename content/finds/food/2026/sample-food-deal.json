@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "food-example-2026-001",
+  "slug": "sample-seafood-special",
+  "kind": "food",
+  "title": "Sample seafood special",
+  "summary": "Example record only. Replace with a verified current offer.",
+  "description": "This placeholder demonstrates the content format and must not be treated as a real promotion.",
+  "status": "candidate",
+  "createdAt": "2026-09-23T00:00:00Z",
+  "updatedAt": "2026-09-23T00:00:00Z",
+  "publishedAt": null,
+  "checkedAt": "2026-09-23T00:00:00Z",
+  "places": [{ "name": "Example venue", "area": "Chaguanas", "region": "Central Trinidad", "address": null, "mapUrl": null }],
+  "price": { "currency": "TTD", "amount": null, "fromAmount": null, "label": "Price not stated", "terms": "Example only" },
+  "validity": { "startsAt": null, "endsAt": null, "recurrence": null, "timezone": "America/Port_of_Spain" },
+  "categories": ["seafood"],
+  "food": { "items": ["Example fish meal"], "dietFit": { "pescatarian": "yes", "dairyFree": "unknown", "vegan": "no" }, "dietNotes": "Dairy status has not been confirmed; example only." },
+  "sources": [{ "url": "https://example.com/", "publisher": "Example source", "type": "official", "checkedAt": "2026-09-23T00:00:00Z", "supports": ["offer"] }],
+  "editorialNote": "Example data; do not publish."
+}
