@@ -33,7 +33,7 @@ No bot can be created on the user's behalf without access to their Telegram acco
 - Events require an explicit future/current date and year; expired records remain stored but are not current feed entries.
 - Offers require a checked source and current validity. Recurring promotions must have current evidence that recurrence is still active.
 - Unknown dairy status stays unknown and is labelled clearly. Only evidence-backed food fits receive `yes`.
-- Flag possible duplicates and substantive changes for review. A first release can require a human approval step before the workflow commits; once confidence is established, auto-commit only deterministic, high-confidence changes and keep ambiguous items as candidates.
+- Possible duplicates are matched against stored IDs, slugs, titles, places, and validity details before writing. Medium-confidence new finds stay hidden as candidates; low-confidence finds are discarded. Human review is still needed to publish a candidate or investigate a held update.
 - Keep a weekly content health report: last successful discovery, current published count, expired count, and records with stale source checks.
 
 ## Setup order
