@@ -28,7 +28,9 @@ The year directory is the record's first publication year and does not move when
 
 ## Record contract
 
-Every record has: `schemaVersion`, `id`, `slug`, `kind`, `title`, `summary`, `description`, `status`, `createdAt`, `updatedAt`, `checkedAt`, `places`, `price`, `validity`, `categories`, and `sources`.
+Every record has: `schemaVersion`, `id`, `slug`, `kind`, `title`, `summary`, `description`, `status`, `confidence`, `createdAt`, `updatedAt`, `checkedAt`, `places`, `price`, `validity`, `categories`, and `sources`.
+
+`confidence` is `high` only when current direct sources support the core offer/event, place, validity, and key claims; `medium` means a person should check it; `low` means discard it. Confidence describes evidence quality, not a promise that every venue will honor a listing.
 
 Food records also carry `food` with an explicit diet fit (`pescatarian`, `dairyFree`, `vegan` each `yes`, `no`, or `unknown`), named qualifying items, and evidence/uncertainty notes. Experience records carry `event` with `startsAt`, `endsAt`, and event format. Food availability may be a single date, a date range, or a recurring schedule; `validity` records that separately from the date on which the offer is served.
 
@@ -39,11 +41,11 @@ Food records also carry `food` with an explicit diet fit (`pescatarian`, `dairyF
 ## Lifecycle and deduplication
 
 - `candidate`: not public; awaiting editorial review.
-- `published`: checked, useful, and visible.
+- `published`: checked, useful, high confidence, and visible.
 - `expired`: validity ended or a recurring find could not be freshly verified; hidden from current results but retained.
 - `withdrawn`: source corrected or deal cancelled; retained with a note.
 
-Use a consistent normalized comparison key derived from kind, venue/place, title, and overlapping validity dates to flag likely duplicates. The pipeline may propose a material update to an existing `id`; it must not create a new record solely because another source repeats the same offer. Do not auto-publish low-confidence food dietary claims or events without a verified current/future year and date.
+Use a consistent normalized comparison key derived from kind, venue/place, title, and overlapping validity dates to flag likely duplicates. The pipeline may propose a material update to an existing `id`; it must not create a new record solely because another source repeats the same offer. It publishes only high-confidence records with direct evidence for key claims. Medium-confidence new records are retained as hidden candidates; low-confidence records are dropped. Uncertain dietary fit remains `unknown` with a visible caveat when the overall find is otherwise high confidence. Uncertain updates to an existing public find are held without replacing its current version.
 
 ## Files and URLs
 

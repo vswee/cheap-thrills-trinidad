@@ -4,7 +4,7 @@
   "title": "Cheap Thrills Trinidad find",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "id", "slug", "kind", "title", "summary", "description", "status", "createdAt", "updatedAt", "publishedAt", "checkedAt", "places", "price", "validity", "categories", "sources"],
+  "required": ["schemaVersion", "id", "slug", "kind", "title", "summary", "description", "status", "confidence", "createdAt", "updatedAt", "publishedAt", "checkedAt", "places", "price", "validity", "categories", "sources"],
   "properties": {
     "schemaVersion": { "const": 1 },
     "id": { "type": "string", "pattern": "^(food|event)-[a-z0-9-]+$" },
@@ -14,6 +14,7 @@
     "summary": { "type": "string", "minLength": 10, "maxLength": 200 },
     "description": { "type": "string", "minLength": 10, "maxLength": 3000 },
     "status": { "enum": ["candidate", "published", "expired", "withdrawn"] },
+    "confidence": { "enum": ["high", "medium", "low"] },
     "createdAt": { "type": "string", "format": "date-time" },
     "updatedAt": { "type": "string", "format": "date-time" },
     "publishedAt": { "type": ["string", "null"], "format": "date-time" },

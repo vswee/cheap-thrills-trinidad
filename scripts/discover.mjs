@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import Ajv from "ajv";
+import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 
 const root = process.cwd();
@@ -52,6 +52,7 @@ function slugPart(value) {
 
 function validateCandidate(candidate, kind) {
   if (!candidate || typeof candidate !== "object") throw new Error("Candidate is not an object");
+  if (!["high", "medium", "low"].includes(candidate.confidence)) throw new Error("Candidate needs a confidence rating");
   for (const key of ["title", "summary", "description", "placeName", "area", "region", "price", "validity", "categories", "sources"]) {
     if (!(key in candidate)) throw new Error(`Candidate is missing ${key}`);
   }
@@ -75,18 +76,18 @@ async function discover(kind, mandate, existing) {
   const examples = existing.slice(0, 160).map(({ value }) => ({ id: value.id, slug: value.slug, title: value.title, place: value.places[0]?.name, area: value.places[0]?.area, start: value.validity.startsAt, end: value.validity.endsAt, recurrence: value.validity.recurrence, status: value.status }));
   const outputSchema = {
     type: "object", additionalProperties: false, required: ["finds"], properties: {
-      finds: { type: "array", items: { type: "object", additionalProperties: false, required: ["existingId", "title", "summary", "description", "placeName", "area", "region", "address", "mapUrl", "price", "validity", "categories", "food", "event", "sources", "editorialNote"], properties: {
-        existingId: { type: ["string", "null"] }, title: { type: "string" }, summary: { type: "string" }, description: { type: "string" }, placeName: { type: "string" }, area: { type: "string" }, region: { type: "string" }, address: { type: ["string", "null"] }, mapUrl: { type: ["string", "null"] },
+      finds: { type: "array", items: { type: "object", additionalProperties: false, required: ["existingId", "confidence", "title", "summary", "description", "placeName", "area", "region", "address", "mapUrl", "price", "validity", "categories", "food", "event", "sources", "editorialNote"], properties: {
+        existingId: { type: ["string", "null"] }, confidence: { type: "string", enum: ["high", "medium", "low"] }, title: { type: "string" }, summary: { type: "string" }, description: { type: "string" }, placeName: { type: "string" }, area: { type: "string" }, region: { type: "string" }, address: { type: ["string", "null"] }, mapUrl: { type: ["string", "null"] },
         price: { type: "object", additionalProperties: false, required: ["amount", "fromAmount", "label", "terms"], properties: { amount: { type: ["number", "null"] }, fromAmount: { type: ["number", "null"] }, label: { type: "string" }, terms: { type: ["string", "null"] } } },
         validity: { type: "object", additionalProperties: false, required: ["startsAt", "endsAt", "recurrence"], properties: { startsAt: { type: ["string", "null"] }, endsAt: { type: ["string", "null"] }, recurrence: { type: ["string", "null"] } } },
         categories: { type: "array", items: { type: "string" } },
-        food: { type: ["object", "null"], additionalProperties: false, required: ["items", "dietFit", "dietNotes"], properties: { items: { type: "array", items: { type: "string" } }, dietFit: { type: "object", additionalProperties: false, required: ["pescatarian", "dairyFree", "vegan"], properties: { pescatarian: { enum: ["yes", "no", "unknown"] }, dairyFree: { enum: ["yes", "no", "unknown"] }, vegan: { enum: ["yes", "no", "unknown"] } } }, dietNotes: { type: "string" } } },
-        event: { type: ["object", "null"], additionalProperties: false, required: ["format", "admission"], properties: { format: { type: "string" }, admission: { enum: ["free", "paid", "unknown"] } } },
-        sources: { type: "array", items: { type: "object", additionalProperties: false, required: ["url", "publisher", "type", "supports"], properties: { url: { type: "string" }, publisher: { type: "string" }, type: { enum: ["official", "ticketing", "institutional", "social", "press", "other"] }, supports: { type: "array", items: { enum: ["offer", "date", "price", "dietary-fit", "location", "terms"] } } } } }, editorialNote: { type: "string" }
+        food: { type: ["object", "null"], additionalProperties: false, required: ["items", "dietFit", "dietNotes"], properties: { items: { type: "array", items: { type: "string" } }, dietFit: { type: "object", additionalProperties: false, required: ["pescatarian", "dairyFree", "vegan"], properties: { pescatarian: { type: "string", enum: ["yes", "no", "unknown"] }, dairyFree: { type: "string", enum: ["yes", "no", "unknown"] }, vegan: { type: "string", enum: ["yes", "no", "unknown"] } } }, dietNotes: { type: "string" } } },
+        event: { type: ["object", "null"], additionalProperties: false, required: ["format", "admission"], properties: { format: { type: "string" }, admission: { type: "string", enum: ["free", "paid", "unknown"] } } },
+        sources: { type: "array", items: { type: "object", additionalProperties: false, required: ["url", "publisher", "type", "supports"], properties: { url: { type: "string" }, publisher: { type: "string" }, type: { type: "string", enum: ["official", "ticketing", "institutional", "social", "press", "other"] }, supports: { type: "array", items: { type: "string", enum: ["offer", "date", "price", "dietary-fit", "location", "terms"] } } } } }, editorialNote: { type: "string" }
       } } }
     }
   };
-  const system = `You are the careful Trinidad ${kind === "food" ? "food-deal" : "non-food events"} editor. Search the live web for currently valid, genuinely useful new finds. Today is ${day}; local time is America/Port_of_Spain (UTC-04:00). Apply this mandate exactly:\n\n${mandate}\n\nExisting records for deduplication (including expired history): ${JSON.stringify(examples)}\n\nReturn only genuinely qualifying, source-backed new finds or material updates. Use existingId only for the same underlying find; do not create a fresh record for an unchanged offer. For an expired recurring food record, re-check whether that same recurrence is still explicitly active; if it is, return it using its existingId so it can be restored. Set sources to direct current pages and supports to the claims actually evidenced. Do not invent a URL, date, price, menu item, location or availability. Event dates must be current/future with year and local offset. Keep uncertain food diet fit as unknown and explain it. If no strong find, return an empty finds array. Do not return sample or hypothetical data. `;
+  const system = `You are the careful Trinidad ${kind === "food" ? "food-deal" : "non-food events"} editor. Search the live web for currently valid, genuinely useful new finds. Today is ${day}; local time is America/Port_of_Spain (UTC-04:00). Apply this mandate exactly:\n\n${mandate}\n\nExisting records for deduplication (including expired history): ${JSON.stringify(examples)}\n\nReturn only genuinely qualifying, source-backed new finds or material updates. Use existingId only for the same underlying find; do not create a fresh record for an unchanged offer. For an expired recurring food record, re-check whether that same recurrence is still explicitly active; if it is, return it using its existingId so it can be restored. Rate confidence high only when the core offer/event, location, validity, and key claims are supported by direct current sources. Use medium when a promising find needs a human check; use low when it should not be kept. Set sources to direct current pages and supports to the claims actually evidenced. Do not invent a URL, date, price, menu item, location or availability. Event dates must be current/future with year and local offset. Keep uncertain food diet fit as unknown and explain it. If no strong find, return an empty finds array. Do not return sample or hypothetical data. `;
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
@@ -111,6 +112,7 @@ function convert(candidate, kind, existing) {
   const old = candidate.existingId ? existing.find((item) => item.value.id === candidate.existingId) : undefined;
   if (candidate.existingId && !old) throw new Error(`Unknown existing id ${candidate.existingId}`);
   const place = { name: candidate.placeName, area: candidate.area, region: candidate.region, address: candidate.address, mapUrl: candidate.mapUrl };
+  const isPublished = candidate.confidence === "high";
   const record = {
     schemaVersion: 1,
     id: old?.value.id ?? `${kind === "food" ? "food" : "event"}-${slugPart(candidate.placeName)}-${slugPart(candidate.title)}`,
@@ -119,10 +121,11 @@ function convert(candidate, kind, existing) {
     title: candidate.title,
     summary: candidate.summary,
     description: candidate.description,
-    status: "published",
+    status: isPublished ? "published" : "candidate",
+    confidence: candidate.confidence,
     createdAt: old?.value.createdAt ?? nowIso,
     updatedAt: nowIso,
-    publishedAt: old?.value.publishedAt ?? nowIso,
+    publishedAt: isPublished ? old?.value.publishedAt ?? nowIso : old?.value.publishedAt ?? null,
     checkedAt: nowIso,
     places: [place],
     price: { currency: "TTD", amount: candidate.price.amount, fromAmount: candidate.price.fromAmount, label: candidate.price.label, terms: candidate.price.terms },
@@ -154,6 +157,14 @@ async function main() {
     const targets = new Set();
     for (const proposal of proposals) {
       validateCandidate(proposal, kind);
+      if (proposal.confidence === "low") {
+        console.log(`dropped low-confidence proposal: ${proposal.title}`);
+        continue;
+      }
+      if (proposal.existingId && proposal.confidence !== "high") {
+        console.log(`held uncertain update for review: ${proposal.existingId}`);
+        continue;
+      }
       const { record, target } = convert(proposal, kind, existing);
       if (targets.has(target)) throw new Error(`Two proposals target the same record: ${target}`);
       targets.add(target);

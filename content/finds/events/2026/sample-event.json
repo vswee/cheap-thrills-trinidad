@@ -7,6 +7,7 @@
   "summary": "Example record only. Replace with a verified current event.",
   "description": "This placeholder demonstrates the content format and must not be treated as a real event listing.",
   "status": "candidate",
+  "confidence": "low",
   "createdAt": "2026-09-23T00:00:00Z",
   "updatedAt": "2026-09-23T00:00:00Z",
   "publishedAt": null,
