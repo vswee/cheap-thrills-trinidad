@@ -43,3 +43,5 @@ No bot can be created on the user's behalf without access to their Telegram acco
 3. Create/configure the Telegram bot and set the two Vercel secrets.
 4. Add the discovery provider key in GitHub repository Actions secrets and enable the scheduled workflow.
 5. Run `workflow_dispatch` and inspect the changed files and Actions summary. The initial implementation commits validated published records automatically; refine the publication gate if early discovery quality needs manual review.
+
+GitHub notes that scheduled workflow runs can be delayed during high load and may be dropped in extreme cases. The non-hour schedule reduces the common contention window; check the Actions run history and use `workflow_dispatch` if a daily run is missed.

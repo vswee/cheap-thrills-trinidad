@@ -8,7 +8,7 @@ export default function Home() {
   const finds = getFinds();
   const foodCount = finds.filter((find) => find.kind === "food").length;
   const eventCount = finds.length - foodCount;
-  return <main className="site-shell">
+  return <main className="site-shell" id="top">
     <header className="topbar"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><nav><a href="#latest">The latest</a><a href="#about">How it works</a><Link href="#report">Report an issue</Link></nav><ThemeToggle /></header>
     <section className="hero">
       <div className="hero-kicker"><span className="live-dot" /> THE GOOD STUFF, FOR LESS <span className="kicker-line" /></div>

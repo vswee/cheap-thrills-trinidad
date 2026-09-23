@@ -14,7 +14,7 @@ export function FindFeed({ finds }: { finds: Find[] }) {
   const sentinel = useRef<HTMLDivElement>(null);
   const shown = useMemo(() => finds.filter((find) => {
     if (kind !== "all" && find.kind !== kind) return false;
-    const text = `${find.title} ${find.summary} ${find.places.map((p) => `${p.area} ${p.region} ${p.name}`).join(" ")} ${find.categories.join(" ")}`.toLowerCase();
+    const text = `${find.title} ${find.summary} ${find.description} ${find.places.map((p) => `${p.area} ${p.region} ${p.name}`).join(" ")} ${find.categories.join(" ")} ${find.price.label} ${find.price.terms ?? ""} ${find.food ? `${find.food.items.join(" ")} ${JSON.stringify(find.food.dietFit)} ${find.food.dietNotes}` : ""}`.toLowerCase();
     return text.includes(query.trim().toLowerCase());
   }), [finds, kind, query]);
   useEffect(() => {
