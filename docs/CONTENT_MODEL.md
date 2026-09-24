@@ -38,6 +38,8 @@ Food records also carry `food` with an explicit diet fit (`pescatarian`, `dairyF
 
 `sources[]` records a URL, publisher, source type, and `checkedAt`. A claim that determines event date, price, eligibility, or dietary suitability should cite the source that supports it. Social links are acceptable evidence when official and current; do not copy full poster/menu text or images into the repo without permission.
 
+Schema version 2 adds required `research: { "service": "Google Gemini", "model": "gemini-2.5-flash" }`, recording the service and exact model that researched and compiled the record. The detail page presents this as a restrained research credit. Local Codex ingestion records OpenAI Codex and the supplied session/model label. Version 1 records remain readable; their unknown provenance is not inferred or backfilled.
+
 ## Lifecycle and deduplication
 
 - `candidate`: not public; awaiting editorial review.

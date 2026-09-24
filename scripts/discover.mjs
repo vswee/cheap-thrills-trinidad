@@ -108,7 +108,10 @@ async function discover(kind, mandate, existing) {
       const providerPrompt = provider.id === "groq" ? `${system}\nRequired output JSON Schema: ${JSON.stringify(outputSchema)}` : system;
       const finds = await requestProvider(provider, providerPrompt, outputSchema);
       console.log(`${kind}: discovery used ${provider.id}/${provider.model}`);
-      return finds;
+      return {
+        finds,
+        research: { service: providerName(provider.id), model: provider.model },
+      };
     } catch (error) {
       const detail = error instanceof Error ? error.message : String(error);
       console.warn(`${kind}: ${provider.id}/${provider.model} failed; trying next configured provider. ${detail}`);
@@ -124,7 +127,17 @@ function readCodexProposals(kind, inputDir) {
   const proposals = Array.isArray(proposalFile) ? proposalFile : proposalFile.finds;
   if (!Array.isArray(proposals)) throw new Error(`${path.relative(root, file)} must contain a finds[] array`);
   console.log(`${kind}: ingesting ${proposals.length} Codex proposal(s) from ${path.relative(root, file)}`);
-  return proposals;
+  const suppliedResearch = Array.isArray(proposalFile) ? null : proposalFile.research;
+  return {
+    finds: proposals,
+    research: suppliedResearch?.service && suppliedResearch?.model
+      ? suppliedResearch
+      : { service: "OpenAI Codex", model: "Codex desktop session" },
+  };
+}
+
+function providerName(providerId) {
+  return ({ openai: "OpenAI", gemini: "Google Gemini", groq: "Groq" })[providerId] ?? providerId;
 }
 
 function weightedPick(providers, seed) {
@@ -223,13 +236,13 @@ function parseJsonObject(outputText) {
   }
 }
 
-function convert(candidate, kind, existing) {
+function convert(candidate, kind, existing, research) {
   const old = candidate.existingId ? existing.find((item) => item.value.id === candidate.existingId) : undefined;
   if (candidate.existingId && !old) throw new Error(`Unknown existing id ${candidate.existingId}`);
   const place = { name: candidate.placeName, area: candidate.area, region: candidate.region, address: candidate.address, mapUrl: candidate.mapUrl };
   const isPublished = candidate.confidence === "high";
   const record = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     id: old?.value.id ?? `${kind === "food" ? "food" : "event"}-${slugPart(candidate.placeName)}-${slugPart(candidate.title)}`,
     slug: old?.value.slug ?? slugPart(`${candidate.title}-${candidate.area}`),
     kind,
@@ -247,6 +260,7 @@ function convert(candidate, kind, existing) {
     validity: { startsAt: candidate.validity.startsAt, endsAt: candidate.validity.endsAt, recurrence: candidate.validity.recurrence, timezone: "America/Port_of_Spain" },
     categories: candidate.categories,
     sources: candidate.sources.map((source) => ({ ...source, checkedAt: nowIso })),
+    research,
     editorialNote: candidate.editorialNote,
     ...(kind === "food" ? { food: candidate.food } : { event: candidate.event }),
   };
@@ -267,7 +281,8 @@ async function main() {
     const existing = readFinds(kind);
     written += expireDatedFinds(existing);
     const mandate = fs.readFileSync(path.join(root, mandateFile), "utf8");
-    const proposals = codexInputDir ? readCodexProposals(kind, codexInputDir) : await discover(kind, mandate, existing);
+    const result = codexInputDir ? readCodexProposals(kind, codexInputDir) : await discover(kind, mandate, existing);
+    const proposals = result.finds;
     console.log(`${kind}: ${proposals.length} proposed find(s)`);
     const targets = new Set();
     for (const proposal of proposals) {
@@ -280,7 +295,7 @@ async function main() {
         console.log(`held uncertain update for review: ${proposal.existingId}`);
         continue;
       }
-      const { record, target } = convert(proposal, kind, existing);
+      const { record, target } = convert(proposal, kind, existing, result.research);
       if (targets.has(target)) throw new Error(`Two proposals target the same record: ${target}`);
       targets.add(target);
       const current = fs.existsSync(target) ? fs.readFileSync(target, "utf8") : null;

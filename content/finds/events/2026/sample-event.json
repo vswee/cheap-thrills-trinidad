@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "event-example-2026-001",
   "slug": "sample-community-event",
   "kind": "event",
@@ -16,6 +16,7 @@
   "price": { "currency": "TTD", "amount": null, "fromAmount": null, "label": "Price not stated", "terms": "Example only" },
   "validity": { "startsAt": "2026-12-01T18:00:00-04:00", "endsAt": "2026-12-01T21:00:00-04:00", "recurrence": null, "timezone": "America/Port_of_Spain" },
   "categories": ["community"],
+  "research": { "service": "Example AI service", "model": "Example model" },
   "event": { "format": "community", "admission": "unknown" },
   "sources": [{ "url": "https://example.com/", "publisher": "Example source", "type": "official", "checkedAt": "2026-09-23T00:00:00Z", "supports": ["date", "price"] }],
   "editorialNote": "Example data; do not publish."

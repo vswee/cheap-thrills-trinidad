@@ -18,6 +18,7 @@ export type Find = {
   price: { currency: "TTD"; amount: number | null; fromAmount: number | null; label: string; terms: string | null };
   validity: { startsAt: string | null; endsAt: string | null; recurrence: string | null; timezone: string };
   categories: string[];
+  research?: { service: string; model: string };
   food?: { items: string[]; dietFit: { pescatarian: string; dairyFree: string; vegan: string }; dietNotes: string };
   event?: { format: string; admission: string };
   sources: { url: string; publisher: string; type: string; checkedAt: string; supports: string[] }[];

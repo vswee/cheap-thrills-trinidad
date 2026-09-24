@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "food-example-2026-001",
   "slug": "sample-seafood-special",
   "kind": "food",
@@ -16,6 +16,7 @@
   "price": { "currency": "TTD", "amount": null, "fromAmount": null, "label": "Price not stated", "terms": "Example only" },
   "validity": { "startsAt": null, "endsAt": null, "recurrence": null, "timezone": "America/Port_of_Spain" },
   "categories": ["seafood"],
+  "research": { "service": "Example AI service", "model": "Example model" },
   "food": { "items": ["Example fish meal"], "dietFit": { "pescatarian": "yes", "dairyFree": "unknown", "vegan": "no" }, "dietNotes": "Dairy status has not been confirmed; example only." },
   "sources": [{ "url": "https://example.com/", "publisher": "Example source", "type": "official", "checkedAt": "2026-09-23T00:00:00Z", "supports": ["offer"] }],
   "editorialNote": "Example data; do not publish."
