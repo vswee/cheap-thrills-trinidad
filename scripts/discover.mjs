@@ -256,9 +256,16 @@ async function requestGroq(provider, prompt, outputSchema) {
 }
 
 async function geminiRequest(endpoint, headers, body, label) {
-  const response = await fetch(endpoint, { method: "POST", headers, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
-  if (!response.ok) throw new Error(`${label} returned ${response.status}: ${(await response.text()).slice(0, 700)}`);
-  return response.json();
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    const response = await fetch(endpoint, { method: "POST", headers, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
+    if (response.ok) return response.json();
+    const detail = (await response.text()).slice(0, 700);
+    if (response.status !== 503 || attempt === 2) throw new Error(`${label} returned ${response.status}: ${detail}`);
+    const delayMs = 8000 * (attempt + 1);
+    console.warn(`${label} returned 503; retrying in ${delayMs / 1000}s (${attempt + 1}/2).`);
+    await new Promise((resolve) => setTimeout(resolve, delayMs));
+  }
+  throw new Error(`${label} exhausted retries`);
 }
 
 function collectUrls(value, urls = new Set()) {
