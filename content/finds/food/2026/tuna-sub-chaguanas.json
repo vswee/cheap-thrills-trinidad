@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "id": "food-subway-trinidad-tuna-sub",
+  "slug": "tuna-sub-chaguanas",
+  "kind": "food",
+  "title": "Tuna Sub",
+  "summary": "Tuna mixed with mayonnaise and customer-choice vegetables. Listed from TT$34.9.",
+  "description": "Tuna mixed with mayonnaise and customer-choice vegetables. Starting price shown on the current menu; final price depends on size and selections. This is not a temporary discount. Confirm price, serving size, stock and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-24T18:17:30.059Z",
+  "publishedAt": "2026-09-24T18:17:30.059Z",
+  "checkedAt": "2026-09-24T18:17:30.059Z",
+  "places": [
+    {
+      "name": "Subway Trinidad",
+      "area": "Chaguanas",
+      "region": "Trinidad",
+      "address": "Montrose, Chaguanas",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": 34.9,
+    "label": "From TT$34.9",
+    "terms": "The ordering menu lists this sandwich from the stated price; final price depends on size/selection."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available while listed on the current Trinidad menu; confirm branch availability before ordering.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "budget-menu",
+    "menu-price",
+    "central-trinidad",
+    "pescatarian-option",
+    "seafood"
+  ],
+  "sources": [
+    {
+      "url": "https://orders.subway-tt.com/takeaway/menus.php",
+      "publisher": "Subway Trinidad — Montrose",
+      "type": "official",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:17:30.059Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "food": {
+    "items": [
+      "Tuna 6-inch Sub"
+    ],
+    "dietFit": {
+      "pescatarian": "yes",
+      "dairyFree": "no",
+      "vegan": "no"
+    },
+    "dietNotes": "Menu listing identifies a fish/seafood item. Dairy-free preparation is not confirmed; check batter, sauces and cross-contact with the venue."
+  }
+}

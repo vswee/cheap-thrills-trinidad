@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-international-trinidad-mediterranean-omelette",
+  "slug": "mediterranean-omelette-trinidad",
+  "kind": "food",
+  "title": "Mediterranean Omelette",
+  "summary": "Omelette with sautéed onions, spinach, roasted peppers and tomato; confirm cheese and dairy status. Posted menu price TT$60.",
+  "description": "Omelette with sautéed onions, spinach, roasted peppers and tomato; confirm cheese and dairy status. Listed price is a standing menu price, not a temporary discount. Confirm price, serving size, stock and branch participation before ordering. Jaxx lists branches at Grand Bazaar in Valsayn, MovieTowne in Port of Spain, C3 Centre in San Fernando, and Shops of Arima; confirm this menu is served at your selected branch.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-24T18:14:37Z",
+  "publishedAt": "2026-09-24T18:17:30.059Z",
+  "checkedAt": "2026-09-24T18:14:37Z",
+  "places": [
+    {
+      "name": "Jaxx International Trinidad",
+      "area": "Multiple Trinidad locations",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 60,
+    "fromAmount": null,
+    "label": "TT$60 menu price",
+    "terms": "Standing menu listing; prices and availability may vary by branch."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available Saturdays and Sundays, 10:00 AM–3:00 PM while listed on Jaxx’s current brunch menu.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "budget-menu",
+    "menu-price",
+    "pescatarian-option"
+  ],
+  "sources": [
+    {
+      "url": "https://tt.jaxxinternationalgrill.com/brunch-menu/",
+      "publisher": "Jaxx International Trinidad",
+      "type": "official",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:17:30.059Z"
+    },
+    {
+      "url": "https://tt.jaxxinternationalgrill.com/branches/",
+      "publisher": "Jaxx International Trinidad",
+      "type": "official",
+      "supports": [
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:14:37Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "food": {
+    "items": [
+      "Mediterranean Omelette"
+    ],
+    "dietFit": {
+      "pescatarian": "yes",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Menu listing identifies plant-based/vegetarian ingredients, but does not establish a fully dairy-free recipe. Verify bread, sauces, toppings and preparation."
+  }
+}

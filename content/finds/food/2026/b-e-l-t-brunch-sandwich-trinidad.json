@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-international-trinidad-b-e-l-t-brunch-sandwich",
+  "slug": "b-e-l-t-brunch-sandwich-trinidad",
+  "kind": "food",
+  "title": "B.E.L.T. Brunch Sandwich",
+  "summary": "Bacon, scrambled egg, lettuce, tomato and garlic aioli on multigrain. Posted menu price TT$79.",
+  "description": "Bacon, scrambled egg, lettuce, tomato and garlic aioli on multigrain. Listed price is a standing menu price, not a temporary discount. Confirm price, serving size, stock and branch participation before ordering. Jaxx lists branches at Grand Bazaar in Valsayn, MovieTowne in Port of Spain, C3 Centre in San Fernando, and Shops of Arima; confirm this menu is served at your selected branch.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-24T18:14:37Z",
+  "publishedAt": "2026-09-24T18:17:30.059Z",
+  "checkedAt": "2026-09-24T18:14:37Z",
+  "places": [
+    {
+      "name": "Jaxx International Trinidad",
+      "area": "Multiple Trinidad locations",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 79,
+    "fromAmount": null,
+    "label": "TT$79 menu price",
+    "terms": "Standing menu listing; prices and availability may vary by branch."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available Saturdays and Sundays, 10:00 AM–3:00 PM while listed on Jaxx’s current brunch menu.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "budget-menu",
+    "menu-price"
+  ],
+  "sources": [
+    {
+      "url": "https://tt.jaxxinternationalgrill.com/brunch-menu/",
+      "publisher": "Jaxx International Trinidad",
+      "type": "official",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:17:30.059Z"
+    },
+    {
+      "url": "https://tt.jaxxinternationalgrill.com/branches/",
+      "publisher": "Jaxx International Trinidad",
+      "type": "official",
+      "supports": [
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:14:37Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "food": {
+    "items": [
+      "B.E.L.T. Brunch Sandwich"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "The menu does not establish a pescatarian or dairy-free preparation for this item."
+  }
+}

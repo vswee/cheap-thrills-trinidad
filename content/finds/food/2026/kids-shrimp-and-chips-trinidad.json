@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "id": "food-tgi-fridays-trinidad-kids-shrimp-and-chips",
+  "slug": "kids-shrimp-and-chips-trinidad",
+  "kind": "food",
+  "title": "Kids Shrimp and Chips",
+  "summary": "Kids menu hand-battered shrimp and fries; confirm batter/dipping sauce ingredients. Posted menu price TT$79.",
+  "description": "Kids menu hand-battered shrimp and fries; confirm batter/dipping sauce ingredients. Listed price is a standing menu price, not a temporary discount. Confirm price, serving size, stock and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-24T18:17:30.059Z",
+  "publishedAt": "2026-09-24T18:17:30.059Z",
+  "checkedAt": "2026-09-24T18:17:30.059Z",
+  "places": [
+    {
+      "name": "TGI Fridays Trinidad",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 79,
+    "fromAmount": null,
+    "label": "TT$79 menu price",
+    "terms": "Standing menu listing; prices and availability may vary by branch."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available while listed on the current TGI Fridays Trinidad menu; kids’ items are children’s portions. Prices may be subject to VAT.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "budget-menu",
+    "menu-price",
+    "pescatarian-option",
+    "seafood",
+    "kids-menu"
+  ],
+  "sources": [
+    {
+      "url": "https://tgif-tt.com/our-food/",
+      "publisher": "TGI Fridays Trinidad",
+      "type": "official",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:17:30.059Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "food": {
+    "items": [
+      "Kids Shrimp and Chips"
+    ],
+    "dietFit": {
+      "pescatarian": "yes",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "Menu listing identifies a fish/seafood item. Dairy-free preparation is not confirmed; check batter, sauces and cross-contact with the venue."
+  }
+}

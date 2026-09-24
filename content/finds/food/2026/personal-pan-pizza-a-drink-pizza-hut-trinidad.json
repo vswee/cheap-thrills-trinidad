@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "food-pizza-hut-trinidad-personal-pan-pizza-a-drink",
+  "slug": "personal-pan-pizza-a-drink-pizza-hut-trinidad",
+  "kind": "food",
+  "title": "Personal Pan Pizza & a Drink",
+  "summary": "Personal pan pizza and a drink at the listed price. Posted menu price TT$29.",
+  "description": "Personal pan pizza and a drink at the listed price. Listed price is a standing menu price, not a temporary discount. Confirm price, serving size, stock and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-24T18:17:30.059Z",
+  "publishedAt": "2026-09-24T18:17:30.059Z",
+  "checkedAt": "2026-09-24T18:17:30.059Z",
+  "places": [
+    {
+      "name": "Pizza Hut Trinidad",
+      "area": "Pizza Hut Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 29,
+    "fromAmount": null,
+    "label": "TT$29 menu price",
+    "terms": "Standing menu listing; prices and availability may vary by branch."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available while listed on the current Trinidad ordering menu; special-day promotions apply only on the stated day.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "budget-menu",
+    "menu-price"
+  ],
+  "sources": [
+    {
+      "url": "https://pizzahut-tt.com/en/menu",
+      "publisher": "Pizza Hut Trinidad",
+      "type": "official",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:17:30.059Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "food": {
+    "items": [
+      "Personal Pan Pizza & a Drink"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "The menu does not establish a pescatarian or dairy-free preparation for this item."
+  }
+}

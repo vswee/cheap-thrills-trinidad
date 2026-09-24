@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "food-wendy-s-trinidad-bigger-box-sandwich-two-tenders-fries-drink",
+  "slug": "bigger-box-sandwich-two-tenders-fries-drink-wendys-trinidad",
+  "kind": "food",
+  "title": "Bigger Box: sandwich, two tenders, fries & drink",
+  "summary": "Choice of Dave’s Single or Classic/Spicy Chicken Sandwich, two tenders, small fries and medium drink. Posted menu price TT$79.",
+  "description": "Choice of Dave’s Single or Classic/Spicy Chicken Sandwich, two tenders, small fries and medium drink. Listed price is a standing menu price, not a temporary discount. Confirm price, serving size, stock and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-24T18:17:30.059Z",
+  "publishedAt": "2026-09-24T18:17:30.059Z",
+  "checkedAt": "2026-09-24T18:17:30.059Z",
+  "places": [
+    {
+      "name": "Wendy's Trinidad",
+      "area": "Wendys Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 79,
+    "fromAmount": null,
+    "label": "TT$79 menu price",
+    "terms": "Standing menu listing; prices and availability may vary by branch."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available while listed on Wendy’s Trinidad promotions page; confirm at the selected branch.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "budget-menu",
+    "menu-price"
+  ],
+  "sources": [
+    {
+      "url": "https://www.wendys.tt/view-our-menu/promotions/",
+      "publisher": "Wendy's Trinidad",
+      "type": "official",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:17:30.059Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "food": {
+    "items": [
+      "Bigger Box: sandwich, two tenders, fries & drink"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "The menu does not establish a pescatarian or dairy-free preparation for this item."
+  }
+}

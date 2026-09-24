@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "food-tgi-fridays-trinidad-parmesan-crusted-chicken-quesadillas",
+  "slug": "parmesan-crusted-chicken-quesadillas-trinidad",
+  "kind": "food",
+  "title": "Parmesan Crusted Chicken Quesadillas",
+  "summary": "Chicken, bacon, Monterey Jack and tomato basil in a tortilla. Posted menu price TT$99.",
+  "description": "Chicken, bacon, Monterey Jack and tomato basil in a tortilla. Listed price is a standing menu price, not a temporary discount. Confirm price, serving size, stock and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-24T18:17:30.059Z",
+  "publishedAt": "2026-09-24T18:17:30.059Z",
+  "checkedAt": "2026-09-24T18:17:30.059Z",
+  "places": [
+    {
+      "name": "TGI Fridays Trinidad",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 99,
+    "fromAmount": null,
+    "label": "TT$99 menu price",
+    "terms": "Standing menu listing; prices and availability may vary by branch."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available while listed on the current TGI Fridays Trinidad menu; kids’ items are children’s portions. Prices may be subject to VAT.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "budget-menu",
+    "menu-price"
+  ],
+  "sources": [
+    {
+      "url": "https://tgif-tt.com/our-food/",
+      "publisher": "TGI Fridays Trinidad",
+      "type": "official",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:17:30.059Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "food": {
+    "items": [
+      "Parmesan Crusted Chicken Quesadillas"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "The menu does not establish a pescatarian or dairy-free preparation for this item."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "food-subway-trinidad-turkey-egg-cheese-deli-roll",
+  "slug": "turkey-egg-cheese-deli-roll-chaguanas",
+  "kind": "food",
+  "title": "Turkey, Egg & Cheese Deli Roll",
+  "summary": "Turkey breast, egg and melted cheese. Posted menu price TT$25.",
+  "description": "Turkey breast, egg and melted cheese. Listed price is a standing menu price, not a temporary discount. Confirm price, serving size, stock and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-24T18:17:30.059Z",
+  "publishedAt": "2026-09-24T18:17:30.059Z",
+  "checkedAt": "2026-09-24T18:17:30.059Z",
+  "places": [
+    {
+      "name": "Subway Trinidad",
+      "area": "Chaguanas",
+      "region": "Trinidad",
+      "address": "Montrose, Chaguanas",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 25,
+    "fromAmount": null,
+    "label": "TT$25 menu price",
+    "terms": "Standing menu listing; prices and availability may vary by branch."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available while listed on the current Trinidad menu; confirm branch availability before ordering.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "budget-menu",
+    "menu-price",
+    "central-trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://orders.subway-tt.com/takeaway/menus.php",
+      "publisher": "Subway Trinidad — Montrose",
+      "type": "official",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-09-24T18:17:30.059Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "food": {
+    "items": [
+      "Turkey, Egg & Cheese Deli Roll"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "The menu does not establish a pescatarian or dairy-free preparation for this item."
+  }
+}
