@@ -153,6 +153,7 @@ function weightedPick(providers, seed) {
 
 async function requestProvider(provider, prompt, outputSchema) {
   if (provider.id === "gemini") return requestGemini(provider, prompt, outputSchema);
+  if (provider.id === "groq") return requestGroq(provider, prompt, outputSchema);
 
   const headers = { "Content-Type": "application/json" };
   let url;
@@ -161,10 +162,6 @@ async function requestProvider(provider, prompt, outputSchema) {
     url = "https://api.openai.com/v1/responses";
     headers.Authorization = `Bearer ${provider.key}`;
     body = { model: provider.model, store: false, tools: [{ type: "web_search" }], input: prompt, text: { format: { type: "json_schema", name: "trinidad_finds", strict: true, schema: outputSchema } } };
-  } else {
-    url = "https://api.groq.com/openai/v1/chat/completions";
-    headers.Authorization = `Bearer ${provider.key}`;
-    body = { model: provider.model, messages: [{ role: "user", content: prompt }], tools: [{ type: "browser_search" }], response_format: { type: "json_object" } };
   }
 
   const response = await fetch(url, { method: "POST", headers, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
@@ -173,8 +170,6 @@ async function requestProvider(provider, prompt, outputSchema) {
   let outputText;
   if (provider.id === "openai") {
     outputText = result.output_text ?? (result.output ?? []).filter((item) => item.type === "message").flatMap((item) => item.content ?? []).filter((item) => item.type === "output_text").map((item) => item.text).join("");
-  } else {
-    outputText = result.choices?.[0]?.message?.content;
   }
   if (typeof outputText !== "string" || !outputText.trim()) throw new Error("Discovery returned no structured output");
   const parsed = parseJsonObject(outputText);
@@ -183,19 +178,14 @@ async function requestProvider(provider, prompt, outputSchema) {
 }
 
 async function requestGemini(provider, prompt, outputSchema) {
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(provider.model)}:generateContent`;
+  const endpoint = "https://generativelanguage.googleapis.com/v1beta/interactions";
   const headers = { "Content-Type": "application/json", "x-goog-api-key": provider.key };
   const researchPrompt = `${prompt}\n\nResearch task: Return concise evidence notes for each qualifying food offer or event. Include the exact facts, current validity, location, price or admission, and source links you found. Do not format the result as JSON. Search the web for direct and current sources.`;
   const research = await geminiRequest(endpoint, headers, {
-    contents: [{ parts: [{ text: researchPrompt }] }],
-    tools: [{ google_search: {} }],
+    model: provider.model, input: researchPrompt, tools: [{ type: "google_search", search_types: ["web_search"] }], store: false,
   }, "Gemini Search grounding");
-  const researchCandidate = research.candidates?.[0];
-  const researchText = researchCandidate?.content?.parts?.map((part) => part.text ?? "").join("").trim();
-  const groundedSources = (researchCandidate?.groundingMetadata?.groundingChunks ?? [])
-    .map((chunk) => chunk.web)
-    .filter((web) => web?.uri)
-    .map((web) => ({ title: web.title ?? "Web source", url: web.uri }));
+  const researchText = research.output_text?.trim();
+  const groundedSources = collectUrls(research.steps ?? []).map((url) => ({ title: "Web source", url }));
   if (!researchText) throw new Error("Gemini Search grounding returned no research text");
   if (groundedSources.length === 0) throw new Error("Gemini Search grounding returned no source URLs");
 
@@ -209,13 +199,48 @@ async function requestGemini(provider, prompt, outputSchema) {
     `Grounded source URLs:\n${JSON.stringify(groundedSources)}`,
   ].join("\n\n");
   const formatted = await geminiRequest(endpoint, headers, {
-    contents: [{ parts: [{ text: formattingPrompt }] }],
-    generationConfig: { responseMimeType: "application/json", responseSchema: outputSchema, temperature: 0.2 },
+    model: provider.model, input: formattingPrompt,
+    response_format: { type: "text", mime_type: "application/json", schema: outputSchema },
+    generation_config: { temperature: 0.2 }, store: false,
   }, "Gemini structured formatting");
-  const outputText = formatted.candidates?.[0]?.content?.parts?.map((part) => part.text ?? "").join("");
+  const outputText = formatted.output_text;
   if (typeof outputText !== "string" || !outputText.trim()) throw new Error("Gemini structured formatting returned no output");
   const parsed = parseJsonObject(outputText);
   if (!Array.isArray(parsed.finds)) throw new Error("Gemini output does not contain finds[]");
+  return parsed.finds;
+}
+
+async function requestGroq(provider, prompt, outputSchema) {
+  const url = "https://api.groq.com/openai/v1/chat/completions";
+  const headers = { "Content-Type": "application/json", Authorization: `Bearer ${provider.key}` };
+  const researchPrompt = `${prompt}\n\nResearch task: Search the live web for qualifying current finds. Return concise evidence notes with exact facts, dates, prices, location, dietary claims where relevant, and exact source URLs. Do not format as JSON.`;
+  const researchResponse = await fetch(url, {
+    method: "POST", headers,
+    body: JSON.stringify({ model: provider.model, messages: [{ role: "user", content: researchPrompt }], tools: [{ type: "browser_search" }] }),
+    signal: AbortSignal.timeout(180000),
+  });
+  if (!researchResponse.ok) throw new Error(`Groq browser search returned ${researchResponse.status}: ${(await researchResponse.text()).slice(0, 700)}`);
+  const research = await researchResponse.json();
+  const researchText = research.choices?.[0]?.message?.content;
+  if (typeof researchText !== "string" || !researchText.trim()) throw new Error("Groq browser search returned no research notes");
+
+  const formattingPrompt = [
+    "Convert the web research notes into the requested proposal schema.",
+    "Use only facts supported by the research notes and exact source URLs stated in those notes. Do not invent or rewrite URLs. Omit unsupported finds.",
+    `Required output JSON Schema: ${JSON.stringify(outputSchema)}`,
+    `Research notes:\n${researchText}`,
+  ].join("\n\n");
+  const formatResponse = await fetch(url, {
+    method: "POST", headers,
+    body: JSON.stringify({ model: provider.model, messages: [{ role: "user", content: formattingPrompt }], response_format: { type: "json_object" } }),
+    signal: AbortSignal.timeout(180000),
+  });
+  if (!formatResponse.ok) throw new Error(`Groq JSON formatting returned ${formatResponse.status}: ${(await formatResponse.text()).slice(0, 700)}`);
+  const formatted = await formatResponse.json();
+  const outputText = formatted.choices?.[0]?.message?.content;
+  if (typeof outputText !== "string" || !outputText.trim()) throw new Error("Groq returned no structured output");
+  const parsed = parseJsonObject(outputText);
+  if (!Array.isArray(parsed.finds)) throw new Error("Groq output does not contain finds[]");
   return parsed.finds;
 }
 
@@ -223,6 +248,18 @@ async function geminiRequest(endpoint, headers, body, label) {
   const response = await fetch(endpoint, { method: "POST", headers, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
   if (!response.ok) throw new Error(`${label} returned ${response.status}: ${(await response.text()).slice(0, 700)}`);
   return response.json();
+}
+
+function collectUrls(value, urls = new Set()) {
+  if (Array.isArray(value)) {
+    for (const item of value) collectUrls(item, urls);
+  } else if (value && typeof value === "object") {
+    for (const [key, item] of Object.entries(value)) {
+      if (key === "url" && typeof item === "string" && /^https?:\/\//i.test(item)) urls.add(item);
+      else collectUrls(item, urls);
+    }
+  }
+  return [...urls];
 }
 
 function parseJsonObject(outputText) {
