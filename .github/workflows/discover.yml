@@ -83,12 +83,10 @@ jobs:
             title="Cheap Thrills discovery $JOB_STATUS"
           fi
 
-          message="$icon $title (run #$RUN_NUMBER)
-Worker step: ${WORKER_OUTCOME:-not started}; exit code: ${WORKER_EXIT_CODE:-unavailable}
-$RUN_URL
-
-Recent worker log:
-$log_excerpt"
+          message="$(printf '%s %s (run #%s)\nWorker step: %s; exit code: %s\n%s\n\nRecent worker log:\n%s' \
+            "$icon" "$title" "$RUN_NUMBER" \
+            "${WORKER_OUTCOME:-not started}" "${WORKER_EXIT_CODE:-unavailable}" \
+            "$RUN_URL" "$log_excerpt")"
 
           {
             printf '## %s %s\n\n' "$icon" "$title"
