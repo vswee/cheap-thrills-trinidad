@@ -14,6 +14,6 @@ const areas: Record<string, DirectoryArea> = {
 export function generateStaticParams() { return Object.keys(areas).map((area) => ({ area })); }
 export async function generateMetadata({ params }: { params: Promise<{ area: string }> }): Promise<Metadata> {
   const { area } = await params; const selected = areas[area];
-  return selected ? { title: selected.title, description: selected.description, alternates: { canonical: `/${selected.path}` }, openGraph: { title: selected.title, description: selected.description, type: "website" } } : {};
+  return selected ? { title: selected.title, description: selected.description, alternates: { canonical: `/${selected.path}` }, openGraph: { title: selected.title, description: selected.description, type: "website", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Cheap Thrills Trinidad — food deals and things to do" }] }, twitter: { card: "summary_large_image", title: selected.title, description: selected.description, images: [{ url: "/twitter-image", alt: "Cheap Thrills Trinidad — food deals and things to do" }] } } : {};
 }
 export default async function FoodAreaPage({ params }: { params: Promise<{ area: string }> }) { const { area } = await params; const selected = areas[area]; if (!selected) notFound(); return <AreaDirectory area={selected} allFinds={getFinds()} />; }

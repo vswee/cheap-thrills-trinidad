@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   applicationName: "Cheap Thrills Trinidad",
   keywords: ["food deals Trinidad", "cheap eats Trinidad", "things to do in Trinidad", "Trinidad events", "Chaguanas food deals", "Central Trinidad", "pescatarian Trinidad", "dairy-free Trinidad"],
-  openGraph: { title: "Cheap Thrills Trinidad — Food Deals & Things to Do", description: "Good food, affordable events and local finds across Trinidad. Chaguanas and Central Trinidad first.", type: "website", locale: "en_TT", siteName: "Cheap Thrills Trinidad", url: "/" },
-  twitter: { card: "summary_large_image", title: "Cheap Thrills Trinidad — Food Deals & Things to Do", description: "Good food, affordable events and local finds across Trinidad. Chaguanas and Central Trinidad first." },
+  openGraph: { title: "Cheap Thrills Trinidad — Food Deals & Things to Do", description: "Good food, affordable events and local finds across Trinidad. Chaguanas and Central Trinidad first.", type: "website", locale: "en_TT", siteName: "Cheap Thrills Trinidad", url: "/", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Cheap Thrills Trinidad — food deals and things to do" }] },
+  twitter: { card: "summary_large_image", title: "Cheap Thrills Trinidad — Food Deals & Things to Do", description: "Good food, affordable events and local finds across Trinidad. Chaguanas and Central Trinidad first.", images: [{ url: "/twitter-image", alt: "Cheap Thrills Trinidad — food deals and things to do" }] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

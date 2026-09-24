@@ -16,7 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ section: 
   const find = kind && getFind(kind, slug);
   if (!find) return {};
   const path = `/${section}/${slug}`;
-  return { title: find.title, description: find.summary, alternates: { canonical: path }, openGraph: { title: find.title, description: find.summary, type: "article", url: path }, twitter: { card: "summary_large_image", title: find.title, description: find.summary } };
+  const imagePath = `${path}/opengraph-image`;
+  const twitterImagePath = `${path}/twitter-image`;
+  return { title: find.title, description: find.summary, alternates: { canonical: path }, openGraph: { title: find.title, description: find.summary, type: "article", url: path, images: [{ url: imagePath, width: 1200, height: 630, alt: `${find.title} — Cheap Thrills Trinidad` }] }, twitter: { card: "summary_large_image", title: find.title, description: find.summary, images: [{ url: twitterImagePath, alt: `${find.title} — Cheap Thrills Trinidad` }] } };
 }
 
 function Detail({ find }: { find: Find }) {

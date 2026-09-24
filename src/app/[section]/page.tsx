@@ -11,7 +11,7 @@ export function generateStaticParams() { return [{ section: "food" }, { section:
 export async function generateMetadata({ params }: { params: Promise<{ section: string }> }): Promise<Metadata> {
   const { section } = await params;
   const selected = sections[section as keyof typeof sections];
-  return section in sections ? { title: selected.title, description: selected.note, alternates: { canonical: `/${section}` }, openGraph: { title: selected.title, description: selected.note, type: "website" } } : {};
+  return section in sections ? { title: selected.title, description: selected.note, alternates: { canonical: `/${section}` }, openGraph: { title: selected.title, description: selected.note, type: "website", images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Cheap Thrills Trinidad — food deals and things to do" }] }, twitter: { card: "summary_large_image", title: selected.title, description: selected.note, images: [{ url: "/twitter-image", alt: "Cheap Thrills Trinidad — food deals and things to do" }] } } : {};
 }
 export default async function SectionPage({ params }: { params: Promise<{ section: string }> }) {
   const { section } = await params;
