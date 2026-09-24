@@ -27,13 +27,13 @@ export function FindFeed({ finds }: { finds: Find[] }) {
     return () => observer.disconnect();
   }, [count, shown.length]);
   return <>
-    <div className="feed-controls">
+    {finds.length > 0 && <div className="feed-controls">
       <div className="filter-tabs" aria-label="Filter finds">
         {([["all", "Everything"], ["food", "Food"], ["event", "Things to do"]] as const).map(([value, label]) => <button key={value} className={kind === value ? "filter active" : "filter"} onClick={() => { setKind(value); setCount(batchSize); }}>{label}</button>)}
       </div>
       <label className="search-box"><span aria-hidden="true">⌕</span><input value={query} onChange={(e) => { setQuery(e.target.value); setCount(batchSize); }} placeholder="Search deals, places, areas" aria-label="Search finds" /><kbd>⌘ K</kbd></label>
-    </div>
-    {shown.length === 0 ? <div className="empty-state"><span className="empty-mark">✳</span><h2>Good finds are on the way.</h2><p>We’re checking across Trinidad, with Chaguanas and Central Trinidad first. Come back soon for something worth sharing.</p><a href="https://www.instagram.com/" className="text-link">Follow along for new finds ↗</a></div> : <>
+    </div>}
+    {shown.length === 0 ? <div className="empty-state"><h2>{query ? "No matching finds." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all") && <><p>{query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={() => { setQuery(""); setKind("all"); }}>Clear filters</button></>}</div> : <>
       <div className="feed-grid">{shown.slice(0, count).map((find, index) => <article className={`find-card ${index === 0 ? "featured" : ""}`} key={find.id}>
         <div className="card-top"><span className={`kind-pill ${find.kind}`}>{find.kind === "food" ? "Food deal" : "Things to do"}</span><span className="card-date">{displayDate(find)}</span></div>
         <Link href={`/${find.kind === "food" ? "food" : "events"}/${find.slug}`} className="card-title"><h2>{find.title}</h2><span className="arrow">↗</span></Link>
