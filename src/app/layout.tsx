@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { HolidayBanner } from "@/components/holiday-banner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en-TT" suppressHydrationWarning><body>{children}<Script id="theme-preference" strategy="beforeInteractive">{`try { const theme = localStorage.getItem("ctt-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}`}</Script></body></html>;
+  return <html lang="en-TT" suppressHydrationWarning><body><HolidayBanner />{children}<Script id="theme-preference" strategy="beforeInteractive">{`try { const theme = localStorage.getItem("ctt-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}`}</Script></body></html>;
 }
