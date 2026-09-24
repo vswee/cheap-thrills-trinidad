@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "id": "food-first-harvest-kitchen-first-harvest-kitchen-four-course-restaurant-week-menu-from-17",
+  "slug": "first-harvest-kitchen-four-course-restaurant-week-menu-from-17",
+  "kind": "food",
+  "title": "First Harvest Kitchen: four-course Restaurant Week menu from $175",
+  "summary": "A four-course Restaurant Week package starts at $175, with vegan choices at this Cunupia restaurant.",
+  "description": "First Harvest Kitchen is offering four-course Trinidad & Tobago Restaurant Week menus at TT$175 and TT$375 per person, with taxes included. The official menu page says vegan and gluten-free options are available; ask which vegan courses are included in the package and whether advance booking is needed. Restaurant Week runs September 25 to October 4, 2026. The venue lists special Sunday hours on September 27 and October 4, so confirm opening hours for other dates.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "publishedAt": "2026-09-24T17:29:48.593Z",
+  "checkedAt": "2026-09-24T17:29:48.593Z",
+  "places": [
+    {
+      "name": "First Harvest Kitchen",
+      "area": "Cunupia",
+      "region": "Central Trinidad",
+      "address": "#30 Southern Main Road, Cunupia",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": 175,
+    "label": "From TT$175 per person; taxes included",
+    "terms": "Four-course Restaurant Week package. Vegan options are available; confirm which courses and choices are included."
+  },
+  "validity": {
+    "startsAt": "2026-09-25T00:00:00-04:00",
+    "endsAt": "2026-10-04T23:59:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant-week",
+    "vegan",
+    "central-trinidad",
+    "multi-course"
+  ],
+  "sources": [
+    {
+      "url": "https://www.ttrwfestival.com/menus?pgid=mt8uc1n3-5fac5a18-04e8-4804-8c56-b9a269a8ade9",
+      "publisher": "Trinidad & Tobago Restaurant Week",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "dietary-fit",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-09-24T17:29:48.593Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current as checked on 2026-09-24. Confirm the vegan course selection and opening hours with the restaurant.",
+  "food": {
+    "items": [
+      "Vegan choices on the Restaurant Week menu; confirm the qualifying courses with the restaurant"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "yes",
+      "vegan": "yes"
+    },
+    "dietNotes": "The official menu labels vegan options but does not name them in the text listing. Ask about the exact dishes and cross-contact if needed."
+  }
+}

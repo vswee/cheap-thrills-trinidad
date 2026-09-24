@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "id": "food-abraham-s-grill-hut-abraham-s-grill-hut-tt-175-restaurant-week-seafood-package",
+  "slug": "abraham-s-grill-hut-tt-175-restaurant-week-seafood-package-cun",
+  "kind": "food",
+  "title": "Abraham's Grill Hut: TT$175 Restaurant Week seafood package",
+  "summary": "A seafood-focused Restaurant Week package for one is TT$175 including taxes at this Cunupia spot.",
+  "description": "Abraham's Grill Hut's official Trinidad & Tobago Restaurant Week menu lists a TT$175 Flavour Affair package. Its Seafood Affair serves one; the organizer says taxes are included. The special is offered during Restaurant Week, September 25 to October 4, 2026. The menu page does not list the seafood dish or its ingredients in text, so check the menu image and ask the restaurant about dairy in sauces, sides and preparation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "publishedAt": "2026-09-24T17:29:48.593Z",
+  "checkedAt": "2026-09-24T17:29:48.593Z",
+  "places": [
+    {
+      "name": "Abraham's Grill Hut",
+      "area": "Cunupia",
+      "region": "Central Trinidad",
+      "address": "600 Munroe Road, Cunupia",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 175,
+    "fromAmount": null,
+    "label": "TT$175 per package; taxes included",
+    "terms": "Seafood Affair serves one. Confirm the exact seafood item and ingredients with the venue."
+  },
+  "validity": {
+    "startsAt": "2026-09-25T00:00:00-04:00",
+    "endsAt": "2026-10-04T23:59:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant-week",
+    "seafood",
+    "central-trinidad",
+    "multi-course"
+  ],
+  "sources": [
+    {
+      "url": "https://www.ttrwfestival.com/menus?pgid=mt8uc1n3-359ef875-e867-4740-a6e1-872cbed5f7a9",
+      "publisher": "Trinidad & Tobago Restaurant Week",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "dietary-fit",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-09-24T17:29:48.593Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current as checked on 2026-09-24. Ask the restaurant about dairy ingredients before ordering.",
+  "food": {
+    "items": [
+      "Seafood Affair package (specific seafood dish not named in the page text)"
+    ],
+    "dietFit": {
+      "pescatarian": "yes",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "A seafood package is listed, but the exact dish and preparation are not detailed in text. Dairy content is unknown; check with the restaurant."
+  }
+}

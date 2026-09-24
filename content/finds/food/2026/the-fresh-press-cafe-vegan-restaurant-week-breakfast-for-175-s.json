@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "id": "food-the-fresh-press-cafe-the-fresh-press-cafe-vegan-restaurant-week-breakfast-for-175",
+  "slug": "the-fresh-press-cafe-vegan-restaurant-week-breakfast-for-175-s",
+  "kind": "food",
+  "title": "The Fresh Press Café: vegan Restaurant Week breakfast for $175",
+  "summary": "A $175 breakfast package includes a vegan pancake main option and vegan ice cream, from September 25 to October 11.",
+  "description": "The Fresh Press Café's Restaurant Week breakfast package is TT$175 per person with taxes included. The listed choices include Ital Vital vegan pancakes and vegan ice cream, alongside non-vegan alternatives, plus a drink. The offer runs September 25 through October 11, 2026. The cafe recommends reservations or preorders. This is in San Fernando, so it is a farther south option for a special breakfast outing.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "publishedAt": "2026-09-24T17:29:48.593Z",
+  "checkedAt": "2026-09-24T17:29:48.593Z",
+  "places": [
+    {
+      "name": "The Fresh Press Café",
+      "area": "San Fernando",
+      "region": "South Trinidad",
+      "address": "#57 Naparima Mayaro Road, San Fernando",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 175,
+    "fromAmount": null,
+    "label": "TT$175 per person; taxes included",
+    "terms": "Breakfast package with a choice of main, dessert and morning drink. Select the vegan options and confirm any substitutions with the cafe."
+  },
+  "validity": {
+    "startsAt": "2026-09-25T00:00:00-04:00",
+    "endsAt": "2026-10-11T23:59:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant-week",
+    "vegan",
+    "breakfast",
+    "south-trinidad",
+    "multi-course"
+  ],
+  "sources": [
+    {
+      "url": "https://www.ttrwfestival.com/menus?pgid=mt8uc1n3-fc008c6b-e90e-4730-9c09-7b898fc099cf",
+      "publisher": "Trinidad & Tobago Restaurant Week",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "dietary-fit",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-09-24T17:29:48.593Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current as checked on 2026-09-24. Reservations and preorders are recommended by the organizer.",
+  "food": {
+    "items": [
+      "Ital Vital vegan pancakes",
+      "Vegan ice cream"
+    ],
+    "dietFit": {
+      "pescatarian": "yes",
+      "dairyFree": "yes",
+      "vegan": "yes"
+    },
+    "dietNotes": "The menu describes these selections as vegan. Confirm the complete package can be ordered with both vegan choices and check for any dietary cross-contact concerns."
+  }
+}

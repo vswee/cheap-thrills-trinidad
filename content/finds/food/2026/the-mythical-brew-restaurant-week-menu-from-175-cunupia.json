@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "id": "food-the-mythical-brew-the-mythical-brew-restaurant-week-menu-from-175",
+  "slug": "the-mythical-brew-restaurant-week-menu-from-175-cunupia",
+  "kind": "food",
+  "title": "The Mythical Brew: Restaurant Week menu from $175",
+  "summary": "Choose a multi-course Restaurant Week meal from $175 per person, with clearly marked dairy-free choices in Cunupia.",
+  "description": "For Trinidad & Tobago Restaurant Week, The Mythical Brew offers a $175 per-person package with a mocktail, main course and dessert, or a $275 package that adds a starter. The flat rates include taxes and charges. The published menu states that dairy-free options are clearly marked. Ask the venue which dishes qualify and confirm availability before booking. Available all day from September 25 through October 4, 2026.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "publishedAt": "2026-09-24T17:29:48.593Z",
+  "checkedAt": "2026-09-24T17:29:48.593Z",
+  "places": [
+    {
+      "name": "The Mythical Brew",
+      "area": "Cunupia",
+      "region": "Central Trinidad",
+      "address": "LP#72 Warren Road, Cunupia",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": 175,
+    "label": "From TT$175 per person; taxes and charges included",
+    "terms": "TT$175 includes mocktail, main and dessert; TT$275 adds a starter. Confirm the dairy-free dish selection with the venue."
+  },
+  "validity": {
+    "startsAt": "2026-09-25T00:00:00-04:00",
+    "endsAt": "2026-10-04T23:59:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant-week",
+    "dairy-free",
+    "central-trinidad",
+    "multi-course"
+  ],
+  "sources": [
+    {
+      "url": "https://www.ttrwfestival.com/menus?pgid=mt8uc1n3-f3c8fa2b-d616-4b8f-bae9-565771eac227",
+      "publisher": "Trinidad & Tobago Restaurant Week",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "dietary-fit",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-09-24T17:29:48.593Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current as checked on 2026-09-24. Contact the venue to confirm specific dietary selections before ordering.",
+  "food": {
+    "items": [
+      "Items marked dairy-free on the Restaurant Week menu; ask the venue for the current selection"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "yes",
+      "vegan": "unknown"
+    },
+    "dietNotes": "The organizer says dairy-free items are clearly marked but its text listing does not identify individual dishes. Verify the exact selections and preparation with the venue."
+  }
+}

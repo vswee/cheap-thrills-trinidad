@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "id": "event-moruga-national-trust-tour-meeting-point-to-confirm-moruga-heritage-recreation-tour",
+  "slug": "moruga-heritage-recreation-tour-moruga",
+  "kind": "event",
+  "title": "Moruga Heritage & Recreation Tour",
+  "summary": "A full-day National Trust trip visits cocoa heritage, historic landmarks and the Moruga coast.",
+  "description": "The National Trust of Trinidad and Tobago lists this full-day Moruga tour for Saturday, October 10, 2026, from 8:00 AM to 5:00 PM. Stops include the Cocoa and Chocolate Museum, the ruins of Mother Corn Husk Chapel and Home, Spring Bridge, Moruga Beach Facility, and St. Vincent Ferrer RC Church. The non-member price is TT$350; members pay TT$300. Lunch is optional for an additional TT$60. Contact the organizer to confirm transport, meeting point and availability.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "publishedAt": "2026-09-24T17:29:48.593Z",
+  "checkedAt": "2026-09-24T17:29:48.593Z",
+  "places": [
+    {
+      "name": "Moruga (National Trust tour; meeting point to confirm)",
+      "area": "Moruga",
+      "region": "South Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 350,
+    "fromAmount": 300,
+    "label": "TT$300 members; TT$350 non-members",
+    "terms": "Lunch is optional at an additional TT$60. Confirm transport and meeting point with the National Trust."
+  },
+  "validity": {
+    "startsAt": "2026-10-10T08:00:00-04:00",
+    "endsAt": "2026-10-10T17:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "heritage",
+    "outdoors",
+    "day-trip",
+    "south-trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://nationaltrust.tt/product/moruga-heritage-recreation-tour-october-2026/",
+      "publisher": "National Trust of Trinidad and Tobago",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-09-24T17:29:48.593Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current as checked on 2026-09-24. The official organizer page is the authority for the date; reconfirm logistics and availability before purchase.",
+  "event": {
+    "format": "Guided heritage and recreation tour",
+    "admission": "paid"
+  }
+}

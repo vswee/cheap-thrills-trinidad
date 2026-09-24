@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "id": "event-paramin-national-trust-tour-meeting-point-to-confirm-paramin-heritage-recreation-tour",
+  "slug": "paramin-heritage-recreation-tour-paramin",
+  "kind": "event",
+  "title": "Paramin Heritage & Recreation Tour",
+  "summary": "An afternoon heritage outing combines the Paramin Rounders Tournament, mountain views and local seasoning stops.",
+  "description": "The National Trust of Trinidad and Tobago lists this Paramin outing for Sunday, October 18, 2026, from 2:00 PM to 7:00 PM. The programme includes the Paramin Rounders Tournament, Barre la Vigie Lookout, and stops to discover and sample local seasonings and toolum. Tickets are TT$275 for non-members and TT$225 for members; lunch is not included. Contact the organizer to confirm transport, meeting point and availability.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "publishedAt": "2026-09-24T17:29:48.593Z",
+  "checkedAt": "2026-09-24T17:29:48.593Z",
+  "places": [
+    {
+      "name": "Paramin (National Trust tour; meeting point to confirm)",
+      "area": "Paramin",
+      "region": "North Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 275,
+    "fromAmount": 225,
+    "label": "TT$225 members; TT$275 non-members",
+    "terms": "Lunch is not included. Confirm transport and meeting point with the National Trust."
+  },
+  "validity": {
+    "startsAt": "2026-10-18T14:00:00-04:00",
+    "endsAt": "2026-10-18T19:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "heritage",
+    "sports",
+    "outdoors",
+    "north-trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://nationaltrust.tt/product/paramin-heritage-recreation-tour-october-2026/",
+      "publisher": "National Trust of Trinidad and Tobago",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-09-24T17:29:48.593Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Current as checked on 2026-09-24. Price and trip logistics should be reconfirmed with the organizer.",
+  "event": {
+    "format": "Guided heritage and recreation tour",
+    "admission": "paid"
+  }
+}
