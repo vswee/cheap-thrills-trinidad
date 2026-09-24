@@ -20,7 +20,11 @@ export function ThemeToggle() {
   function toggle() {
     const next = !dark;
     document.documentElement.dataset.theme = next ? "dark" : "light";
-    localStorage.setItem("ctt-theme", next ? "dark" : "light");
+    try {
+      localStorage.setItem("ctt-theme", next ? "dark" : "light");
+    } catch {
+      // Keep the current page usable when browser storage is unavailable.
+    }
     window.dispatchEvent(new Event(themeChanged));
   }
   return <button className="theme-toggle" onClick={toggle} aria-label={`Switch to ${dark ? "light" : "dark"} mode`}>{dark ? "☼" : "◐"}<span>{dark ? "Light" : "Dark"}</span></button>;
