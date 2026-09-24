@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 
@@ -7,10 +8,13 @@ const root = process.cwd();
 const now = new Date();
 const nowIso = now.toISOString();
 const day = nowIso.slice(0, 10);
-const apiKey = process.env.OPENAI_API_KEY;
-if (!apiKey) throw new Error("OPENAI_API_KEY is required");
-
+const codexInputIndex = process.argv.indexOf("--from-codex");
+const codexInputDir = codexInputIndex >= 0 ? process.argv[codexInputIndex + 1] : null;
+if (codexInputIndex >= 0 && (!codexInputDir || codexInputDir.startsWith("--"))) {
+  throw new Error("Usage: npm run discover:ingest -- <proposal-directory>");
+}
 const findSchema = JSON.parse(fs.readFileSync(path.join(root, "schemas/find.schema.json"), "utf8"));
+const routing = JSON.parse(fs.readFileSync(path.join(root, "config/ai-routing.json"), "utf8"));
 const ajv = new Ajv({ allErrors: true, strict: false });
 addFormats(ajv);
 const validateFind = ajv.compile(findSchema);
@@ -73,7 +77,7 @@ function validateCandidate(candidate, kind) {
 }
 
 async function discover(kind, mandate, existing) {
-  const examples = existing.slice(0, 160).map(({ value }) => ({ id: value.id, slug: value.slug, title: value.title, place: value.places[0]?.name, area: value.places[0]?.area, start: value.validity.startsAt, end: value.validity.endsAt, recurrence: value.validity.recurrence, status: value.status }));
+  const examples = existing.slice(0, 160).map(({ value }) => ({ id: value.id, slug: value.slug, title: value.title, place: value.places[0]?.name, area: value.places[0]?.area, start: value.validity.startsAt, end: value.validity.endsAt, repeat: value.validity.recurrence, status: value.status }));
   const outputSchema = {
     type: "object", additionalProperties: false, required: ["finds"], properties: {
       finds: { type: "array", items: { type: "object", additionalProperties: false, required: ["existingId", "confidence", "title", "summary", "description", "placeName", "area", "region", "address", "mapUrl", "price", "validity", "categories", "food", "event", "sources", "editorialNote"], properties: {
@@ -88,24 +92,135 @@ async function discover(kind, mandate, existing) {
     }
   };
   const system = `You are the careful Trinidad ${kind === "food" ? "food-deal" : "non-food events"} editor. Search the live web for currently valid, genuinely useful new finds. Today is ${day}; local time is America/Port_of_Spain (UTC-04:00). Apply this mandate exactly:\n\n${mandate}\n\nExisting records for deduplication (including expired history): ${JSON.stringify(examples)}\n\nReturn only genuinely qualifying, source-backed new finds or material updates. Use existingId only for the same underlying find; do not create a fresh record for an unchanged offer. For an expired recurring food record, re-check whether that same recurrence is still explicitly active; if it is, return it using its existingId so it can be restored. Rate confidence high only when the core offer/event, location, validity, and key claims are supported by direct current sources. Use medium when a promising find needs a human check; use low when it should not be kept. Set sources to direct current pages and supports to the claims actually evidenced. Do not invent a URL, date, price, menu item, location or availability. Event dates must be current/future with year and local offset. Keep uncertain food diet fit as unknown and explain it. If no strong find, return an empty finds array. Do not return sample or hypothetical data. `;
-  const response = await fetch("https://api.openai.com/v1/responses", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ model: process.env.OPENAI_MODEL || "gpt-5.6-luna", store: false, tools: [{ type: "web_search" }], input: system, text: { format: { type: "json_schema", name: "trinidad_finds", strict: true, schema: outputSchema } } }),
-    signal: AbortSignal.timeout(180000),
-  });
-  if (!response.ok) throw new Error(`OpenAI Responses API returned ${response.status}: ${(await response.text()).slice(0, 1000)}`);
+  const providers = [
+    { id: "openai", key: process.env.OPENAI_API_KEY, model: process.env.OPENAI_MODEL || routing.models.openai },
+    { id: "gemini", key: process.env.GEMINI_API_KEY, model: process.env.GEMINI_MODEL || routing.models.gemini },
+    { id: "groq", key: process.env.GROQ_API_KEY, model: process.env.GROQ_MODEL || routing.models.groq },
+  ].filter((provider) => provider.key && routing.weights[provider.id] > 0)
+    .sort((a, b) => routing.weights[b.id] - routing.weights[a.id]);
+  if (providers.length === 0) throw new Error("Set at least one AI provider key: OPENAI_API_KEY, GEMINI_API_KEY, or GROQ_API_KEY");
+
+  const preferred = weightedPick(providers, `${day}:${kind}`);
+  const ordered = [preferred, ...providers.filter((provider) => provider !== preferred).sort((a, b) => routing.weights[b.id] - routing.weights[a.id])];
+  const errors = [];
+  for (const provider of ordered) {
+    try {
+      const providerPrompt = provider.id === "groq" ? `${system}\nRequired output JSON Schema: ${JSON.stringify(outputSchema)}` : system;
+      const finds = await requestProvider(provider, providerPrompt, outputSchema);
+      console.log(`${kind}: discovery used ${provider.id}/${provider.model}`);
+      return finds;
+    } catch (error) {
+      const detail = error instanceof Error ? error.message : String(error);
+      console.warn(`${kind}: ${provider.id}/${provider.model} failed; trying next configured provider. ${detail}`);
+      errors.push(`${provider.id}: ${detail}`);
+    }
+  }
+  throw new Error(`All configured AI providers failed for ${kind}: ${errors.join("; ")}`);
+}
+
+function readCodexProposals(kind, inputDir) {
+  const file = path.resolve(root, inputDir, `${kind}.json`);
+  const proposalFile = JSON.parse(fs.readFileSync(file, "utf8"));
+  const proposals = Array.isArray(proposalFile) ? proposalFile : proposalFile.finds;
+  if (!Array.isArray(proposals)) throw new Error(`${path.relative(root, file)} must contain a finds[] array`);
+  console.log(`${kind}: ingesting ${proposals.length} Codex proposal(s) from ${path.relative(root, file)}`);
+  return proposals;
+}
+
+function weightedPick(providers, seed) {
+  const totalWeight = providers.reduce((sum, provider) => sum + routing.weights[provider.id], 0);
+  const digest = createHash("sha256").update(seed).digest();
+  let slot = digest.readUInt32BE(0) % totalWeight;
+  for (const provider of providers) {
+    slot -= routing.weights[provider.id];
+    if (slot < 0) return provider;
+  }
+  return providers[0];
+}
+
+async function requestProvider(provider, prompt, outputSchema) {
+  if (provider.id === "gemini") return requestGemini(provider, prompt, outputSchema);
+
+  const headers = { "Content-Type": "application/json" };
+  let url;
+  let body;
+  if (provider.id === "openai") {
+    url = "https://api.openai.com/v1/responses";
+    headers.Authorization = `Bearer ${provider.key}`;
+    body = { model: provider.model, store: false, tools: [{ type: "web_search" }], input: prompt, text: { format: { type: "json_schema", name: "trinidad_finds", strict: true, schema: outputSchema } } };
+  } else {
+    url = "https://api.groq.com/openai/v1/chat/completions";
+    headers.Authorization = `Bearer ${provider.key}`;
+    body = { model: provider.model, messages: [{ role: "user", content: prompt }], tools: [{ type: "browser_search" }], response_format: { type: "json_object" } };
+  }
+
+  const response = await fetch(url, { method: "POST", headers, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
+  if (!response.ok) throw new Error(`${provider.id} API returned ${response.status}: ${(await response.text()).slice(0, 700)}`);
   const result = await response.json();
-  const outputText = result.output_text ?? (result.output ?? [])
-    .filter((item) => item.type === "message")
-    .flatMap((item) => item.content ?? [])
-    .filter((item) => item.type === "output_text")
-    .map((item) => item.text)
-    .join("");
-  if (!outputText) throw new Error("Discovery returned no structured output");
-  const parsed = JSON.parse(outputText);
+  let outputText;
+  if (provider.id === "openai") {
+    outputText = result.output_text ?? (result.output ?? []).filter((item) => item.type === "message").flatMap((item) => item.content ?? []).filter((item) => item.type === "output_text").map((item) => item.text).join("");
+  } else {
+    outputText = result.choices?.[0]?.message?.content;
+  }
+  if (typeof outputText !== "string" || !outputText.trim()) throw new Error("Discovery returned no structured output");
+  const parsed = parseJsonObject(outputText);
   if (!Array.isArray(parsed.finds)) throw new Error("Discovery output does not contain finds[]");
   return parsed.finds;
+}
+
+async function requestGemini(provider, prompt, outputSchema) {
+  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(provider.model)}:generateContent`;
+  const headers = { "Content-Type": "application/json", "x-goog-api-key": provider.key };
+  const researchPrompt = `${prompt}\n\nResearch task: Return concise evidence notes for each qualifying food offer or event. Include the exact facts, current validity, location, price or admission, and source links you found. Do not format the result as JSON. Search the web for direct and current sources.`;
+  const research = await geminiRequest(endpoint, headers, {
+    contents: [{ parts: [{ text: researchPrompt }] }],
+    tools: [{ google_search: {} }],
+  }, "Gemini Search grounding");
+  const researchCandidate = research.candidates?.[0];
+  const researchText = researchCandidate?.content?.parts?.map((part) => part.text ?? "").join("").trim();
+  const groundedSources = (researchCandidate?.groundingMetadata?.groundingChunks ?? [])
+    .map((chunk) => chunk.web)
+    .filter((web) => web?.uri)
+    .map((web) => ({ title: web.title ?? "Web source", url: web.uri }));
+  if (!researchText) throw new Error("Gemini Search grounding returned no research text");
+  if (groundedSources.length === 0) throw new Error("Gemini Search grounding returned no source URLs");
+
+  const formattingPrompt = [
+    "Convert the grounded research into the requested proposal schema.",
+    "Use only facts supported by the research notes. Use only exact URLs from the grounded source list; do not invent or rewrite URLs.",
+    "Set source supports only for claims evidenced by the notes. If a claim is unclear, omit the find or keep the relevant dietary fit as unknown.",
+    "Preserve existingId values only when the notes identify a material update to the same existing record.",
+    `Research instructions and existing-directory context:\n${prompt}`,
+    `Grounded research notes:\n${researchText}`,
+    `Grounded source URLs:\n${JSON.stringify(groundedSources)}`,
+  ].join("\n\n");
+  const formatted = await geminiRequest(endpoint, headers, {
+    contents: [{ parts: [{ text: formattingPrompt }] }],
+    generationConfig: { responseMimeType: "application/json", responseSchema: outputSchema, temperature: 0.2 },
+  }, "Gemini structured formatting");
+  const outputText = formatted.candidates?.[0]?.content?.parts?.map((part) => part.text ?? "").join("");
+  if (typeof outputText !== "string" || !outputText.trim()) throw new Error("Gemini structured formatting returned no output");
+  const parsed = parseJsonObject(outputText);
+  if (!Array.isArray(parsed.finds)) throw new Error("Gemini output does not contain finds[]");
+  return parsed.finds;
+}
+
+async function geminiRequest(endpoint, headers, body, label) {
+  const response = await fetch(endpoint, { method: "POST", headers, body: JSON.stringify(body), signal: AbortSignal.timeout(180000) });
+  if (!response.ok) throw new Error(`${label} returned ${response.status}: ${(await response.text()).slice(0, 700)}`);
+  return response.json();
+}
+
+function parseJsonObject(outputText) {
+  try {
+    return JSON.parse(outputText);
+  } catch {
+    const start = outputText.indexOf("{");
+    const end = outputText.lastIndexOf("}");
+    if (start < 0 || end <= start) throw new Error("Discovery output is not valid JSON");
+    return JSON.parse(outputText.slice(start, end + 1));
+  }
 }
 
 function convert(candidate, kind, existing) {
@@ -152,7 +267,7 @@ async function main() {
     const existing = readFinds(kind);
     written += expireDatedFinds(existing);
     const mandate = fs.readFileSync(path.join(root, mandateFile), "utf8");
-    const proposals = await discover(kind, mandate, existing);
+    const proposals = codexInputDir ? readCodexProposals(kind, codexInputDir) : await discover(kind, mandate, existing);
     console.log(`${kind}: ${proposals.length} proposed find(s)`);
     const targets = new Set();
     for (const proposal of proposals) {
