@@ -216,13 +216,25 @@ async function requestGroq(provider, prompt, outputSchema) {
   const researchPrompt = `${prompt}\n\nResearch task: Search the live web for qualifying current finds. Return concise evidence notes with exact facts, dates, prices, location, dietary claims where relevant, and exact source URLs. Do not format as JSON.`;
   const researchResponse = await fetch(url, {
     method: "POST", headers,
-    body: JSON.stringify({ model: provider.model, messages: [{ role: "user", content: researchPrompt }], tools: [{ type: "browser_search" }] }),
+    body: JSON.stringify({
+      model: provider.model,
+      messages: [{ role: "user", content: researchPrompt }],
+      tools: [{ type: "browser_search" }],
+      tool_choice: "required",
+      reasoning_effort: "low",
+      max_completion_tokens: 8192,
+      stream: false,
+    }),
     signal: AbortSignal.timeout(180000),
   });
   if (!researchResponse.ok) throw new Error(`Groq browser search returned ${researchResponse.status}: ${(await researchResponse.text()).slice(0, 700)}`);
   const research = await researchResponse.json();
   const researchText = research.choices?.[0]?.message?.content;
-  if (typeof researchText !== "string" || !researchText.trim()) throw new Error("Groq browser search returned no research notes");
+  if (typeof researchText !== "string" || !researchText.trim()) {
+    const message = research.choices?.[0]?.message;
+    const toolNames = (message?.tool_calls ?? []).map((call) => call.function?.name ?? call.type).filter(Boolean);
+    throw new Error(`Groq browser search returned no final research notes (finish_reason=${research.choices?.[0]?.finish_reason ?? "unknown"}; tools=${toolNames.join(",") || "none"})`);
+  }
 
   const formattingPrompt = [
     "Convert the web research notes into the requested proposal schema.",
