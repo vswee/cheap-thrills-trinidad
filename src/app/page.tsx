@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FindFeed } from "@/components/find-feed";
 import { ReportForm } from "@/components/report-form";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { IslandStamp } from "@/components/island-stamp";
 import { getFinds } from "@/lib/content";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
       <div className="hero-kicker"><span className="live-dot" /> THE GOOD STUFF, FOR LESS <span className="kicker-line" /></div>
       <h1>Trinidad, well<br />spent<span className="hero-period">.</span></h1>
       <div className="hero-bottom"><p>Good food. Good times.<br /><em>Better prices.</em></p><span className="hero-note">A growing guide to worthwhile finds<br />across Trinidad, updated often.</span><a className="round-link" href="#latest" aria-label="Scroll to latest finds">↓</a></div>
-      <div className="hero-stamp">ISLAND<br /><span>FINDS</span><b>·</b> 10° 31′ N</div>
+      <div className="hero-stamp"><IslandStamp /></div>
     </section>
     <section className="latest-section" id="latest">
       <div className="section-heading"><div><p className="eyebrow">THE DIRECTORY <span>↘</span></p><h2>Latest finds</h2></div>{finds.length > 0 && <p className="count-note">{finds.length} good {finds.length === 1 ? "find" : "finds"} and counting</p>}</div>
