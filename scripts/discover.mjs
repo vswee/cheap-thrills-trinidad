@@ -105,8 +105,7 @@ async function discover(kind, mandate, existing) {
   const errors = [];
   for (const provider of ordered) {
     try {
-      const providerPrompt = provider.id === "groq" ? `${system}\nRequired output JSON Schema: ${JSON.stringify(outputSchema)}` : system;
-      const finds = await requestProvider(provider, providerPrompt, outputSchema);
+      const finds = await requestProvider(provider, system, outputSchema);
       console.log(`${kind}: discovery used ${provider.id}/${provider.model}`);
       return {
         finds,
