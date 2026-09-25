@@ -80,7 +80,7 @@ body { font-family: var(--font-inter), Inter, Arial, sans-serif; }
   .hero-copy { max-width:100%; }
   .hero-copy h1 { font-size:clamp(59px,14vw,82px); line-height:.95; letter-spacing:-.075em; }
   .hero-copy>p { margin-top:19px; font-size:14px; line-height:1.65; }
-  .hero-copy>p span { font-size:12px; }
+.hero-copy>p span { font-size:12px; }
   .hero-stamp { width:168px; height:180px; top:auto; bottom:12px; right:0; transform:rotate(1deg); }
   .holiday-banner { min-height:58px; grid-template-columns:auto auto; justify-content:center; gap:10px; padding:8px 14px; }
   .holiday-sun { width:27px; height:27px; }
@@ -88,4 +88,41 @@ body { font-family: var(--font-inter), Inter, Arial, sans-serif; }
   .holiday-message strong { font-size:14px; }
   .holiday-note { display:none; }
   .find-card { min-height:190px; }
+}
+
+/* Oversized, viewport-clipped map artwork in the homepage hero. */
+.site-shell { overflow-x:clip; overflow-y:visible; }
+.hero { min-height:520px; overflow:visible; isolation:isolate; }
+.hero-copy { max-width:62%; z-index:1; }
+.hero-stamp {
+  position:absolute;
+  z-index:0;
+  top:50%;
+  right:clamp(-460px,-22vw,-150px);
+  width:min(84vw,1100px);
+  height:auto;
+  aspect-ratio:136 / 124;
+  transform:translateY(-50%);
+  opacity:.19;
+  pointer-events:none;
+}
+.island-stamp {
+  display:block;
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg,var(--green),var(--green) 68%,var(--accent));
+  -webkit-mask-image:url("/trinidad-and-tobago-orthographic.svg");
+  mask-image:url("/trinidad-and-tobago-orthographic.svg");
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-position:center;
+  mask-position:center;
+  -webkit-mask-size:contain;
+  mask-size:contain;
+}
+@media (max-width:650px) {
+  .hero { min-height:520px; padding:56px 0; align-items:center; }
+  .hero-copy { max-width:88%; }
+  .hero-copy h1 { font-size:clamp(59px,14vw,82px); }
+  .hero-stamp { width:min(112vw,640px); right:-38vw; top:50%; bottom:auto; opacity:.14; transform:translateY(-50%); }
 }
