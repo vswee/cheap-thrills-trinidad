@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "food-mr-rango-two-for-one-tuesday-appetizers",
+  "slug": "mr-rango-two-for-one-tuesday-appetizers",
+  "kind": "food",
+  "title": "Mr. Rango 2-for-1 Tuesday appetizers",
+  "summary": "Get two of selected appetizers for the price of one, all day Tuesday.",
+  "description": "The listed selection includes Jalapeño Rellenos, Bacon Jalapeño Cheese Fries, Salt & Pepper Tofu, Mama Julia Corn, Cajun Corn Ribs, Mozzarella Sticks, Onion Rings, and Chicken or Beef Nachos. Items are subject to tax.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-09-25T11:37:54Z",
+  "publishedAt": "2026-09-25T11:37:54Z",
+  "checkedAt": "2026-09-25T11:37:54Z",
+  "places": [
+    {
+      "name": "Mr. Rango Cookhouse",
+      "area": "Price Plaza, Chaguanas",
+      "region": "Central Trinidad",
+      "address": "#2 & 3 Lot D, Price Plaza",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Price not stated — 2-for-1",
+    "terms": "Selected appetizers only; items are subject to tax. See linked list and confirm availability."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Every Tuesday, all day",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "food-deal",
+    "value-meal"
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6 desktop (manual source review)"
+  },
+  "food": {
+    "items": [
+      "selected appetizers"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Some items contain meat or dairy; preparation details vary."
+  },
+  "sources": [
+    {
+      "url": "https://mrrango.ttmenus.com/promotions/2-for-1-tuesdays/",
+      "publisher": "Mr. Rango Cookhouse via TT Menus",
+      "type": "official",
+      "checkedAt": "2026-09-25T11:37:54Z",
+      "supports": [
+        "offer",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+}

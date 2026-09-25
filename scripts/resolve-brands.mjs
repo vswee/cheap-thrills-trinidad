@@ -54,7 +54,7 @@ function safeHttpsUrl(value, base) {
 function coreTokens(name) {
   return name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
     .replace(/[^a-z0-9]+/g, " ").trim().split(/\s+/)
-    .filter((word) => word.length > 2 && !/^(the|and|for|from|restaurant|grill|cafe|café|limited|ltd|inc|llc|trinidad|tobago|tt)$/.test(word));
+    .filter((word) => word.length > 2 && !/^(the|and|for|from|limited|ltd|inc|llc|trinidad|tobago|tt)$/.test(word));
 }
 
 function pageBelongsToBrand(source, name) {
@@ -129,6 +129,7 @@ function officialImageFromHtml(html, pageUrl, source, brand) {
     if (typeof rawUrl !== "string" || !rawUrl) return;
     const url = safeHttpsUrl(rawUrl, pageUrl);
     if (!url) return;
+    if (url.hostname === "cdn.ttmenus.com" && /\/branding\/ttmenus\//i.test(url.pathname)) return;
     candidates.push({ url: url.href, signal: normalize(signal), width: parseDimension(width, 120), height: parseDimension(height, 60), mode, kind });
   };
 
@@ -181,7 +182,8 @@ function acceptedLicense(value) {
 
 async function commonsLogo(brand) {
   const tokens = coreTokens(brand.name);
-  if (!tokens.length) return null;
+  // A single name token is too ambiguous for Commons search; rely on the official venue page instead.
+  if (tokens.length < 2) return null;
   const searchName = tokens.join(" ");
   const query = new URLSearchParams({ action: "query", format: "json", generator: "search", gsrsearch: `intitle:"${searchName}" logo`, gsrnamespace: "6", gsrlimit: "15", prop: "imageinfo", iiprop: "url|extmetadata", iiurlwidth: "320" });
   const response = await fetch(`https://commons.wikimedia.org/w/api.php?${query}`, { headers: { "User-Agent": userAgent, Accept: "application/json" }, signal: AbortSignal.timeout(15000) });
@@ -290,14 +292,25 @@ export async function resolveBrandAssets() {
 
   for (const { brand, sources } of groups.values()) {
     const checkedAt = brand.checkedAt ? new Date(brand.checkedAt).getTime() : 0;
-    if (brand.mark || (Number.isFinite(checkedAt) && Date.now() - checkedAt < retryAfterMs)) continue;
-    const officialSources = [...new Map(sources.filter((source) => source.type === "official").map((source) => [source.url, source])).values()];
-    try {
-      brand.mark = await commonsLogo(brand);
-    } catch (error) {
-      console.warn(`Commons logo lookup failed for ${brand.name}: ${error instanceof Error ? error.message : String(error)}`);
+    const refreshOfficialMark = brand.mark?.sourceType === "official-cdn" && Number.isFinite(checkedAt) && Date.now() - checkedAt >= retryAfterMs;
+    if (brand.mark && !refreshOfficialMark) continue;
+    const previousMark = brand.mark;
+    const officialSources = [...new Map([
+      ...(brand.mark?.sourcePage ? [{ url: brand.mark.sourcePage, type: "official", publisher: brand.name }] : []),
+      ...sources.filter((source) => source.type === "official"),
+    ].map((source) => [source.url, source])).values()];
+    if (!brand.mark) {
+      try {
+        brand.mark = await commonsLogo(brand);
+      } catch (error) {
+        console.warn(`Commons logo lookup failed for ${brand.name}: ${error instanceof Error ? error.message : String(error)}`);
+      }
     }
-    if (!brand.mark) brand.mark = await officialCdnLogo(brand, officialSources);
+    if (!brand.mark || refreshOfficialMark) {
+      const refreshedMark = await officialCdnLogo(brand, officialSources);
+      if (refreshedMark) brand.mark = refreshedMark;
+      else if (previousMark) brand.mark = previousMark;
+    }
     brand.checkedAt = new Date().toISOString();
     changed = true;
     console.log(brand.mark

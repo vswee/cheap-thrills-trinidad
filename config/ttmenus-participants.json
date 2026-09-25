@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "participants": [
+    { "name": "OMG Sushi", "origin": "https://omgsushi.ttmenus.com", "area": "Endeavour, Chaguanas", "region": "Central Trinidad" },
+    { "name": "Woodford Cafe", "origin": "https://woodfordcafe.ttmenus.com", "area": "Price Plaza, Chaguanas", "region": "Central Trinidad" },
+    { "name": "Burger King", "origin": "https://burgerking.ttmenus.com", "area": "Grand Bazaar", "region": "Central Trinidad" },
+    { "name": "Mr. Rango Cookhouse", "origin": "https://mrrango.ttmenus.com", "area": "Price Plaza, Chaguanas", "region": "Central Trinidad" }
+  ]
+}

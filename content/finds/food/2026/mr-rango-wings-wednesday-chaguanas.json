@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "food-mr-rango-wings-wednesday-chaguanas",
+  "slug": "mr-rango-wings-wednesday-chaguanas",
+  "kind": "food",
+  "title": "Mr. Rango Wings Wednesday — buy 10, get 5 free",
+  "summary": "Buy 10 wings and receive 5 more free, all day Wednesday.",
+  "description": "Mr. Rango lists this wings offer for its Cookhouse locations. Items are subject to tax.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-09-25T11:37:54Z",
+  "publishedAt": "2026-09-25T11:37:54Z",
+  "checkedAt": "2026-09-25T11:37:54Z",
+  "places": [
+    {
+      "name": "Mr. Rango Cookhouse",
+      "area": "Price Plaza, Chaguanas",
+      "region": "Central Trinidad",
+      "address": "#2 & 3 Lot D, Price Plaza",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Price not stated — buy 10 wings, get 5 free",
+    "terms": "Items subject to tax; confirm branch availability."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Every Wednesday, all day",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "food-deal",
+    "value-meal"
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6 desktop (manual source review)"
+  },
+  "food": {
+    "items": [
+      "15 chicken wings (10 paid, 5 free)"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "Chicken wings; dairy and shared preparation details are not stated."
+  },
+  "sources": [
+    {
+      "url": "https://mrrango.ttmenus.com/promotions/wings-wednesday/",
+      "publisher": "Mr. Rango Cookhouse via TT Menus",
+      "type": "official",
+      "checkedAt": "2026-09-25T11:37:54Z",
+      "supports": [
+        "offer",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+}

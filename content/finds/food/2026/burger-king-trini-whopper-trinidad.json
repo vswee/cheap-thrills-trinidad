@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "food-burger-king-trini-whopper-trinidad",
+  "slug": "burger-king-trini-whopper-trinidad",
+  "kind": "food",
+  "title": "Burger King limited-time Trini Whopper — TT$55.11",
+  "summary": "A Trinidad Whopper listed at TT$55.11 under Burger King’s limited-time offers.",
+  "description": "The Trinidad Burger King menu lists the Trini Whopper for TT$55.11. Check the selected branch and checkout total before ordering; this is a limited-time menu item, not a stated discount.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-09-25T11:37:54Z",
+  "publishedAt": "2026-09-25T11:37:54Z",
+  "checkedAt": "2026-09-25T11:37:54Z",
+  "places": [
+    {
+      "name": "Burger King",
+      "area": "Grand Bazaar",
+      "region": "Central Trinidad",
+      "address": "Grand Bazaar Food Court",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 55.11,
+    "fromAmount": null,
+    "label": "TT$55.11 listed",
+    "terms": "Listed as limited time; confirm availability at participating locations."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Limited-time menu item; confirm with participating branch",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "food-deal",
+    "value-meal"
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6 desktop (manual source review)"
+  },
+  "food": {
+    "items": [
+      "Trini Whopper"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "Whopper is a beef burger; dairy and shared-preparation details are not specified."
+  },
+  "sources": [
+    {
+      "url": "https://burgerking.ttmenus.com/limited-time-offers/trini-whopper/",
+      "publisher": "Burger King via TT Menus",
+      "type": "official",
+      "checkedAt": "2026-09-25T11:37:54Z",
+      "supports": [
+        "offer",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+}

@@ -36,6 +36,10 @@ The resolver prefers a Commons logo whose title clearly matches the venue and wh
 
 Review registry changes and attribution alongside new records. Do not manually edit the generated attribution file; correct the registry entry or resolver instead. If a brand changes its identity or a source is no longer appropriate, update the registry entry deliberately and preserve the provenance trail in Git history.
 
+## TT Menus discovery sources
+
+The food worker reads the public `/api/menu-items.json` feed on each configured participant origin in `config/ttmenus-participants.json`. It extracts entries from specials, promotions, limited-time offers, deal, and feast categories, and fetches the exact public item page before sending the evidence to the research model. It can also discover additional participant origins from TT Menus URLs already present in published food records. Per-run venue and item limits, request timeouts, response-size limits, exact same-origin page validation, and catalogue timestamps constrain this integration. The catalogue is a discovery index, not sufficient proof by itself: stale catalogues need a currently accessible item page with matching offer details before the worker can publish a current recurring offer. Only public menu data is read; the worker does not sign in, order, or submit forms.
+
 ## Record contract
 
 Every record has: `schemaVersion`, `id`, `slug`, `kind`, `title`, `summary`, `description`, `status`, `confidence`, `createdAt`, `updatedAt`, `checkedAt`, `places`, `price`, `validity`, `categories`, and `sources`.

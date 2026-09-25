@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "food-mr-rango-burger-thursday-20-off",
+  "slug": "mr-rango-burger-thursday-20-off",
+  "kind": "food",
+  "title": "Mr. Rango Burger Thursday — TT$20 off burgers and sandwiches",
+  "summary": "Save TT$20 on listed burgers and sandwiches all day Thursday.",
+  "description": "The promotion page lists TT$20 off burgers and sandwiches. It also mentions a separate tequila-shot offer, which is not included here. Items are subject to tax.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-09-25T11:37:54Z",
+  "publishedAt": "2026-09-25T11:37:54Z",
+  "checkedAt": "2026-09-25T11:37:54Z",
+  "places": [
+    {
+      "name": "Mr. Rango Cookhouse",
+      "area": "Price Plaza, Chaguanas",
+      "region": "Central Trinidad",
+      "address": "#2 & 3 Lot D, Price Plaza",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Price not stated — TT$20 off",
+    "terms": "Items are subject to tax. This listing covers the food discount only."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Every Thursday, all day",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "food-deal",
+    "value-meal"
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6 desktop (manual source review)"
+  },
+  "food": {
+    "items": [
+      "burgers and sandwiches"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Menu choices vary; ask the venue about dietary options."
+  },
+  "sources": [
+    {
+      "url": "https://mrrango.ttmenus.com/promotions/burger-thursdays/",
+      "publisher": "Mr. Rango Cookhouse via TT Menus",
+      "type": "official",
+      "checkedAt": "2026-09-25T11:37:54Z",
+      "supports": [
+        "offer",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+}

@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { resolveBrandAssets } from "./resolve-brands.mjs";
+import { collectTtMenusEvidence } from "./ttmenus.mjs";
 
 const root = process.cwd();
 const now = new Date();
@@ -77,8 +78,8 @@ function validateCandidate(candidate, kind) {
   }
 }
 
-async function discover(kind, mandate, existing) {
-  const examples = existing.slice(0, 160).map(({ value }) => ({ id: value.id, slug: value.slug, title: value.title, place: value.places[0]?.name, area: value.places[0]?.area, start: value.validity.startsAt, end: value.validity.endsAt, repeat: value.validity.recurrence, status: value.status }));
+async function discover(kind, mandate, existing, ttMenusEvidence = []) {
+  const examples = existing.map(({ value }) => ({ id: value.id, slug: value.slug, title: value.title, place: value.places[0]?.name, area: value.places[0]?.area, start: value.validity.startsAt, end: value.validity.endsAt, repeat: value.validity.recurrence, status: value.status }));
   const outputSchema = {
     type: "object", additionalProperties: false, required: ["finds"], properties: {
       finds: { type: "array", items: { type: "object", additionalProperties: false, required: ["existingId", "confidence", "title", "summary", "description", "placeName", "area", "region", "address", "mapUrl", "price", "validity", "categories", "food", "event", "sources", "editorialNote"], properties: {
@@ -92,7 +93,7 @@ async function discover(kind, mandate, existing) {
       } } }
     }
   };
-  const system = `You are the careful Trinidad ${kind === "food" ? "food-deal" : "non-food events"} editor. Search the live web for currently valid, genuinely useful new finds. Today is ${day}; local time is America/Port_of_Spain (UTC-04:00). Apply this mandate exactly:\n\n${mandate}\n\nExisting records for deduplication (including expired history): ${JSON.stringify(examples)}\n\nReturn only genuinely qualifying, source-backed new finds or material updates. Use existingId only for the same underlying find; do not create a fresh record for an unchanged offer. For an expired recurring food record, re-check whether that same recurrence is still explicitly active; if it is, return it using its existingId so it can be restored. Rate confidence high only when the core offer/event, location, validity, and key claims are supported by direct current sources. Use medium when a promising find needs a human check; use low when it should not be kept. Set sources to direct current pages and supports to the claims actually evidenced. Do not invent a URL, date, price, menu item, location or availability. Event dates must be current/future with year and local offset. Keep uncertain food diet fit as unknown and explain it. If no strong find, return an empty finds array. Do not return sample or hypothetical data. `;
+  const system = `You are the careful Trinidad ${kind === "food" ? "food-deal" : "non-food events"} editor. Search the live web for currently valid, genuinely useful new finds. Today is ${day}; local time is America/Port_of_Spain (UTC-04:00). Apply this mandate exactly:\n\n${mandate}\n\nExisting records for deduplication (including expired history): ${JSON.stringify(examples)}\n\nReturn only genuinely qualifying, source-backed new finds or material updates. Use existingId only for the same underlying find; do not create a fresh record for an unchanged offer. For an expired recurring food record, re-check whether that same recurrence is still explicitly active; if it is, return it using its existingId so it can be restored. Rate confidence high only when the core offer/event, location, validity, and key claims are supported by direct current sources. Use medium when a promising find needs a human check; use low when it should not be kept. Set sources to direct current pages and supports to the claims actually evidenced. Do not invent a URL, date, price, menu item, location or availability. Event dates must be current/future with year and local offset. Keep uncertain food diet fit as unknown and explain it. If no strong find, return an empty finds array. Do not return sample or hypothetical data.${kind === "food" && ttMenusEvidence.length ? `\n\nCurrent TT Menus participant listings scraped from their public menu API and item pages. Treat each item page URL as an exact source; use only offers still visibly listed there. Prefer low-priced food offers and explicit specials. Use pageExcerpt for the offer terms; do not infer a schedule from a title alone. If pageExcerpt is absent and catalogIsFresh is false, treat the catalog item as stale and do not publish it as current. Preserve sourceUrl exactly. This evidence is a lead set, not a guarantee that every item qualifies:\n${JSON.stringify(ttMenusEvidence)}` : ""}`;
   const providers = [
     { id: "openai", key: process.env.OPENAI_API_KEY, model: process.env.OPENAI_MODEL || routing.models.openai },
     { id: "gemini", key: process.env.GEMINI_API_KEY, model: process.env.GEMINI_MODEL || routing.models.gemini },
@@ -106,7 +107,7 @@ async function discover(kind, mandate, existing) {
   const errors = [];
   for (const provider of ordered) {
     try {
-      const finds = await requestProvider(provider, system, outputSchema);
+      const finds = await requestProvider(provider, system, outputSchema, ttMenusEvidence);
       console.log(`${kind}: discovery used ${provider.id}/${provider.model}`);
       return {
         finds,
@@ -151,9 +152,9 @@ function weightedPick(providers, seed) {
   return providers[0];
 }
 
-async function requestProvider(provider, prompt, outputSchema) {
-  if (provider.id === "gemini") return requestGemini(provider, prompt, outputSchema);
-  if (provider.id === "groq") return requestGroq(provider, prompt, outputSchema);
+async function requestProvider(provider, prompt, outputSchema, ttMenusEvidence = []) {
+  if (provider.id === "gemini") return requestGemini(provider, prompt, outputSchema, ttMenusEvidence);
+  if (provider.id === "groq") return requestGroq(provider, prompt, outputSchema, ttMenusEvidence);
 
   const headers = { "Content-Type": "application/json" };
   let url;
@@ -177,7 +178,7 @@ async function requestProvider(provider, prompt, outputSchema) {
   return parsed.finds;
 }
 
-async function requestGemini(provider, prompt, outputSchema) {
+async function requestGemini(provider, prompt, outputSchema, ttMenusEvidence = []) {
   const endpoint = "https://generativelanguage.googleapis.com/v1beta/interactions";
   const headers = { "Content-Type": "application/json", "x-goog-api-key": provider.key };
   const researchPrompt = `${prompt}\n\nResearch task: Return concise evidence notes for each qualifying food offer or event. Include the exact facts, current validity, location, price or admission, and source links you found. Do not format the result as JSON. Search the web for direct and current sources.`;
@@ -185,7 +186,11 @@ async function requestGemini(provider, prompt, outputSchema) {
     model: provider.model, input: researchPrompt, tools: [{ type: "google_search", search_types: ["web_search"] }], store: false,
   }, "Gemini Search grounding");
   const researchText = research.output_text?.trim();
-  const groundedSources = collectUrls(research.steps ?? []).map((url) => ({ title: "Web source", url }));
+  const workerFetchedSources = ttMenusEvidence.filter((item) => item.pageExcerpt).map((item) => ({ title: `${item.participant}: ${item.title}`, url: item.sourceUrl }));
+  const groundedSources = [...new Map([
+    ...collectUrls(research.steps ?? []).map((url) => [url, { title: "Web source", url }]),
+    ...workerFetchedSources.map((source) => [source.url, source]),
+  ]).values()];
   if (!researchText) throw new Error("Gemini Search grounding returned no research text");
   if (groundedSources.length === 0) throw new Error("Gemini Search grounding returned no source URLs");
 
@@ -210,7 +215,7 @@ async function requestGemini(provider, prompt, outputSchema) {
   return parsed.finds;
 }
 
-async function requestGroq(provider, prompt, outputSchema) {
+async function requestGroq(provider, prompt, outputSchema, ttMenusEvidence = []) {
   const url = "https://api.groq.com/openai/v1/chat/completions";
   const headers = { "Content-Type": "application/json", Authorization: `Bearer ${provider.key}` };
   const researchPrompt = `${prompt}\n\nResearch task: Search the live web for qualifying current finds. Return concise evidence notes with exact facts, dates, prices, location, dietary claims where relevant, and exact source URLs. Do not format as JSON.`;
@@ -239,6 +244,7 @@ async function requestGroq(provider, prompt, outputSchema) {
   const formattingPrompt = [
     "Convert the web research notes into the requested proposal schema.",
     "Use only facts supported by the research notes and exact source URLs stated in those notes. Do not invent or rewrite URLs. Omit unsupported finds.",
+    `Worker-fetched TT Menus detail pages (these exact URLs and excerpts are approved source evidence): ${JSON.stringify(ttMenusEvidence.filter((item) => item.pageExcerpt).map(({ participant, title, sourceUrl, pageExcerpt }) => ({ participant, title, sourceUrl, pageExcerpt })))}`,
     `Required output JSON Schema: ${JSON.stringify(outputSchema)}`,
     `Research notes:\n${researchText}`,
   ].join("\n\n");
@@ -337,7 +343,8 @@ async function main() {
     const existing = readFinds(kind);
     written += expireDatedFinds(existing);
     const mandate = fs.readFileSync(path.join(root, mandateFile), "utf8");
-    const result = codexInputDir ? readCodexProposals(kind, codexInputDir) : await discover(kind, mandate, existing);
+    const ttMenusEvidence = kind === "food" && !codexInputDir ? await collectTtMenusEvidence(existing) : [];
+    const result = codexInputDir ? readCodexProposals(kind, codexInputDir) : await discover(kind, mandate, existing, ttMenusEvidence);
     const proposals = result.finds;
     console.log(`${kind}: ${proposals.length} proposed find(s)`);
     const targets = new Set();

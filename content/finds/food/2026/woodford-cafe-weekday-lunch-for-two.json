@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "food-woodford-cafe-weekday-lunch-for-two",
+  "slug": "woodford-cafe-weekday-lunch-for-two",
+  "kind": "food",
+  "title": "Woodford Café weekday lunch for two — TT$281.25",
+  "summary": "A weekday lunch listing for two people at TT$281.25, with taxes included.",
+  "description": "Woodford Café lists a Lunch for Two special Monday to Friday from 11am to 3pm. The page does not specify meal choices; contact the café to confirm inclusions.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-09-25T11:37:54Z",
+  "publishedAt": "2026-09-25T11:37:54Z",
+  "checkedAt": "2026-09-25T11:37:54Z",
+  "places": [
+    {
+      "name": "Woodford Café",
+      "area": "Price Plaza, Chaguanas",
+      "region": "Central Trinidad",
+      "address": "Shop C1, Price Plaza North, Narsaloo Ramaya Road",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 281.25,
+    "fromAmount": null,
+    "label": "TT$281.25 for two, taxes included",
+    "terms": "TT Menus item page says all taxes included; meal inclusions are not described."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Monday–Friday, 11:00 AM–3:00 PM",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "food-deal",
+    "value-meal"
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6 desktop (manual source review)"
+  },
+  "food": {
+    "items": [
+      "lunch for two"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "The menu page does not specify the meal choices or dietary options."
+  },
+  "sources": [
+    {
+      "url": "https://woodfordcafe.ttmenus.com/specials/lunch-for-2-mon-fri-11am-3pm/",
+      "publisher": "Woodford Café via TT Menus",
+      "type": "official",
+      "checkedAt": "2026-09-25T11:37:54Z",
+      "supports": [
+        "offer",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+}

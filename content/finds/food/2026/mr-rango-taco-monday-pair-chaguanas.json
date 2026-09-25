@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "food-mr-rango-taco-monday-pair-chaguanas",
+  "slug": "mr-rango-taco-monday-pair-chaguanas",
+  "kind": "food",
+  "title": "Mr. Rango Taco Monday — 2 tacos for TT$39.95",
+  "summary": "Two chicken, beef or fish tacos for TT$39.95, all day Monday.",
+  "description": "Mr. Rango’s listed Taco Monday special is a pair of tacos. Items are subject to tax.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-09-25T11:37:54Z",
+  "publishedAt": "2026-09-25T11:37:54Z",
+  "checkedAt": "2026-09-25T11:37:54Z",
+  "places": [
+    {
+      "name": "Mr. Rango Cookhouse",
+      "area": "Price Plaza, Chaguanas",
+      "region": "Central Trinidad",
+      "address": "#2 & 3 Lot D, Price Plaza",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 39.95,
+    "fromAmount": null,
+    "label": "TT$39.95 for two tacos",
+    "terms": "Items subject to tax; choose chicken, beef or fish. Branch availability may vary."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Every Monday, all day",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "food-deal",
+    "value-meal"
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6 desktop (manual source review)"
+  },
+  "food": {
+    "items": [
+      "two chicken, beef or fish tacos"
+    ],
+    "dietFit": {
+      "pescatarian": "yes",
+      "dairyFree": "unknown",
+      "vegan": "no"
+    },
+    "dietNotes": "Fish taco option is listed. Confirm toppings and preparation; items are subject to tax."
+  },
+  "sources": [
+    {
+      "url": "https://mrrango.ttmenus.com/promotions/taco-mondays/",
+      "publisher": "Mr. Rango Cookhouse via TT Menus",
+      "type": "official",
+      "checkedAt": "2026-09-25T11:37:54Z",
+      "supports": [
+        "offer",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+}

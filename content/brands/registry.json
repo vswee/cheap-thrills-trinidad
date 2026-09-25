@@ -93,13 +93,13 @@
       ],
       "mark": {
         "sourceType": "official-cdn",
-        "src": "https://tt.jaxxinternationalgrill.com/wp-content/uploads/2024/12/Jaxx-Logo_No-Oval.png",
+        "src": "https://jaxxinternationalgrill.com/images/jaxx-logo.png",
         "width": 661,
         "height": 462,
         "mode": "standard",
-        "sourcePage": "https://tt.jaxxinternationalgrill.com/jaxxgrilltt-menu/",
+        "sourcePage": "https://jaxxinternationalgrill.com/",
         "license": "Officially hosted brand asset; copyright and trademark remain with Jaxx International Grill.",
-        "credit": "Jaxx International Grill Trinidad official menu"
+        "credit": "Jaxx International Grill official website"
       },
       "checkedAt": "2026-09-25T12:00:00.000Z"
     },
@@ -110,7 +110,7 @@
         "Abraham's Grill Hut"
       ],
       "mark": null,
-      "checkedAt": "2026-09-25T11:12:48.491Z"
+      "checkedAt": "2026-09-25T11:46:30.380Z"
     },
     {
       "id": "first-harvest-kitchen",
@@ -119,7 +119,7 @@
         "First Harvest Kitchen"
       ],
       "mark": null,
-      "checkedAt": "2026-09-25T11:12:48.990Z"
+      "checkedAt": "2026-09-25T11:46:32.967Z"
     },
     {
       "id": "the-fresh-press-cafe",
@@ -128,7 +128,7 @@
         "The Fresh Press Café"
       ],
       "mark": null,
-      "checkedAt": "2026-09-25T11:12:49.481Z"
+      "checkedAt": "2026-09-25T11:46:39.305Z"
     },
     {
       "id": "the-mythical-brew",
@@ -137,7 +137,83 @@
         "The Mythical Brew"
       ],
       "mark": null,
-      "checkedAt": "2026-09-25T11:12:49.958Z"
+      "checkedAt": "2026-09-25T11:46:39.839Z"
+    },
+    {
+      "id": "burger-king",
+      "name": "Burger King",
+      "aliases": [
+        "Burger King"
+      ],
+      "mark": {
+        "sourceType": "official-cdn",
+        "src": "https://burgerking.ttmenus.com/branding/favicon192.webp",
+        "width": 120,
+        "height": 120,
+        "mode": "standard",
+        "kind": "logo",
+        "sourcePage": "https://burgerking.ttmenus.com/limited-time-offers/trini-whopper/",
+        "license": "Official site-linked logo asset; copyright and trademark remain with Burger King.",
+        "credit": "Burger King official source page"
+      },
+      "checkedAt": "2026-09-25T11:46:32.446Z"
+    },
+    {
+      "id": "mr-rango-cookhouse",
+      "name": "Mr. Rango Cookhouse",
+      "aliases": [
+        "Mr. Rango Cookhouse"
+      ],
+      "mark": {
+        "sourceType": "official-cdn",
+        "src": "https://mrrango.ttmenus.com/branding/favicon192.webp",
+        "width": 120,
+        "height": 120,
+        "mode": "standard",
+        "kind": "logo",
+        "sourcePage": "https://mrrango.ttmenus.com/promotions/wings-wednesday/",
+        "license": "Official site-linked logo asset; copyright and trademark remain with Mr. Rango Cookhouse.",
+        "credit": "Mr. Rango Cookhouse official source page"
+      },
+      "checkedAt": "2026-09-25T11:46:36.994Z"
+    },
+    {
+      "id": "omg-sushi",
+      "name": "OMG Sushi",
+      "aliases": [
+        "OMG Sushi"
+      ],
+      "mark": {
+        "sourceType": "official-cdn",
+        "src": "https://omgsushi.ttmenus.com/branding/favicon192.webp",
+        "width": 192,
+        "height": 192,
+        "mode": "standard",
+        "kind": "logo",
+        "sourcePage": "https://omgsushi.ttmenus.com/specials/20-piece-combo/",
+        "license": "Official site-linked logo asset; copyright and trademark remain with OMG Sushi.",
+        "credit": "OMG Sushi official source page"
+      },
+      "checkedAt": "2026-09-25T11:46:38.825Z"
+    },
+    {
+      "id": "woodford-cafe",
+      "name": "Woodford Café",
+      "aliases": [
+        "Woodford Café"
+      ],
+      "mark": {
+        "sourceType": "official-cdn",
+        "src": "https://woodfordcafe.ttmenus.com/branding/favicon192.webp",
+        "width": 120,
+        "height": 120,
+        "mode": "standard",
+        "kind": "logo",
+        "sourcePage": "https://woodfordcafe.ttmenus.com/specials/lunch-for-2-mon-fri-11am-3pm/",
+        "license": "Official site-linked logo asset; copyright and trademark remain with Woodford Café.",
+        "credit": "Woodford Café official source page"
+      },
+      "checkedAt": "2026-09-25T11:46:41.496Z"
     }
   ]
 }

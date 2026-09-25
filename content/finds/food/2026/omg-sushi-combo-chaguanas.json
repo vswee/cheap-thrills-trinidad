@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "id": "food-omg-sushi-combo-chaguanas",
+  "slug": "omg-sushi-combo-chaguanas",
+  "kind": "food",
+  "title": "OMG Sushi combo — TT$220",
+  "summary": "Twenty pieces: four each of Godzilla, Californication, Dynamite, King Cali and Firecracker rolls for TT$220.",
+  "description": "Available every day for pickup or delivery.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-09-25T11:37:54Z",
+  "publishedAt": "2026-09-25T11:37:54Z",
+  "checkedAt": "2026-09-25T11:37:54Z",
+  "places": [
+    {
+      "name": "OMG Sushi",
+      "area": "Endeavour, Chaguanas",
+      "region": "Central Trinidad",
+      "address": "Rodney Road, Endeavour",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 220,
+    "fromAmount": null,
+    "label": "TT$220",
+    "terms": "For pickup or delivery; selected options and hours are subject to the linked menu."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Daily; pickup or delivery",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "food-deal",
+    "value-meal"
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6 desktop (manual source review)"
+  },
+  "food": {
+    "items": [
+      "20 pieces of selected sushi rolls"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Roll ingredients vary; dietary fit is not established by the menu listing."
+  },
+  "sources": [
+    {
+      "url": "https://omgsushi.ttmenus.com/specials/omg-combo/",
+      "publisher": "OMG Sushi via TT Menus",
+      "type": "official",
+      "checkedAt": "2026-09-25T11:37:54Z",
+      "supports": [
+        "offer",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+}
