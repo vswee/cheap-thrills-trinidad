@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-paramin-breakfast-and-sunday-lunch-activity",
+  "slug": "paramin-breakfast-and-sunday-lunch-activity",
+  "kind": "event",
+  "title": "Paramin Breakfast and Sunday Lunch",
+  "summary": "Experience breakfast and Sunday lunch traditions in Paramin, listed by the official tourism directory. Check current host availability and menu prices.",
+  "description": "Experience breakfast and Sunday lunch traditions in Paramin, listed by the official tourism directory. Check current host availability and menu prices. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Paramin",
+      "area": "Paramin",
+      "region": "North Trinidad",
+      "address": "Paramin"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "food-experience",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/cuisine/",
+      "publisher": "Visit Trinidad — official things-to-do directory",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Food and culture experience",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

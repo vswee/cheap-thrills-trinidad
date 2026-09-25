@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-national-cocoa-chocolate-museum-activity",
+  "slug": "national-cocoa-chocolate-museum-activity",
+  "kind": "event",
+  "title": "National Cocoa Chocolate Museum",
+  "summary": "Houses a host of artifacts from historic cocoa plantations from over the time period of one hundred years.",
+  "description": "Houses a host of artifacts from historic cocoa plantations from over the time period of one hundred years. Listed opening hours: Monday - Sunday 10:00 AM-5:00 PM (appointments between hours). Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "National Cocoa Chocolate Museum",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "1522-1556 Prince of Moruga Estate, Rock River Hill, Moruga",
+      "mapUrl": "https://cocoamuseumtt.wordpress.com/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/national-cocoa-chocolate-museum",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

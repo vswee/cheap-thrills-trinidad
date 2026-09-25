@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-iere-village-presbyterian-activity",
+  "slug": "iere-village-presbyterian-activity",
+  "kind": "event",
+  "title": "Iere Village Presbyterian",
+  "summary": "This establishment is the oldest standing Presbyterian church in operation. Founded in 1843 by American missionaries, it was handed over to Rev. John Morton in 1868. The…",
+  "description": "This establishment is the oldest standing Presbyterian church in operation. Founded in 1843 by American missionaries, it was handed over to Rev. John Morton in 1868. The current building dates from 1966. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Iere Village Presbyterian",
+      "area": "Princes Town",
+      "region": "South Trinidad",
+      "address": "Naparima/Mayaro Road, Iere Village, Princes Town",
+      "mapUrl": "https://nationaltrust.tt/location/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/iere-village-presbyterian",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

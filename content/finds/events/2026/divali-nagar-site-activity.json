@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-divali-nagar-site-activity",
+  "slug": "divali-nagar-site-activity",
+  "kind": "event",
+  "title": "Divali Nagar Site",
+  "summary": "The Divali Nagar first began in 1986 at the Mid Centre Mall's car park. It is organized and run by the National Council for Indian Culture (NCIC). The idea was to have a place…",
+  "description": "The Divali Nagar first began in 1986 at the Mid Centre Mall's car park. It is organized and run by the National Council for Indian Culture (NCIC). The idea was to have a place where the national community could participate in Divali. Prior to the establishment of the Nagar, Divali was celebrated mainly at private homes and in villages with a strong Hindu presence. It was held for the first time at its current location, at Narsaloo Ramaya Marg Road, Chaguanas in 1991. This site is visible from the Uriah Butler Highway. Listed opening hours: Monday to Sunday 10am-11pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Divali Nagar Site",
+      "area": "Chaguanas",
+      "region": "Central Trinidad",
+      "address": "28-38 NCIC Nagar, Narsaloo Ramaya Marg Rd, Endeavour, Chaguanas",
+      "mapUrl": "https://ncictt.com/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/divali-nagar-site",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

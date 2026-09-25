@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-chaguanas-market-food-discovery-activity",
+  "slug": "chaguanas-market-food-discovery-activity",
+  "kind": "event",
+  "title": "Chaguanas Market Food Discovery",
+  "summary": "Explore central Trinidad’s food culture around Chaguanas markets and local vendors. Check opening hours and prices directly with vendors.",
+  "description": "Explore central Trinidad’s food culture around Chaguanas markets and local vendors. Check opening hours and prices directly with vendors. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Chaguanas",
+      "area": "Chaguanas",
+      "region": "Central Trinidad",
+      "address": "Chaguanas"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "food-experience",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/cuisine/",
+      "publisher": "Visit Trinidad — official things-to-do directory",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Food and culture experience",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

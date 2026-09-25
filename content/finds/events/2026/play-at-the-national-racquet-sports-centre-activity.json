@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-play-at-the-national-racquet-sports-centre-activity",
+  "slug": "play-at-the-national-racquet-sports-centre-activity",
+  "kind": "event",
+  "title": "Play at the National Racquet Sports Centre",
+  "summary": "The National Racquet Sports Centre is listed by Trinidad’s official sports directory. Contact the facility for court availability and booking fees.",
+  "description": "The National Racquet Sports Centre is listed by Trinidad’s official sports directory. Contact the facility for court availability and booking fees. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Tacarigua",
+      "area": "Tacarigua",
+      "region": "East Trinidad",
+      "address": "Tacarigua"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "sports",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/sports/",
+      "publisher": "Visit Trinidad — official sports directory",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Sports and recreation",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-aripo-river-waterfall-activity",
+  "slug": "aripo-river-waterfall-activity",
+  "kind": "event",
+  "title": "Aripo River Waterfall",
+  "summary": "Also known as the Aripo Blue Basins, the Aripo River waterfalls is a stunning, 6 to 10 feet waterfall in the Heights of Aripo.",
+  "description": "Also known as the Aripo Blue Basins, the Aripo River waterfalls is a stunning, 6 to 10 feet waterfall in the Heights of Aripo. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Aripo River Waterfall",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Heights of Aripo",
+      "mapUrl": "https://maps.app.goo.gl/7MrKFgQ2kDWtXxih6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/aripo-river-waterfall",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

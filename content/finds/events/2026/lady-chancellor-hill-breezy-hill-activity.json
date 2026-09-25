@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-lady-chancellor-hill-breezy-hill-activity",
+  "slug": "lady-chancellor-hill-breezy-hill-activity",
+  "kind": "event",
+  "title": "Lady Chancellor Hill/Breezy Hill",
+  "summary": "Lady Chancellor Hill/Breezy Hill is well-known to fitness enthusiasts. It is a must walk, run, jog, hike or bike where visitors are awarded with a scenic lookout of St. Ann's,…",
+  "description": "Lady Chancellor Hill/Breezy Hill is well-known to fitness enthusiasts. It is a must walk, run, jog, hike or bike where visitors are awarded with a scenic lookout of St. Ann's, the Queen's Park Savannah, Port of Spain and on clear days, even Central and South Trinidad on the horizon. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Lady Chancellor Hill/Breezy Hill",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Lady Chancellor Road, Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/WPWCiYoYRPnrtQaJ6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/lady-chancellor-hill-breezy-hill",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

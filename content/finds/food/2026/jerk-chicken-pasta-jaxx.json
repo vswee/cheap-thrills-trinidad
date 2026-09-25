@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-jerk-chicken-pasta-jaxx",
+  "slug": "jerk-chicken-pasta-jaxx",
+  "kind": "food",
+  "title": "Jerk Chicken Pasta",
+  "summary": "Jerk Chicken Pasta · TT$120.00 menu price at Jaxx International Grill.",
+  "description": "PENNE PASTA TOSSED WITH JERK SPICES AND A HINT OF COCONUT CREAM, SAUTEED WITH BELL Listed menu price: TT$120.00. Confirm current price and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Jaxx International Grill",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 120,
+    "fromAmount": null,
+    "label": "TT$120.00 menu price",
+    "terms": "Regular posted menu price; not a limited-time discount. Confirm the current price and participating branch before ordering."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Listed on the current menu at the source URL; availability may vary by branch.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "menu-price",
+    "budget-eats",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://tt.jaxxinternationalgrill.com/product/jerk-chicken-pasta/",
+      "publisher": "Jaxx International Grill — Trinidad menu",
+      "type": "official",
+      "supports": [
+        "menu item",
+        "price"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "food": {
+    "items": [
+      "Jerk Chicken Pasta"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Dietary status is only marked when supported by the published menu description. Confirm ingredients and preparation with the restaurant."
+  }
+}

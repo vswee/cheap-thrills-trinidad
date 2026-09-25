@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-mount-tamana-activity",
+  "slug": "mount-tamana-activity",
+  "kind": "event",
+  "title": "Mount Tamana",
+  "summary": "Mt. Tamana is famous for the extensive network of caverns located on its northern slope. A Silk Cotton tree stands beautifully at the entrance to one of the caves, its roots…",
+  "description": "Mt. Tamana is famous for the extensive network of caverns located on its northern slope. A Silk Cotton tree stands beautifully at the entrance to one of the caves, its roots reaching down into the dark corners of the cave. On clear days, you may enjoy some amazing views over the Central Trinidad, the Northern Range, the Port of Spain, and the South from the summit of Mt. Tamana, which is often reached after just 45-minute hike. You can also see the lighthouse on Brigand Hill, Plum Mitan Road, in Manzanilla from some spots on the summit. Listed opening hours: 6:00AM - 6:00PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Mount Tamana",
+      "area": "Sangre Grande",
+      "region": "East Trinidad",
+      "address": "Off Tamana Road, Sangre Grande",
+      "mapUrl": "https://maps.app.goo.gl/rgrhW1g67VETFxjM9"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/mount-tamana",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

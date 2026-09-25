@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-indian-caribbean-museum-of-trinidad-and-tobago-activity",
+  "slug": "indian-caribbean-museum-of-trinidad-and-tobago-activity",
+  "kind": "event",
+  "title": "Indian Caribbean Museum of Trinidad and Tobago",
+  "summary": "The museum is dedicated to the preservation of the history of indentured East Indian labourers who came to Trinidad from India. From 1837 to 1917 approximately 100,000…",
+  "description": "The museum is dedicated to the preservation of the history of indentured East Indian labourers who came to Trinidad from India. From 1837 to 1917 approximately 100,000 labourers were brought to the West Indies from India. There is also an art gallery, reference library and genealogical database in the building. There are also biographies of important cultural, sports and political figures of East Indian descent. Opening hours for the museum are Wednesday to Sunday 10:00 a.m. to 5:00 p.m. Listed opening hours: Monday - Friday 10:00 am - 5pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Indian Caribbean Museum of Trinidad and Tobago",
+      "area": "Carapichaima",
+      "region": "Central Trinidad",
+      "address": "Waterloo Road, Carapichaima",
+      "mapUrl": "https://maps.app.goo.gl/wCr8KC4AJKvkeahS6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/indian-museum",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

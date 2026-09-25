@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-nutmeg-vale-trail-tour-activity",
+  "slug": "nutmeg-vale-trail-tour-activity",
+  "kind": "event",
+  "title": "Nutmeg Vale Trail (Tour)",
+  "summary": "The Nutmeg Vale Trail is an easy, leisurely 20 min walk through the scenic Covigne Valley in Chaguaramas. The trail winds through lush tropical vegetaion and historic nutmeg…",
+  "description": "The Nutmeg Vale Trail is an easy, leisurely 20 min walk through the scenic Covigne Valley in Chaguaramas. The trail winds through lush tropical vegetaion and historic nutmeg groves. It offers visitors a peaceful opportunity to experience the natural beauty and tranquil atmosphere of the valley. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Nutmeg Vale Trail (Tour)",
+      "area": "Chaguaramas",
+      "region": "North Trinidad",
+      "address": "Tucker Valley, Chaguaramas",
+      "mapUrl": "https://chaguaramas.com/tours-1"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/nutmeg-vale-trail-tour",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

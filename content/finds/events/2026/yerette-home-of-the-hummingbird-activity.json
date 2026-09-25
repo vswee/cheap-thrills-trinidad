@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-yerette-home-of-the-hummingbird-activity",
+  "slug": "yerette-home-of-the-hummingbird-activity",
+  "kind": "event",
+  "title": "Yerette - Home of the Hummingbird",
+  "summary": "The home of the hummingbird, Yerettê, is situated in Maracas, St. Joseph, and is a stunning location to observe several hummingbird species found in Trinidad and Tobago. The…",
+  "description": "The home of the hummingbird, Yerettê, is situated in Maracas, St. Joseph, and is a stunning location to observe several hummingbird species found in Trinidad and Tobago. The intimate setting and experience offered by Yerettê allow you an up-close look at these hummingbirds. Listed opening hours: Tour Times: 8am/ 11:30am/ 3 pm Tours are appointments Only!. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Yerette - Home of the Hummingbird",
+      "area": "Maracas",
+      "region": "North Trinidad",
+      "address": "88 Valley View, Maracas, St Joseph",
+      "mapUrl": "https://www.yerettett.com/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/yerette",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

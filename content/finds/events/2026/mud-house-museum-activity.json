@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-mud-house-museum-activity",
+  "slug": "mud-house-museum-activity",
+  "kind": "event",
+  "title": "Mud House Museum",
+  "summary": "There is only a small number of places which remain intact today that were built by indentured Indians in Trinidad. Built in 1885, the Avocat Mud House Museum, located at 176…",
+  "description": "There is only a small number of places which remain intact today that were built by indentured Indians in Trinidad. Built in 1885, the Avocat Mud House Museum, located at 176 Siparia Old Road, Avocat is one of these historical treasures. Listed opening hours: By appoinments only. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Mud House Museum",
+      "area": "Siparia",
+      "region": "South Trinidad",
+      "address": "177 Siparia Old Road, Avocat",
+      "mapUrl": "https://maps.app.goo.gl/u1PpK18smA4bRa9k9"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/mud-house-museum",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

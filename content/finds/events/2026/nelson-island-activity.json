@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-nelson-island-activity",
+  "slug": "nelson-island-activity",
+  "kind": "event",
+  "title": "Nelson Island",
+  "summary": "Nelson Island is the largest of five miniature islands located in the Gulf of Paria, west of Port of Spain. They are part of the archipelago known as down de islands (or…",
+  "description": "Nelson Island is the largest of five miniature islands located in the Gulf of Paria, west of Port of Spain. They are part of the archipelago known as down de islands (or DDI). During the twentieth century, Nelson Island served as an entry point for people immigrating to Trinidad and as a detention centre. Records show that over 114,000 East Indian immigrants were processed on the Island from 1845 to 1921. In the 1930s, Jews who were fleeing from the Holocaust were held at Nelson Island. Visitors can tour the Island and peruse the lists of indentured immigrants to identify ancestors or walk through the jail cells that held those detained on the Island. View exhibits and ruins, walk along scenic trails and take photos by gun bunkers. Listed opening hours: Full day or half day tours available Sunday to Sunday Flexible to your schedule. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Nelson Island",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Gulf of Paria, west of Port of Spain",
+      "mapUrl": "https://nationaltrust.tt/heritage-sites/nelson-island/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/nelson-island",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

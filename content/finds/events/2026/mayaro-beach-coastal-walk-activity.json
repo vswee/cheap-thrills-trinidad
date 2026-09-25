@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-mayaro-beach-coastal-walk-activity",
+  "slug": "mayaro-beach-coastal-walk-activity",
+  "kind": "event",
+  "title": "Mayaro Beach Coastal Walk",
+  "summary": "Explore the long Atlantic coastline at Mayaro Beach. Conditions and available facilities can change; check before setting out.",
+  "description": "Plan a coastal walk at Mayaro Beach, listed in Trinidad’s official beaches directory. Check current sea conditions, facilities and access before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Mayaro Beach",
+      "area": "Mayaro",
+      "region": "East Trinidad",
+      "address": "Mayaro, Trinidad"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "No fixed admission price is confirmed here. Confirm current access, transport and facility fees before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing coastal outing · check conditions",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "beach",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/beaches/",
+      "publisher": "Visit Trinidad — official beaches directory",
+      "type": "official",
+      "supports": [
+        "beach listing",
+        "location"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Coastal outing",
+    "admission": "Check current beach access and facility information before travelling."
+  }
+}

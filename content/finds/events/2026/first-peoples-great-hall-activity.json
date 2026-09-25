@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-first-peoples-great-hall-activity",
+  "slug": "first-peoples-great-hall-activity",
+  "kind": "event",
+  "title": "First Peoples Great Hall",
+  "summary": "First peoples Great Hall contains artifacts, throne room of grand chief, 1st peoples display, atcivities reinactment, dramatizion, center of ceremoines and meetings of 1st…",
+  "description": "First peoples Great Hall contains artifacts, throne room of grand chief, 1st peoples display, atcivities reinactment, dramatizion, center of ceremoines and meetings of 1st poeple activities. Listed opening hours: Monday - Sunday 10:00 AM-5:00 PM (appointments betwen hours). Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "First Peoples Great Hall",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "1522-1556 Prince of Moruga Estate, Rock River Hill, Moruga",
+      "mapUrl": "http://www.firstpeoplett.com/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/first-peoples-great-hall",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

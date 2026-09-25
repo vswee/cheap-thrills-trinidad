@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-pointe-a-pierre-wildfowl-trust-activity",
+  "slug": "pointe-a-pierre-wildfowl-trust-activity",
+  "kind": "event",
+  "title": "Pointe-a-Pierre Wildfowl Trust",
+  "summary": "Founded in 1966, the Point-a-Pierre Wild Fowl Trust is a national nonprofit volunteer organization. The site is a 26-hectare inland freshwater wetland environment with two…",
+  "description": "Founded in 1966, the Point-a-Pierre Wild Fowl Trust is a national nonprofit volunteer organization. The site is a 26-hectare inland freshwater wetland environment with two lakes that is home to wetland birds that have been endangered in the area. This unique nature center is situated in south Trinidad on the grounds of the Petrotrin Refinery, a petrochemical facility. The Trust is a well-liked destination for scientists and researchers as well as for nature enthusiasts, particularly birdwatchers, who may learn about the facility's ongoing activities in the fields of raising and reintroducing regionally endangered wetland birds to their native habitats. Listed opening hours: Monday - Friday: 9:30am - 4pm Saturday & Sunday: 10:30am - 4pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Pointe-a-Pierre Wildfowl Trust",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Bon Accord Road, Pointe a Pierre",
+      "mapUrl": "http://www.papwildfowltrust.org/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/pointe-a-pierre-wildfowl-trust",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

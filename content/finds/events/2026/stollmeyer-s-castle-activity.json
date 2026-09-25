@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-stollmeyer-s-castle-activity",
+  "slug": "stollmeyer-s-castle-activity",
+  "kind": "event",
+  "title": "Stollmeyer's Castle",
+  "summary": "The magical and elaborate Stollmeyer’s Castle, also called “Killarney”, is one of seven striking mansions that make up the Magnificant Seven located around the Queen’s Park…",
+  "description": "The magical and elaborate Stollmeyer’s Castle, also called “Killarney”, is one of seven striking mansions that make up the Magnificant Seven located around the Queen’s Park Savannah in Port of Spain and is actually the first of them to be constructed. It was built for entrepreneur Charles Stollmeyer in 1904 by Scotsman Robert Gillies who found inspiration in the Balmoral Castle of Scotland. Listed opening hours: Appointments only (8am- 4pm ). Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Stollmeyer's Castle",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "31 Maraval Road, Port of Spain",
+      "mapUrl": "https://nationaltrust.tt/location/stollmeyers-castle/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/stollmeyers-castle",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

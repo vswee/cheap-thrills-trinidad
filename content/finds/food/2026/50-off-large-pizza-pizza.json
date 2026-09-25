@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "id": "food-pizza-50-off-large-pizza-pizza",
+  "slug": "50-off-large-pizza-pizza",
+  "kind": "food",
+  "title": "50% Off Large Pizza",
+  "summary": "Pizza Hut lists this large pizza under Everyday Deals at TT$74.50; check the order page for the full terms.",
+  "description": "Pizza Hut Trinidad currently lists this large pizza in its Everyday Deals menu at TT$74.50. Check the order page for applicable size, crust, delivery or pickup terms and participating branch availability.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Pizza Hut Trinidad",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 74.5,
+    "fromAmount": null,
+    "label": "TT$74.50 menu price",
+    "terms": "Listed in the Everyday Deals section of the official menu when checked. Confirm current offer terms and participating branch before ordering."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Current Everyday Deals listing · verify offer terms",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "menu-price",
+    "budget-eats",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://pizzahut-tt.com/en/menu",
+      "publisher": "Pizza Hut Trinidad — official menu",
+      "type": "official",
+      "supports": [
+        "menu item",
+        "price"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "food": {
+    "items": [
+      "50% Off Large Pizza"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Dietary status is only marked when supported by the published menu description. Confirm ingredients and preparation with the restaurant."
+  }
+}

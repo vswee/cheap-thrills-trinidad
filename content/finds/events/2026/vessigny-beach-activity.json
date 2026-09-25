@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-vessigny-beach-activity",
+  "slug": "vessigny-beach-activity",
+  "kind": "event",
+  "title": "Vessigny Beach",
+  "summary": "If you are looking for peaceful ocean views without the crowds associated with other popular beaches in on the North-western coast, Vessigny beach might be the beach for you.…",
+  "description": "If you are looking for peaceful ocean views without the crowds associated with other popular beaches in on the North-western coast, Vessigny beach might be the beach for you. Vessigny beach is situated directly south of La Brea and is a venue for hosting weddings, christenings and a variety of other functions and events Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Vessigny Beach",
+      "area": "La Brea",
+      "region": "South Trinidad",
+      "address": "Southern Main Road, La Brea",
+      "mapUrl": "https://maps.app.goo.gl/QUgmNiWChrurkYgu8"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/vessigny-beach",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

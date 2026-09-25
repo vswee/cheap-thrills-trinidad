@@ -14,9 +14,7 @@ export default function Home() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd()).replace(/</g, "\\u003c") }} />
     <header className="topbar"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><nav><a href="#latest">The latest</a><a href="#about">About</a><Link href="#report">Report an issue</Link></nav><ThemeToggle /></header>
     <section className="hero">
-      <div className="hero-kicker"><span className="live-dot" /> THE GOOD STUFF, FOR LESS <span className="kicker-line" /></div>
-      <h1>Trinidad, well<br />spent<span className="hero-period">.</span></h1>
-      <div className="hero-bottom"><p>Good food. Good times.<br /><em>Better prices.</em></p><span className="hero-note">Food deals, cheap eats and things to do<br />in Trinidad, with Chaguanas first.</span><a className="round-link" href="#latest" aria-label="Scroll to latest finds">↓</a></div>
+      <div className="hero-copy"><h1>Trinidad,<br />well spent<span className="hero-period">.</span></h1><p>Good food. Good times. Better prices.<br /><span>Affordable eats and things to do across the island.</span></p></div>
       <div className="hero-stamp"><IslandStamp /></div>
     </section>
     <section className="latest-section" id="latest">

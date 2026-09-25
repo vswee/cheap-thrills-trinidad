@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-triveni-mandir-activity",
+  "slug": "triveni-mandir-activity",
+  "kind": "event",
+  "title": "Triveni Mandir",
+  "summary": "The Triveni Mandir is located along Sister's Road in the Williamsville community of Hardbargain. The mandir was given the name Triveni because it served as the meeting point…",
+  "description": "The Triveni Mandir is located along Sister's Road in the Williamsville community of Hardbargain. The mandir was given the name Triveni because it served as the meeting point for the settlements of Sister's Road, St. Julien, and Dyers Village. In India, Triveni refers to the confluence of the Ganga, Jamuna, and Saraswati, three holy rivers. The Triveni Mandir is a grand temple and great work of art. It is exquisitely decorated, with exterior waterfalls, fountains, and enormous elephant statues, and inside stained-glass windows and elaborate paintings by regional artisans. Additionally, it has a large main hall surrounded by the Raamdharbar and other shrines dedicated to various gods. The temple provides an opportunity for members and the surrounding neighborhood to engage in and learn about different elements of Hindu tradition and culture, including Bhajan singing, Indian dance, Indian music, and Chowtaal singing. Listed opening hours: Visits can be scheduled in advance. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Triveni Mandir",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Sister's Road, Hardbargain, Williamsville.",
+      "mapUrl": "https://www.trivenimandir.com/virtual-tour/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/triveni-mandir",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

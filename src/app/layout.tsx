@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import { HolidayBanner } from "@/components/holiday-banner";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cheap-thrills-trinidad.flat18.app"),
@@ -15,5 +18,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en-TT" suppressHydrationWarning><body><HolidayBanner />{children}<Script id="theme-preference" strategy="beforeInteractive">{`try { const theme = localStorage.getItem("ctt-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}`}</Script></body></html>;
+  return <html lang="en-TT" className={inter.variable} suppressHydrationWarning><body><HolidayBanner />{children}<Script id="theme-preference" strategy="beforeInteractive">{`try { const theme = localStorage.getItem("ctt-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}`}</Script></body></html>;
 }

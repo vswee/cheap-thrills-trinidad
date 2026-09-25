@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-cocoa-panyol-museum-activity",
+  "slug": "cocoa-panyol-museum-activity",
+  "kind": "event",
+  "title": "Cocoa Panyol Museum",
+  "summary": "Clive Teemul's garage was converted into a home based museum displaying artefacts from as far back as the late 1880s. Cocoa Panyol was created in 2017 and now welcomes visitors…",
+  "description": "Clive Teemul's garage was converted into a home based museum displaying artefacts from as far back as the late 1880s. Cocoa Panyol was created in 2017 and now welcomes visitors across the country. Listed opening hours: During school vacation Monday-Friday otherwise weekends and Public Holidays Flexible hours. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Cocoa Panyol Museum",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "16 Telemaque Road, Flanagin Town",
+      "mapUrl": "https://maps.app.goo.gl/HhJxWZb4hoVeK9jG9"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/cocoa-panyol-museum",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

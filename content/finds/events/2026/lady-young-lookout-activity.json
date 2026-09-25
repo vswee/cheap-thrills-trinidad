@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-lady-young-lookout-activity",
+  "slug": "lady-young-lookout-activity",
+  "kind": "event",
+  "title": "Lady Young Lookout",
+  "summary": "Lady Young Lookout offers one of the most spectacular views in Trinidad. Perched high in the hills above the city, this vantage point is a photographer's dream. This scenic…",
+  "description": "Lady Young Lookout offers one of the most spectacular views in Trinidad. Perched high in the hills above the city, this vantage point is a photographer's dream. This scenic viewpoint is located along the Lady Young Road, overlooking the eastern side of Port of Spain and the surrounding foothills of the Northern Range. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Lady Young Lookout",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Lady Young Road, Morvant, Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/jWHrANsk7NQ4R6W56"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/lady-young-lookout",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

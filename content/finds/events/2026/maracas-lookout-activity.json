@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-maracas-lookout-activity",
+  "slug": "maracas-lookout-activity",
+  "kind": "event",
+  "title": "Maracas Lookout",
+  "summary": "The view of this popular beach Maracas Bay, Fulfills the fantasy of the ideal Caribbean Beach. From this vantage point the nature lover will be thrilled by the photo op of the…",
+  "description": "The view of this popular beach Maracas Bay, Fulfills the fantasy of the ideal Caribbean Beach. From this vantage point the nature lover will be thrilled by the photo op of the lush mountainous backdrop. This stop also offers visitors the opportunity to stock up local souvenirs by local vendors Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Maracas Lookout",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "North Coast Road",
+      "mapUrl": "https://maps.app.goo.gl/jFFY5joRVi5htxrHA"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/maracas-lookout",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

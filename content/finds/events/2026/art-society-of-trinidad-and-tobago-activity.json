@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-art-society-of-trinidad-and-tobago-activity",
+  "slug": "art-society-of-trinidad-and-tobago-activity",
+  "kind": "event",
+  "title": "Art Society of Trinidad and Tobago",
+  "summary": "The Art Society of Trinidad and Tobago (ASTT) was founded in 1943 with the goal of developing its members' artistic abilities, advocating for them, educating them on their…",
+  "description": "The Art Society of Trinidad and Tobago (ASTT) was founded in 1943 with the goal of developing its members' artistic abilities, advocating for them, educating them on their rights and, of course, presenting their work. Listed opening hours: Tuesday - Saturday 12:00 pm - 6:00 pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Art Society of Trinidad and Tobago",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "3-7 St. Vincent Ave, Federation Park, Port-of-Spain",
+      "mapUrl": "https://maps.app.goo.gl/5sV63SQofLWa3yi38"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/art-society-of-trinidad-and-tobago",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

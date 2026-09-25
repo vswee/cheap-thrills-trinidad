@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-fort-george-activity",
+  "slug": "fort-george-activity",
+  "kind": "event",
+  "title": "Fort George",
+  "summary": "In 1804, under the direction of the then British Governer, Brigadier-General Sir Thomas Hislop, a series of complex military fortifications were built on the North-western…",
+  "description": "In 1804, under the direction of the then British Governer, Brigadier-General Sir Thomas Hislop, a series of complex military fortifications were built on the North-western hills overlooking the stunning Gulf of Paria to protect the Port of Spain from any perceived military threats. Defensive activities not being required beyond this, in 1846 the site ceased to be a military establishment. An intricate, wooden signal station, designed by Prince Kofi Nti, son of King Kofi Calcali of Ashantee West Africa was later built in 1833, sharply contrasting the formidable characteristics of the fort. The site came to be known as Fort George (formerly La Vigie) and continues to offer visitors spectaular, panoramic views of Port of Spain in addition to views of its original cannons, dungeons and artefacts. Listed opening hours: Every day from 9:00 am to 5:30 pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Fort George",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Fort George Road, St. James, Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/ENVGEr8Pc6QruMrE7"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/fort-george",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

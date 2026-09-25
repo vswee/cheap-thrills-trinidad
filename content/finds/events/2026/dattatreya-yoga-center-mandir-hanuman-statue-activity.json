@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-dattatreya-yoga-center-mandir-hanuman-statue-activity",
+  "slug": "dattatreya-yoga-center-mandir-hanuman-statue-activity",
+  "kind": "event",
+  "title": "Dattatreya Yoga Center Mandir/Hanuman Statue",
+  "summary": "Towering over the village of Carapichaima is the spectacular 85-foot tall statue of Lord Hanuman, the largest Hanuman murti outside of India. Lord Hanuman is a Hindu god…",
+  "description": "Towering over the village of Carapichaima is the spectacular 85-foot tall statue of Lord Hanuman, the largest Hanuman murti outside of India. Lord Hanuman is a Hindu god regarded as the most revered disciple of Lord Rama who exhibited great strength and bravery. Its magnitude employs its devotees to grow in height spiritually. The Dattatreya Yoga Center and Mandir upon which the statue is situated is built in a Dravidian style of architecture popular in South India. Listed opening hours: Sunday - Saturday 9:00 am - 12:00 pm 5:00 pm - 7:00 pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Dattatreya Yoga Center Mandir/Hanuman Statue",
+      "area": "Carapichaima",
+      "region": "Central Trinidad",
+      "address": "Datta Drive, Orange Field Road, Carapichaima",
+      "mapUrl": "https://maps.app.goo.gl/zJGsQjrVga3Fbbp9A"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/dattatreya-yoga-center-mandir-hanuman-statue",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

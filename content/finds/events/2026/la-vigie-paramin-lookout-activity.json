@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-la-vigie-paramin-lookout-activity",
+  "slug": "la-vigie-paramin-lookout-activity",
+  "kind": "event",
+  "title": "La Vigie Paramin Lookout",
+  "summary": "Take a climb above the foothills of Maraval, there you will find a charming village that encapsulates the essence of the creole community living in Paramin. A beautiful,…",
+  "description": "Take a climb above the foothills of Maraval, there you will find a charming village that encapsulates the essence of the creole community living in Paramin. A beautiful, traditional village that gives the best view of both the Caribbean Sea and the City capital Port of Spain. Here you will find the La Vigie Lookout, where you can enjoy scenic views that transcend your imagination. At this facility, there are gazebos, where groups can enjoy food and the company of others while engaging in the kind of ambience that the beloved Northern Range provides. Listed opening hours: 5:00AM - 8:00PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "La Vigie Paramin Lookout",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Fond Pois Doux Road",
+      "mapUrl": "https://tradeind.gov.tt/la-vigie-paramin-lookout/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/la-vigie-paramin-lookout",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

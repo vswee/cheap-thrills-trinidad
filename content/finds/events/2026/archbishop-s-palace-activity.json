@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-archbishop-s-palace-activity",
+  "slug": "archbishop-s-palace-activity",
+  "kind": "event",
+  "title": "Archbishop's Palace",
+  "summary": "Built in 1903 and influenced by Indian Empire architecture with a touch of medieval style, the Archbishop's Palace stands out among the Magnificent Seven mansions around the…",
+  "description": "Built in 1903 and influenced by Indian Empire architecture with a touch of medieval style, the Archbishop's Palace stands out among the Magnificent Seven mansions around the Queen's Park Savannah for its truly distinctive architecture which also incorporates elements of its designer's Irish heritage such as red granite and marble brought over from the Emerald Isle. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Archbishop's Palace",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "27 Maraval Road, Port of Spain",
+      "mapUrl": "http://www.catholicnewstt.com/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/archbishops-palace",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-paramin-village-activity",
+  "slug": "paramin-village-activity",
+  "kind": "event",
+  "title": "Paramin Village",
+  "summary": "Paramin Village is located on the slopes of the Northern Range, between Diego Martin and Maracas. The population of Spanish ancestry came from Venezuela to plant cocoa in the…",
+  "description": "Paramin Village is located on the slopes of the Northern Range, between Diego Martin and Maracas. The population of Spanish ancestry came from Venezuela to plant cocoa in the nineteenth century. The village is famous for producing seasonings such as chive, peppermint and thyme and is known as the herb basket of Trinidad. The community is famous for a number of traditions such as parang and the Paramin Blue Devils. The village is also home to the Our Lady of Guadalupe Church. Listed opening hours: Based on Tour appointments. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Paramin Village",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Paramin",
+      "mapUrl": "https://maps.app.goo.gl/wcRp5nXQuU1RV6rj6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/paramin-village",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

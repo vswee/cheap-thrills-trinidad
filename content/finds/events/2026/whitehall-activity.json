@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-whitehall-activity",
+  "slug": "whitehall-activity",
+  "kind": "event",
+  "title": "Whitehall",
+  "summary": "White Hall, named after the beautiful coral stone with which it was made, was the largest of the six private residences of the Magnificent Seven mansions in Port of Spain.…",
+  "description": "White Hall, named after the beautiful coral stone with which it was made, was the largest of the six private residences of the Magnificent Seven mansions in Port of Spain. Construction of this majestic structure began in 1904, featuring a Palladian style with origins in classic Greek, Roman and Moorish architecture. Interestingly, the White Hall served as the Headquarters for the US Military during World War II until 1944. It also served as the Office of the Prime Minister of Trinidad and Tobago from 1959 to 1988 and from 1999 to 2008. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Whitehall",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "29 Maraval Road, St. Clair, Port of Spain",
+      "mapUrl": "http://www.nationaltrust.org/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/whitehall",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

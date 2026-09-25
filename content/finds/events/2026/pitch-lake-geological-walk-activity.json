@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-pitch-lake-geological-walk-activity",
+  "slug": "pitch-lake-geological-walk-activity",
+  "kind": "event",
+  "title": "Pitch Lake Geological Walk",
+  "summary": "Walk the La Brea Pitch Lake landscape with an authorised guide to learn about its geology. Confirm current tour times and admission.",
+  "description": "Walk the La Brea Pitch Lake landscape with an authorised guide to learn about its geology. Confirm current tour times and admission. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "La Brea",
+      "area": "La Brea",
+      "region": "South Trinidad",
+      "address": "La Brea"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "outdoors",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/hiking/",
+      "publisher": "Visit Trinidad — official things-to-do directory",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Guided outdoor activity",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

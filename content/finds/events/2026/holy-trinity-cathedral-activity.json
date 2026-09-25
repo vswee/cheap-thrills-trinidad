@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-holy-trinity-cathedral-activity",
+  "slug": "holy-trinity-cathedral-activity",
+  "kind": "event",
+  "title": "Holy Trinity Cathedral",
+  "summary": "Often cited as one of the first churches built in Trinidad, the Trinity Church, was destroyed by fire in 1808 and the present cathedral was rebuilt and consecrated on Trinity…",
+  "description": "Often cited as one of the first churches built in Trinidad, the Trinity Church, was destroyed by fire in 1808 and the present cathedral was rebuilt and consecrated on Trinity Sunday in 1823. Celebrating life as a personal walk with God, one can find the Labyrinth, a sacred space for private prayer on the Cathedral Grounds. The adjacent Garden of peace is beautiful sacred space. Listed opening hours: Tuesday- Friday: 8:00AM - 4:00PM Second & Fourth Saturday: 9:00AM - 12:00PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Holy Trinity Cathedral",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "30 A Abercromby Street, Port-of-Spain,",
+      "mapUrl": "https://maps.app.goo.gl/7bVjy2wXhGAPopQcA"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/holy-trinity-cathedral",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

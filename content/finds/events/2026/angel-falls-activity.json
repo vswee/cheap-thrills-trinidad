@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-angel-falls-activity",
+  "slug": "angel-falls-activity",
+  "kind": "event",
+  "title": "Angel Falls",
+  "summary": "Angel Falls is a beautiful 50 -foot waterfall tucked away in the lush rainforest of Trinidad's Northern Range. Flowing into cool, natural pools surrounded by rich tropical…",
+  "description": "Angel Falls is a beautiful 50 -foot waterfall tucked away in the lush rainforest of Trinidad's Northern Range. Flowing into cool, natural pools surrounded by rich tropical vegetation, the Falls offer a refreshing escape into nature . Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Angel Falls",
+      "area": "Maracas",
+      "region": "North Trinidad",
+      "address": "Maracas Bay Village",
+      "mapUrl": "https://maps.app.goo.gl/oa6kVefTVB2Nn9RA8"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/angel-falls",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

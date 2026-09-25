@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-brian-lara-promenade-activity",
+  "slug": "brian-lara-promenade-activity",
+  "kind": "event",
+  "title": "Brian Lara Promenade",
+  "summary": "The Brian Lara Promenade, which runs the width of the city centre, complements downtown Port-of-Spain by adding a relaxed, laid back flavour to the bustling streets of the…",
+  "description": "The Brian Lara Promenade, which runs the width of the city centre, complements downtown Port-of-Spain by adding a relaxed, laid back flavour to the bustling streets of the city. Originally called Plaza de la Marina, it was translated into the English Marine Square. When Trinidad became independent in 1962, the name was changed to Independence Square, and the central east-west strip was later named Brian Lara Promenade, in honour of star batsman Brian Lara. The Promenade now features free outdoor concerts, film festivals, celebration ceremonies and craft shows. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Brian Lara Promenade",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Independence Square, Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/ttfeWVyLX6NYaWi77"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/brian-lara-promenade",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

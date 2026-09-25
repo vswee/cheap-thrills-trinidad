@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-de-legacy-house-activity",
+  "slug": "de-legacy-house-activity",
+  "kind": "event",
+  "title": "De Legacy House",
+  "summary": "Master Artist Dr. LeRoy Clarke (1938-2021) was a self-taught Trinidadian prolific artist, poet, philosopher and teacher, widely regarded as one of the Caribbean's most…",
+  "description": "Master Artist Dr. LeRoy Clarke (1938-2021) was a self-taught Trinidadian prolific artist, poet, philosopher and teacher, widely regarded as one of the Caribbean's most influential cultural icon, whose work explored African spirituality, identity and postcolonial consciousness. He established the De Legacy House of Leroy Clarke El Tucuchian Foundation, located at his Cascade residence, as a &quot;living/lived in museum&quot; dedicated to preserving, archiving his artistic and intellectual legacy for research, education, and inspiration for generations to come. Listed opening hours: 10AM - 4PM (Monday - Friday). Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "De Legacy House",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "13A, Wellsprings, Casade",
+      "mapUrl": "https://maps.app.goo.gl/3KeomCaEbUL5R6Qu6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/d-legacy-house",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-petit-marianne-waterfall-hike-activity",
+  "slug": "petit-marianne-waterfall-hike-activity",
+  "kind": "event",
+  "title": "Petit Marianne Waterfall Hike",
+  "summary": "A hiking outing to Petit Marianne Waterfall, listed among Trinidad outdoor activities. Check trail conditions and arrange a local guide.",
+  "description": "A hiking outing to Petit Marianne Waterfall, listed among Trinidad outdoor activities. Check trail conditions and arrange a local guide. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Maracas Valley",
+      "area": "Maracas Valley",
+      "region": "North Trinidad",
+      "address": "Maracas Valley"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "outdoors",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/hiking/",
+      "publisher": "Visit Trinidad — official things-to-do directory",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Guided outdoor activity",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-turtle-watching-at-matura-activity",
+  "slug": "turtle-watching-at-matura-activity",
+  "kind": "event",
+  "title": "Turtle Watching at Matura",
+  "summary": "A seasonal turtle-watching experience on Trinidad’s east coast. Visit with an authorised guide and follow current wildlife-protection rules.",
+  "description": "A seasonal turtle-watching experience on Trinidad’s east coast. Visit with an authorised guide and follow current wildlife-protection rules. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Matura",
+      "area": "Matura",
+      "region": "East Trinidad",
+      "address": "Matura"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "outdoors",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/hiking/",
+      "publisher": "Visit Trinidad — official things-to-do directory",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Guided outdoor activity",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

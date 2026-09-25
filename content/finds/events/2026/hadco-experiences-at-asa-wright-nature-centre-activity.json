@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-hadco-experiences-at-asa-wright-nature-centre-activity",
+  "slug": "hadco-experiences-at-asa-wright-nature-centre-activity",
+  "kind": "event",
+  "title": "HADCO Experiences at Asa Wright Nature Centre",
+  "summary": "The Asa Wright Nature Centre and Lodge is a nature resort and scientific research station in the Arima Valley of the Northern Range in Trinidad and Tobago. The centre is one of…",
+  "description": "The Asa Wright Nature Centre and Lodge is a nature resort and scientific research station in the Arima Valley of the Northern Range in Trinidad and Tobago. The centre is one of the top birdwatching spots in the Caribbean; a total of 256 species of birds have been recoded there. The centre is owned by a non-profit trust. Nestled in the Northern Mountain Range, the Asa Wright Nature Centre is one of the Caribbean's premier bird-watching spots. Visitors can explore guided birding tours, nature trails, pools, rivers and tasty Creole-style cooking or stay on the lodge's veranda and observe a myriad of birds. Listed opening hours: 9:00 am - 5:00 pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "HADCO Experiences at Asa Wright Nature Centre",
+      "area": "Arima",
+      "region": "East Trinidad",
+      "address": "7 3/4 MM Blanchisseuse Road, Arima",
+      "mapUrl": "http://www.hadcoexperiences.com/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/hadco-experiences-at-asa-wright-nature-centre",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

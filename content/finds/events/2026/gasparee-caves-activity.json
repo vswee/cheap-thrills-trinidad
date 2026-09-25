@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-gasparee-caves-activity",
+  "slug": "gasparee-caves-activity",
+  "kind": "event",
+  "title": "Gasparee Caves",
+  "summary": "Escape on a boat ride to the Island of Gaspar Grande, an old whaling station, where you can find one of the easily accessible limestone caves in Trinidad and Tobago. 100 feet…",
+  "description": "Escape on a boat ride to the Island of Gaspar Grande, an old whaling station, where you can find one of the easily accessible limestone caves in Trinidad and Tobago. 100 feet underground, visitors to Gasparee Caves can witness the natural wonders, sinkholes and the crystal pool with sunlight dappling on the aquamarine waters. Outside the caves, visitors may encounter many different bird species such as the yellow-headed parrot, the rufous-necked woodrail, the yellow-headed caracara and the streaked saltator Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Gasparee Caves",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Gaspar Island",
+      "mapUrl": "https://chaguaramas.com/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/gasparee-caves",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

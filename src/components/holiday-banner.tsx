@@ -16,6 +16,6 @@ export function HolidayBanner() {
   if (!holiday) return null;
 
   return <aside className="holiday-banner" role="status" aria-live="polite">
-    <span aria-hidden="true">✳</span> Happy {holiday}! <span className="holiday-location">Trinidad & Tobago</span>
+    <span className="holiday-sun" aria-hidden="true">✳</span><span className="holiday-message"><small>TRINIDAD &amp; TOBAGO · TODAY</small><strong>Happy {holiday}</strong></span><span className="holiday-note">Wishing you a lovely holiday</span>
   </aside>;
 }

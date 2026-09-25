@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-knolly-s-tunnel-activity",
+  "slug": "knolly-s-tunnel-activity",
+  "kind": "event",
+  "title": "Knolly's Tunnel",
+  "summary": "Knollys Tunnel, near Rio Claro in south-east Trinidad, was named after the then acting Colonial Governor of Trinidad and Tobago, Sir Clement Courtenay Knollys KCMG), who…",
+  "description": "Knollys Tunnel, near Rio Claro in south-east Trinidad, was named after the then acting Colonial Governor of Trinidad and Tobago, Sir Clement Courtenay Knollys KCMG), who officially opened the new railway tunnel on 20th August 1898. The Official Governor at the time was Hubert Edward Henry Jerningham (1897 to 1900) whose name was given to the line’s Junction (Jerningham Junction) where the Rio Claro Line left the Southern Main Line. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Knolly's Tunnel",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Union Road, Tabaquite",
+      "mapUrl": "http://www.nationaltrust.tt/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/knollys-tunnel",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

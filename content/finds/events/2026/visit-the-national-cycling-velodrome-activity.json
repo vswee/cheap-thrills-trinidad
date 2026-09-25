@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-visit-the-national-cycling-velodrome-activity",
+  "slug": "visit-the-national-cycling-velodrome-activity",
+  "kind": "event",
+  "title": "Visit the National Cycling Velodrome",
+  "summary": "Explore Trinidad’s National Cycling Velodrome, listed in the official sports directory. Check current events and visitor access.",
+  "description": "Explore Trinidad’s National Cycling Velodrome, listed in the official sports directory. Check current events and visitor access. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Couva",
+      "area": "Couva",
+      "region": "Central Trinidad",
+      "address": "Couva"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "sports",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/sports/",
+      "publisher": "Visit Trinidad — official sports directory",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Sports and recreation",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

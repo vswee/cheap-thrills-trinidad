@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-the-old-police-headquarters-activity",
+  "slug": "the-old-police-headquarters-activity",
+  "kind": "event",
+  "title": "The Old Police Headquarters",
+  "summary": "The Police Headquarters in Port of Spain was built in 1876 in an Italian-Gothic style with limestone from the Piccadilly Quarries. Large arched galleries on two storeys and a…",
+  "description": "The Police Headquarters in Port of Spain was built in 1876 in an Italian-Gothic style with limestone from the Piccadilly Quarries. Large arched galleries on two storeys and a tall clock tower give the structure a luring appearance. The structure was formerly home of the force's commanding officer, but it was destroyed by fire in 1882. By 1884, it had been reconstructed with concrete floors, iron stairs, and a roof that could withstand fire. During the 1990 coup attempt, it was destroyed by fire once more. In 2001, the restoration project was finished.Senior police officer offices, the headquarters for the Central Police Station and C.I.D. in Port of Spain, and the Trinidad and Tobago Police Service Museum are currently housed in the structure. Listed opening hours: Not Open to the public. Can view outside of building only. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "The Old Police Headquarters",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Corner of St. Vincent and Sackville Streets, Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/eJoJFSu4kgbeYiPv6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/the-old-police-headquarters",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

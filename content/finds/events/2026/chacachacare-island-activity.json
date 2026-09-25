@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-chacachacare-island-activity",
+  "slug": "chacachacare-island-activity",
+  "kind": "event",
+  "title": "Chacachacare Island",
+  "summary": "The second largest off-shore island flanked by the Third and Grand Bocas. Historically, it was the base of a leprosarium settlement, a plantation economy, a whaling station and…",
+  "description": "The second largest off-shore island flanked by the Third and Grand Bocas. Historically, it was the base of a leprosarium settlement, a plantation economy, a whaling station and a US naval base. The highlight of tours to the island include a salt water and the ruins of the Leprosarium. Listed opening hours: 24 hours. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Chacachacare Island",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Off the Western Peninsula of Trinidad",
+      "mapUrl": "https://chaguaramas.com/tour-chacachacare"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/chacachacare-island-historic",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

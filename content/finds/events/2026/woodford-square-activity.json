@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-woodford-square-activity",
+  "slug": "woodford-square-activity",
+  "kind": "event",
+  "title": "Woodford Square",
+  "summary": "At the heart of Port of Spain, Woodford Square is a vibrant historic landmark where nature, culture and the story of Trinidad and Tobago come together. Surrounded by heritage…",
+  "description": "At the heart of Port of Spain, Woodford Square is a vibrant historic landmark where nature, culture and the story of Trinidad and Tobago come together. Surrounded by heritage buildings, the Square offers a glimpse into the capital's rich civic and cultural history. Known as the University of Woodford Square, it has been an important setting for public discourse, cultural activities and historical events. Visitors can explore the square and nearby heritage sites as part of a walking experience through the historic heart of Port of Spain. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Woodford Square",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/kFFpgnwSA8k9UWXN8"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/woodford-square",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

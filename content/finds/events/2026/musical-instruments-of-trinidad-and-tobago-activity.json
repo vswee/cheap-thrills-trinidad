@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-musical-instruments-of-trinidad-and-tobago-activity",
+  "slug": "musical-instruments-of-trinidad-and-tobago-activity",
+  "kind": "event",
+  "title": "Musical Instruments of Trinidad and Tobago",
+  "summary": "Musical Instruments of Trinidad and Tobago Company Limited (MITTCO), headquartered in Diego Martin, was developed with a vision to become a leading musical instrument…",
+  "description": "Musical Instruments of Trinidad and Tobago Company Limited (MITTCO), headquartered in Diego Martin, was developed with a vision to become a leading musical instrument manufacturer. The first line of products to market are steelpans and accessories that are crafted using a combination of traditional and innovative manufacturing processes. Listed opening hours: Mon - Fri: 8am - 5pm. Closed on Saturdays and Sundays. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Musical Instruments of Trinidad and Tobago",
+      "area": "Diego Martin",
+      "region": "North Trinidad",
+      "address": "Lot 3A & 3B e TecK Diamond Vale Business Park, Industrial Estate, Diego Martin",
+      "mapUrl": "https://mittcott.com/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/musical-instruments-of-trinidad-and-tobago",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

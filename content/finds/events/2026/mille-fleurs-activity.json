@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-mille-fleurs-activity",
+  "slug": "mille-fleurs-activity",
+  "kind": "event",
+  "title": "Mille Fleurs",
+  "summary": "Mille Fleurs is one of seven magnificent mansions located around the Queen's Park Savannah in Port of Spain, featuring a balanced and symmetrical architectural style best…",
+  "description": "Mille Fleurs is one of seven magnificent mansions located around the Queen's Park Savannah in Port of Spain, featuring a balanced and symmetrical architectural style best described as French Provincial. This charming mansion was built in 1904 under the direction of renown architect George Brown of the Trinidad Trading Company and as a gift to Dr Enrique Prada, who would serve as the Mayor of Port of Spain from 1914 to 1917. Listed opening hours: 9:00AM- 3:00PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Mille Fleurs",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Lot 23 Maraval Road, St. Clair",
+      "mapUrl": "http://www.nationaltrust.tt/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/mille-fleurs",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

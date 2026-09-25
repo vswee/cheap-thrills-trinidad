@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-korean-fried-chicken-sandwich-jaxx",
+  "slug": "korean-fried-chicken-sandwich-jaxx",
+  "kind": "food",
+  "title": "Korean Fried Chicken Sandwich",
+  "summary": "Korean Fried Chicken Sandwich · TT$119.00 menu price at Jaxx International Grill.",
+  "description": "OUR HAND-BREADED, CRISPY ON THE OUTSIDE AND JUICY ON THE INSIDE CHICKEN BREAST, DIPPED IN Listed menu price: TT$119.00. Confirm current price and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Jaxx International Grill",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 119,
+    "fromAmount": null,
+    "label": "TT$119.00 menu price",
+    "terms": "Regular posted menu price; not a limited-time discount. Confirm the current price and participating branch before ordering."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Listed on the current menu at the source URL; availability may vary by branch.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "menu-price",
+    "budget-eats",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://tt.jaxxinternationalgrill.com/product/korean-fried-chicken-sandwich/",
+      "publisher": "Jaxx International Grill — Trinidad menu",
+      "type": "official",
+      "supports": [
+        "menu item",
+        "price"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "food": {
+    "items": [
+      "Korean Fried Chicken Sandwich"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Dietary status is only marked when supported by the published menu description. Confirm ingredients and preparation with the restaurant."
+  }
+}

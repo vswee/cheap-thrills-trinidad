@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-cipriani-statue-activity",
+  "slug": "cipriani-statue-activity",
+  "kind": "event",
+  "title": "Cipriani Statue",
+  "summary": "At the foot of Frederick Street in the middle of Independence Square stands a statue of Captain Arthur Andrew Cipriani. On April 17, 1959, at Port of Spain, Dr. Eric Williams…",
+  "description": "At the foot of Frederick Street in the middle of Independence Square stands a statue of Captain Arthur Andrew Cipriani. On April 17, 1959, at Port of Spain, Dr. Eric Williams erected a monument honoring Cipriani and said, &quot;Captain Cipriani is the pioneer of the nationalist movement of Trinidad and Tobago.&quot; We honor the aspirations of our indigenous peoples, our own historical growth, our own constructive activity, and our own native history created by native hands with the installation of this statue. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Cipriani Statue",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Independence Square, Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/XhhFCS2NwteCUhTq6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/cipriani-statue",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

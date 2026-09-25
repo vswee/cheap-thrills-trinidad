@@ -35,10 +35,10 @@ export function FindFeed({ finds }: { finds: Find[] }) {
     </div>}
     {shown.length === 0 ? <div className="empty-state"><h2>{query ? "No matching finds." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all") && <><p>{query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={() => { setQuery(""); setKind("all"); }}>Clear filters</button></>}</div> : <>
       <div className="feed-grid">{shown.slice(0, count).map((find, index) => <article className={`find-card ${index === 0 ? "featured" : ""}`} key={find.id}>
-        <div className="card-top"><span className={`kind-pill ${find.kind}`}>{find.kind === "food" ? "Food deal" : "Things to do"}</span><span className="card-date">{displayDate(find)}</span></div>
-        <Link href={`/${find.kind === "food" ? "food" : "events"}/${find.slug}`} className="card-title"><h2>{find.title}</h2><span className="arrow">↗</span></Link>
-        <p className="card-summary">{find.summary}</p>
-        <div className="card-bottom"><span className="card-place">⌖ {find.places[0]?.area}, {find.places[0]?.region}</span><strong>{formatPrice(find)}</strong></div>
+        <div className="card-top"><span className={`card-kind ${find.kind}`}>{find.kind === "food" ? "FOOD FIND" : "THINGS TO DO"}</span><span className="card-date">{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "MENU" : "ONGOING"}</span></div>
+        <Link href={`/${find.kind === "food" ? "food" : "events"}/${find.slug}`} className="card-title"><h2>{find.title}</h2></Link>
+        {!(find.kind === "food" && /menu price at/i.test(find.summary)) && <p className="card-summary">{find.summary}</p>}
+        <div className="card-bottom"><strong>{formatPrice(find)}</strong><span className="card-place">{find.places[0]?.area}</span></div>
         {find.kind === "food" && find.food && <div className="diet-row">{find.food.dietFit.pescatarian === "yes" && <span>◉ Pescatarian</span>}{find.food.dietFit.dairyFree === "yes" && <span>◉ Dairy-free</span>}{find.food.dietFit.vegan === "yes" && <span>◉ Vegan</span>}{find.food.dietFit.dairyFree === "unknown" && <span className="uncertain">Dairy status unconfirmed</span>}</div>}
       </article>)}</div>
       {count < shown.length && <><div ref={sentinel} className="feed-sentinel" aria-hidden="true" /><button className="load-more" onClick={() => setCount((current) => current + batchSize)}>Show more finds <span>↓</span></button></>}

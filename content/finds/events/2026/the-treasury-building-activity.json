@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-the-treasury-building-activity",
+  "slug": "the-treasury-building-activity",
+  "kind": "event",
+  "title": "The Treasury Building",
+  "summary": "This original Treasury Building was constructed by British Governor Sir Lewis Grant in 1831. This building housed the Treasury and Government Rum Bond and became historic not…",
+  "description": "This original Treasury Building was constructed by British Governor Sir Lewis Grant in 1831. This building housed the Treasury and Government Rum Bond and became historic not only because Sir Lewis Grant lived here, making it a Government House, but also, because it was from here that the succeeding Governor, George Fitzgerald Hill, declared the abolition of slavery on August 1st, 1838. On June 25th, 1932 the original Treasury Building was destroyed by fire. Listed opening hours: Monday - Friday 8:00AM - 4:00PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "The Treasury Building",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Independence Square, Port of Spain",
+      "mapUrl": "https://www.finance.gov.tt/services/treasury/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/the-treasury-building",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

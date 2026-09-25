@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-la-brea-pitch-lake-activity",
+  "slug": "la-brea-pitch-lake-activity",
+  "kind": "event",
+  "title": "La Brea Pitch Lake",
+  "summary": "A truly unusual natural wonder: 40 hectares of liquid bitumen rise to the surface and cool to natural asphalt. It is the largest phenomena of this kind worldwide. You can find…",
+  "description": "A truly unusual natural wonder: 40 hectares of liquid bitumen rise to the surface and cool to natural asphalt. It is the largest phenomena of this kind worldwide. You can find out more about the lake's history on a guided tour. Listed opening hours: Monday -Friday: 8am - 5pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "La Brea Pitch Lake",
+      "area": "La Brea",
+      "region": "South Trinidad",
+      "address": "Southern Main Rd, La Brea",
+      "mapUrl": "https://tradeind.gov.tt/la-brea-pitch-lake/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/la-brea-pitch-lake",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

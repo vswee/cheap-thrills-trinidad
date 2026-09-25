@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-tyrico-bay-activity",
+  "slug": "tyrico-bay-activity",
+  "kind": "event",
+  "title": "Tyrico Bay",
+  "summary": "Just minutes from Maracas Beach, this gorgeous stretch of sand offers a sense of calmness and the kind of 'laid back' Caribbean vibes that's hard to find in popular spots.…",
+  "description": "Just minutes from Maracas Beach, this gorgeous stretch of sand offers a sense of calmness and the kind of 'laid back' Caribbean vibes that's hard to find in popular spots. Tyrico Bay is perfect for families, picnics or simply switching off and soaking up the sun. This is a less crowded space, compared to nearby Maracas Beach. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Tyrico Bay",
+      "area": "Maracas",
+      "region": "North Trinidad",
+      "address": "North Coast Road, Maracas",
+      "mapUrl": "https://maps.app.goo.gl/V7hqnb8t2R2cvRweA"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/tyrico-bay",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

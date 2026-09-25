@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-queen-s-royal-college-activity",
+  "slug": "queen-s-royal-college-activity",
+  "kind": "event",
+  "title": "Queen's Royal College",
+  "summary": "Queen's Royal College is considered to be the most striking of the buildings of the Magnificent Seven. The foundation stone was laid on 11 November 1902, by Sir Courtney…",
+  "description": "Queen's Royal College is considered to be the most striking of the buildings of the Magnificent Seven. The foundation stone was laid on 11 November 1902, by Sir Courtney Knollys, who was the acting governor of the day. The structure was designed by Daniel M Hahn, who was Chief Draughtsman of the Public Works Department and the old boy of Queen's Royal College, during the period when the school was housed at the Princes Building. The architecture of the main block is German Renaissance in style, evident by its solid appearance. Listed opening hours: Monday - Friday 7:40 am - 3 pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Queen's Royal College",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "Corner Maraval Road & St. Clair Avenue, Port of Spain",
+      "mapUrl": "https://www.qrc.edu/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/queens-royal-college",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

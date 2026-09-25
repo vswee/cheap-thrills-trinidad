@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-soup-of-the-day-jaxx",
+  "slug": "soup-of-the-day-jaxx",
+  "kind": "food",
+  "title": "Soup Of The Day",
+  "summary": "Soup Of The Day · TT$35.00 menu price at Jaxx International Grill.",
+  "description": "CHEF'S SOUP CREATION FOR THE DAY. ASK YOUR SERVER FOR OUR DAILY SOUP. MADE FRESH Listed menu price: TT$35.00. Confirm current price and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Jaxx International Grill",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 35,
+    "fromAmount": null,
+    "label": "TT$35.00 menu price",
+    "terms": "Regular posted menu price; not a limited-time discount. Confirm the current price and participating branch before ordering."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Listed on the current menu at the source URL; availability may vary by branch.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "menu-price",
+    "budget-eats",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://tt.jaxxinternationalgrill.com/product/chef-soup-of-the-day/",
+      "publisher": "Jaxx International Grill — Trinidad menu",
+      "type": "official",
+      "supports": [
+        "menu item",
+        "price"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "food": {
+    "items": [
+      "Soup Of The Day"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Dietary status is only marked when supported by the published menu description. Confirm ingredients and preparation with the restaurant."
+  }
+}

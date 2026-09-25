@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-asa-wright-nature-centre-birding-visit-activity",
+  "slug": "asa-wright-nature-centre-birding-visit-activity",
+  "kind": "event",
+  "title": "Asa Wright Nature Centre Birding Visit",
+  "summary": "Visit Asa Wright Nature Centre for a rainforest and birding experience listed by Trinidad’s official tourism directory. Confirm entry and reservation requirements.",
+  "description": "Visit Asa Wright Nature Centre for a rainforest and birding experience listed by Trinidad’s official tourism directory. Confirm entry and reservation requirements. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Arima Valley",
+      "area": "Arima Valley",
+      "region": "North Trinidad",
+      "address": "Arima Valley"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "nature",
+    "wildlife",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/things-to-do/nature-wildlife/",
+      "publisher": "Visit Trinidad — official nature and wildlife directory",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Wildlife and nature visit",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

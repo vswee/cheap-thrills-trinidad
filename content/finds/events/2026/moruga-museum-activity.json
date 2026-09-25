@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-moruga-museum-activity",
+  "slug": "moruga-museum-activity",
+  "kind": "event",
+  "title": "Moruga Museum",
+  "summary": "This museum was opened on 30th November 2013 and was founded by Eric Lewis. He received a Vatican Gold Medal for his tremendous work in preserving the history of Moruga and…",
+  "description": "This museum was opened on 30th November 2013 and was founded by Eric Lewis. He received a Vatican Gold Medal for his tremendous work in preserving the history of Moruga and archaeological collection. Moruga Museum was built with the aim of preserving the socio-cultural and historical existence of the past to the wider community. The museum is known for its large collection of Amerindians artefacts, geological contents, exhibits of European, African and Natural Science Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Moruga Museum",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Grand Chemin Moruga",
+      "mapUrl": "https://maps.app.goo.gl/KDZGUGm3UUCrSKv96"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/moruga-museum",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

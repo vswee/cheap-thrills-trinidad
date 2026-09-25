@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-arnim-s-art-galleria-activity",
+  "slug": "arnim-s-art-galleria-activity",
+  "kind": "event",
+  "title": "Arnim's Art Galleria",
+  "summary": "Discover local Artists' artwork at the exhibitions ranging from Scupltures, Fashion Design, Photography, Installation Art, Painting and Graphics. Take part in various events/…",
+  "description": "Discover local Artists' artwork at the exhibitions ranging from Scupltures, Fashion Design, Photography, Installation Art, Painting and Graphics. Take part in various events/ workshops for all ages. Listed opening hours: Monday - Friday 9 am-6 pm Saturday 9 am-4 pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Arnim's Art Galleria",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "# 27 Tragarete Rd, Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/qsmgXnRGUpqFyeRy9"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/arnims-art-galleria",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

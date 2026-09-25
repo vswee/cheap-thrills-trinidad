@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "id": "food-pizza-ju-c-500ml-bottle-pizza",
+  "slug": "ju-c-500ml-bottle-pizza",
+  "kind": "food",
+  "title": "Ju-C 500ml Bottle",
+  "summary": "Ju-C 500ml Bottle · TT$8.00 menu price at Pizza Hut Trinidad.",
+  "description": "Listed on Pizza Hut Trinidad’s current online menu. Check the ordering menu for the full description and participating branch availability. Listed menu price: TT$8.00. Confirm current price and branch participation before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Pizza Hut Trinidad",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 8,
+    "fromAmount": null,
+    "label": "TT$8.00 menu price",
+    "terms": "Regular posted menu price; not a limited-time discount. Confirm the current price and participating branch before ordering."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Listed on the current menu at the source URL; availability may vary by branch.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "menu-price",
+    "budget-eats",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://pizzahut-tt.com/en/menu",
+      "publisher": "Pizza Hut Trinidad — official menu",
+      "type": "official",
+      "supports": [
+        "menu item",
+        "price"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "food": {
+    "items": [
+      "Ju-C 500ml Bottle"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Dietary status is only marked when supported by the published menu description. Confirm ingredients and preparation with the restaurant."
+  }
+}

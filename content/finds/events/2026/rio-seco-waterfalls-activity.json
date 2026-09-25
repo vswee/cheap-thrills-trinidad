@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-rio-seco-waterfalls-activity",
+  "slug": "rio-seco-waterfalls-activity",
+  "kind": "event",
+  "title": "Rio Seco Waterfalls",
+  "summary": "Rio Seco Waterfall is a scenic waterfall near Matura, known for its crystal -clear pool, lush rainforest surrounding and easy accessibility.",
+  "description": "Rio Seco Waterfall is a scenic waterfall near Matura, known for its crystal -clear pool, lush rainforest surrounding and easy accessibility. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Rio Seco Waterfalls",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Salybia",
+      "mapUrl": "https://maps.app.goo.gl/xdYdL3nqRy7dRbuY7"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/rio-seco-waterfalls",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

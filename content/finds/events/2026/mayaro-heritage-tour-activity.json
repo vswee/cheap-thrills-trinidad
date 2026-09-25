@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-mayaro-heritage-tour-activity",
+  "slug": "mayaro-heritage-tour-activity",
+  "kind": "event",
+  "title": "Mayaro Heritage Tour",
+  "summary": "A full-day heritage itinerary in Mayaro, listed by the National Trust as an eight-hour tour.",
+  "description": "A full-day heritage itinerary in Mayaro, listed by the National Trust as an eight-hour tour. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Mayaro",
+      "area": "Mayaro",
+      "region": "East Trinidad",
+      "address": "Mayaro"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "heritage",
+    "guided-tour",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://nationaltrust.tt/book-your-tour/",
+      "publisher": "National Trust of Trinidad and Tobago",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Guided heritage tour",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

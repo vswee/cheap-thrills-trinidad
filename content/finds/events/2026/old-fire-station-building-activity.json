@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-old-fire-station-building-activity",
+  "slug": "old-fire-station-building-activity",
+  "kind": "event",
+  "title": "Old Fire Station Building",
+  "summary": "Originally built in 1897 and refurbished and renovated in 2000, The Old Fire Station is an excellent example of the preservation of a historic building which has been elegantly…",
+  "description": "Originally built in 1897 and refurbished and renovated in 2000, The Old Fire Station is an excellent example of the preservation of a historic building which has been elegantly blended with the modern architectural landscape of the city. For ten years (1989-1999) it was the home of the Trinidad Theatre Workshop which was founded and directed by West Indian poet and Nobel Prize Winner, Derek Walcott. It has been incorporated into the National Library Complex and remains a historic gem in the city of Port-of-Spain. Listed opening hours: Monday - Friday: 8:30AM - 6:00PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Old Fire Station Building",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "23 Abercrombry Street, Port of Spain",
+      "mapUrl": "http://www.nalis.gov.tt/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/old-fire-station",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-cumaca-cave-activity",
+  "slug": "cumaca-cave-activity",
+  "kind": "event",
+  "title": "Cumaca Cave",
+  "summary": "Cumaca Cave - A large cave system located in northern Trinidad. The cave is notable for oilbirds and bats.",
+  "description": "Cumaca Cave - A large cave system located in northern Trinidad. The cave is notable for oilbirds and bats. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Cumaca Cave",
+      "area": "Sangre Grande",
+      "region": "East Trinidad",
+      "address": "Off Cumaca Road, East Northern Range, Sangre Grande",
+      "mapUrl": "https://maps.app.goo.gl/JcC8HyqHZuGWoqSn7"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/cumaca-cave",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

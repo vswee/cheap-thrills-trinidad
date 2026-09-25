@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-santa-rosa-rc-church-activity",
+  "slug": "santa-rosa-rc-church-activity",
+  "kind": "event",
+  "title": "Santa Rosa RC Church",
+  "summary": "The Santa Rosa Roman Catholic Church is renowned for its close connection to the annual Santa Rosa Festival, one of the oldest indigenous celebrations in the Caribbean, which…",
+  "description": "The Santa Rosa Roman Catholic Church is renowned for its close connection to the annual Santa Rosa Festival, one of the oldest indigenous celebrations in the Caribbean, which blends Catholic tradition with Amerindian heritage.The church's architecture, peaceful interior and longstanding role in community life make it both a spiritual centre and a cultural attraction. Listed opening hours: 9am - 5pm sat 9 to 12 noon. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Santa Rosa RC Church",
+      "area": "Arima",
+      "region": "East Trinidad",
+      "address": "Corner of Woodford Street and Sanchez Street Arima",
+      "mapUrl": "https://maps.app.goo.gl/gZzVC8M3FVRSZvvz6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/santa-rosa-rc-church",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

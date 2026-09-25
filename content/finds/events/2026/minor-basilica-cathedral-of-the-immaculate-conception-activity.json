@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-minor-basilica-cathedral-of-the-immaculate-conception-activity",
+  "slug": "minor-basilica-cathedral-of-the-immaculate-conception-activity",
+  "kind": "event",
+  "title": "Minor Basilica Cathedral of the Immaculate Conception",
+  "summary": "The Cathedral was built in the shape of the Latin Cross. The northern and southern transepts were designed as chapels of Our Blessed Lady and St. Joseph respectively. The walls…",
+  "description": "The Cathedral was built in the shape of the Latin Cross. The northern and southern transepts were designed as chapels of Our Blessed Lady and St. Joseph respectively. The walls were made of limestone quarried from the Laventille Hills which were nearby. The Cathedral of the Immaculate Conception was given the status of a Minor Basilica in 1857 as decreed by Pope Pius IX. Thus the church was given special privileges and making it the principal church of the diocese. Listed opening hours: Monday - Friday 8:00AM - 4:30PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Minor Basilica Cathedral of the Immaculate Conception",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "31 Independence Square, Port of Spain",
+      "mapUrl": "https://www.motherchurchtt.org"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/minor-basilica-cathedral-of-the-immaculate-conception",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

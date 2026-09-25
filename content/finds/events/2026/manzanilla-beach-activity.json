@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-manzanilla-beach-activity",
+  "slug": "manzanilla-beach-activity",
+  "kind": "event",
+  "title": "Manzanilla Beach",
+  "summary": "Fifteen miles of beachfront on the rural, east coast of Trinidad is called Manzanilla. On the interior, flowing parallel to the beach shoreline is the Nariva Swamp which is…",
+  "description": "Fifteen miles of beachfront on the rural, east coast of Trinidad is called Manzanilla. On the interior, flowing parallel to the beach shoreline is the Nariva Swamp which is home to a variety of freshwater animals and precious wildlife. The single road of beach and the swamp is lined with coconut palm trees and is one of the largest, local leatherback turtle nesting beaches on the island. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Manzanilla Beach",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "https://maps.app.goo.gl/DAEmFGUAhdGq58r56",
+      "mapUrl": "https://maps.app.goo.gl/6j2YK8XDivHX4G8MA"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/manzanilla-beach",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

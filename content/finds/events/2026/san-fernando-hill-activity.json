@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-san-fernando-hill-activity",
+  "slug": "san-fernando-hill-activity",
+  "kind": "event",
+  "title": "San Fernando Hill",
+  "summary": "San Fernando Hill, which was originally a sacred Amerindian location, is 100 acres in size and around 200 meters high. The hill provides ideal vantage points with expansive…",
+  "description": "San Fernando Hill, which was originally a sacred Amerindian location, is 100 acres in size and around 200 meters high. The hill provides ideal vantage points with expansive views of the Gulf of Paria, the distant towns of Point-a-Pierre and Point Lisas, and even the Venezuelan coastline. The lush greenery of the semi-evergreen forests and wild flowers that may be discovered on the San Fernando Hill includes the Almond tree, Bottle Brush, African Tulip, Dwarf Poui, Mohogany, Roble, Accasia, and Luciania trees. As a result of preservation efforts, this landmark has been designated as a protected area. Listed opening hours: Temporarily Closed. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "San Fernando Hill",
+      "area": "San Fernando",
+      "region": "South Trinidad",
+      "address": "Seereeram Drive Circular Road, San Fernando",
+      "mapUrl": "https://maps.app.goo.gl/J82ZXFTPSgAmpJGdA"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/san-fernando-hill",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

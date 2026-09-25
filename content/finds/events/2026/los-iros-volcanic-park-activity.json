@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-los-iros-volcanic-park-activity",
+  "slug": "los-iros-volcanic-park-activity",
+  "kind": "event",
+  "title": "Los Iros Volcanic Park",
+  "summary": "In Los Iros in south Trinidad neatly hidden away in a forest lies a Volcanic Park, home of Erin Bouffe Mud Volcano. The Los Iros Volcanic Park is a wonderful opportunity for a…",
+  "description": "In Los Iros in south Trinidad neatly hidden away in a forest lies a Volcanic Park, home of Erin Bouffe Mud Volcano. The Los Iros Volcanic Park is a wonderful opportunity for a dip in the rejuvenating mud volcano or just relax amidst beautiful surroundings. Listed opening hours: 9 AM - 5 PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Los Iros Volcanic Park",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Royal Engineer Road, Los Iros",
+      "mapUrl": "https://maps.app.goo.gl/qNEVSzcVUHzcXexx6"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/los-iros-volcanic-park",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-knollys-tunnel-360-virtual-experience-activity",
+  "slug": "knollys-tunnel-360-virtual-experience-activity",
+  "kind": "event",
+  "title": "Knollys Tunnel 360° Virtual Experience",
+  "summary": "Take a virtual 360° look at the historic Knollys Tunnel.",
+  "description": "Take a virtual 360° look at the historic Knollys Tunnel. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Tabaquite",
+      "area": "Tabaquite",
+      "region": "Central Trinidad",
+      "address": "Tabaquite"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Available online; check official page",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "virtual-tour",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinidad.tt/360-experiences/",
+      "publisher": "Tourism Trinidad",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Virtual 360° experience",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}

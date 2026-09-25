@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-roomor-ambard-s-house-activity",
+  "slug": "roomor-ambard-s-house-activity",
+  "kind": "event",
+  "title": "Roomor/Ambard's House",
+  "summary": "Roomor, or Ambard's House, was constructed by Lucien F Ambard in 1904 as a family residence. It was designed by a French architect and is described as being French 2nd Empire…",
+  "description": "Roomor, or Ambard's House, was constructed by Lucien F Ambard in 1904 as a family residence. It was designed by a French architect and is described as being French 2nd Empire in style. Because of financial difficulties resulting in an inability to meet his mortgage payments to Gordon Grant and Company, Ambard lost his house in 1919. It was subsequently sold tp Pointz Mackenzie, who also lost it in 1923 under similar circumstances. The property again came under the control of the Gordon Grant and company. In 1925, William Pettigrew Humphrey, an American bussinessman, rented the house where he lived with his family until 1940, the year that the house was sold to Mr. Timothy Roodal. Today, Ambard's House remains the property and residence of Mr. Roodal's heirs and the house is at present occupied by Mr. Roodal's granddaughter, Dr. Yvonne Morgan, and her family. Roomor is a combination of two family names; Roodal and Morgan. Despite many changes, Roomor remains one of the few of the Magnificient Seven that has substantially maintained the integrity of the original design and finishes. Listed opening hours: Restricted access- Visits can be scheduled for photoshoots. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Roomor/Ambard's House",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "25 Maraval Road, Port of Spain",
+      "mapUrl": "https://maps.app.goo.gl/t2VHyoZPYmRp8JE18"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/roomor-ambards-house",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

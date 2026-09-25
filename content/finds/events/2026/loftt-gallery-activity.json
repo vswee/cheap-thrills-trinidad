@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-loftt-gallery-activity",
+  "slug": "loftt-gallery-activity",
+  "kind": "event",
+  "title": "Loftt Gallery",
+  "summary": "A vibrant hub for contemporary Caribbean art in Port of Spain. Our focus lies on meticulously selecting and showcasing primarily the works of talented Trinidadian artists,…",
+  "description": "A vibrant hub for contemporary Caribbean art in Port of Spain. Our focus lies on meticulously selecting and showcasing primarily the works of talented Trinidadian artists, fostering a platform for artistic exchange and critical discussion. Listed opening hours: Tuesday - Thursday: 12:00PM - 6:00PM Friday - Saturday: 4:00PM - 8:00PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Loftt Gallery",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "# 63 Rosalino St, Woodbrook,POS",
+      "mapUrl": "https://maps.app.goo.gl/r2MeWgwxJ4vPa1Pq9"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/loftt-gallery",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

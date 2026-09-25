@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-santa-rosa-first-people-community-activity",
+  "slug": "santa-rosa-first-people-community-activity",
+  "kind": "event",
+  "title": "Santa Rosa First People Community",
+  "summary": "The Santa Rosa Amerindian Community is the only organized area of Amerindian Survival in Trinidad and Tobago.",
+  "description": "The Santa Rosa Amerindian Community is the only organized area of Amerindian Survival in Trinidad and Tobago. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Santa Rosa First People Community",
+      "area": "Arima",
+      "region": "East Trinidad",
+      "address": "7 Paul Mitchell Street Arima",
+      "mapUrl": "https://maps.app.goo.gl/u4Fcnt6fgKFsveuy9"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/santa-rosa-first-people-community",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

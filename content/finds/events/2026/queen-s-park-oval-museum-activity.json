@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-queen-s-park-oval-museum-activity",
+  "slug": "queen-s-park-oval-museum-activity",
+  "kind": "event",
+  "title": "Queen's Park Oval Museum",
+  "summary": "The Queen’s Park Oval’s Cricket Heritage Museum is located at the Brian Lara Pavilion on Tragarete Road, Port of Spain. There is a record of the development of the Club from…",
+  "description": "The Queen’s Park Oval’s Cricket Heritage Museum is located at the Brian Lara Pavilion on Tragarete Road, Port of Spain. There is a record of the development of the Club from its days at the Queen's Park Savannah to the very first days at the Queen's Park Oval. Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Queen's Park Oval Museum",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "94 Tragarete Road, Woodbrook, Port of Spain.",
+      "mapUrl": "https://qpcc.com/the-museum/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/queens-park-oval-museum",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-hacienda-jacana-activity",
+  "slug": "hacienda-jacana-activity",
+  "kind": "event",
+  "title": "Hacienda Jacana",
+  "summary": "Hacienda Jacana is a retreat and lodge based in Talparo, Trinidad. It was established in 2010 on an old citrus estate and offers a unique experience for guests. The site is a…",
+  "description": "Hacienda Jacana is a retreat and lodge based in Talparo, Trinidad. It was established in 2010 on an old citrus estate and offers a unique experience for guests. The site is a birdwatcher's paradise, boasting over 175 species. (www.haciendajacana.com). Listed opening hours: Monday - Sunday from 8 am - 4 pm. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Hacienda Jacana",
+      "area": "Trinidad",
+      "region": "Trinidad",
+      "address": "Leotaud Trace, Talparo",
+      "mapUrl": "https://maps.app.goo.gl/P3XLFoNnjNPN7J2j9"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/hacienda-jacana",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

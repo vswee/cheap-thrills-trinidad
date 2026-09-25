@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-scotland-bay-activity",
+  "slug": "scotland-bay-activity",
+  "kind": "event",
+  "title": "Scotland Bay",
+  "summary": "Scotland Bay is a picturesque bay on Trinidad's northwestern coast, known for its calm waters, natural beauty and secluded setting. Accessible by boat or hike, it is a popular…",
+  "description": "Scotland Bay is a picturesque bay on Trinidad's northwestern coast, known for its calm waters, natural beauty and secluded setting. Accessible by boat or hike, it is a popular destination for swimming, snorkeling and enjoying a peaceful retreat in nature. Listed opening hours: 24 HOURS. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Scotland Bay",
+      "area": "Chaguaramas",
+      "region": "North Trinidad",
+      "address": "Chaguaramas",
+      "mapUrl": "https://chaguaramas.com/tours-1"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/scotland-bay",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-studio-joli-ltd-activity",
+  "slug": "studio-joli-ltd-activity",
+  "kind": "event",
+  "title": "Studio Joli Ltd.",
+  "summary": "Art Gallery, Café, Studio Rental, Art Classes for kids and adults, and more!",
+  "description": "Art Gallery, Café, Studio Rental, Art Classes for kids and adults, and more! Listed opening hours: Monday - Friday 10:00 AM - 6:00 PM Saturday - 10:00 AM - 2:00 PM. Verify access, opening times and any fees with the site before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Studio Joli Ltd.",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": "#21 Henry Pierre Street, Port of Spain",
+      "mapUrl": "http://www.studiojoli.net/"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/studio-joli-ltd",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-edith-falls-activity",
+  "slug": "edith-falls-activity",
+  "kind": "event",
+  "title": "Edith Falls",
+  "summary": "Nestled against the eastern side of Morne Catherine overlooking the Chaguaramas Golf Course, this awesome 180 metre waterfall is a sight to behold!",
+  "description": "Nestled against the eastern side of Morne Catherine overlooking the Chaguaramas Golf Course, this awesome 180 metre waterfall is a sight to behold! Check current opening arrangements, visitor access and any fees before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Edith Falls",
+      "area": "Chaguaramas",
+      "region": "North Trinidad",
+      "address": "Chaguaramas",
+      "mapUrl": "https://maps.app.goo.gl/9YN54dwsULt4j9N6A"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The tourism listing does not provide a fixed price. Confirm current admission or guided-tour fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing attraction · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "attraction",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://visittrinbago.tt/attractions/edith-falls",
+      "publisher": "Visit Trinidad — official attractions directory",
+      "type": "official",
+      "supports": [
+        "attraction",
+        "location",
+        "visitor access"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Ongoing attraction visit",
+    "admission": "The directory does not list a fixed admission fee. Contact the site before visiting."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "activity-nelson-island-heritage-site-tour-option-1-activity",
+  "slug": "nelson-island-heritage-site-tour-option-1-activity",
+  "kind": "event",
+  "title": "Nelson Island Heritage Site Tour — Option 1",
+  "summary": "A three-hour National Trust visit to Nelson Island Heritage Site. Check the current booking page for itinerary and availability.",
+  "description": "A three-hour National Trust visit to Nelson Island Heritage Site. Check the current booking page for itinerary and availability. Check current opening hours, access, prices and booking requirements with the operator or official listing before travelling.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "publishedAt": "2026-09-25T12:00:00.000Z",
+  "checkedAt": "2026-09-25T12:00:00.000Z",
+  "places": [
+    {
+      "name": "Chaguaramas",
+      "area": "Chaguaramas",
+      "region": "North West Trinidad",
+      "address": "Chaguaramas"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Check admission",
+    "terms": "The referenced listing does not establish a fixed price. Confirm current admission, transport and booking fees directly before travelling."
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Ongoing experience · check opening hours",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "activity",
+    "heritage",
+    "guided-tour",
+    "trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://nationaltrust.tt/book-your-tour/",
+      "publisher": "National Trust of Trinidad and Tobago",
+      "type": "official",
+      "supports": [
+        "activity listing",
+        "experience details"
+      ],
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    }
+  ],
+  "event": {
+    "format": "Guided heritage tour",
+    "admission": "No fixed admission price is confirmed here; check with the operator or official listing."
+  }
+}
