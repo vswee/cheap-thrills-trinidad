@@ -3,6 +3,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
+import { resolveBrandAssets } from "./resolve-brands.mjs";
 
 const root = process.cwd();
 const now = new Date();
@@ -363,6 +364,7 @@ async function main() {
       }
     }
   }
+  await resolveBrandAssets();
   console.log(`Discovery complete: ${written} record(s) changed.`);
 }
 

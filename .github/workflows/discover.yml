@@ -34,7 +34,7 @@ jobs:
             npm run discover
             git config user.name "cheap-thrills-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add content/finds
+            git add content/finds content/brands public/brands
             if git diff --cached --quiet; then
               echo "No content changes to publish."
               exit 0

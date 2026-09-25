@@ -16,7 +16,9 @@ content/
   finds/
     food/YYYY/<stable-slug>.json
     events/YYYY/<stable-slug>.json
+  brands/registry.json       # shared brand identity and logo provenance
   sources/                 # optional source snapshots or provenance notes
+public/brands/             # local brand marks and generated attribution
 schemas/find.schema.json  # validation contract
 trinidad_*_monitor.md      # original editorial mandates
 src/app/                   # Next.js routes and templates
@@ -25,6 +27,14 @@ src/lib/                   # content loading, filtering and shared helpers
 ```
 
 The year directory is the record's first publication year and does not move when the record is updated. The record's `kind` is immutable. Slugs are lowercase ASCII kebab-case and never reused.
+
+## Brand identities
+
+`content/brands/registry.json` is the canonical brand identity registry used by both the discovery worker and the site. Worker discovery groups food finds by venue name and adds any new venue to this registry. It attempts to resolve an identity only when new or when a previous lookup produced no mark and its retry interval has elapsed.
+
+The resolver prefers a Commons logo whose title clearly matches the venue and whose file metadata declares a supported open license (Public Domain, CC0, CC BY, or CC BY-SA); those assets are copied into `public/brands/` and credited in the generated `public/brands/ATTRIBUTION.md`. If no qualifying Commons asset is available, it checks official venue source pages for a logo or icon URL and records the source page, venue credit, and rights note. The remote asset URL is used as provided by the official page; it is not copied into the repository. If neither route yields a verifiable mark, `mark` stays null and the UI renders a neutral initials tile without implying the venue's colours or logo. Lookup errors are logged but do not fail find discovery.
+
+Review registry changes and attribution alongside new records. Do not manually edit the generated attribution file; correct the registry entry or resolver instead. If a brand changes its identity or a source is no longer appropriate, update the registry entry deliberately and preserve the provenance trail in Git history.
 
 ## Record contract
 

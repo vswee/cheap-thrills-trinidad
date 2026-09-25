@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "brands": [
+    {
+      "id": "pizza-hut",
+      "name": "Pizza Hut",
+      "aliases": [
+        "Pizza Hut",
+        "Pizza Hut Trinidad"
+      ],
+      "mark": {
+        "sourceType": "commons",
+        "src": "/brands/pizza-hut.svg",
+        "width": 492,
+        "height": 395,
+        "mode": "standard",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Pizza_Hut_(2019).svg",
+        "license": "Public domain claim for a simple text/geometric logo; trademark rights noted on the file page.",
+        "credit": "Wikimedia Commons — Pizza Hut (2019).svg"
+      },
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    },
+    {
+      "id": "subway",
+      "name": "Subway",
+      "aliases": [
+        "Subway",
+        "Subway Trinidad"
+      ],
+      "mark": {
+        "sourceType": "commons",
+        "src": "/brands/subway.svg",
+        "width": 512,
+        "height": 102,
+        "mode": "standard",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Subway_2016_logo.svg",
+        "license": "Public domain claim for text/simple shapes; trademark rights noted on the file page.",
+        "credit": "Wikimedia Commons — Subway 2016 logo.svg"
+      },
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    },
+    {
+      "id": "wendys",
+      "name": "Wendy’s",
+      "aliases": [
+        "Wendy's",
+        "Wendy’s",
+        "Wendy's Trinidad",
+        "Wendy’s Trinidad"
+      ],
+      "mark": {
+        "sourceType": "official-cdn",
+        "src": "https://www.wendys.com/themes/custom/wendys_main/wendys-logo.svg",
+        "width": 60,
+        "height": 56,
+        "mode": "standard",
+        "sourcePage": "https://www.wendys.com/brand-assets-search",
+        "license": "Officially hosted brand asset; copyright and trademark remain with Wendy’s.",
+        "credit": "Wendy’s official website"
+      },
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    },
+    {
+      "id": "tgi-fridays",
+      "name": "TGI Fridays",
+      "aliases": [
+        "TGI Fridays",
+        "TGI Friday's",
+        "T.G.I. Fridays",
+        "TGI Fridays Trinidad",
+        "Fridays Trinidad"
+      ],
+      "mark": {
+        "sourceType": "official-cdn",
+        "src": "https://tgif-tt.com/web/wp-content/themes/TGIF/assets/img/FridaysLogo-white-tm.svg?x50361",
+        "width": 180,
+        "height": 70,
+        "mode": "dark",
+        "sourcePage": "https://tgif-tt.com/",
+        "license": "Officially hosted brand asset; copyright and trademark remain with TGI Fridays.",
+        "credit": "TGI Fridays Trinidad official website"
+      },
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    },
+    {
+      "id": "jaxx",
+      "name": "Jaxx International Grill",
+      "aliases": [
+        "Jaxx",
+        "Jaxx Grill",
+        "Jaxx International Grill",
+        "Jaxx International Trinidad"
+      ],
+      "mark": {
+        "sourceType": "official-cdn",
+        "src": "https://tt.jaxxinternationalgrill.com/wp-content/uploads/2024/12/Jaxx-Logo_No-Oval.png",
+        "width": 661,
+        "height": 462,
+        "mode": "standard",
+        "sourcePage": "https://tt.jaxxinternationalgrill.com/jaxxgrilltt-menu/",
+        "license": "Officially hosted brand asset; copyright and trademark remain with Jaxx International Grill.",
+        "credit": "Jaxx International Grill Trinidad official menu"
+      },
+      "checkedAt": "2026-09-25T12:00:00.000Z"
+    },
+    {
+      "id": "abraham-s-grill-hut",
+      "name": "Abraham's Grill Hut",
+      "aliases": [
+        "Abraham's Grill Hut"
+      ],
+      "mark": null,
+      "checkedAt": "2026-09-25T11:12:48.491Z"
+    },
+    {
+      "id": "first-harvest-kitchen",
+      "name": "First Harvest Kitchen",
+      "aliases": [
+        "First Harvest Kitchen"
+      ],
+      "mark": null,
+      "checkedAt": "2026-09-25T11:12:48.990Z"
+    },
+    {
+      "id": "the-fresh-press-cafe",
+      "name": "The Fresh Press Café",
+      "aliases": [
+        "The Fresh Press Café"
+      ],
+      "mark": null,
+      "checkedAt": "2026-09-25T11:12:49.481Z"
+    },
+    {
+      "id": "the-mythical-brew",
+      "name": "The Mythical Brew",
+      "aliases": [
+        "The Mythical Brew"
+      ],
+      "mark": null,
+      "checkedAt": "2026-09-25T11:12:49.958Z"
+    }
+  ]
+}
