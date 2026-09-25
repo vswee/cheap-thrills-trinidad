@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Find } from "@/lib/content";
 import { displayDate, formatPrice } from "@/lib/find-display";
+import { BrandMark } from "@/components/brand-mark";
 
 const batchSize = 8;
 
@@ -35,7 +36,7 @@ export function FindFeed({ finds }: { finds: Find[] }) {
     </div>}
     {shown.length === 0 ? <div className="empty-state"><h2>{query ? "No matching finds." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all") && <><p>{query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={() => { setQuery(""); setKind("all"); }}>Clear filters</button></>}</div> : <>
       <div className="feed-grid">{shown.slice(0, count).map((find, index) => <article className={`find-card ${index === 0 ? "featured" : ""}`} key={find.id}>
-        <div className="card-top"><span className={`card-kind ${find.kind}`}>{find.kind === "food" ? "FOOD FIND" : "THINGS TO DO"}</span><span className="card-date">{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "MENU" : "ONGOING"}</span></div>
+        <div className="card-top">{find.kind === "food" ? <BrandMark placeName={find.places[0]?.name ?? "Local kitchen"} /> : <span className="card-kind event">THINGS TO DO</span>}<span className="card-date">{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "MENU" : "ONGOING"}</span></div>
         <Link href={`/${find.kind === "food" ? "food" : "events"}/${find.slug}`} className="card-title"><h2>{find.title}</h2></Link>
         {!(find.kind === "food" && /menu price at/i.test(find.summary)) && <p className="card-summary">{find.summary}</p>}
         <div className="card-bottom"><strong>{formatPrice(find)}</strong><span className="card-place">{find.places[0]?.area}</span></div>
