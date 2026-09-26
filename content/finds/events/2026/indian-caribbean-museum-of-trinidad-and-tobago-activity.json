@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.810Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Carapichaima",
       "region": "Central Trinidad",
       "address": "Waterloo Road, Carapichaima",
-      "mapUrl": "https://maps.app.goo.gl/wCr8KC4AJKvkeahS6"
+      "mapUrl": "https://maps.app.goo.gl/wCr8KC4AJKvkeahS6",
+      "geolocation": {
+        "latitude": 10.4801699,
+        "longitude": -61.4580948,
+        "crs": "EPSG:4326",
+        "precision": "area",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/wCr8KC4AJKvkeahS6"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

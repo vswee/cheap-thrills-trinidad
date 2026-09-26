@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "id": "event-hikenation-chaguaramas-departure-salt-light-cruise",
+  "slug": "salt-light-cruise-chaguaramas",
+  "kind": "event",
+  "title": "Salt & Light Cruise",
+  "summary": "A Chacachacare boat-and-hike day with swimming and island exploration, listed from TT$250 per person for groups of five or more.",
+  "description": "HikeNation lists Salt & Light Cruise for Sunday 27 September in Chaguaramas. A current secondary listing gives a 9:00 am–3:00 pm Chacachacare itinerary including Perruquier Bay, an optional lighthouse hike, Salt Pond, swimming and island exploration, with bottled water, life jackets and noodles. Listed pricing is TT$300 single, TT$275 each for two or more, and TT$250 each for groups of five or more. HikeNation's official event page confirms the event/date/location but does not expose those price details in the indexed page, so this remains a candidate for review.",
+  "status": "candidate",
+  "confidence": "medium",
+  "createdAt": "2026-09-26T15:17:58.284Z",
+  "updatedAt": "2026-09-26T15:17:58.284Z",
+  "publishedAt": null,
+  "checkedAt": "2026-09-26T15:17:58.284Z",
+  "places": [
+    {
+      "name": "HikeNation / Chaguaramas departure",
+      "area": "Chaguaramas",
+      "region": "North-West Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": 250,
+    "label": "From TT$250 per person",
+    "terms": "Secondary listing: TT$250 each for groups 5+, TT$275 each for 2+, TT$300 single. Confirm with HikeNation before payment."
+  },
+  "validity": {
+    "startsAt": "2026-09-27T09:00:00-04:00",
+    "endsAt": "2026-09-27T15:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "boat-trip",
+    "hiking",
+    "nature",
+    "outdoors",
+    "day-trip"
+  ],
+  "sources": [
+    {
+      "url": "https://www.hikenationclub.com/events",
+      "publisher": "HikeNation",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-09-26T15:17:58.284Z"
+    },
+    {
+      "url": "https://whatson.tt/events/2026/09/salt-light-cruise-hikenation-club-2026-09-27",
+      "publisher": "WhatsOn.tt",
+      "type": "other",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "terms"
+      ],
+      "checkedAt": "2026-09-26T15:17:58.284Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "Medium confidence: official HikeNation page confirms event/date/location, but detailed itinerary and tiered pricing currently rely on a secondary listing.",
+  "event": {
+    "format": "boat cruise and hiking excursion",
+    "admission": "paid"
+  }
+}

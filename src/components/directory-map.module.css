@@ -1,0 +1,26 @@
+.mapSection { margin-top: 34px; }
+.mapToolbar { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:13px; }
+.mapToolbar p { margin:0; color:var(--muted); font-size:11px; }
+.filterGroup { display:flex; gap:7px; flex-wrap:wrap; }
+.filter,.activeFilter { display:flex; align-items:center; gap:9px; border:1px solid var(--line); border-radius:999px; background:var(--paper); color:var(--ink); padding:9px 13px; font-size:11px; }
+.filter span,.activeFilter span { color:var(--muted); font-size:10px; }
+.activeFilter { border-color:var(--ink); background:var(--ink); color:var(--paper); }
+.activeFilter span { color:color-mix(in srgb,var(--paper),transparent 24%); }
+.mapCanvas { width:100%; height:min(68vh,720px); min-height:420px; overflow:hidden; border:1px solid var(--line); border-radius:10px; background:var(--pale); }
+.mapCanvas :global(.leaflet-container) { width:100%; height:100%; background:#e7e9e4; font:12px var(--font-inter),Arial,sans-serif; }
+.mapCanvas :global(.leaflet-popup-content-wrapper) { border-radius:8px; color:#242b33; }
+.mapCanvas :global(.leaflet-popup-content) { margin:13px 15px; }
+.mapCanvas :global(.leaflet-popup-content strong) { display:block; margin-bottom:7px; font-size:12px; }
+.mapCanvas :global(.leaflet-popup-content a) { display:block; padding:6px 0; border-top:1px solid #e8e5df; color:#3c6c59; font-size:11px; line-height:1.4; }
+.mapCanvas :global(.leaflet-control-attribution) { font-size:9px; }
+.mapCanvas :global(.ct-map-icon) { border:0; background:none; }
+.mapCanvas :global(.ct-map-dot) { display:grid; width:32px; height:32px; place-items:center; border:2px solid #fff; border-radius:50%; box-shadow:0 2px 8px rgba(20,30,28,.3); color:#fff; font:600 10px var(--font-inter),Arial,sans-serif; }
+.mapCanvas :global(.ct-map-food) { background:#43826a; }
+.mapCanvas :global(.ct-map-event) { background:var(--primary); }
+.mapCanvas :global(.ct-map-mixed) { background:#697b6d; }
+.mapLegend { display:flex; flex-wrap:wrap; align-items:center; gap:17px; padding-top:12px; color:var(--muted); font-size:10px; }
+.mapLegend span { display:flex; align-items:center; gap:6px; }
+.mapLegend i { width:9px; height:9px; border-radius:50%; }
+.foodKey { background:#43826a; }
+.eventKey { background:var(--primary); }
+@media (max-width:640px) { .mapToolbar { align-items:flex-start; flex-direction:column; gap:11px; }.mapCanvas { min-height:58vh; height:58vh; }.mapLegend { gap:10px 15px; }.mapLegend span:last-child { flex-basis:100%; } }

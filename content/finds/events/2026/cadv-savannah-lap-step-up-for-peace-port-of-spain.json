@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "id": "event-queen-s-park-savannah-cadv-savannah-lap-step-up-for-peace",
+  "slug": "cadv-savannah-lap-step-up-for-peace-port-of-spain",
+  "kind": "event",
+  "title": "CADV Savannah Lap – Step Up for Peace",
+  "summary": "A community Savannah lap at Queen’s Park Savannah with adult and child registration, prizes and a commemorative pin.",
+  "description": "The Coalition Against Domestic Violence’s annual Savannah Lap takes place Saturday 26 September 2026 at 4:30 PM at Queen’s Park Savannah. Participants take part in the Step Up for Peace lap, with prizes advertised and a commemorative pin for all participants. Race Roster lists adult registration at approximately TT$150 plus processing fee and child registration at approximately TT$100 plus processing fee.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-26T15:17:58.180Z",
+  "updatedAt": "2026-09-26T15:17:58.180Z",
+  "publishedAt": "2026-09-26T15:17:58.180Z",
+  "checkedAt": "2026-09-26T15:17:58.180Z",
+  "places": [
+    {
+      "name": "Queen's Park Savannah",
+      "area": "Port of Spain",
+      "region": "Northwest Trinidad",
+      "address": "Queen's Park E, Port of Spain, Trinidad and Tobago",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 150,
+    "fromAmount": 100,
+    "label": "About TT$100 children; TT$150 adults, plus processing fee",
+    "terms": "Race Roster displays prices in USD with approximate TTD equivalents. Registration tiers run through 26 September 2026."
+  },
+  "validity": {
+    "startsAt": "2026-09-26T16:30:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "sports",
+    "recreation",
+    "community",
+    "run-walk"
+  ],
+  "sources": [
+    {
+      "url": "https://raceroster.com/events/2026/140161/cadv-savannah-lap",
+      "publisher": "Race Roster / Coalition Against Domestic Violence",
+      "type": "ticketing",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-09-26T15:17:58.180Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "Verified 2026-09-26 on the live Race Roster page. Prices are displayed by Race Roster in USD with approximate TTD equivalents; preserve that caveat rather than treating TT$100/150 as exact card charges.",
+  "event": {
+    "format": "Community Savannah lap / run-walk",
+    "admission": "paid"
+  }
+}

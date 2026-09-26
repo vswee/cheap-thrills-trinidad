@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.807Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Trinidad",
       "region": "Trinidad",
       "address": "North Coast Road , Las Cuevas",
-      "mapUrl": "https://maps.app.goo.gl/pqgvRnCfBL4zYADs7"
+      "mapUrl": "https://maps.app.goo.gl/pqgvRnCfBL4zYADs7",
+      "geolocation": {
+        "latitude": 10.7851144,
+        "longitude": -61.3928829,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/pqgvRnCfBL4zYADs7"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

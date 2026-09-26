@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "id": "event-medulla-art-gallery-the-universe-has-already-printed-our-blessings",
+  "slug": "the-universe-has-already-printed-our-blessings-woodbrook",
+  "kind": "event",
+  "title": "The Universe Has Already Printed Our Blessings",
+  "summary": "A free interactive living-garden sound-and-light installation by David Gumbs at Medulla Art Gallery during TTFF/26.",
+  "description": "TTFF/26 presents David Gumbs' interactive installation at Medulla Art Gallery in Woodbrook. Visitors touch a living indoor tropical garden to trigger sound and light responses. The unveiling and festival closing-night event runs Sunday 27 September from 6:00 pm to 10:00 pm. TTFF states that entry is free and no ticket is required.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-26T15:17:58.284Z",
+  "updatedAt": "2026-09-26T15:17:58.284Z",
+  "publishedAt": "2026-09-26T15:17:58.284Z",
+  "checkedAt": "2026-09-26T15:17:58.284Z",
+  "places": [
+    {
+      "name": "Medulla Art Gallery",
+      "area": "Woodbrook",
+      "region": "Port of Spain",
+      "address": "37 Fitt Street, Woodbrook, Trinidad and Tobago",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": "No ticket required."
+  },
+  "validity": {
+    "startsAt": "2026-09-27T18:00:00-04:00",
+    "endsAt": "2026-09-27T22:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "art",
+    "exhibition",
+    "interactive",
+    "festival"
+  ],
+  "sources": [
+    {
+      "url": "https://ttfilmfestival.com/new-media-at-ttff-26-david-gumbs-the-universe-has-already-printed-our-blessings/",
+      "publisher": "Trinidad+Tobago Film Festival",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-09-26T15:17:58.284Z"
+    },
+    {
+      "url": "https://ttfilmfestival.com/event/new-media/",
+      "publisher": "Trinidad+Tobago Film Festival",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-09-26T15:17:58.284Z"
+    }
+  ],
+  "research": {
+    "service": "OpenAI",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "High confidence: TTFF's current official pages directly support the event, date/time, venue and free/no-ticket admission.",
+  "event": {
+    "format": "interactive art installation",
+    "admission": "free"
+  }
+}

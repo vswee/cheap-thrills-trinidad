@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.814Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Trinidad",
       "region": "Trinidad",
       "address": "# 63 Rosalino St, Woodbrook,POS",
-      "mapUrl": "https://maps.app.goo.gl/r2MeWgwxJ4vPa1Pq9"
+      "mapUrl": "https://maps.app.goo.gl/r2MeWgwxJ4vPa1Pq9",
+      "geolocation": {
+        "latitude": 10.6654128,
+        "longitude": -61.5243123,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/r2MeWgwxJ4vPa1Pq9"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

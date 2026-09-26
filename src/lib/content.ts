@@ -14,7 +14,7 @@ export type Find = {
   updatedAt: string;
   publishedAt: string | null;
   checkedAt: string;
-  places: { name: string; area: string; region: string; address: string | null; mapUrl: string | null }[];
+  places: { name: string; area: string; region: string; address: string | null; mapUrl: string | null; geolocation?: { latitude: number; longitude: number; crs: "EPSG:4326"; precision: "venue" | "area"; source: { provider: string; url: string }; verifiedAt: string } }[];
   price: { currency: "TTD"; amount: number | null; fromAmount: number | null; label: string; terms: string | null };
   validity: { startsAt: string | null; endsAt: string | null; recurrence: string | null; timezone: string };
   categories: string[];

@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.815Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Blanchisseuse",
       "region": "North Trinidad",
       "address": "Blanchisseuse",
-      "mapUrl": "https://maps.app.goo.gl/rTsQEz3gUn38c2NPA"
+      "mapUrl": "https://maps.app.goo.gl/rTsQEz3gUn38c2NPA",
+      "geolocation": {
+        "latitude": 10.7430677,
+        "longitude": -61.2042817,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/rTsQEz3gUn38c2NPA"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

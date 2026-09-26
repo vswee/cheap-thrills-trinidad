@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.810Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Debe",
       "region": "South Trinidad",
       "address": "L'eau Michel Beach, Debe, Morne Diablo",
-      "mapUrl": "https://maps.app.goo.gl/mAjv6NSx3DDPPZWJ7"
+      "mapUrl": "https://maps.app.goo.gl/mAjv6NSx3DDPPZWJ7",
+      "geolocation": {
+        "latitude": 10.0893585,
+        "longitude": -61.4024214,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/mAjv6NSx3DDPPZWJ7"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

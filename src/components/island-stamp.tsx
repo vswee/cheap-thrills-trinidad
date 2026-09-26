@@ -1,3 +1,3 @@
 export function IslandStamp() {
-  return <div className="island-stamp" role="img" aria-label="Map of Trinidad and Tobago" />;
+  return <img className="island-stamp" src="/trinidad-and-tobago-outline.svg" alt="Outline map of Trinidad and Tobago" />;
 }

@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.805Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Chaguaramas",
       "region": "North Trinidad",
       "address": "Chaguaramas",
-      "mapUrl": "https://maps.app.goo.gl/9YN54dwsULt4j9N6A"
+      "mapUrl": "https://maps.app.goo.gl/9YN54dwsULt4j9N6A",
+      "geolocation": {
+        "latitude": 10.725181,
+        "longitude": -61.6215205,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/9YN54dwsULt4j9N6A"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

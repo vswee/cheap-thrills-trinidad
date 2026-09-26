@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-24T18:17:30.059Z",
-  "updatedAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-09-25T12:44:46.837Z",
   "publishedAt": "2026-09-24T18:17:30.059Z",
   "checkedAt": "2026-09-24T18:17:30.059Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Chaguanas",
       "region": "Trinidad",
       "address": "Montrose, Chaguanas",
-      "mapUrl": null
+      "mapUrl": null,
+      "geolocation": {
+        "latitude": 10.5141191,
+        "longitude": -61.4024206,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "OpenStreetMap Nominatim",
+          "url": "https://www.openstreetmap.org/node/1858008819"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.837Z"
+      }
     }
   ],
   "price": {

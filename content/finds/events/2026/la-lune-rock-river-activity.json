@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.811Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Trinidad",
       "region": "Trinidad",
       "address": "Moruga",
-      "mapUrl": "https://maps.app.goo.gl/686WsuXSFF4mCT16A"
+      "mapUrl": "https://maps.app.goo.gl/686WsuXSFF4mCT16A",
+      "geolocation": {
+        "latitude": 10.0813961,
+        "longitude": -61.330255,
+        "crs": "EPSG:4326",
+        "precision": "area",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/686WsuXSFF4mCT16A"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

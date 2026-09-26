@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FindFeed } from "@/components/find-feed";
-import { ReportForm } from "@/components/report-form";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { IslandStamp } from "@/components/island-stamp";
+import { ReportIssueLink } from "@/components/report-issue-link";
 import { getFinds } from "@/lib/content";
 import { siteJsonLd } from "@/lib/seo";
 
@@ -12,9 +12,9 @@ export default function Home() {
   const eventCount = finds.length - foodCount;
   return <main className="site-shell" id="top">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd()).replace(/</g, "\\u003c") }} />
-    <header className="topbar"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><nav><a href="#latest">The latest</a><a href="#about">About</a><Link href="#report">Report an issue</Link></nav><ThemeToggle /></header>
+    <header className="topbar"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><nav><a href="#latest">The latest</a><Link href="/map">Map</Link><Link href="/about">About</Link><ReportIssueLink>Report an issue</ReportIssueLink></nav><ThemeToggle /></header>
     <section className="hero">
-      <div className="hero-copy"><h1>Trinidad,<br />well spent<span className="hero-period">.</span></h1><p>Good food. Good times. Better prices.<br /><span>Affordable eats and things to do across the island.</span></p></div>
+      <div className="hero-copy"><h1>Food & Events,<br />Trinidad<span className="hero-period">.</span></h1><p>Affordable eats and things to do across the island.</p></div>
       <div className="hero-stamp"><IslandStamp /></div>
     </section>
     <section className="latest-section" id="latest">
@@ -23,8 +23,6 @@ export default function Home() {
       <FindFeed finds={finds} />
       <div className="seo-links"><p className="eyebrow">BROWSE BY PLACE</p><p>Looking for a local deal or plan? Start with these curated guides.</p><div><Link href="/food-deals/trinidad">Food deals in Trinidad</Link><Link href="/food-deals/chaguanas">Chaguanas food deals</Link><Link href="/food-deals/central-trinidad">Central Trinidad food deals</Link><Link href="/things-to-do/trinidad">Things to do in Trinidad</Link><Link href="/things-to-do/central-trinidad">Central Trinidad events</Link></div></div>
     </section>
-    <section className="manifesto" id="about"><div className="manifesto-mark">✳</div><p className="eyebrow">CURATED WITH CARE · MADE FOR TRINIDAD</p><h2>Less scrolling.<br /><span>More living.</span></h2><p className="manifesto-copy">We find the local deals, small adventures and good moments worth leaving home for. Every listing comes with the details you need to make it a plan.</p><div className="manifesto-places">CHAGUANAS <span>→</span> CENTRAL <span>→</span> EVERYWHERE</div></section>
-    <section className="report-section" id="report"><div><p className="eyebrow">HELP KEEP IT FRESH</p><h2>Spot something<br /><em>off?</em></h2><p className="report-copy">Prices change and plans move. Tell us when a listing needs a second look.</p></div><div className="report-panel"><div className="report-panel-head"><span>ISSUE REPORT</span><span className="status-dot" /> PRIVATE MESSAGE</div><ReportForm /></div></section>
-    <footer className="footer"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><span className="footer-copy">© 2026 Cheap Thrills Trinidad</span><a href="#top" className="back-top">BACK TO TOP ↑</a></footer>
+    <footer className="footer"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><span className="footer-copy">© 2026 Cheap Thrills Trinidad</span><nav className="footer-nav" aria-label="About and help"><Link href="/about">About</Link><ReportIssueLink>Report an issue</ReportIssueLink><Link href="/map">Map</Link><a href="#top" className="back-top">Back to top ↑</a></nav></footer>
   </main>;
 }

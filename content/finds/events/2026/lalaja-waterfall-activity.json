@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.813Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Trinidad",
       "region": "Trinidad",
       "address": "Off La Ja Ja Rd, Brasso Seco Village",
-      "mapUrl": "https://maps.app.goo.gl/RL9bZPSPKWz2Aiq88"
+      "mapUrl": "https://maps.app.goo.gl/RL9bZPSPKWz2Aiq88",
+      "geolocation": {
+        "latitude": 10.7205625,
+        "longitude": -61.2563404,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/RL9bZPSPKWz2Aiq88"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

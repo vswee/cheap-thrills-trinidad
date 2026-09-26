@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.822Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Trinidad",
       "region": "Trinidad",
       "address": "Rampanalgas",
-      "mapUrl": "https://maps.app.goo.gl/1zyuCGHBBc4apu449"
+      "mapUrl": "https://maps.app.goo.gl/1zyuCGHBBc4apu449",
+      "geolocation": {
+        "latitude": 10.7364802,
+        "longitude": -60.987796,
+        "crs": "EPSG:4326",
+        "precision": "area",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/1zyuCGHBBc4apu449"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

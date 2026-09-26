@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.803Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Arima",
       "region": "East Trinidad",
       "address": "Arima Old Road",
-      "mapUrl": "https://maps.app.goo.gl/trma6uVrCWCcze8F8"
+      "mapUrl": "https://maps.app.goo.gl/trma6uVrCWCcze8F8",
+      "geolocation": {
+        "latitude": 10.6318625,
+        "longitude": -61.2980469,
+        "crs": "EPSG:4326",
+        "precision": "area",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/trma6uVrCWCcze8F8"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

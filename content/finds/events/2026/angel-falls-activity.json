@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.798Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Maracas",
       "region": "North Trinidad",
       "address": "Maracas Bay Village",
-      "mapUrl": "https://maps.app.goo.gl/oa6kVefTVB2Nn9RA8"
+      "mapUrl": "https://maps.app.goo.gl/oa6kVefTVB2Nn9RA8",
+      "geolocation": {
+        "latitude": 10.7528519,
+        "longitude": -61.4132453,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/oa6kVefTVB2Nn9RA8"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {

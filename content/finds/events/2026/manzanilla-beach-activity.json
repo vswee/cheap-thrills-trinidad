@@ -9,7 +9,7 @@
   "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-09-25T12:44:46.815Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -18,7 +18,18 @@
       "area": "Trinidad",
       "region": "Trinidad",
       "address": "https://maps.app.goo.gl/DAEmFGUAhdGq58r56",
-      "mapUrl": "https://maps.app.goo.gl/6j2YK8XDivHX4G8MA"
+      "mapUrl": "https://maps.app.goo.gl/6j2YK8XDivHX4G8MA",
+      "geolocation": {
+        "latitude": 10.5078481,
+        "longitude": -61.0434668,
+        "crs": "EPSG:4326",
+        "precision": "venue",
+        "source": {
+          "provider": "Google Maps",
+          "url": "https://maps.app.goo.gl/6j2YK8XDivHX4G8MA"
+        },
+        "verifiedAt": "2026-09-25T12:44:46.794Z"
+      }
     }
   ],
   "price": {
