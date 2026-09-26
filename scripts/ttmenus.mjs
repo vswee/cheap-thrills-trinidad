@@ -5,7 +5,7 @@ const root = process.cwd();
 const configPath = path.join(root, "config/ttmenus-participants.json");
 const userAgent = "CheapThrillsTrinidad/1.0 (+https://cheap-thrills-trinidad.flat18.app/; public menu research)";
 const maxResponseBytes = 1_500_000;
-const maxPerParticipant = 20;
+const maxPerParticipant = 5;
 const maxParticipants = 12;
 
 function plainText(value) {
@@ -69,7 +69,7 @@ async function verifyMenuPage(item) {
   try {
     const { response, body } = await fetchText(item.sourceUrl, "text/html,application/xhtml+xml");
     if (!/text\/html|application\/xhtml\+xml/i.test(response.headers.get("content-type") ?? "")) return;
-    const excerpt = pageEvidence(body.toString("utf8"), item.title);
+    const excerpt = pageEvidence(body.toString("utf8"), item.title).slice(0, 500);
     if (excerpt.length < item.title.length) return;
     item.pageCheckedAt = new Date().toISOString();
     item.pageExcerpt = excerpt;
@@ -153,7 +153,11 @@ export async function collectTtMenusEvidence(existingFood = []) {
       const participantFinds = catalog.menu_items
         .map((item) => publicMenuItem(item, participant, generatedAt))
         .filter(Boolean)
-        .sort((a, b) => (a.listedPrices[0] ?? Number.MAX_SAFE_INTEGER) - (b.listedPrices[0] ?? Number.MAX_SAFE_INTEGER))
+        .sort((a, b) => {
+          const dietTerms = /fish|seafood|sushi|vegan|plant[- ]based|dairy[- ]free|vegetarian|tofu|ital/i;
+          const dietPriority = Number(dietTerms.test(`${b.title} ${b.details}`)) - Number(dietTerms.test(`${a.title} ${a.details}`));
+          return dietPriority || (a.listedPrices[0] ?? Number.MAX_SAFE_INTEGER) - (b.listedPrices[0] ?? Number.MAX_SAFE_INTEGER);
+        })
         .slice(0, maxPerParticipant);
       for (const item of participantFinds) {
         await verifyMenuPage(item);
