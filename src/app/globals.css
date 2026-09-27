@@ -125,7 +125,7 @@ button { cursor:pointer; }
 .stamp-center-island { font:650 8px var(--font-inter),Inter,Arial,sans-serif; letter-spacing:2px; }
 .stamp-center-finds { font:500 22px var(--font-fraunces),Inter,Arial,sans-serif; letter-spacing:1px; }
 .stamp-center-coords { font:550 6px var(--font-inter),Inter,Arial,sans-serif; letter-spacing:2px; opacity:.75; }
-.stamp-map { position:absolute; top:31%; left:50%; z-index:1; display:block; width:34%; height:auto; transform:translateX(-50%); object-fit:contain; opacity:.9;
+.stamp-map { position:absolute; top:23%; left:50%; z-index:1; display:block; width:52%; height:auto; transform:translateX(-50%); object-fit:contain; opacity:.9;
 }
 .brand-identity { display:inline-flex; align-items:center; gap:7px; min-width:0; max-width:100%; color:var(--ink); text-align:left; }
 .brand-emblem { width:48px; height:30px; flex:0 0 auto; display:grid; place-items:center; overflow:hidden; padding:2px 4px; border:1px solid var(--line); border-radius:5px; background:var(--paper); }
