@@ -17,6 +17,6 @@ export function IslandStamp() {
       <text className="stamp-center-finds" x="200" y="311">FINDS</text>
       <text className="stamp-center-coords" x="200" y="335">10° 31′ N</text>
     </svg>
-    <Image className="stamp-map" src="/trinidad-and-tobago-outline.svg" width={136} height={124} alt="" />
+    <Image className="stamp-map" src="/trinidad-outline.svg" width={104} height={82} alt="" />
   </div>;
 }
