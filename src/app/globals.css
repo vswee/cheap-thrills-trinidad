@@ -98,20 +98,34 @@ button { cursor:pointer; }
   position:absolute;
   z-index:0;
   top:50%;
-  right:clamp(-460px,-22vw,-150px);
-  width:min(84vw,1100px);
+  right:clamp(-210px,-8vw,-80px);
+  width:clamp(390px,54vw,760px);
   height:auto;
-  aspect-ratio:136 / 124;
-  transform:translateY(-50%);
-  opacity:.19;
+  aspect-ratio:1;
+  transform:translateY(-50%) rotate(1deg);
+  opacity:.23;
   pointer-events:none;
 }
 .island-stamp {
+  position:relative;
   display:block;
   width:100%;
   height:100%;
-  object-fit:contain;
-  opacity:.72;
+  color:var(--primary);
+}
+.stamp-seal { display:block; width:100%; height:100%; overflow:visible; }
+.stamp-ring,.stamp-inner-ring,.stamp-center-ring { fill:none; stroke:currentColor; }
+.stamp-ring { stroke-width:1.1; }
+.stamp-inner-ring { stroke-width:.65; opacity:.65; }
+.stamp-center-ring { stroke-width:.65; stroke-dasharray:1.5 3; opacity:.45; }
+.stamp-arc-text { fill:currentColor; font-family:var(--font-inter),Inter,Arial,sans-serif; font-size:9px; font-weight:650; letter-spacing:2px; }
+.stamp-arc-bottom { font-size:8px; letter-spacing:2.2px; }
+.stamp-seal-mark { fill:var(--accent); }
+.stamp-center-island,.stamp-center-finds,.stamp-center-coords { fill:currentColor; text-anchor:middle; }
+.stamp-center-island { font:650 8px var(--font-inter),Inter,Arial,sans-serif; letter-spacing:2px; }
+.stamp-center-finds { font:500 22px var(--font-fraunces),Inter,Arial,sans-serif; letter-spacing:1px; }
+.stamp-center-coords { font:550 6px var(--font-inter),Inter,Arial,sans-serif; letter-spacing:2px; opacity:.75; }
+.stamp-map { position:absolute; top:31%; left:50%; z-index:1; display:block; width:34%; height:auto; transform:translateX(-50%); object-fit:contain; opacity:.9;
 }
 .brand-identity { display:inline-flex; align-items:center; gap:7px; min-width:0; max-width:100%; color:var(--ink); text-align:left; }
 .brand-emblem { width:48px; height:30px; flex:0 0 auto; display:grid; place-items:center; overflow:hidden; padding:2px 4px; border:1px solid var(--line); border-radius:5px; background:var(--paper); }
@@ -129,7 +143,7 @@ button { cursor:pointer; }
   .hero { min-height:0; padding:56px 0; align-items:center; }
   .hero-copy { max-width:88%; }
   .hero-copy h1 { font-size:clamp(59px,14vw,82px); }
-  .hero-stamp { width:min(112vw,640px); right:-38vw; top:50%; bottom:auto; opacity:.14; transform:translateY(-50%); }
+  .hero-stamp { width:min(100vw,460px); right:-34vw; top:50%; bottom:auto; opacity:.13; transform:translateY(-50%) rotate(1deg); }
   .brand-name { max-width:106px; font-size:8px; }
   .brand-identity-large .brand-name { max-width:none; font-size:11px; }
 }
