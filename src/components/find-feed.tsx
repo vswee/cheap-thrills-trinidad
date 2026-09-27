@@ -9,6 +9,7 @@ import { BrandMark } from "@/components/brand-mark";
 const batchSize = 8;
 type FindKind = "all" | "food" | "event";
 type FindView = "cards" | "list";
+type DietFilter = "pescatarian" | "vegan" | null;
 
 function readKind(value: string | null, fallback: FindKind): FindKind {
   return value === "all" || value === "food" || value === "event" ? value : fallback;
@@ -18,19 +19,26 @@ function readView(value: string | null): FindView {
   return value === "list" ? "list" : "cards";
 }
 
+function readDiet(value: string | null): DietFilter {
+  return value === "pescatarian" || value === "vegan" ? value : null;
+}
+
 export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaultKind?: FindKind }) {
   const [kind, setKind] = useState<FindKind>(defaultKind);
   const [query, setQuery] = useState("");
   const [count, setCount] = useState(batchSize);
   const [view, setView] = useState<FindView>("cards");
+  const [diet, setDiet] = useState<DietFilter>(null);
   const sentinel = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const syncFromUrl = () => {
       const params = new URLSearchParams(window.location.search);
-      setKind(readKind(params.get("type"), defaultKind));
+      const nextKind = readKind(params.get("type"), defaultKind);
+      setKind(nextKind);
       setQuery(params.get("q") ?? "");
       setView(readView(params.get("view")));
+      setDiet(nextKind === "food" ? readDiet(params.get("diet")) : null);
       setCount(batchSize);
     };
     syncFromUrl();
@@ -38,7 +46,7 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     return () => window.removeEventListener("popstate", syncFromUrl);
   }, [defaultKind]);
 
-  const makeUrl = useCallback((nextKind: FindKind, nextQuery: string, nextView: FindView) => {
+  const makeUrl = useCallback((nextKind: FindKind, nextQuery: string, nextView: FindView, nextDiet: DietFilter) => {
     const params = new URLSearchParams(window.location.search);
     if (nextKind === defaultKind) params.delete("type");
     else params.set("type", nextKind);
@@ -46,6 +54,8 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     else params.delete("q");
     if (nextView === "cards") params.delete("view");
     else params.set("view", nextView);
+    if (nextKind !== "food" || !nextDiet) params.delete("diet");
+    else params.set("diet", nextDiet);
     const queryString = params.toString();
     return `${window.location.pathname}${queryString ? `?${queryString}` : ""}${window.location.hash}`;
   }, [defaultKind]);
@@ -53,32 +63,44 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
   const changeKind = (nextKind: FindKind) => {
     setCount(batchSize);
     setKind(nextKind);
-    window.history.pushState(null, "", makeUrl(nextKind, query, view));
+    const nextDiet = nextKind === "food" ? diet : null;
+    setDiet(nextDiet);
+    window.history.pushState(null, "", makeUrl(nextKind, query, view, nextDiet));
   };
 
   const changeQuery = (nextQuery: string) => {
     setQuery(nextQuery);
     setCount(batchSize);
-    window.history.replaceState(null, "", makeUrl(kind, nextQuery, view));
+    window.history.replaceState(null, "", makeUrl(kind, nextQuery, view, diet));
   };
 
   const clearFilters = () => {
     setQuery("");
     setKind(defaultKind);
+    setDiet(null);
     setCount(batchSize);
-    window.history.pushState(null, "", makeUrl(defaultKind, "", view));
+    window.history.pushState(null, "", makeUrl(defaultKind, "", view, null));
   };
 
   const changeView = (nextView: FindView) => {
     setView(nextView);
-    window.history.pushState(null, "", makeUrl(kind, query, nextView));
+    window.history.pushState(null, "", makeUrl(kind, query, nextView, diet));
+  };
+
+  const changeDiet = (nextDiet: DietFilter) => {
+    setCount(batchSize);
+    setKind("food");
+    setDiet(nextDiet);
+    window.history.pushState(null, "", makeUrl("food", query, view, nextDiet));
   };
 
   const shown = useMemo(() => finds.filter((find) => {
     if (kind !== "all" && find.kind !== kind) return false;
+    if (diet === "pescatarian" && find.food?.dietFit.pescatarian !== "yes") return false;
+    if (diet === "vegan" && find.food?.dietFit.vegan !== "yes") return false;
     const text = `${find.title} ${find.summary} ${find.description} ${find.places.map((p) => `${p.area} ${p.region} ${p.name}`).join(" ")} ${find.categories.join(" ")} ${find.price.label} ${find.price.terms ?? ""} ${find.food ? `${find.food.items.join(" ")} ${JSON.stringify(find.food.dietFit)} ${find.food.dietNotes}` : ""}`.toLowerCase();
     return text.includes(query.trim().toLowerCase());
-  }), [finds, kind, query]);
+  }), [finds, kind, query, diet]);
 
   useEffect(() => {
     const node = sentinel.current;
@@ -97,7 +119,8 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
       </div>
       <div className="feed-tools"><label className="search-box"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => changeQuery(event.target.value)} placeholder="Search deals, places, areas" aria-label="Search finds" /><kbd>⌘ K</kbd></label><div className="view-toggle" role="group" aria-label="Listing view"><button type="button" aria-pressed={view === "cards"} onClick={() => changeView("cards")}>▦ <span>Cards</span></button><button type="button" aria-pressed={view === "list"} onClick={() => changeView("list")}>☷ <span>List</span></button></div></div>
     </div>}
-    {shown.length === 0 ? <div className="empty-state"><h2>{query ? "No matching finds." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all") && <><p>{query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={clearFilters}>Clear filters</button></>}</div> : <>
+    {kind === "food" && <div className="diet-filters" role="group" aria-label="Filter food by diet"><span>DIET</span><button type="button" aria-pressed={!diet} onClick={() => changeDiet(null)}>Any</button><button type="button" aria-pressed={diet === "pescatarian"} onClick={() => changeDiet("pescatarian")}>Pescetarian</button><button type="button" aria-pressed={diet === "vegan"} onClick={() => changeDiet("vegan")}>Vegan</button></div>}
+    {shown.length === 0 ? <div className="empty-state"><h2>{diet ? `No confirmed ${diet} finds.` : query ? "No matching finds." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all" || diet) && <><p>{diet ? "Only listings with a confirmed dietary fit appear in this view." : query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={clearFilters}>Clear filters</button></>}</div> : <>
       {view === "cards" ? <div className="feed-grid">{shown.slice(0, count).map((find, index) => <article className={`find-card ${index === 0 ? "featured" : ""}`} key={find.id}>
         <Link href={`/${find.kind === "food" ? "food" : "events"}/${find.slug}`} className="find-card-link" aria-label={`View details: ${find.title}`}>
           <div className="card-top">{find.kind === "food" ? <BrandMark placeName={find.places[0]?.name ?? "Local kitchen"} /> : <span className="card-kind event">THINGS TO DO</span>}<span className="card-date">{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "MENU" : "ONGOING"}</span></div>

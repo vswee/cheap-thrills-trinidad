@@ -156,6 +156,10 @@ h1,h2,h3,h4,h5,h6 { font-variation-settings:"SOFT" 22,"WONK" 0; font-optical-siz
 .feed-table td { color:var(--muted); }
 .feed-table .feed-table-price { color:var(--primary); font-size:12px; font-weight:650; }
 @media (max-width:650px) { .feed-tools { width:100%; }.feed-tools .search-box { width:auto; }.feed-table { min-width:680px; } }
+.diet-filters { display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:-8px 0 24px; }
+.diet-filters>span { margin-right:5px; color:var(--muted); font-size:9px; font-weight:650; letter-spacing:1px; }
+.diet-filters button { padding:7px 11px; border:1px solid transparent; border-radius:18px; background:transparent; color:var(--muted); font-size:10px; }
+.diet-filters button:hover,.diet-filters button[aria-pressed="true"] { border-color:var(--line); background:var(--paper); color:var(--primary); }
 .standalone-page { max-width:980px; min-height:calc(100vh - 164px); margin:0 auto; padding:48px 0 76px; }
 .standalone-page>.back-link { margin-bottom:42px; }
 .about-page h1,.standalone-report h1 { margin:0; font:550 clamp(58px,8vw,96px)/.98 var(--font-fraunces),Inter,Arial,sans-serif; letter-spacing:-.07em; }
