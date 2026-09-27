@@ -6,10 +6,10 @@
   "title": "CADV Savannah Lap – Step Up for Peace",
   "summary": "A community Savannah lap at Queen’s Park Savannah with adult and child registration, prizes and a commemorative pin.",
   "description": "The Coalition Against Domestic Violence’s annual Savannah Lap takes place Saturday 26 September 2026 at 4:30 PM at Queen’s Park Savannah. Participants take part in the Step Up for Peace lap, with prizes advertised and a commemorative pin for all participants. Race Roster lists adult registration at approximately TT$150 plus processing fee and child registration at approximately TT$100 plus processing fee.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-26T15:17:58.180Z",
-  "updatedAt": "2026-09-26T15:17:58.180Z",
+  "updatedAt": "2026-09-27T17:44:36.359Z",
   "publishedAt": "2026-09-26T15:17:58.180Z",
   "checkedAt": "2026-09-26T15:17:58.180Z",
   "places": [
@@ -59,7 +59,7 @@
     "service": "OpenAI",
     "model": "GPT-5.6 Sol"
   },
-  "editorialNote": "Verified 2026-09-26 on the live Race Roster page. Prices are displayed by Race Roster in USD with approximate TTD equivalents; preserve that caveat rather than treating TT$100/150 as exact card charges.",
+  "editorialNote": "Verified 2026-09-26 on the live Race Roster page. Prices are displayed by Race Roster in USD with approximate TTD equivalents; preserve that caveat rather than treating TT$100/150 as exact card charges. Advertised validity ended 2026-09-27.",
   "event": {
     "format": "Community Savannah lap / run-walk",
     "admission": "paid"
