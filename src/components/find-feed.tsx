@@ -23,12 +23,17 @@ function readDiet(value: string | null): DietFilter {
   return value === "pescatarian" || value === "vegan" ? value : null;
 }
 
+function MapPinIcon() {
+  return <svg aria-hidden="true" viewBox="0 0 16 20" fill="none"><path d="M8 19s6-6.1 6-11A6 6 0 1 0 2 8c0 4.9 6 11 6 11Z" stroke="currentColor" strokeWidth="1.6" /><circle cx="8" cy="8" r="2" stroke="currentColor" strokeWidth="1.6" /></svg>;
+}
+
 export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaultKind?: FindKind }) {
   const [kind, setKind] = useState<FindKind>(defaultKind);
   const [query, setQuery] = useState("");
   const [count, setCount] = useState(batchSize);
   const [view, setView] = useState<FindView>("cards");
   const [diet, setDiet] = useState<DietFilter>(null);
+  const [freeOnly, setFreeOnly] = useState(false);
   const [returnTo, setReturnTo] = useState("/");
   const sentinel = useRef<HTMLDivElement>(null);
 
@@ -42,6 +47,7 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
       setQuery(params.get("q") ?? "");
       setView(readView(params.get("view")));
       setDiet(nextKind === "food" ? readDiet(params.get("diet")) : null);
+      setFreeOnly(params.get("free") === "1");
       setCount(batchSize);
     };
     syncFromUrl();
@@ -56,7 +62,7 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
 
   const rememberCurrentUrl = () => setReturnTo(`${window.location.pathname}${window.location.search}${window.location.hash}`);
 
-  const makeUrl = useCallback((nextKind: FindKind, nextQuery: string, nextView: FindView, nextDiet: DietFilter) => {
+  const makeUrl = useCallback((nextKind: FindKind, nextQuery: string, nextView: FindView, nextDiet: DietFilter, nextFreeOnly: boolean) => {
     const params = new URLSearchParams(window.location.search);
     if (nextKind === defaultKind) params.delete("type");
     else params.set("type", nextKind);
@@ -66,6 +72,8 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     else params.set("view", nextView);
     if (nextKind !== "food" || !nextDiet) params.delete("diet");
     else params.set("diet", nextDiet);
+    if (nextFreeOnly) params.set("free", "1");
+    else params.delete("free");
     const queryString = params.toString();
     return `${window.location.pathname}${queryString ? `?${queryString}` : ""}${window.location.hash}`;
   }, [defaultKind]);
@@ -75,14 +83,14 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     setKind(nextKind);
     const nextDiet = nextKind === "food" ? diet : null;
     setDiet(nextDiet);
-    window.history.pushState(null, "", makeUrl(nextKind, query, view, nextDiet));
+    window.history.pushState(null, "", makeUrl(nextKind, query, view, nextDiet, freeOnly));
     rememberCurrentUrl();
   };
 
   const changeQuery = (nextQuery: string) => {
     setQuery(nextQuery);
     setCount(batchSize);
-    window.history.replaceState(null, "", makeUrl(kind, nextQuery, view, diet));
+    window.history.replaceState(null, "", makeUrl(kind, nextQuery, view, diet, freeOnly));
     rememberCurrentUrl();
   };
 
@@ -90,22 +98,31 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     setQuery("");
     setKind(defaultKind);
     setDiet(null);
+    setFreeOnly(false);
     setCount(batchSize);
-    window.history.pushState(null, "", makeUrl(defaultKind, "", view, null));
+    window.history.pushState(null, "", makeUrl(defaultKind, "", view, null, false));
     rememberCurrentUrl();
   };
 
   const changeView = (nextView: FindView) => {
     setView(nextView);
-    window.history.pushState(null, "", makeUrl(kind, query, nextView, diet));
+    window.history.pushState(null, "", makeUrl(kind, query, nextView, diet, freeOnly));
     rememberCurrentUrl();
   };
 
   const changeDiet = (nextDiet: DietFilter) => {
     setCount(batchSize);
-    setKind("food");
+    const nextKind = nextDiet ? "food" : kind;
+    setKind(nextKind);
     setDiet(nextDiet);
-    window.history.pushState(null, "", makeUrl("food", query, view, nextDiet));
+    window.history.pushState(null, "", makeUrl(nextKind, query, view, nextDiet, freeOnly));
+    rememberCurrentUrl();
+  };
+
+  const changeFreeOnly = (nextFreeOnly: boolean) => {
+    setCount(batchSize);
+    setFreeOnly(nextFreeOnly);
+    window.history.pushState(null, "", makeUrl(kind, query, view, diet, nextFreeOnly));
     rememberCurrentUrl();
   };
 
@@ -113,9 +130,15 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     if (kind !== "all" && find.kind !== kind) return false;
     if (diet === "pescatarian" && find.food?.dietFit.pescatarian !== "yes") return false;
     if (diet === "vegan" && find.food?.dietFit.vegan !== "yes") return false;
+    if (freeOnly && find.price.amount !== 0 && find.price.fromAmount !== 0) return false;
     const text = `${find.title} ${find.summary} ${find.description} ${find.places.map((p) => `${p.area} ${p.region} ${p.name}`).join(" ")} ${find.categories.join(" ")} ${find.price.label} ${find.price.terms ?? ""} ${find.food ? `${find.food.items.join(" ")} ${JSON.stringify(find.food.dietFit)} ${find.food.dietNotes}` : ""}`.toLowerCase();
     return text.includes(query.trim().toLowerCase());
-  }), [finds, kind, query, diet]);
+  }).sort((a, b) => {
+    if (kind !== "all") return 0;
+    const aDate = Date.parse(a.publishedAt ?? a.createdAt);
+    const bDate = Date.parse(b.publishedAt ?? b.createdAt);
+    return bDate - aDate || a.title.localeCompare(b.title);
+  }), [finds, kind, query, diet, freeOnly]);
 
   useEffect(() => {
     const node = sentinel.current;
@@ -132,17 +155,17 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
       <div className="filter-tabs" aria-label="Filter finds">
         {([ ["all", "Everything"], ["food", "Food"], ["event", "Things to do"] ] as const).map(([value, label]) => <button key={value} type="button" aria-pressed={kind === value} className={kind === value ? "filter active" : "filter"} onClick={() => changeKind(value)}>{label}</button>)}
       </div>
-      <div className="feed-tools"><label className="search-box"><span aria-hidden="true">⌕</span><input value={query} onChange={(event) => changeQuery(event.target.value)} placeholder="Search deals, places, areas" aria-label="Search finds" /><kbd>⌘ K</kbd></label><div className="view-toggle" role="group" aria-label="Listing view"><button type="button" aria-pressed={view === "cards"} onClick={() => changeView("cards")}>▦ <span>Cards</span></button><button type="button" aria-pressed={view === "list"} onClick={() => changeView("list")}>☷ <span>List</span></button></div></div>
+      <div className="feed-tools"><label className="search-box"><span aria-hidden="true">⌕</span><input data-signal-search="directory_search" value={query} onChange={(event) => changeQuery(event.target.value)} placeholder="Search deals, places, areas" aria-label="Search finds" /><kbd>⌘ K</kbd></label><div className="view-toggle" role="group" aria-label="Listing view"><button type="button" aria-pressed={view === "cards"} onClick={() => changeView("cards")}>▦ <span>Cards</span></button><button type="button" aria-pressed={view === "list"} onClick={() => changeView("list")}>☷ <span>List</span></button></div></div>
     </div>}
-    {kind === "food" && <div className="diet-filters" role="group" aria-label="Filter food by diet"><span>DIET</span><button type="button" aria-pressed={!diet} onClick={() => changeDiet(null)}>Any</button><button type="button" aria-pressed={diet === "pescatarian"} onClick={() => changeDiet("pescatarian")}>Pescetarian</button><button type="button" aria-pressed={diet === "vegan"} onClick={() => changeDiet("vegan")}>Vegan</button></div>}
-    {shown.length === 0 ? <div className="empty-state"><h2>{diet ? `No confirmed ${diet} finds.` : query ? "No matching finds." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all" || diet) && <><p>{diet ? "Only listings with a confirmed dietary fit appear in this view." : query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={clearFilters}>Clear filters</button></>}</div> : <>
+    <div className="diet-filters" role="group" aria-label="Filter finds by diet and cost">{kind !== "event" && <><span>DIET</span><button type="button" aria-pressed={!diet} onClick={() => changeDiet(null)}>Any</button><button type="button" aria-pressed={diet === "pescatarian"} onClick={() => changeDiet("pescatarian")}>Pescatarian</button><button type="button" aria-pressed={diet === "vegan"} onClick={() => changeDiet("vegan")}>Vegan</button><span className="diet-filter-divider" aria-hidden="true">·</span></>}<span>COST</span><button type="button" aria-pressed={freeOnly} onClick={() => changeFreeOnly(!freeOnly)}>Free</button></div>
+    {shown.length === 0 ? <div className="empty-state"><h2>{diet ? `No confirmed ${diet} finds.` : query ? "No matching finds." : freeOnly ? "No free finds match these filters." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all" || diet || freeOnly) && <><p>{diet ? "Only listings with a confirmed dietary fit appear in this view." : query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={clearFilters}>Clear filters</button></>}</div> : <>
       {view === "cards" ? <div className="feed-grid">{shown.slice(0, count).map((find, index) => <article className={`find-card ${index === 0 ? "featured" : ""}`} key={find.id}>
-        <Link href={detailHref(find)} className="find-card-link" aria-label={`View details: ${find.title}`}>
-          <div className="card-top">{find.kind === "food" ? <BrandMark placeName={find.places[0]?.name ?? "Local kitchen"} /> : <span className="card-kind event">THINGS TO DO</span>}<span className="card-date">{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "MENU" : "ONGOING"}</span></div>
+        <Link href={detailHref(find)} className="find-card-link" aria-label={`View details: ${find.title}`} data-signal-label="find_open">
+          <div className="card-top">{find.kind === "food" ? <><div className="card-kind-location"><span className="card-kind food">FOOD</span><span className="card-event-location"><MapPinIcon />{find.places[0]?.area ?? "Trinidad"}</span></div><BrandMark placeName={find.places[0]?.name ?? "Local kitchen"} /></> : <div className="card-kind-location"><span className="card-kind event">THINGS TO DO</span><span className="card-event-location"><MapPinIcon />{find.places[0]?.area ?? "Trinidad"}</span></div>}<span className="card-date">{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "MENU" : "ONGOING"}</span></div>
           <div className="card-title"><h2>{find.title}</h2><span className="arrow" aria-hidden="true">↗</span></div>
           {!(find.kind === "food" && /menu price at/i.test(find.summary)) && <p className="card-summary">{find.summary}</p>}
-          <div className="card-bottom"><strong>{formatPrice(find)}</strong><span className="card-place">{find.places[0]?.area}</span></div>
           {find.kind === "food" && find.food && <div className="diet-row">{find.food.dietFit.pescatarian === "yes" && <span>◉ Pescatarian</span>}{find.food.dietFit.dairyFree === "yes" && <span>◉ Dairy-free</span>}{find.food.dietFit.vegan === "yes" && <span>◉ Vegan</span>}{find.food.dietFit.dairyFree === "unknown" && <span className="uncertain">Dairy status unconfirmed</span>}</div>}
+          <div className="card-bottom"><strong>{formatPrice(find)}</strong></div>
         </Link>
       </article>)}</div> : <div className="feed-table-wrap"><table className="feed-table"><thead><tr><th scope="col">Find</th><th scope="col">Type</th><th scope="col">When</th><th scope="col">Price</th><th scope="col">Area</th></tr></thead><tbody>{shown.slice(0, count).map((find) => <tr key={find.id}><th scope="row"><Link href={detailHref(find)}>{find.title}</Link><span>{find.summary}</span></th><td><span className={`kind-pill ${find.kind}`}>{find.kind === "food" ? "Food" : "Things to do"}</span></td><td>{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "Menu" : "Ongoing"}</td><td className="feed-table-price">{formatPrice(find)}</td><td>{find.places[0]?.area ?? "Trinidad"}</td></tr>)}</tbody></table></div>}
       {count < shown.length && <><div ref={sentinel} className="feed-sentinel" aria-hidden="true" /><button className="load-more" onClick={() => setCount((current) => current + batchSize)}>Show more finds <span>↓</span></button></>}

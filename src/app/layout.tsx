@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import { HolidayBanner } from "@/components/holiday-banner";
+import { SignalMapEvents } from "@/components/signalmap-events";
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
@@ -20,5 +21,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en-TT" className={`${inter.variable} ${fraunces.variable}`} suppressHydrationWarning><body><HolidayBanner />{children}<Script id="theme-preference" strategy="beforeInteractive">{`try { const theme = localStorage.getItem("ctt-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}`}</Script></body></html>;
+  return <html lang="en-TT" className={`${inter.variable} ${fraunces.variable}`} suppressHydrationWarning><body><HolidayBanner />{children}<SignalMapEvents /><Script id="theme-preference" strategy="beforeInteractive">{`try { const theme = localStorage.getItem("ctt-theme"); if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme; } catch {}`}</Script><Script id="google-analytics" src="https://www.googletagmanager.com/gtag/js?id=G-MYXG8PKQR3" strategy="afterInteractive" /><Script id="google-analytics-init" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || []; window.gtag = function(){window.dataLayer.push(arguments);}; window.gtag('js', new Date()); window.gtag('config', 'G-MYXG8PKQR3');`}</Script><Script id="signalmap-tracker" src="https://signal.flat18.app/signal.js" data-site="805bce6c737656dde7027891" strategy="afterInteractive" /></body></html>;
 }

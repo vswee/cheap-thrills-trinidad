@@ -44,6 +44,10 @@ export function ReportForm() {
     try {
       const response = await fetch("/api/report", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message: form.get("message"), page: form.get("page"), website: form.get("website") }) });
       setState(response.ok ? "sent" : "error");
+      if (response.ok) {
+        window.signal?.("conversion", "report_submitted", { form: "issue_report" });
+        window.gtag?.("event", "generate_lead", { form_name: "issue_report" });
+      }
       if (response.ok) event.currentTarget.reset();
     } catch { setState("error"); }
   }
