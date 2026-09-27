@@ -14,7 +14,7 @@ export default function Home() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd()).replace(/</g, "\\u003c") }} />
     <header className="topbar"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><nav><a href="#latest">The latest</a><Link href="/map">Map</Link><Link href="/about">About</Link><ReportIssueLink>Report an issue</ReportIssueLink></nav><ThemeToggle /></header>
     <section className="hero">
-      <div className="hero-copy"><h1>Food & Events,<br />Trinidad<span className="hero-period">.</span></h1><p>Affordable eats and things to do across the island.</p></div>
+      <div className="hero-copy"><h1>Food & Events,<br />Trinidad<span className="hero-period">.</span></h1><p>Affordable eats and things to do across the island.</p><form className="hero-actions" action="/#latest" method="get"><label className="hero-search"><span aria-hidden="true">⌕</span><input type="search" name="q" placeholder="Search deals, places, areas" aria-label="Search finds" /></label><button className="hero-search-submit" type="submit">Search <span aria-hidden="true">↗</span></button><Link className="hero-browse" href="/#latest">Browse directory <span aria-hidden="true">↓</span></Link></form></div>
       <div className="hero-stamp"><IslandStamp /></div>
     </section>
     <section className="latest-section" id="latest">
