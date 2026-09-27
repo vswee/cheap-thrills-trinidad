@@ -17,8 +17,8 @@ function getDestination(value: string | null): Destination {
     }
 
     const type = url.searchParams.get("type");
-    const isFood = type === "food" || url.pathname === "/food" || url.pathname.startsWith("/food-deals/");
-    const isEvents = type === "event" || url.pathname === "/events" || url.pathname.startsWith("/things-to-do/");
+    const isFood = type ? type === "food" : url.pathname === "/food" || url.pathname.startsWith("/food-deals/");
+    const isEvents = type ? type === "event" : url.pathname === "/events" || url.pathname.startsWith("/things-to-do/");
     if (url.pathname === "/" && !url.hash) url.hash = "latest";
 
     return {
