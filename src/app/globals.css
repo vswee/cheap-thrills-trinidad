@@ -99,8 +99,8 @@ button { cursor:pointer; }
   z-index:0;
   top:50%;
   right:clamp(-210px,-8vw,-80px);
-  width:clamp(390px,54vw,760px);
-  height:auto;
+  width:min(54vw,520px);
+  height:min(54vw,520px);
   aspect-ratio:1;
   transform:translateY(-50%) rotate(1deg);
   opacity:.23;
@@ -143,7 +143,7 @@ button { cursor:pointer; }
   .hero { min-height:0; padding:56px 0; align-items:center; }
   .hero-copy { max-width:88%; }
   .hero-copy h1 { font-size:clamp(59px,14vw,82px); }
-  .hero-stamp { width:min(100vw,460px); right:-34vw; top:50%; bottom:auto; opacity:.13; transform:translateY(-50%) rotate(1deg); }
+  .hero-stamp { width:min(64vw,240px); height:min(64vw,240px); right:-20vw; top:50%; bottom:auto; opacity:.13; transform:translateY(-50%) rotate(1deg); }
   .brand-name { max-width:106px; font-size:8px; }
   .brand-identity-large .brand-name { max-width:none; font-size:11px; }
 }
