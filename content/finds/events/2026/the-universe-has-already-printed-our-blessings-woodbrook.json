@@ -6,10 +6,10 @@
   "title": "The Universe Has Already Printed Our Blessings",
   "summary": "A free interactive living-garden sound-and-light installation by David Gumbs at Medulla Art Gallery during TTFF/26.",
   "description": "TTFF/26 presents David Gumbs' interactive installation at Medulla Art Gallery in Woodbrook. Visitors touch a living indoor tropical garden to trigger sound and light responses. The unveiling and festival closing-night event runs Sunday 27 September from 6:00 pm to 10:00 pm. TTFF states that entry is free and no ticket is required.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-26T15:17:58.284Z",
-  "updatedAt": "2026-09-26T15:17:58.284Z",
+  "updatedAt": "2026-09-28T16:10:21.770Z",
   "publishedAt": "2026-09-26T15:17:58.284Z",
   "checkedAt": "2026-09-26T15:17:58.284Z",
   "places": [
@@ -70,7 +70,7 @@
     "service": "OpenAI",
     "model": "GPT-5.6 Sol"
   },
-  "editorialNote": "High confidence: TTFF's current official pages directly support the event, date/time, venue and free/no-ticket admission.",
+  "editorialNote": "High confidence: TTFF's current official pages directly support the event, date/time, venue and free/no-ticket admission. Advertised validity ended 2026-09-28.",
   "event": {
     "format": "interactive art installation",
     "admission": "free"
