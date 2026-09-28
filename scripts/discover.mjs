@@ -82,7 +82,7 @@ async function discover(kind, mandate, existing, ttMenusEvidence = []) {
   let webResearch = null;
   if (process.env.TAVILY_API_KEY) {
     try {
-      webResearch = await requestTavilyResearch(kind);
+      webResearch = await requestTavilyResearch(kind, existing);
     } catch (error) {
       console.warn(`Tavily search failed; trying provider-native search if available. ${error instanceof Error ? error.message : String(error)}`);
     }
@@ -91,7 +91,7 @@ async function discover(kind, mandate, existing, ttMenusEvidence = []) {
   }
 
   // Pass only history likely to match today's search leads, plus a recent safety window.
-  // Tuple order: id, title, venue, area, date, recurrence, status.
+  // Tuple order: id, title, venue, area, date, recurrence, status, source URLs.
   const existingContext = selectExistingContext(existing, JSON.stringify(webResearch?.results ?? []));
   const ttMenusContext = compactTtMenusEvidence(ttMenusEvidence);
   const outputSchema = {
@@ -107,7 +107,7 @@ async function discover(kind, mandate, existing, ttMenusEvidence = []) {
       } } }
     }
   };
-  const system = `You are the careful Trinidad ${kind === "food" ? "food-deal" : "non-food events"} editor. Today is ${day}; local time is America/Port_of_Spain (UTC-04:00). Apply this mandate exactly:\n\n${mandate}\n\nExisting records for deduplication, including relevant matches and recent history (each row: id, title, venue, area, date, recurrence, status): ${JSON.stringify(existingContext)}\n\nReturn at most 6 of the strongest genuinely qualifying new finds or material updates; prefer no result over weak results. Use existingId only for the same underlying find; do not create a fresh record for an unchanged offer. For an expired recurring food record, re-check whether that same recurrence is still explicitly active; if it is, return it using its existingId so it can be restored. Rate confidence high only when core claims are supported by direct current sources. Use medium only when a promising find needs a human check. Set sources to direct current pages and supports to claims actually evidenced. Do not invent a URL, date, price, menu item, location or availability. Event dates must be future/current with year and local offset. Keep uncertain food diet fit as unknown and explain it. Food coverage should retain seafood and plant-based options when supported, rather than selecting only the cheapest meat specials. If no strong find, return an empty finds array. Do not return sample or hypothetical data.${kind === "food" && ttMenusContext.length && !webResearch ? `\n\nTT Menus lead evidence: use exact sourceUrl only, and treat pageExcerpt as the offer terms. Do not infer a schedule from a title alone. If pageExcerpt is absent and catalogIsFresh is false, do not treat the item as current. This is a lead set, not a guarantee that every item qualifies:\n${JSON.stringify(ttMenusContext)}` : ""}`;
+  const system = `You are the careful Trinidad ${kind === "food" ? "food-deal" : "non-food events"} editor. Today is ${day}; local time is America/Port_of_Spain (UTC-04:00). Apply this mandate exactly:\n\n${mandate}\n\nExisting records for deduplication, including relevant matches and recent history (each row: id, title, venue, area, date, recurrence, status, source URLs): ${JSON.stringify(existingContext)}\n\nReturn at most 6 of the strongest genuinely qualifying new finds or material updates; prefer no result over weak results. Use existingId only for the same underlying find; do not create a fresh record for an unchanged offer. For an expired recurring food record, re-check whether that same recurrence is still explicitly active; if it is, return it using its existingId so it can be restored. Rate confidence high only when core claims are supported by direct current sources. Use medium only when a promising lead needs another scheduled verification; medium records stay unpublished until a later run can support high confidence. Set sources to direct current pages and supports to claims actually evidenced. Do not invent a URL, date, price, menu item, location or availability. Event dates must be future/current with year and local offset. Keep uncertain food diet fit as unknown and explain it. Food coverage should retain seafood and plant-based options when supported, rather than selecting only the cheapest meat specials. For food, favour independent local outlets and aim for variety across doubles and bake vendors, bakeries, gyro or shawarma shops, cafés, and other small eateries; do not return more than two offers from one chain when independent choices are supported by evidence. Social posts are valid sources only when the exact public post directly supports the offer and current terms; a profile link or an old post alone is not enough. Existing candidate records are leads: recheck their source URLs against fresh search evidence on each run, and promote them with their existingId only when current evidence supports high confidence. If no strong find, return an empty finds array. Do not return sample or hypothetical data.${kind === "food" && ttMenusContext.length && !webResearch ? `\n\nTT Menus lead evidence: use exact sourceUrl only, and treat pageExcerpt as the offer terms. Do not infer a schedule from a title alone. If there is no pageExcerpt and the catalogue is stale, do not treat the item as current. This is a lead set, not a guarantee that every item qualifies:\n${JSON.stringify(ttMenusContext)}` : ""}`;
   const providers = [
     { id: "openai", key: process.env.OPENAI_API_KEY, model: process.env.OPENAI_MODEL || routing.models.openai },
     { id: "cloudflare", key: process.env.CLOUDFLARE_API_TOKEN && process.env.CLOUDFLARE_ACCOUNT_ID ? process.env.CLOUDFLARE_API_TOKEN : undefined, model: process.env.CLOUDFLARE_MODEL || routing.models.cloudflare },
@@ -173,7 +173,7 @@ function selectExistingContext(existing, evidenceText, limit = 120) {
       if (titleTokens.has(token)) score += 3;
       if (placeTokens.has(token)) score += 4;
     }
-    const row = [value.id, value.title, value.places?.[0]?.name, value.places?.[0]?.area, value.validity.startsAt ?? value.validity.endsAt, value.validity.recurrence, value.status];
+    const row = [value.id, value.title, value.places?.[0]?.name, value.places?.[0]?.area, value.validity.startsAt ?? value.validity.endsAt, value.validity.recurrence, value.status, (value.sources ?? []).map((source) => source.url).slice(0, 3)];
     return { row, score, updatedAt: value.updatedAt ?? value.checkedAt ?? "" };
   });
   const recent = [...rows].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)).slice(0, Math.min(30, limit));
@@ -205,12 +205,18 @@ function formatResearchPrompt(prompt, outputSchema, research, ttMenusEvidence = 
   ].join("\n\n");
 }
 
-async function requestTavilyResearch(kind) {
+async function requestTavilyResearch(kind, existing = []) {
   const month = new Intl.DateTimeFormat("en", { timeZone: "America/Port_of_Spain", month: "long", year: "numeric" }).format(now);
+  const trackedOutlets = kind === "food" ? [...new Set(existing.flatMap(({ value }) => (value.sources ?? [])
+    .filter((source) => source.type === "social" || /(?:instagram|facebook|tiktok)\.com/i.test(source.url ?? ""))
+    .map((source) => source.publisher)
+    .filter((publisher) => publisher && !/^(instagram|facebook|tiktok|social)$/i.test(publisher))))].slice(0, 6) : [];
+  const trackedOutletTerms = trackedOutlets.length ? ` Recheck public posts from these previously verified local outlets where indexed: ${trackedOutlets.join(", ")}.` : "";
   const queries = kind === "food" ? [
-    "Chaguanas Trinidad cheap lunch specials restaurant deals sushi seafood vegan dairy-free",
-    "Central Trinidad restaurant promotions food deals fish seafood plant-based vegan",
-    `Trinidad current food offers cheap lunch deals seafood sushi vegan dairy-free ${month}`,
+    `Chaguanas and Central Trinidad affordable doubles, bake, roti, aloo pie, street food specials and daily offers ${month}`,
+    `Trinidad independent bakery cafe gyro shawarma breakfast pastry sandwich lunch budget specials Instagram Facebook ${month}`,
+    `site:instagram.com OR site:facebook.com Trinidad food special doubles bakery cafe gyro cheap offer recent post ${month}${trackedOutletTerms}`,
+    `Trinidad affordable seafood fish pescatarian vegan dairy-free small restaurant cafe specials ${month}`,
   ] : [
     "Chaguanas Central Trinidad upcoming free cheap events activities",
     "Trinidad upcoming low-cost events festivals concerts workshops exhibitions outdoor activities",
@@ -232,7 +238,17 @@ async function requestTavilyResearch(kind) {
       publishedDate: item.published_date ?? null,
     })).filter((item) => /^https?:\/\//i.test(item.url) && item.content);
   }));
-  const results = [...new Map(responses.flatMap((response) => response.status === "fulfilled" ? response.value : []).map((item) => [item.url, item])).values()].slice(0, 15);
+  const groups = responses.map((response) => response.status === "fulfilled" ? response.value : []);
+  const byUrl = new Map();
+  for (let rank = 0; rank < 5; rank += 1) {
+    for (const group of groups) {
+      const item = group[rank];
+      if (item && !byUrl.has(item.url)) byUrl.set(item.url, item);
+      if (byUrl.size >= 20) break;
+    }
+    if (byUrl.size >= 20) break;
+  }
+  const results = [...byUrl.values()];
   const successfulSearches = responses.filter((response) => response.status === "fulfilled").length;
   console.log(`Tavily research: ${successfulSearches} successful basic searches (${successfulSearches} credits), ${results.length} unique source(s).`);
   if (successfulSearches < 2 || results.length < 3) {
@@ -522,7 +538,7 @@ async function main() {
         continue;
       }
       if (proposal.existingId && proposal.confidence !== "high") {
-        console.log(`held uncertain update for review: ${proposal.existingId}`);
+        console.log(`deferred uncertain update until a later run finds stronger evidence: ${proposal.existingId}`);
         continue;
       }
       const { record, target } = await convert(proposal, kind, existing, result.research);
