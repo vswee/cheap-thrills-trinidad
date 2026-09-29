@@ -3011,3 +3011,245 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 0;
   padding-top: 0;
 }
+
+/* Listing confidence cues and a share action that sits above the card link. */
+.find-card {
+  position: relative;
+}
+
+.find-card-link {
+  position: static;
+}
+
+.find-card-link::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border-radius: inherit;
+  content: "";
+}
+
+.find-card-link:focus-visible::after {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.card-kind {
+  white-space: normal;
+}
+
+.card-date {
+  max-width: 100%;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.card-bottom {
+  position: relative;
+  z-index: auto;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-right: 0;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.card-price {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.card-checked {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.card-checked {
+  flex: 0 1 auto;
+  text-align: right;
+}
+
+.card-bottom .share-find-button {
+  pointer-events: auto;
+}
+
+.share-find-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 12px;
+  transition: border-color .18s, color .18s, background .18s;
+}
+
+.share-find-button:hover,
+.share-find-button:focus-visible,
+.share-find-button:active,
+.find-card:hover .share-find-button.compact,
+.find-card:active .share-find-button.compact {
+  border-color: transparent;
+  color: var(--primary);
+  background: var(--paper);
+}
+
+.share-find-button svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.share-find-button.compact {
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  flex: 0 0 40px;
+  min-height: 40px;
+  padding: 0;
+  background: transparent;
+}
+
+.share-find-status {
+  position: absolute;
+  z-index: 3;
+  right: 16px;
+  bottom: calc(100% + 5px);
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.share-find-status:empty {
+  display: none;
+}
+
+.detail-share .share-find-status {
+  position: static;
+  background: transparent;
+  color: var(--muted);
+}
+
+@media (max-width: 650px) {
+  .card-bottom {
+    gap: 8px;
+  }
+}
+
+/* Keep the first screen focused on the directory below the hero. */
+.hero {
+  min-height: 0;
+  padding: 20px 0;
+}
+
+.hero-copy h1 {
+  font-size: clamp(48px, 5.7vw, 78px);
+  line-height: .94;
+}
+
+.hero-copy > p {
+  margin-top: 18px;
+  line-height: 1.5;
+}
+
+.hero-stamp {
+  max-width: 360px;
+  justify-self: center;
+  transform: none;
+  opacity: 1;
+}
+
+.stamp-artwork {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: perspective(950px)
+    rotateY(var(--stamp-tilt-y, 0deg))
+    rotateX(var(--stamp-tilt-x, 0deg))
+    rotateZ(var(--stamp-tilt-z, 0deg));
+  transform-origin: center;
+}
+
+.stamp-square-frame {
+  fill: var(--paper);
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.stamp-square-inner {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: .8;
+  opacity: .75;
+}
+
+.stamp-square-corner,
+.stamp-square-rule {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.stamp-square-corner {
+  stroke: var(--primary);
+  stroke-width: 1.4;
+}
+
+.stamp-square-kicker,
+.stamp-square-index {
+  fill: var(--muted);
+  font: 650 8px var(--font-inter), Inter, Arial, sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.stamp-square-index {
+  fill: var(--primary);
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.stamp-center-island {
+  fill: var(--ink);
+  font: 650 17px var(--font-inter), Inter, Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.stamp-center-coords {
+  fill: var(--muted);
+  font-size: 7px;
+  letter-spacing: 1.5px;
+}
+
+.stamp-map {
+  top: 25%;
+  width: 54%;
+  transform: translateX(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp-artwork {
+    transform: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding: 32px 0;
+  }
+}

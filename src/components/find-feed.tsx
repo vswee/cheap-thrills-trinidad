@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Find } from "@/lib/content";
-import { displayDate, formatPrice } from "@/lib/find-display";
+import { formatPrice } from "@/lib/find-display";
 import { BrandMark } from "@/components/brand-mark";
+import { ShareFindButton } from "@/components/share-find-button";
 
 const batchSize = 8;
 type FindKind = "all" | "food" | "event";
@@ -25,6 +26,42 @@ function readDiet(value: string | null): DietFilter {
 
 function MapPinIcon() {
   return <svg aria-hidden="true" viewBox="0 0 16 20" fill="none"><path d="M8 19s6-6.1 6-11A6 6 0 1 0 2 8c0 4.9 6 11 6 11Z" stroke="currentColor" strokeWidth="1.6" /><circle cx="8" cy="8" r="2" stroke="currentColor" strokeWidth="1.6" /></svg>;
+}
+
+function cardLabel(find: Find) {
+  if (find.kind === "food") {
+    if (find.categories.includes("menu-price")) return "FOOD";
+    if (find.categories.includes("food-experience")) return "FOOD EXPERIENCE";
+    if (["food-deal", "restaurant-week", "value-meal"].some((category) => find.categories.includes(category))) return "FOOD DEAL";
+    return "BUDGET EAT";
+  }
+  if (find.categories.includes("food-experience")) return "FOOD EXPERIENCE";
+  if (find.categories.includes("activity") || find.categories.includes("attraction")) return "ACTIVITY";
+  return "EVENT";
+}
+
+function cardTiming(find: Find) {
+  if (find.validity.startsAt) {
+    const start = new Date(find.validity.startsAt);
+    const date = new Intl.DateTimeFormat("en-TT", { weekday: "short", day: "numeric", month: "short", timeZone: "America/Port_of_Spain" }).format(start);
+    const hasTime = !/T00:00(?::00(?:\.000)?)?(?:[+-]|Z)/.test(find.validity.startsAt);
+    if (!hasTime) return date;
+    const timeFormatter = new Intl.DateTimeFormat("en-TT", { hour: "numeric", minute: "2-digit", timeZone: "America/Port_of_Spain" });
+    const time = timeFormatter.format(start);
+    if (!find.validity.endsAt) return `${date} · ${time}`;
+    const end = new Date(find.validity.endsAt);
+    const sameDay = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Port_of_Spain", year: "numeric", month: "2-digit", day: "2-digit" }).format(start) === new Intl.DateTimeFormat("en-CA", { timeZone: "America/Port_of_Spain", year: "numeric", month: "2-digit", day: "2-digit" }).format(end);
+    const endTime = timeFormatter.format(end);
+    const endLabel = sameDay ? endTime : `${new Intl.DateTimeFormat("en-TT", { weekday: "short", day: "numeric", month: "short", timeZone: "America/Port_of_Spain" }).format(end)} · ${endTime}`;
+    return `${date} · ${time}–${endLabel}`;
+  }
+  if (find.kind === "food") return find.validity.recurrence ? "Check availability" : "Current menu";
+  if (find.categories.includes("activity") || find.categories.includes("attraction")) return "Ongoing · check hours";
+  return find.validity.recurrence ?? "Date to be confirmed";
+}
+
+function checkedDate(find: Find) {
+  return new Intl.DateTimeFormat("en-TT", { day: "numeric", month: "short", year: "numeric", timeZone: "America/Port_of_Spain" }).format(new Date(find.checkedAt));
 }
 
 export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaultKind?: FindKind }) {
@@ -161,13 +198,13 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     {shown.length === 0 ? <div className="empty-state"><h2>{diet ? `No confirmed ${diet} finds.` : query ? "No matching finds." : freeOnly ? "No free finds match these filters." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all" || diet || freeOnly) && <><p>{diet ? "Only listings with a confirmed dietary fit appear in this view." : query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={clearFilters}>Clear filters</button></>}</div> : <>
       {view === "cards" ? <div className="feed-grid">{shown.slice(0, count).map((find, index) => <article className={`find-card ${index === 0 ? "featured" : ""}`} key={find.id}>
         <Link href={detailHref(find)} className="find-card-link" aria-label={`View details: ${find.title}`} data-signal-label="find_open">
-          <div className="card-top">{find.kind === "food" ? <><div className="card-kind-location"><span className="card-kind food">FOOD</span><span className="card-event-location"><MapPinIcon />{find.places[0]?.area ?? "Trinidad"}</span></div><BrandMark placeName={find.places[0]?.name ?? "Local kitchen"} /></> : <div className="card-kind-location"><span className="card-kind event">THINGS TO DO</span><span className="card-event-location"><MapPinIcon />{find.places[0]?.area ?? "Trinidad"}</span></div>}<span className="card-date">{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "MENU" : "ONGOING"}</span></div>
+          <div className="card-top">{find.kind === "food" ? <><div className="card-kind-location"><span className="card-kind food">{cardLabel(find)}</span><span className="card-event-location"><MapPinIcon />{find.places[0]?.area ?? "Trinidad"}</span></div><BrandMark placeName={find.places[0]?.name ?? "Local kitchen"} /></> : <div className="card-kind-location"><span className="card-kind event">{cardLabel(find)}</span><span className="card-event-location"><MapPinIcon />{find.places[0]?.area ?? "Trinidad"}</span></div>}<span className="card-date">{cardTiming(find)}</span></div>
           <div className="card-title"><h2>{find.title}</h2><span className="arrow" aria-hidden="true">↗</span></div>
           {!(find.kind === "food" && /menu price at/i.test(find.summary)) && <p className="card-summary">{find.summary}</p>}
           {find.kind === "food" && find.food && <div className="diet-row">{find.food.dietFit.pescatarian === "yes" && <span>◉ Pescatarian</span>}{find.food.dietFit.dairyFree === "yes" && <span>◉ Dairy-free</span>}{find.food.dietFit.vegan === "yes" && <span>◉ Vegan</span>}{find.food.dietFit.dairyFree === "unknown" && <span className="uncertain">Dairy status unconfirmed</span>}</div>}
-          <div className="card-bottom"><strong>{formatPrice(find)}</strong></div>
         </Link>
-      </article>)}</div> : <div className="feed-table-wrap"><table className="feed-table"><thead><tr><th scope="col">Find</th><th scope="col">Type</th><th scope="col">When</th><th scope="col">Price</th><th scope="col">Area</th></tr></thead><tbody>{shown.slice(0, count).map((find) => <tr key={find.id}><th scope="row"><Link href={detailHref(find)}>{find.title}</Link><span>{find.summary}</span></th><td><span className={`kind-pill ${find.kind}`}>{find.kind === "food" ? "Food" : "Things to do"}</span></td><td>{find.validity.startsAt ? displayDate(find) : find.kind === "food" ? "Menu" : "Ongoing"}</td><td className="feed-table-price">{formatPrice(find)}</td><td>{find.places[0]?.area ?? "Trinidad"}</td></tr>)}</tbody></table></div>}
+        <div className="card-bottom"><div className="card-price"><strong>{formatPrice(find)}</strong></div><span className="card-checked">Checked {checkedDate(find)}</span><ShareFindButton title={find.title} url={`/${find.kind === "food" ? "food" : "events"}/${find.slug}`} compact /></div>
+      </article>)}</div> : <div className="feed-table-wrap"><table className="feed-table"><thead><tr><th scope="col">Find</th><th scope="col">Type</th><th scope="col">When</th><th scope="col">Price</th><th scope="col">Area</th><th scope="col">Checked</th></tr></thead><tbody>{shown.slice(0, count).map((find) => <tr key={find.id}><th scope="row"><Link href={detailHref(find)}>{find.title}</Link><span>{find.summary}</span></th><td><span className={`kind-pill ${find.kind}`}>{cardLabel(find)}</span></td><td>{cardTiming(find)}</td><td className="feed-table-price">{formatPrice(find)}</td><td>{find.places[0]?.area ?? "Trinidad"}</td><td>{checkedDate(find)}</td></tr>)}</tbody></table></div>}
       {count < shown.length && <><div ref={sentinel} className="feed-sentinel" aria-hidden="true" /><button className="load-more" onClick={() => setCount((current) => current + batchSize)}>Show more finds <span>↓</span></button></>}
     </>}
   </>;
