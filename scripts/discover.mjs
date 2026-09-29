@@ -56,12 +56,28 @@ function slugPart(value) {
   return value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 62);
 }
 
+function normalizeCategories(categories) {
+  if (!Array.isArray(categories) || categories.some((category) => typeof category !== "string")) {
+    throw new Error("Candidate categories must be an array of strings");
+  }
+  const normalized = [...new Set(categories.map(slugPart).filter(Boolean))];
+  if (categories.length > 0 && normalized.length === 0) {
+    throw new Error("Candidate categories did not contain any usable labels");
+  }
+  return normalized;
+}
+
 function validateCandidate(candidate, kind) {
   if (!candidate || typeof candidate !== "object") throw new Error("Candidate is not an object");
   if (!["high", "medium", "low"].includes(candidate.confidence)) throw new Error("Candidate needs a confidence rating");
   for (const key of ["title", "summary", "description", "placeName", "area", "region", "price", "validity", "categories", "sources"]) {
     if (!(key in candidate)) throw new Error(`Candidate is missing ${key}`);
   }
+  const normalizedCategories = normalizeCategories(candidate.categories);
+  if (normalizedCategories.some((category, index) => category !== candidate.categories[index]) || normalizedCategories.length !== candidate.categories.length) {
+    console.log(`normalized categories for ${candidate.title}: ${candidate.categories.join(", ")} → ${normalizedCategories.join(", ")}`);
+  }
+  candidate.categories = normalizedCategories;
   if (!Array.isArray(candidate.sources) || candidate.sources.length === 0) throw new Error("Candidate has no sources");
   if (candidate.sources.some((source) => !/^https?:\/\//i.test(source.url ?? ""))) throw new Error("Candidate contains an invalid source URL");
   if (!candidate.validity || typeof candidate.validity !== "object") throw new Error("Candidate has invalid validity");
