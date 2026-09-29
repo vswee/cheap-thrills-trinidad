@@ -1,0 +1,37 @@
+name: Validate directory contributions
+
+on:
+  pull_request:
+    paths:
+      - "content/finds/**/*.json"
+      - "public/schemas/find.schema.json"
+      - "scripts/validate-content.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/validate-content-pr.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-content-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Validate the full directory
+        run: npm run validate:content
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}

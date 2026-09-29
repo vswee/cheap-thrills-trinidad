@@ -2198,6 +2198,151 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
 }
 
+.contribute-page h1 {
+  margin: 0;
+  font: 550 clamp(58px, 8vw, 96px)/.98 var(--font-fraunces), Inter, Arial, sans-serif;
+  letter-spacing: -.07em;
+}
+
+.contribute-page h1 span {
+  color: var(--primary);
+}
+
+.contribute-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  margin: 0 0 58px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.contribute-actions a:not(.contribute-primary),
+.contribute-footnote>a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.contribute-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 14px 18px;
+  border-radius: 3px;
+  background: var(--primary);
+  color: var(--paper);
+}
+
+.contribute-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.contribute-steps {
+  display: grid;
+  gap: 24px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: contribution-step;
+}
+
+.contribute-steps li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  column-gap: 14px;
+  counter-increment: contribution-step;
+}
+
+.contribute-steps li::before {
+  content: "0" counter(contribution-step);
+  grid-row: span 2;
+  padding-top: 1px;
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .8px;
+}
+
+.contribute-steps b {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.contribute-steps li>span,
+.contribute-note,
+.contribute-footnote p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.contribute-steps li>span {
+  margin-top: 6px;
+}
+
+.contribute-page code {
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: var(--soft);
+  color: var(--ink);
+  font-size: .9em;
+}
+
+.contribute-note {
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+}
+
+.contribute-note p:last-child {
+  margin-bottom: 0;
+}
+
+.contribute-footnote {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.contribute-footnote>span {
+  color: var(--primary);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contribute-footnote p {
+  max-width: 700px;
+  margin: 12px 0;
+}
+
+.contribute-footnote>a {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+@media (max-width: 760px) {
+  .contribute-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contribute-actions {
+    margin-bottom: 40px;
+  }
+
+  .contribute-footnote {
+    margin-top: 42px;
+  }
+}
+
 .report-page-context {
   margin-bottom: 13px;
 }

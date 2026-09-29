@@ -19,7 +19,7 @@ content/
   brands/registry.json       # shared brand identity and logo provenance
   sources/                 # optional source snapshots or provenance notes
 public/brands/             # local brand marks and generated attribution
-schemas/find.schema.json  # validation contract
+public/schemas/find.schema.json  # public validation contract used by the site and worker
 trinidad_*_monitor.md      # original editorial mandates
 src/app/                   # Next.js routes and templates
 src/lib/                   # content loading, filtering and shared helpers
@@ -52,7 +52,7 @@ Food records also carry `food` with an explicit diet fit (`pescatarian`, `dairyF
 
 `sources[]` records a URL, publisher, source type, and `checkedAt`. A claim that determines event date, price, eligibility, or dietary suitability should cite the source that supports it. Social links are acceptable evidence when official and current; do not copy full poster/menu text or images into the repo without permission.
 
-Schema version 2 adds required `research: { "service": "Google Gemini", "model": "gemini-3.6-flash" }`, recording the service and exact model that researched and compiled the record. The detail page presents this as a restrained research credit. Local Codex ingestion records OpenAI Codex and the supplied session/model label. Version 1 records remain readable; their unknown provenance is not inferred or backfilled.
+New and updated records must include `research: { "service": "...", "model": "..." }`, recording the actual researcher and exact model; use `Contributor research` and `Manual` for manual research. The detail page presents this as a restrained research credit. Historical records without provenance remain readable, and their unknown provenance is not inferred or backfilled. The public JSON Schema keeps this field optional for historical compatibility; the pull request validator requires it on every changed record.
 
 ## Lifecycle and deduplication
 

@@ -15,7 +15,7 @@ const codexInputDir = codexInputIndex >= 0 ? process.argv[codexInputIndex + 1] :
 if (codexInputIndex >= 0 && (!codexInputDir || codexInputDir.startsWith("--"))) {
   throw new Error("Usage: npm run discover:ingest -- <proposal-directory>");
 }
-const findSchema = JSON.parse(fs.readFileSync(path.join(root, "schemas/find.schema.json"), "utf8"));
+const findSchema = JSON.parse(fs.readFileSync(path.join(root, "public/schemas/find.schema.json"), "utf8"));
 const routing = JSON.parse(fs.readFileSync(path.join(root, "config/ai-routing.json"), "utf8"));
 const ajv = new Ajv({ allErrors: true, strict: false });
 addFormats(ajv);

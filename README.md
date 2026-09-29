@@ -4,7 +4,7 @@ A growing, source-linked directory of good-value food deals and things to do acr
 
 ## Project status
 
-The two monitor mandates are the editorial source of truth in [`trinidad_food_deals_monitor.md`](trinidad_food_deals_monitor.md) and [`trinidad_events_experiences_monitor.md`](trinidad_events_experiences_monitor.md). Contributors can follow [`docs/CONTRIBUTING_FINDS.md`](docs/CONTRIBUTING_FINDS.md) to research and submit a food or event find by hand or with an agent coder. The content contract and publishing workflow are documented in [`docs/CONTENT_MODEL.md`](docs/CONTENT_MODEL.md) and [`docs/OPERATIONS.md`](docs/OPERATIONS.md). The site is a Next.js application; production hosting is planned on Vercel at `cheap-thrills-trinidad.flat18.app`.
+The two monitor mandates are the editorial source of truth in [`trinidad_food_deals_monitor.md`](trinidad_food_deals_monitor.md) and [`trinidad_events_experiences_monitor.md`](trinidad_events_experiences_monitor.md). Anyone can propose a find as a public GitHub pull request using [`CONTRIBUTING.md`](CONTRIBUTING.md); the website exposes a [contribution guide](https://cheap-thrills-trinidad.flat18.app/contribute) and a machine-readable [agent contribution contract](https://cheap-thrills-trinidad.flat18.app/.well-known/cheap-thrills-contribute.json). The canonical record schema is served from [`public/schemas/find.schema.json`](public/schemas/find.schema.json), and PRs validate with `npm run validate:content`. The content contract and publishing workflow are documented in [`docs/CONTENT_MODEL.md`](docs/CONTENT_MODEL.md) and [`docs/OPERATIONS.md`](docs/OPERATIONS.md). The site is deployed on Vercel at `cheap-thrills-trinidad.flat18.app`.
 
 ## Local development
 
@@ -13,7 +13,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000. Content lives in `content/finds/`; one JSON file is one canonical find. The sample records are candidate examples, not real offers.
+Open http://localhost:3000. Content lives in `content/finds/`; one JSON file is one canonical find. Example records are kept under `templates/`, not in the public directory.
 
 ## Publishing shape
 

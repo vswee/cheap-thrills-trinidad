@@ -2,6 +2,8 @@
 
 This guide is for adding or correcting a food deal or a non-food event/experience in the Cheap Thrills Trinidad directory. A find is useful only when its key details are current and readers can check the sources themselves. If evidence is weak, submit it for review as a candidate or leave it out.
 
+The public contribution page is [`/contribute`](https://cheap-thrills-trinidad.flat18.app/contribute). Agentic tools can read the machine-readable contract at [`/.well-known/cheap-thrills-contribute.json`](https://cheap-thrills-trinidad.flat18.app/.well-known/cheap-thrills-contribute.json) and the canonical JSON Schema at [`/schemas/find.schema.json`](https://cheap-thrills-trinidad.flat18.app/schemas/find.schema.json). Contributions are submitted as ordinary GitHub pull requests; the repository does not accept unauthenticated writes.
+
 ## Before you research
 
 1. Read the relevant editorial mandate: [`trinidad_food_deals_monitor.md`](../trinidad_food_deals_monitor.md) for food, or [`trinidad_events_experiences_monitor.md`](../trinidad_events_experiences_monitor.md) for events.
@@ -14,6 +16,14 @@ This guide is for adding or correcting a food deal or a non-food event/experienc
 - **Food:** Focus on worthwhile, unusually good-value offers, prioritising Chaguanas and Central Trinidad. Ordinary menu prices do not qualify unless they are exceptional standing bargains. Prioritise pescatarian and genuinely dairy-free choices. Never infer dairy-free from vegetarian, vegan from eggless, or suitability from a dish name. Use `unknown` when ingredients or preparation are not confirmed, and explain what the reader should check.
 - **Events:** Include non-food activities and experiences on Trinidad, prioritising Chaguanas and Central Trinidad. Confirm the event date, year, time, price/admission and location from current sources. “Price not stated” does not mean free. Exclude food deals and events where the meal is the main attraction.
 - **Both:** Include only claims supported by the linked source. Do not invent or normalize a URL, date, price, menu item, venue, availability or terms. Mention meaningful caveats. Prefer no entry over a stale or weak one.
+
+## Public pull request: person or agent
+
+This is the standard intake path for a contribution that should become part of the directory. Fork the repository, create one canonical JSON file per find in the matching food or events folder, then open a pull request. The public site links this guide and publishes the machine-readable instructions and schema so an agent can discover the same requirements without a private API key.
+
+Before creating a file, inspect the schema and an existing record of the same kind. Required timestamps are ISO 8601. Use the local Trinidad timezone for validity, a unique `id` and `slug`, source URLs over HTTPS, and the current researcher/model in the `research` object. A `published` record must have `high` confidence and a `publishedAt` timestamp. Keep unresolved records as `candidate`; maintainers decide whether evidence is sufficient to publish. Run `npm run validate:content`, and include direct source links, check dates, and caveats in the pull request description. The GitHub check validates the whole directory and blocks malformed records, wrong paths, insecure/example URLs, and duplicate IDs or slugs.
+
+Agents must use their own GitHub-authorized fork/branch flow and leave merging to a maintainer. No unauthenticated write endpoint or bot token is exposed by the site.
 
 ## Option A: contribute with an agent coder
 
@@ -80,8 +90,8 @@ The safest manual workflow uses the same local ingestion path as agent-assisted 
 
 ## Editing a canonical record directly
 
-Direct edits are useful for correcting an existing record or adjusting lifecycle fields, but they bypass the proposal checks in `discover:ingest`. Copy the structure of a nearby canonical record and follow [`schemas/find.schema.json`](../schemas/find.schema.json) exactly. Preserve its `id`, `slug`, `createdAt`, `kind`, and `publishedAt`; update `updatedAt` and `checkedAt` when rechecking it. Add current source entries with `checkedAt` and claim-specific `supports`. Do not delete expired records: update their status and validity, leaving history in Git. Before opening a PR, compare the JSON against the schema and review every edited claim and source manually.
+Direct edits are the canonical public contribution format. Copy the structure of a nearby canonical record and follow [`public/schemas/find.schema.json`](../public/schemas/find.schema.json) exactly. For a new find, use a permanent unique `id` and `slug`, set `createdAt`, `updatedAt`, and `checkedAt` to the current time, and add it under `content/finds/food/YYYY/<slug>.json` or `content/finds/events/YYYY/<slug>.json`. Set `research.service` and `research.model` to the actual researcher and model (use `Contributor research` and `Manual` for manual research). Publish only a high-confidence record with current supporting sources; use `candidate` for an item that still needs review. For an existing find, preserve its `id`, `slug`, `createdAt`, `kind`, and `publishedAt`; update `updatedAt` and `checkedAt` when rechecking it. Add current source entries with `checkedAt` and claim-specific `supports`. Do not delete expired records: update their status and validity, leaving history in Git. Before opening a PR, run `npm run validate:content` and review every edited claim and source manually.
 
 ## Open a pull request
 
-Keep the change focused on the record(s) and any necessary correction. Include a short summary of what qualifies, source links, when each source was checked, and any unresolved caveat. Do not stage secrets, `.env*` files, `.codex-run/`, downloads of copyrighted posters/menu images, or unrelated generated files. A maintainer should be able to verify the entry from the cited sources and review the JSON diff without repeating the search from scratch.
+Keep the change focused on the record(s) and any necessary correction. Include a short summary of what qualifies, source links, when each source was checked, and any unresolved caveat. Do not stage secrets, `.env*` files, `.codex-run/`, downloads of copyrighted posters/menu images, or unrelated generated files. The pull request workflow checks JSON schema validity, record paths, and duplicate IDs/slugs. Passing checks do not replace the maintainer's source and editorial review. A maintainer should be able to verify the entry from the cited sources and review the JSON diff without repeating the search from scratch.

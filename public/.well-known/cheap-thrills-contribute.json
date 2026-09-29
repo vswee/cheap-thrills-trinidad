@@ -1,0 +1,31 @@
+{
+  "name": "Cheap Thrills Trinidad directory contributions",
+  "version": 1,
+  "website": "https://cheap-thrills-trinidad.flat18.app",
+  "repository": "https://github.com/vswee/cheap-thrills-trinidad",
+  "contributionGuide": "https://cheap-thrills-trinidad.flat18.app/contribute",
+  "humanGuide": "https://github.com/vswee/cheap-thrills-trinidad/blob/main/docs/CONTRIBUTING_FINDS.md",
+  "schema": "https://cheap-thrills-trinidad.flat18.app/schemas/find.schema.json",
+  "foodMandate": "https://github.com/vswee/cheap-thrills-trinidad/blob/main/trinidad_food_deals_monitor.md",
+  "eventsMandate": "https://github.com/vswee/cheap-thrills-trinidad/blob/main/trinidad_events_experiences_monitor.md",
+  "submission": {
+    "method": "github_pull_request",
+    "fork": "https://github.com/vswee/cheap-thrills-trinidad/fork",
+    "pullRequests": "https://github.com/vswee/cheap-thrills-trinidad/pulls",
+    "recordPaths": {
+      "food": "content/finds/food/{createdAtYear}/{slug}.json",
+      "event": "content/finds/events/{createdAtYear}/{slug}.json"
+    },
+    "oneRecordPerFile": true,
+    "checks": [
+      "Follow the matching editorial mandate.",
+      "Search existing records and update the matching record instead of duplicating it.",
+      "Use public, current, direct source URLs over search snippets or old posts.",
+      "Record source checkedAt timestamps and claim-specific supports.",
+      "Use high confidence and published status only when current sources substantiate the key details; otherwise use candidate status.",
+      "Do not invent prices, terms, dates, locations, dietary suitability, or URLs.",
+      "Run npm run validate:content before opening the pull request."
+    ],
+    "agentInstructions": "Research current qualifying Trinidad food deals or non-food events using public sources. Read this manifest, the relevant mandate, the contributor guide, the canonical schema, and nearby records. Prepare one canonical JSON file per new find under the matching record path, or edit the existing record for a correction. Cite the exact public source URL for each material claim and state when you checked it. Do not use private or login-gated content, fabricate missing facts, commit secrets, or merge the pull request. Run the content validator, summarize sources and caveats in the pull request, and let repository maintainers review it."
+  }
+}

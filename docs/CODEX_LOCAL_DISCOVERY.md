@@ -6,7 +6,7 @@ Use this flow when a scheduled Codex desktop task performs research locally. It 
 
 Run this from the Cheap Thrills Trinidad project checkout:
 
-1. Read `trinidad_food_deals_monitor.md`, `trinidad_events_experiences_monitor.md`, `schemas/find.schema.json`, and `docs/OPERATIONS.md`.
+1. Read `trinidad_food_deals_monitor.md`, `trinidad_events_experiences_monitor.md`, `public/schemas/find.schema.json`, and `docs/OPERATIONS.md`.
 2. Review existing records under `content/finds/food/` and `content/finds/events/` for deduplication and update candidates.
 3. Use Codex's available web research tools to find current Trinidad food offers and events. Follow each mandate carefully, prioritize Chaguanas, and preserve the food mandate's pescatarian and dairy-free coverage. Do not call `npm run discover`; that command uses cloud model APIs.
 4. Create `.codex-run/food.json` and `.codex-run/event.json`. Each file must be a JSON object of the form `{"research":{"service":"OpenAI Codex","model":"Codex desktop session"},"finds":[...]}`. Replace the model label with the exact Codex model when known. Each item in `finds` must match the candidate shape described in `scripts/discover.mjs`; use `existingId: null` for a genuinely new record. Include direct source URLs and only make claims the linked source supports. If no good finds exist for a type, use an empty `finds` array.
