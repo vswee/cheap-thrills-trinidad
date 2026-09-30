@@ -34,10 +34,7 @@
     "recurrence": "Available while listed on Wendy’s Trinidad promotions page; confirm at the selected branch.",
     "timezone": "America/Port_of_Spain"
   },
-  "categories": [
-    "budget-menu",
-    "menu-price"
-  ],
+  "categories": ["budget-menu", "menu-price"],
   "sources": [
     {
       "url": "https://www.wendys.tt/view-our-menu/promotions/",
