@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "id": "event-hikenation-archery-discovery-chaguaramas",
+  "slug": "hikenation-archery-discovery-chaguaramas",
+  "kind": "event",
+  "title": "HikeNation Archery Discovery",
+  "summary": "A four-hour beginner archery workshop in Chaguaramas with instruction, equipment, practice, handbook and certificate for TT$375.",
+  "description": "HikeNation's Archery Discovery is a four-hour beginner-friendly outdoor workshop covering archery safety, equipment handling, shooting fundamentals, accuracy and coached target practice. No prior experience is required. The TT$375 fee includes trained instructors, equipment and gear, an archery handbook and a certificate of participation.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-30T17:20:55.000Z",
+  "updatedAt": "2026-09-30T17:20:55.000Z",
+  "publishedAt": "2026-09-30T17:20:55.000Z",
+  "checkedAt": "2026-09-30T17:20:55.000Z",
+  "places": [
+    {
+      "name": "HikeNation Archery Discovery",
+      "area": "Chaguaramas",
+      "region": "North-West Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 375,
+    "fromAmount": null,
+    "label": "TT$375 per person",
+    "terms": "Includes the four-hour workshop, instructors, equipment and gear, handbook and certificate of participation."
+  },
+  "validity": {
+    "startsAt": "2026-10-24T13:00:00-04:00",
+    "endsAt": "2026-10-24T17:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "archery",
+    "outdoors",
+    "sports",
+    "workshop"
+  ],
+  "sources": [
+    {
+      "url": "https://www.hikenationclub.com/events-1/archerydiscovery",
+      "publisher": "HikeNation Club",
+      "type": "official",
+      "checkedAt": "2026-09-30T17:20:55.000Z",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "research": {
+    "service": "OpenAI",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "High confidence: HikeNation's current official event page directly supports the date, time, Chaguaramas location, price and inclusions.",
+  "event": {
+    "format": "archery workshop",
+    "admission": "paid"
+  }
+}
