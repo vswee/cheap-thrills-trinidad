@@ -185,3 +185,7 @@ Do not pad an update with old deals simply to produce a notification.
 If there is nothing meaningfully new, **send no notification**. Silence
 is the intended successful outcome of a check with no qualifying
 changes.
+
+## Repository submission from scheduled ChatGPT runs
+
+Before submitting new or materially changed finds, fetch the current [`ChatGPT publishing guide`](docs/CHATGPT_SCHEDULED_DISCOVERY.md) and [`agent contribution contract`](public/.well-known/cheap-thrills-contribute.json) from `vswee/cheap-thrills-trinidad` on `main`. Use the GitHub plugin to commit canonical find JSON on a unique branch, open a PR, and apply `agent-content` when using the authorised account. GitHub validates and publishes eligible contributions automatically. Report the PR URL as submitted; report publication only after confirming the PR is merged. A local shell is optional. No qualifying changes still means no PR and no notification.

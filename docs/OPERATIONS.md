@@ -41,6 +41,24 @@ No bot can be created on the user's behalf without access to their Telegram acco
 
 ## Content quality gates
 
+### Authorised agent pull requests
+
+`Merge authorised agent contributions` automatically merges opted-in find contributions from trusted GitHub accounts. It uses the built-in `GITHUB_TOKEN` and the same direct publishing path as the existing discovery worker, so no new personal token or branch-protection changes are required. The contributing agent still needs permission to push its source branch and open the PR.
+
+Production configuration:
+
+- Repository Actions variable `AUTHORISED_AGENT_LOGINS` lists exact trusted PR author usernames or bot logins, separated by commas or whitespace. The initial authorised account is `vswee`, which the existing ChatGPT integration uses. An empty variable disables automatic merging. The `research` field does not confer authorisation.
+- The PR must carry the `agent-content` label. When multiple agent flows use the same GitHub account, this label selects which submissions should be published automatically.
+- Only open, non-draft PRs targeting the default branch, adding or modifying at most 25 canonical find JSON files, qualify. Deletions, renames, application code, brand assets, schemas, dependencies, and workflow changes stay for manual review.
+
+The automation waits for **Validate find records** from GitHub Actions and all other reported checks. It then creates a temporary merge checkout from the exact current `main`, runs the trusted default branch's content validator against the complete merged directory, and publishes the merge commit only if `main` still matches that validated base. The push uses an explicit lease and the commit must have that base as its first parent, so simultaneous ChatGPT submissions or the existing direct publisher cannot overwrite each other. A new head commit or removed opt-in label during validation also prevents publication. GitHub recognises the source commit as merged and closes the PR. Failed validation, conflicts, or concurrent publication defer the merge until the next attempt.
+
+It retries on PR events, completed validation runs, manual dispatch, and every 15 minutes. It executes only trusted default-branch code with write credentials. It deliberately defers protected branches to normal GitHub review/merge rules; if `main` is protected in the future, migrate both direct publishers together. The existing `.github/workflows/discover.yml` remains compatible.
+
+Schema validation checks record structure and provenance fields; it does not independently confirm factual claims. Authorising an agent delegates source verification and editorial review to that agent. Other public contributors continue through maintainer review.
+
+See [`docs/CHATGPT_SCHEDULED_DISCOVERY.md`](CHATGPT_SCHEDULED_DISCOVERY.md) for the existing ChatGPT task's submission instructions. The task should fetch the current contribution contract and guide each run, open a content PR, and apply `agent-content`. It must report submission and publication separately, using the actual PR state.
+
 - Validate JSON schema and unique IDs/slugs on every run.
 - Events require an explicit future/current date and year; expired records remain stored but are not current feed entries.
 - Offers require a checked source and current validity. Recurring promotions must have current evidence that recurrence is still active.

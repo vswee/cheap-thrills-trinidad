@@ -24,8 +24,16 @@
       "Record source checkedAt timestamps and claim-specific supports.",
       "Use high confidence and published status only when current sources substantiate the key details; otherwise use candidate status.",
       "Do not invent prices, terms, dates, locations, dietary suitability, or URLs.",
-      "Run npm run validate:content before opening the pull request."
+      "Run npm run validate:content when a local checkout is available; otherwise wait for the PR content validation check before claiming acceptance."
     ],
-    "agentInstructions": "Research current qualifying Trinidad food deals or non-food events using public sources. Read this manifest, the relevant mandate, the contributor guide, the canonical schema, and nearby records. Prepare one canonical JSON file per new find under the matching record path, or edit the existing record for a correction. Cite the exact public source URL for each material claim and state when you checked it. Do not use private or login-gated content, fabricate missing facts, commit secrets, or merge the pull request. Run the content validator, summarize sources and caveats in the pull request, and let repository maintainers review it."
+    "agentInstructions": "Research current qualifying Trinidad food deals or non-food events using public sources. Read this manifest, the relevant mandate, the contributor guide, the canonical schema, and nearby records. Prepare one canonical JSON file per new find under the matching record path, or edit the existing record for a correction. Cite the exact public source URL for each material claim and state when you checked it. Do not use private or login-gated content, fabricate missing facts, commit secrets, or merge the pull request. Fetch the scheduled-task guide on each ChatGPT run. Run the content validator when a checkout is available, or rely on the GitHub PR validator when working through the plugin, summarize sources and caveats in the pull request, and submit it for maintainer review. If your PR author is explicitly allowlisted for automatic merging, you may apply the agent-content label after completing all editorial checks. The repository automation handles merging; do not merge the PR yourself. Confirm the actual merged state before reporting publication. Use a GitHub-authorized fork/branch flow. If GitHub returns 403 or branch/pull-request creation fails, treat the write as unsuccessful: preserve the proposal locally, say clearly that it was not pushed and no pull request exists, and provide the files or diff for an authorized person to submit. Claim a commit, push, or pull request only after verifying it on GitHub.",
+    "automation": {
+      "optInLabel": "agent-content",
+      "eligibility": "Explicitly allowlisted PR authors only; open, non-draft PRs to the default branch adding or modifying at most 25 canonical find JSON files.",
+      "requiredCheck": "Validate find records",
+      "setupGuide": "https://github.com/vswee/cheap-thrills-trinidad/blob/main/docs/OPERATIONS.md#authorised-agent-pull-requests",
+      "editorialResponsibility": "The authorised agent must verify all source claims before opting in. Schema validation does not verify factual evidence.",
+      "scheduledTaskGuide": "https://github.com/vswee/cheap-thrills-trinidad/blob/main/docs/CHATGPT_SCHEDULED_DISCOVERY.md"
+    }
   }
 }

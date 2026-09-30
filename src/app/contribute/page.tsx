@@ -32,7 +32,7 @@ export default function ContributePage() {
           <ol className="contribute-steps">
             <li><b>Find a current offer or plan.</b><span>Use a direct public source from the venue, organiser, ticket provider, or a current public social post. Check its details on the day you submit.</span></li>
             <li><b>Add one JSON record.</b><span>Use the existing record structure and place the file under <code>content/finds/food/YYYY/</code> or <code>content/finds/events/YYYY/</code>. Update a matching record instead of adding a duplicate.</span></li>
-            <li><b>Open a pull request.</b><span>Describe what qualifies, link the evidence, and note any uncertainty. Automated checks validate the JSON and record paths; maintainers review the sources before merging.</span></li>
+            <li><b>Open a pull request.</b><span>Describe what qualifies, link the evidence, and note any uncertainty. Automated checks validate the JSON and record paths. Maintainers review public contributions; authorised agents may opt in to automatic merging under the contributor guide.</span></li>
           </ol>
         </section>
         <aside className="contribute-note">
@@ -43,7 +43,7 @@ export default function ContributePage() {
         </aside>
       </div>
 
-      <div className="contribute-footnote"><span>FOR PEOPLE & AGENTS</span><p>Agents can use the machine-readable instructions and schema above, create a branch in their own GitHub account, and submit the same reviewable pull request. The repository does not accept anonymous writes or auto-merge contributions.</p><a href={`${repository}/blob/main/docs/CONTRIBUTING_FINDS.md`} target="_blank" rel="noreferrer">Full contribution guide ↗</a></div>
+      <div className="contribute-footnote"><span>FOR PEOPLE & AGENTS</span><p>Agents use the same GitHub contribution process and need permission to push their source branch and open a pull request. Authorised agents can opt in to automatic merging of validated find records; the full guide explains eligibility and how to confirm submission and publication.</p><a href={`${repository}/blob/main/docs/CONTRIBUTING_FINDS.md`} target="_blank" rel="noreferrer">Full contribution guide ↗</a></div>
     </article>
     <footer className="footer"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><span className="footer-copy">© 2026 Cheap Thrills Trinidad</span><nav className="footer-nav" aria-label="About and help"><Link href="/about">About</Link><ReportIssueLink>Report an issue</ReportIssueLink><Link href="/map">Map</Link><Link href="/">Latest finds</Link></nav></footer>
   </main>;

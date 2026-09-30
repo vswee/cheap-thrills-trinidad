@@ -2,13 +2,6 @@ name: Validate directory contributions
 
 on:
   pull_request:
-    paths:
-      - "content/finds/**/*.json"
-      - "public/schemas/find.schema.json"
-      - "scripts/validate-content.mjs"
-      - "package.json"
-      - "package-lock.json"
-      - ".github/workflows/validate-content-pr.yml"
 
 permissions:
   contents: read
@@ -19,6 +12,7 @@ concurrency:
 
 jobs:
   validate:
+    name: Validate find records
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,6 +24,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --ignore-scripts
+      - name: Check automatic merge policy
+        run: node --test scripts/tests/auto-merge-agent-content.test.mjs
       - name: Validate the full directory
         run: npm run validate:content
         env:
