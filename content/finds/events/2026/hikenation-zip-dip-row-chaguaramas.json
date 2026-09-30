@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 2,
+  "id": "event-hikenation-zip-dip-row-chaguaramas",
+  "slug": "hikenation-zip-dip-row-chaguaramas",
+  "kind": "event",
+  "title": "HikeNation Zip, Dip & Row",
+  "summary": "A four-hour Chaguaramas adventure combining canopy zip-lining, kayaking and a snorkelling stop from TT$325 per person for groups of four or more.",
+  "description": "HikeNation's Zip, Dip & Row combines a canopy zip-line tour, kayaking lesson and coastal paddling with a snorkelling beach stop. Adventure guides, activity instructors and safety gear are included. Meet at 9:45 am for a 10:00 am start. Transportation to the Chaguaramas meeting point is not included.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-30T17:20:55.000Z",
+  "updatedAt": "2026-09-30T17:20:55.000Z",
+  "publishedAt": "2026-09-30T17:20:55.000Z",
+  "checkedAt": "2026-09-30T17:20:55.000Z",
+  "places": [
+    {
+      "name": "HikeNation Zip, Dip & Row meeting point",
+      "area": "Chaguaramas",
+      "region": "North-West Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": 325,
+    "label": "TT$325–375 per person",
+    "terms": "TT$375 single; TT$350 each for teams of 2+; TT$325 each for groups of 4+. Transportation is not included."
+  },
+  "validity": {
+    "startsAt": "2026-10-31T10:00:00-04:00",
+    "endsAt": "2026-10-31T14:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "adventure",
+    "kayaking",
+    "outdoors",
+    "snorkelling",
+    "ziplining"
+  ],
+  "sources": [
+    {
+      "url": "https://www.hikenationclub.com/events-1/zipanddip",
+      "publisher": "HikeNation Club",
+      "type": "official",
+      "checkedAt": "2026-09-30T17:20:55.000Z",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "research": {
+    "service": "OpenAI",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "High confidence: current official HikeNation page supports the event details.",
+  "event": {
+    "format": "outdoor adventure",
+    "admission": "paid"
+  }
+}
