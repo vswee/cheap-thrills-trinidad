@@ -168,3 +168,16 @@ test('the currently running merge job does not block itself', async () => {
   await mergeAgentContributions(f);
   assert.equal(f.merges.length, 1);
 });
+
+test('a failed external check cannot hide behind the current workflow URL', async () => {
+  process.env.AUTHORISED_AGENT_LOGINS = 'trusted-agent';
+  const f = fixture();
+  const paginate = f.github.paginate;
+  f.github.paginate = async (endpoint) => {
+    const values = await paginate(endpoint);
+    return endpoint === 'checks' ? [...values, { name: 'merge', app: { id: 123 }, status: 'completed', conclusion: 'failure', details_url: 'https://github.com/owner/repo/actions/runs/123/job/456' }] : values;
+  };
+  f.context.runId = 123;
+  await mergeAgentContributions(f);
+  assert.equal(f.merges.length, 0);
+});

@@ -93,7 +93,8 @@ async function mergeAgentContributions({ github, context, core, publish = publis
     const statuses = [];
     for (const ref of new Set([pr.head.sha, pr.merge_commit_sha])) {
       checks.push(...(await github.paginate(github.rest.checks.listForRef, { ...repo, ref, filter: "latest", per_page: 100 }))
-        .filter((check) => !check.details_url?.includes(`/actions/runs/${context.runId}/`)));
+        .filter((check) => !(check.name === "merge" && check.app?.id === 15368
+          && check.details_url?.includes(`/actions/runs/${context.runId}/`))));
       const { data: combined } = await github.rest.repos.getCombinedStatusForRef({ ...repo, ref });
       statuses.push(...combined.statuses);
     }
