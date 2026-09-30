@@ -26,6 +26,8 @@ jobs:
       - run: npm ci --ignore-scripts
       - name: Check automatic merge policy
         run: node --test scripts/tests/auto-merge-agent-content.test.mjs
+      - name: Test feeds and Telegram delivery
+        run: npm run test:notifications
       - name: Validate the full directory
         run: npm run validate:content
         env:

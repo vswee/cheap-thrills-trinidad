@@ -1,0 +1,39 @@
+name: Publish Telegram channel finds
+
+on:
+  schedule:
+    - cron: "43 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: telegram-channel-notifications
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/cache/restore@v4
+        with:
+          path: .notification-state
+          key: telegram-channel-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: telegram-channel-v1-
+      - name: Post new finds from the published website
+        run: node scripts/notify-telegram.mjs
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+      # Save partial progress even if a later Telegram request fails.
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .notification-state
+          key: telegram-channel-v1-${{ github.run_id }}-${{ github.run_attempt }}

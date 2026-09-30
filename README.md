@@ -26,3 +26,7 @@ Food discovery also reads the public TT Menus JSON menu feed for the configured 
 The discovery worker prefers Tavily basic web search for live evidence, then formats candidates with providers in descending priority weight: Cloudflare Workers AI, Gemini, Groq and OpenAI. If Tavily is unavailable, providers with their own web search can take over; Cloudflare requires Tavily evidence. Tavily basic search requests cost one credit each, with three queries per section per daily run. Add `TAVILY_API_KEY` and `CLOUDFLARE_API_TOKEN` as GitHub Actions secrets, and `CLOUDFLARE_ACCOUNT_ID` as a repository Actions variable or secret. The Cloudflare token needs the account-level Workers AI Read permission. The default Cloudflare model is `@cf/meta/llama-3.3-70b-instruct-fp8-fast`; override it with the `CLOUDFLARE_MODEL` Actions variable if needed. `config/ai-routing.json` controls provider priority and model IDs.
 
 See [`docs/OPERATIONS.md`](docs/OPERATIONS.md) for rollout steps and required secrets. No credentials belong in this repository.
+
+## Subscriber updates
+
+The homepage links to `/updates` for Telegram, RSS (`/rss.xml`) and a calendar subscription (`/calendar.ics`). Feeds regenerate with each production build. An hourly GitHub Actions workflow posts new live finds to the public Telegram channel. See [`docs/NOTIFICATIONS.md`](docs/NOTIFICATIONS.md) for channel setup, required configuration, calendar behaviour and delivery-state limitations. Run `npm run test:notifications` to verify feed formatting and notification deduplication.

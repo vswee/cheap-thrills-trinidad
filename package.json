@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:notifications": "node --test scripts/tests/feeds.test.mjs scripts/tests/notify-telegram.test.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "discover": "node scripts/discover.mjs",
     "discover:ingest": "node scripts/discover.mjs --from-codex"
