@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "id": "event-island-hikers-bamboo-cathedral-to-bagatelle-2026",
+  "slug": "bamboo-cathedral-to-bagatelle-island-hikers",
+  "kind": "event",
+  "title": "Bamboo Cathedral to Bagatelle with Island Hikers",
+  "summary": "A challenging 5–6 hour guided loop from Macqueripe through the Bamboo Cathedral to Bagatelle for TT$80.",
+  "description": "Island Hikers lists a challenging 5–6 hour Bamboo Cathedral to Bagatelle loop for Saturday 3 October 2026. Meet at Macqueripe Car Park at 7:30 AM. The advertised fee is TT$80 and payment can be made on the day of the hike.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-30T16:52:00-04:00",
+  "updatedAt": "2026-09-30T16:52:00-04:00",
+  "publishedAt": "2026-09-30T16:52:00-04:00",
+  "checkedAt": "2026-09-30T16:52:00-04:00",
+  "places": [
+    {
+      "name": "Macqueripe Car Park",
+      "area": "Chaguaramas",
+      "region": "North-West Trinidad",
+      "address": "Macqueripe"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 80,
+    "fromAmount": null,
+    "label": "TT$80",
+    "terms": "Island Hikers states payment can be made on the day of the hike."
+  },
+  "validity": {
+    "startsAt": "2026-10-03T07:30:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "hiking",
+    "outdoors",
+    "nature"
+  ],
+  "research": {
+    "service": "ChatGPT scheduled discovery",
+    "model": "GPT-5.6 Sol"
+  },
+  "event": {
+    "format": "Guided hike",
+    "admission": "TT$80; registration is offered by Island Hikers and payment can be made on the day."
+  },
+  "sources": [
+    {
+      "url": "https://islandhikers.com/",
+      "publisher": "Island Hikers Club",
+      "type": "official",
+      "checkedAt": "2026-09-30T16:52:00-04:00",
+      "supports": [
+        "event",
+        "date",
+        "price",
+        "location",
+        "duration",
+        "payment terms"
+      ]
+    }
+  ],
+  "editorialNote": "Current organiser homepage lists this upcoming hike. The page gives a 7:30 AM meeting time and 5–6 hour duration but no explicit finish time, so endsAt is left null."
+}
