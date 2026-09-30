@@ -1,3 +1,4 @@
+import { BuiltBy } from "@/components/built-by";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -18,7 +19,7 @@ export default function ContributePage() {
       <Link href="/" className="back-link">← LATEST FINDS</Link>
       <p className="eyebrow">HELP THE DIRECTORY GROW</p>
       <h1>Know a good<br /><span>find?</span></h1>
-      <p className="standalone-lede">Share a current food deal, cheap eat, event, or activity. Contributions are reviewed in public and added through GitHub.</p>
+      <p className="standalone-lede">Share a current food deal, affordable meal, event or activity. Contributions are reviewed in public and added through GitHub.</p>
 
       <div className="contribute-actions">
         <a className="contribute-primary" href={`${repository}/fork`} target="_blank" rel="noreferrer">Contribute on GitHub <span aria-hidden="true">↗</span></a>
@@ -30,14 +31,14 @@ export default function ContributePage() {
         <section>
           <p className="eyebrow">THE PROCESS</p>
           <ol className="contribute-steps">
-            <li><b>Find a current offer or plan.</b><span>Use a direct public source from the venue, organiser, ticket provider, or a current public social post. Check its details on the day you submit.</span></li>
+            <li><b>Find a current offer or plan.</b><span>Use a current public source, such as a page or social post from the venue, organiser or ticket provider. Check its details on the day you submit.</span></li>
             <li><b>Add one JSON record.</b><span>Use the existing record structure and place the file under <code>content/finds/food/YYYY/</code> or <code>content/finds/events/YYYY/</code>. Update a matching record instead of adding a duplicate.</span></li>
             <li><b>Open a pull request.</b><span>Describe what qualifies, link the evidence, and note any uncertainty. Automated checks validate the JSON and record paths. Maintainers review public contributions; authorised agents may opt in to automatic merging under the contributor guide.</span></li>
           </ol>
         </section>
         <aside className="contribute-note">
           <p className="eyebrow">GOOD EVIDENCE</p>
-          <p>Link the exact current page or social post. Include the source check time and mark which claims it supports, such as offer, price, location, terms, date, or dietary fit.</p>
+          <p>Link to the exact current page or social post. Include the source check time and mark which claims it supports, such as offer, price, location, terms, date, or dietary fit.</p>
           <p>For food finds, we especially welcome affordable options from independent doubles and bake vendors, bakeries, gyro shops, cafés, and small eateries. Mark pescatarian, dairy-free, or vegan suitability as unknown unless a source confirms it.</p>
           <p>Never guess an amount, date, schedule, ingredient, or availability. Old posts and search snippets are useful leads, not proof that an offer is still active.</p>
         </aside>
@@ -45,6 +46,6 @@ export default function ContributePage() {
 
       <div className="contribute-footnote"><span>FOR PEOPLE & AGENTS</span><p>Agents use the same GitHub contribution process and need permission to push their source branch and open a pull request. Authorised agents can opt in to automatic merging of validated find records; the full guide explains eligibility and how to confirm submission and publication.</p><a href={`${repository}/blob/main/docs/CONTRIBUTING_FINDS.md`} target="_blank" rel="noreferrer">Full contribution guide ↗</a></div>
     </article>
-    <footer className="footer"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><span className="footer-copy">© 2026 Cheap Thrills Trinidad</span><nav className="footer-nav" aria-label="About and help"><Link href="/about">About</Link><ReportIssueLink>Report an issue</ReportIssueLink><Link href="/map">Map</Link><Link href="/">Latest finds</Link></nav></footer>
+    <footer className="footer"><Link href="/" className="wordmark"><span className="brand-mark">ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><span className="footer-copy">© 2026 Cheap Thrills Trinidad<BuiltBy /></span><nav className="footer-nav" aria-label="About and help"><Link href="/about">About</Link><ReportIssueLink>Report an issue</ReportIssueLink><Link href="/map">Map</Link><Link href="/">Latest finds</Link></nav></footer>
   </main>;
 }

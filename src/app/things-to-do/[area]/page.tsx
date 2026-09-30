@@ -6,7 +6,7 @@ import type { Find } from "@/lib/content";
 
 const isCentral = (find: Find) => find.places.some((place) => /central/i.test(place.region));
 const areas: Record<string, DirectoryArea> = {
-  trinidad: { path: "things-to-do/trinidad", label: "Trinidad", title: "Things to do in Trinidad", description: "Discover affordable events, cultural experiences, tours and local things to do across Trinidad. Check dates, prices, locations and organiser sources before making a plan.", kind: "event", matches: () => true },
+  trinidad: { path: "things-to-do/trinidad", label: "Trinidad", title: "Things to do in Trinidad", description: "Discover affordable events, cultural experiences, tours and local things to do across Trinidad. Check dates, prices, locations and information from organisers before making a plan.", kind: "event", matches: () => true },
   "central-trinidad": { path: "things-to-do/central-trinidad", label: "Central Trinidad", title: "Things to do in Central Trinidad", description: "Find events and affordable experiences in Central Trinidad, from heritage tours to local outings. Listings include location, price and date information when available.", kind: "event", matches: isCentral },
 };
 export function generateStaticParams() { return Object.keys(areas).map((area) => ({ area })); }

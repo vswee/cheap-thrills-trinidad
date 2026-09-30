@@ -1,3 +1,4 @@
+import { BuiltBy } from "@/components/built-by";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getFinds } from "@/lib/content";
@@ -43,6 +44,6 @@ export default function MapPage() {
     </section>
     <DirectoryMap entries={entries} />
     {missing > 0 && <p className={styles.mapNotice}><strong>{missing} of {finds.length} current finds don’t have a verified map pin yet.</strong> They remain in the directory; only locations checked against a map link or address appear here. <Link href="/">Browse all finds →</Link></p>}
-    <footer className={styles.footer}><Link href="/" className={styles.wordmark}><span className={styles.brandMark}>ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><span className={styles.footerCopy}>© 2026 Cheap Thrills Trinidad</span><nav className="footer-nav" aria-label="About and help"><Link href="/about">About</Link><ReportIssueLink>Report an issue</ReportIssueLink><Link href="/">Latest finds</Link></nav></footer>
+    <footer className={styles.footer}><Link href="/" className={styles.wordmark}><span className={styles.brandMark}>ct<span>.</span></span><span>Cheap Thrills <i>Trinidad</i></span></Link><span className={styles.footerCopy}>© 2026 Cheap Thrills Trinidad<BuiltBy /></span><nav className="footer-nav" aria-label="About and help"><Link href="/about">About</Link><ReportIssueLink>Report an issue</ReportIssueLink><Link href="/">Latest finds</Link></nav></footer>
   </main>;
 }

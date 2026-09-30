@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Find } from "@/lib/content";
-import { formatPrice } from "@/lib/find-display";
+import { formatPrice, listingLabel } from "@/lib/find-display";
+import { ListingFreshness } from "@/components/listing-freshness";
 import { BrandMark } from "@/components/brand-mark";
 import { ShareFindButton } from "@/components/share-find-button";
 
@@ -11,6 +12,7 @@ const batchSize = 8;
 type FindKind = "all" | "food" | "event";
 type FindView = "cards" | "list";
 type DietFilter = "pescatarian" | "vegan" | null;
+type MobilePanel = "filters" | "search" | null;
 
 function readKind(value: string | null, fallback: FindKind): FindKind {
   return value === "all" || value === "food" || value === "event" ? value : fallback;
@@ -28,17 +30,7 @@ function MapPinIcon() {
   return <svg aria-hidden="true" viewBox="0 0 16 20" fill="none"><path d="M8 19s6-6.1 6-11A6 6 0 1 0 2 8c0 4.9 6 11 6 11Z" stroke="currentColor" strokeWidth="1.6" /><circle cx="8" cy="8" r="2" stroke="currentColor" strokeWidth="1.6" /></svg>;
 }
 
-function cardLabel(find: Find) {
-  if (find.kind === "food") {
-    if (find.categories.includes("menu-price")) return "FOOD";
-    if (find.categories.includes("food-experience")) return "FOOD EXPERIENCE";
-    if (["food-deal", "restaurant-week", "value-meal"].some((category) => find.categories.includes(category))) return "FOOD DEAL";
-    return "BUDGET EAT";
-  }
-  if (find.categories.includes("food-experience")) return "FOOD EXPERIENCE";
-  if (find.categories.includes("activity") || find.categories.includes("attraction")) return "ACTIVITY";
-  return "EVENT";
-}
+function cardLabel(find: Find) { return listingLabel(find).toUpperCase(); }
 
 function cardTiming(find: Find) {
   if (find.validity.startsAt) {
@@ -55,7 +47,7 @@ function cardTiming(find: Find) {
     const endLabel = sameDay ? endTime : `${new Intl.DateTimeFormat("en-TT", { weekday: "short", day: "numeric", month: "short", timeZone: "America/Port_of_Spain" }).format(end)} · ${endTime}`;
     return `${date} · ${time}–${endLabel}`;
   }
-  if (find.kind === "food") return find.validity.recurrence ? "Check availability" : "Current menu";
+  if (find.kind === "food") return find.validity.recurrence ?? "Check availability";
   if (find.categories.includes("activity") || find.categories.includes("attraction")) return "Ongoing · check hours";
   return find.validity.recurrence ?? "Date to be confirmed";
 }
@@ -71,8 +63,10 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
   const [view, setView] = useState<FindView>("cards");
   const [diet, setDiet] = useState<DietFilter>(null);
   const [freeOnly, setFreeOnly] = useState(false);
+  const [mobilePanel, setMobilePanel] = useState<MobilePanel>(null);
   const [returnTo, setReturnTo] = useState("/");
   const sentinel = useRef<HTMLDivElement>(null);
+  const mobileSearchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setReturnTo(`${window.location.pathname}${window.location.search}${window.location.hash}`);
@@ -91,6 +85,14 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     window.addEventListener("popstate", syncFromUrl);
     return () => window.removeEventListener("popstate", syncFromUrl);
   }, [defaultKind]);
+
+  useEffect(() => {
+    if (!mobilePanel) return;
+    if (mobilePanel === "search") mobileSearchRef.current?.focus();
+    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") setMobilePanel(null); };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [mobilePanel]);
 
   const detailHref = (find: Find) => {
     const params = new URLSearchParams({ from: returnTo });
@@ -163,6 +165,12 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
     rememberCurrentUrl();
   };
 
+  const mobileFilterSummary = [
+    kind === "all" ? "Everything" : kind === "food" ? "Food" : "Things to do",
+    diet ? diet === "vegan" ? "Vegan" : "Pescatarian" : null,
+    freeOnly ? "Free" : null,
+  ].filter(Boolean).join(" · ");
+
   const shown = useMemo(() => finds.filter((find) => {
     if (kind !== "all" && find.kind !== kind) return false;
     if (diet === "pescatarian" && find.food?.dietFit.pescatarian !== "yes") return false;
@@ -195,6 +203,31 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
       <div className="feed-tools"><label className="search-box"><span aria-hidden="true">⌕</span><input data-signal-search="directory_search" value={query} onChange={(event) => changeQuery(event.target.value)} placeholder="Search deals, places, areas" aria-label="Search finds" /><kbd>⌘ K</kbd></label><div className="view-toggle" role="group" aria-label="Listing view"><button type="button" aria-pressed={view === "cards"} onClick={() => changeView("cards")}>▦ <span>Cards</span></button><button type="button" aria-pressed={view === "list"} onClick={() => changeView("list")}>☷ <span>List</span></button></div></div>
     </div>}
     <div className="diet-filters" role="group" aria-label="Filter finds by diet and cost">{kind !== "event" && <><span>DIET</span><button type="button" aria-pressed={!diet} onClick={() => changeDiet(null)}>Any</button><button type="button" aria-pressed={diet === "pescatarian"} onClick={() => changeDiet("pescatarian")}>Pescatarian</button><button type="button" aria-pressed={diet === "vegan"} onClick={() => changeDiet("vegan")}>Vegan</button><span className="diet-filter-divider" aria-hidden="true">·</span></>}<span>COST</span><button type="button" aria-pressed={freeOnly} onClick={() => changeFreeOnly(!freeOnly)}>Free</button></div>
+    {finds.length > 0 && <div className={`mobile-filter-dock${mobilePanel ? " is-expanded" : ""}`}>
+      {mobilePanel === "filters" && <div className="mobile-filter-panel" id="mobile-filter-panel">
+        <p className="mobile-filter-heading">SHOW ME</p>
+        <div className="mobile-filter-options" role="group" aria-label="Filter finds">
+          {([["all", "Everything"], ["food", "Food"], ["event", "Things to do"]] as const).map(([value, label]) => <button key={value} type="button" aria-pressed={kind === value} className={kind === value ? "selected" : ""} onClick={() => changeKind(value)}>{label}</button>)}
+        </div>
+        {kind !== "event" && <>
+          <p className="mobile-filter-heading">DIET</p>
+          <div className="mobile-filter-options" role="group" aria-label="Filter by diet">
+            <button type="button" aria-pressed={!diet} className={!diet ? "selected" : ""} onClick={() => changeDiet(null)}>Any</button>
+            <button type="button" aria-pressed={diet === "pescatarian"} className={diet === "pescatarian" ? "selected" : ""} onClick={() => changeDiet("pescatarian")}>Pescatarian</button>
+            <button type="button" aria-pressed={diet === "vegan"} className={diet === "vegan" ? "selected" : ""} onClick={() => changeDiet("vegan")}>Vegan</button>
+          </div>
+        </>}
+        <div className="mobile-filter-footer">
+          <button type="button" className={freeOnly ? "selected" : ""} aria-pressed={freeOnly} onClick={() => changeFreeOnly(!freeOnly)}>Free only</button>
+          <div className="view-toggle" role="group" aria-label="Listing view"><button type="button" aria-pressed={view === "cards"} onClick={() => changeView("cards")}>▦ <span>Cards</span></button><button type="button" aria-pressed={view === "list"} onClick={() => changeView("list")}>☷ <span>List</span></button></div>
+        </div>
+      </div>}
+      <div className="mobile-filter-row" inert={mobilePanel === "search"}>
+        <button type="button" className="mobile-current-filter" aria-expanded={mobilePanel === "filters"} aria-controls="mobile-filter-panel" onClick={() => setMobilePanel(mobilePanel === "filters" ? null : "filters")}><span>{mobileFilterSummary}</span><span aria-hidden="true">{mobilePanel === "filters" ? "⌄" : "⌃"}</span></button>
+        <button type="button" className="mobile-search-trigger" aria-label="Search finds" aria-expanded={mobilePanel === "search"} onClick={() => setMobilePanel(mobilePanel === "search" ? null : "search")}>⌕</button>
+      </div>
+      {mobilePanel === "search" && <div role="search" className="mobile-search-expanded"><span aria-hidden="true">⌕</span><input type="search" enterKeyHint="done" onKeyDown={(event) => { if (event.key === "Enter" || event.key === "Escape") { event.currentTarget.blur(); setMobilePanel(null); } }} ref={mobileSearchRef} data-signal-search="directory_search" value={query} onChange={(event) => changeQuery(event.target.value)} placeholder="Search deals, places, areas" aria-label="Search finds" /><button type="button" aria-label="Close search" onClick={() => setMobilePanel(null)}>×</button></div>}
+    </div>}
     {shown.length === 0 ? <div className="empty-state"><h2>{diet ? `No confirmed ${diet} finds.` : query ? "No matching finds." : freeOnly ? "No free finds match these filters." : kind === "food" ? "No food deals yet." : kind === "event" ? "No events yet." : "No finds published yet."}</h2>{(query || kind !== "all" || diet || freeOnly) && <><p>{diet ? "Only listings with a confirmed dietary fit appear in this view." : query ? "Try a different search or clear the filters." : "Clear the filter to see all finds."}</p><button className="empty-reset" onClick={clearFilters}>Clear filters</button></>}</div> : <>
       {view === "cards" ? <div className="feed-grid">{shown.slice(0, count).map((find, index) => <article className={`find-card ${index === 0 ? "featured" : ""}`} key={find.id}>
         <Link href={detailHref(find)} className="find-card-link" aria-label={`View details: ${find.title}`} data-signal-label="find_open">
@@ -203,8 +236,8 @@ export function FindFeed({ finds, defaultKind = "all" }: { finds: Find[]; defaul
           {!(find.kind === "food" && /menu price at/i.test(find.summary)) && <p className="card-summary">{find.summary}</p>}
           {find.kind === "food" && find.food && <div className="diet-row">{find.food.dietFit.pescatarian === "yes" && <span>◉ Pescatarian</span>}{find.food.dietFit.dairyFree === "yes" && <span>◉ Dairy-free</span>}{find.food.dietFit.vegan === "yes" && <span>◉ Vegan</span>}{find.food.dietFit.dairyFree === "unknown" && <span className="uncertain">Dairy status unconfirmed</span>}</div>}
         </Link>
-        <div className="card-bottom"><div className="card-price"><strong>{formatPrice(find)}</strong></div><span className="card-checked">Checked {checkedDate(find)}</span><ShareFindButton title={find.title} url={`/${find.kind === "food" ? "food" : "events"}/${find.slug}`} compact /></div>
-      </article>)}</div> : <div className="feed-table-wrap"><table className="feed-table"><thead><tr><th scope="col">Find</th><th scope="col">Type</th><th scope="col">When</th><th scope="col">Price</th><th scope="col">Area</th><th scope="col">Checked</th></tr></thead><tbody>{shown.slice(0, count).map((find) => <tr key={find.id}><th scope="row"><Link href={detailHref(find)}>{find.title}</Link><span>{find.summary}</span></th><td><span className={`kind-pill ${find.kind}`}>{cardLabel(find)}</span></td><td>{cardTiming(find)}</td><td className="feed-table-price">{formatPrice(find)}</td><td>{find.places[0]?.area ?? "Trinidad"}</td><td>{checkedDate(find)}</td></tr>)}</tbody></table></div>}
+        <div className="card-bottom"><div className="card-price"><strong>{formatPrice(find)}</strong><span className="card-checked">Checked {checkedDate(find)}<ListingFreshness find={find} /></span></div><ShareFindButton title={find.title} url={`/${find.kind === "food" ? "food" : "events"}/${find.slug}`} compact /></div>
+      </article>)}</div> : <div className="feed-table-wrap"><table className="feed-table"><thead><tr><th scope="col">Find</th><th scope="col">Type</th><th scope="col">When</th><th scope="col">Price</th><th scope="col">Area</th><th scope="col">Checked</th></tr></thead><tbody>{shown.slice(0, count).map((find) => <tr key={find.id}><th scope="row"><Link href={detailHref(find)}>{find.title}</Link><span>{find.summary}</span></th><td><span className={`kind-pill ${find.kind}`}>{cardLabel(find)}</span></td><td>{cardTiming(find)}</td><td className="feed-table-price">{formatPrice(find)}</td><td>{find.places[0]?.area ?? "Trinidad"}</td><td>{checkedDate(find)}<ListingFreshness find={find} /></td></tr>)}</tbody></table></div>}
       {count < shown.length && <><div ref={sentinel} className="feed-sentinel" aria-hidden="true" /><button className="load-more" onClick={() => setCount((current) => current + batchSize)}>Show more finds <span>↓</span></button></>}
     </>}
   </>;
