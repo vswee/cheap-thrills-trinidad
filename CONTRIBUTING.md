@@ -8,4 +8,4 @@ Add or correct a food deal, cheap eat, event, or activity through a public pull 
 - Food mandate: [`trinidad_food_deals_monitor.md`](trinidad_food_deals_monitor.md)
 - Events mandate: [`trinidad_events_experiences_monitor.md`](trinidad_events_experiences_monitor.md)
 
-Contributions must be JSON records under `content/finds/food/YYYY/` or `content/finds/events/YYYY/`. Pull requests run `npm run validate:content`; maintainers review all sources and claims before merging.
+Contributions must be JSON records under `content/finds/food/YYYY/` or `content/finds/events/YYYY/`. GitHub runs `npm run validate:content`; maintainers review public contributions. Explicitly authorised agents can opt in to automatic publication with the `agent-content` label after verifying the sources. Existing ChatGPT scheduled tasks should fetch and follow [`docs/CHATGPT_SCHEDULED_DISCOVERY.md`](docs/CHATGPT_SCHEDULED_DISCOVERY.md) each run.
