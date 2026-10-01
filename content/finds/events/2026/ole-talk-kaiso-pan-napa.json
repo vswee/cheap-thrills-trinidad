@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 2,
+  "id": "event-napa-ole-talk-kaiso-pan-2026",
+  "slug": "ole-talk-kaiso-pan-napa",
+  "kind": "event",
+  "title": "Ole Talk, Kaiso & Pan",
+  "summary": "Two Calypso History Month evenings pairing live steelpan with vintage calypso, extempo and soca for TT$150 per event.",
+  "description": "The National Academy for the Performing Arts lists two Friday evenings by the National Steel Symphony Orchestra in the Batimamselle Room at NAPA Hotel. The 2 October programme features vintage calypso, kaiso through the decades and extempo with the Mighty Gypsy, Myron B and David Bereaux. The 9 October programme shifts to soca on steel with guest performances including Orlando Octave. Tickets are TT$150 per event and seating is limited.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-01T00:54:00-04:00",
+  "updatedAt": "2026-10-01T00:54:00-04:00",
+  "publishedAt": "2026-10-01T00:54:00-04:00",
+  "checkedAt": "2026-10-01T00:54:00-04:00",
+  "places": [{"name":"Batimamselle Room, NAPA Hotel","area":"Port of Spain","region":"North-West Trinidad","address":null}],
+  "price": {"currency":"TTD","amount":150,"fromAmount":null,"label":"TT$150 per event","terms":"Limited seating available."},
+  "validity": {"startsAt":"2026-10-02T18:00:00-04:00","endsAt":"2026-10-09T22:00:00-04:00","recurrence":"Two Friday events: 2 October and 9 October 2026, 6:00 PM–10:00 PM.","timezone":"America/Port_of_Spain"},
+  "categories": ["live-music","steelpan","calypso","culture"],
+  "research": {"service":"ChatGPT scheduled discovery","model":"GPT-5.6 Sol"},
+  "event": {"format":"Live music and cultural performance","admission":"TT$150 per event; limited seating."},
+  "sources": [{"url":"https://islandetickets.com/event/nssokaisoandpan","publisher":"Island E-Tickets / National Academy for the Performing Arts","type":"ticketing","checkedAt":"2026-10-01T00:54:00-04:00","supports":["event","dates","price","location","programme","limited seating"]}],
+  "editorialNote": "Ticketing page currently lists both October performances together. The listing header spans 2–9 October; the recurring description is retained rather than implying continuous operation between dates."
+}
