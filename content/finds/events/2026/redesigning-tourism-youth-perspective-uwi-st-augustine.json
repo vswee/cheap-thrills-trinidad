@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 2,
+  "id": "event-uwi-redesigning-tourism-youth-perspective-2026",
+  "slug": "redesigning-tourism-youth-perspective-uwi-st-augustine",
+  "kind": "event",
+  "title": "Redesigning Tourism: A Youth Perspective",
+  "summary": "A free three-hour UWI discussion and workshop on AI, innovation and the future of Caribbean tourism, with invited speakers and an open forum.",
+  "description": "The UWI Tourism Society and The Academic Lounge are hosting Redesigning Tourism: A Youth Perspective at the FSS Lounge, UWI St. Augustine on Thursday 1 October 2026 from 1:00 PM to 4:00 PM. The free programme includes invited speakers, interactive group discussions and an open forum focused on technology, innovation and the future of tourism in Trinidad and Tobago and the wider Caribbean. Places are limited and registration is subject to confirmation.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-01T01:21:00-04:00",
+  "updatedAt": "2026-10-01T01:21:00-04:00",
+  "publishedAt": "2026-10-01T01:21:00-04:00",
+  "checkedAt": "2026-10-01T01:21:00-04:00",
+  "places": [
+    {
+      "name": "FSS Lounge, The University of the West Indies",
+      "area": "St. Augustine",
+      "region": "East-West Corridor",
+      "address": "The University of the West Indies, St. Augustine"
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free admission",
+    "terms": "Limited spots; registration is subject to confirmation."
+  },
+  "validity": {
+    "startsAt": "2026-10-01T13:00:00-04:00",
+    "endsAt": "2026-10-01T16:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "free",
+    "workshop",
+    "talk",
+    "technology",
+    "culture"
+  ],
+  "research": {
+    "service": "ChatGPT scheduled discovery",
+    "model": "GPT-5.6 Sol"
+  },
+  "event": {
+    "format": "Talk, interactive discussion and open forum",
+    "admission": "Free admission; limited spots and registration is subject to confirmation."
+  },
+  "sources": [
+    {
+      "url": "https://quadtt.com/events/redesigning-tourism-a-youth-perspective/",
+      "publisher": "QUAD TT / UWI Events",
+      "type": "institutional",
+      "checkedAt": "2026-10-01T01:21:00-04:00",
+      "supports": [
+        "event",
+        "date",
+        "time",
+        "location",
+        "price",
+        "programme",
+        "registration terms"
+      ]
+    },
+    {
+      "url": "https://tt.linkedin.com/company/the-academic-lounge",
+      "publisher": "The Academic Lounge / UWI STA Tourism Society",
+      "type": "social",
+      "checkedAt": "2026-10-01T01:21:00-04:00",
+      "supports": [
+        "event",
+        "date",
+        "time",
+        "location",
+        "price",
+        "programme"
+      ]
+    }
+  ],
+  "editorialNote": "Current UWI-linked calendar listing and a recent organiser social post agree on the date, time, venue and free admission. Registration is limited and subject to confirmation."
+}
