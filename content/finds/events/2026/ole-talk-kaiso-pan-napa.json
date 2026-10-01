@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "id": "event-nsso-ole-talk-kaiso-pan-2026",
+  "slug": "ole-talk-kaiso-pan-napa",
+  "kind": "event",
+  "title": "Ole Talk, Kaiso & Pan",
+  "summary": "Two Calypso History Month evenings of vintage calypso, extempo and soca on steel with the National Steel Symphony Orchestra for TT$150 per event.",
+  "description": "The National Steel Symphony Orchestra presents two Friday evenings at the Batimamselle Room, NAPA Hotel: Vintage & Extempo on 2 October 2026 and Soca on Steel on 9 October 2026. The ticketing page lists TT$150 admission per event and limited seating.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-09-30T22:31:00-04:00",
+  "updatedAt": "2026-09-30T22:31:00-04:00",
+  "publishedAt": "2026-09-30T22:31:00-04:00",
+  "checkedAt": "2026-09-30T22:31:00-04:00",
+  "places": [
+    {
+      "name": "Batimamselle Room, NAPA Hotel",
+      "area": "Port of Spain",
+      "region": "North-West Trinidad",
+      "address": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 150,
+    "fromAmount": null,
+    "label": "TT$150 per event",
+    "terms": "Limited seating available."
+  },
+  "validity": {
+    "startsAt": "2026-10-02T18:00:00-04:00",
+    "endsAt": "2026-10-09T22:00:00-04:00",
+    "recurrence": "Two Friday events: 2 October and 9 October 2026.",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "live-music",
+    "culture",
+    "steelpan",
+    "calypso"
+  ],
+  "research": {
+    "service": "ChatGPT scheduled discovery",
+    "model": "GPT-5.6 Sol"
+  },
+  "event": {
+    "format": "Live music performance",
+    "admission": "TT$150 per event; limited seating."
+  },
+  "sources": [
+    {
+      "url": "https://islandetickets.com/event/nssokaisoandpan",
+      "publisher": "Island E-Tickets",
+      "type": "ticketing",
+      "checkedAt": "2026-09-30T22:31:00-04:00",
+      "supports": [
+        "event",
+        "date",
+        "price",
+        "location",
+        "programme",
+        "terms"
+      ]
+    }
+  ],
+  "editorialNote": "Current ticketing page confirms two October 2026 performances and TT$150 admission per event. The ticketing calendar lists the 2 October session from 6:00 PM to 10:00 PM; the event page confirms both dates but does not separately state the 9 October hours."
+}
