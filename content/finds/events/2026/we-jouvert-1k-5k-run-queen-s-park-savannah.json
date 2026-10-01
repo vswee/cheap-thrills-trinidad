@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "id": "event-we-jouvert-1k-5k-run-2026",
+  "slug": "we-jouvert-1k-5k-run-queen-s-park-savannah",
+  "kind": "event",
+  "title": "WE J'ouvert 1K & 5K Run/Walk",
+  "summary": "A family-friendly 1K or 5K run/walk at Queen's Park Savannah with entry from TT$130 and finish-line activities.",
+  "description": "WE J'ouvert Band is hosting a standalone 1K and 5K run/walk at Queen's Park Savannah on Saturday 24 October 2026. The 1K starts at 3:30 PM and costs TT$130; the 5K starts at 4:30 PM and costs TT$150. Both distances are open to runners and walkers of all paces and ages. The organiser describes the 1K as family-friendly and lists a bouncy castle, face painting, prizes and giveaways. Registration is open. Fees are non-refundable, and missing the advertised bib-collection window forfeits the bib and entry without refund, credit or transfer.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-01T02:05:59-04:00",
+  "updatedAt": "2026-10-01T02:05:59-04:00",
+  "publishedAt": "2026-10-01T02:05:59-04:00",
+  "checkedAt": "2026-10-01T02:05:59-04:00",
+  "places": [
+    {
+      "name": "Queen's Park Savannah",
+      "area": "Port of Spain",
+      "region": "North-West Trinidad",
+      "address": "Queen's Park Savannah, Port of Spain, Trinidad and Tobago",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": 130,
+    "label": "TT$130 for 1K; TT$150 for 5K",
+    "terms": "Entry is per person. Fees are non-refundable; missed bib collection forfeits the bib and entry with no refund, credit or transfer."
+  },
+  "validity": {
+    "startsAt": "2026-10-24T15:30:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "running",
+    "walking",
+    "sports",
+    "family-friendly"
+  ],
+  "sources": [
+    {
+      "url": "https://wejouvertband.com/race",
+      "publisher": "WE J'ouvert Band",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location",
+        "terms"
+      ],
+      "checkedAt": "2026-10-01T02:05:59-04:00"
+    }
+  ],
+  "research": {
+    "service": "OpenAI",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "High confidence: the current official organiser page confirms the 24 October 2026 date, both start times, Queen's Park Savannah venue, TT$130/TT$150 entry prices, family activities, registration methods and refund/bib terms. No overall event end time is published.",
+  "event": {
+    "format": "1K and 5K run/walk",
+    "admission": "paid"
+  }
+}
