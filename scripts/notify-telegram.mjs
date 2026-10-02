@@ -25,6 +25,7 @@ if (!fs.existsSync(stateFile)) {
 const previous = JSON.parse(fs.readFileSync(stateFile, 'utf8'));
 if (!Array.isArray(previous) || previous.some((id) => typeof id !== 'string')) throw new Error('Invalid notification state');
 const sent = new Set(previous);
+let posted = 0;
 for (const find of [...finds].reverse()) {
   if (sent.has(find.id)) continue;
   const message = `New find: ${find.title.slice(0, 400)}\n\n${find.summary.slice(0, 1800)}\n${find.price.slice(0, 300)}\n\n${find.url}`;
@@ -37,5 +38,7 @@ for (const find of [...finds].reverse()) {
   sent.add(find.id);
   save(sent);
   console.log(`Posted ${find.id}`);
+  posted++;
   await new Promise((resolve) => setTimeout(resolve, 1100));
 }
+console.log(`Telegram channel: ${posted} new find(s) posted; ${finds.length} published feed record(s) checked.`);

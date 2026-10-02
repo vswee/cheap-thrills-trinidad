@@ -32,6 +32,8 @@ The built-in `GITHUB_TOKEN` should be used for repository commits with `contents
 
 ## Telegram setup checklist
 
+Public new-find alerts use `TELEGRAM_CHANNEL_ID`, separately from the private run-report destination `TELEGRAM_CHAT_ID`. The channel workflow runs after successful authorised-agent merge and discovery workflows, as well as on its hourly timer. It reads the deployed website feed and posts only unseen record IDs. A successful build or a run with no new finds does not generate a channel message. If deployment is still pending when the publication workflow completes, the hourly run catches the new feed later. Actions logs report the number posted; each `Posted <id>` means Telegram accepted that message. Existing cached IDs suppress duplicates.
+
 1. In Telegram, create a bot with the official `@BotFather` and copy its token into Vercel as `TELEGRAM_BOT_TOKEN`.
 2. Start a private chat with the bot (or add it to the chosen reporting group); send a message so Telegram creates an update.
 3. Resolve the destination chat ID using the Bot API `getUpdates` for that bot, or use a trusted bot-management method. Save it as `TELEGRAM_CHAT_ID`.
