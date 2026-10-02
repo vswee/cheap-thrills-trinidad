@@ -16,7 +16,7 @@ The existing task already fetches this guide every run. Its research and notific
 
 ## Unattended repository publication
 
-`Discover Trinidad finds` runs daily at 13:17 UTC (9:17 AM Trinidad), with a manual dispatch available for operational recovery. GitHub may delay scheduled starts. It uses the existing research providers and secrets, validates the complete directory, and commits accepted changes directly to `main` with its repository-scoped `GITHUB_TOKEN`. Concurrent changes are incorporated and revalidated before a normal push; conflicts fail visibly in the private run report.
+`Discover Trinidad finds` runs daily at 13:17 UTC (9:17 AM Trinidad), on changes to its workflow, discovery script or provider configuration on `main`, and through manual dispatch for operational recovery. GitHub may delay scheduled starts. It uses the existing research providers and secrets, validates the complete directory, and commits accepted changes directly to `main` with its repository-scoped `GITHUB_TOKEN`. Concurrent changes are incorporated and revalidated before a normal push; conflicts fail visibly in the private run report. Content commits do not trigger another discovery run.
 
 Vercel builds the published revision. `Publish Telegram channel finds` reads the deployed feed after successful publication workflows and on its hourly timer, sending only unseen records. The timer catches deployment delays. Build success alone is not a new-find notification.
 

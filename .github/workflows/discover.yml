@@ -1,6 +1,12 @@
 name: Discover Trinidad finds
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/discover.yml
+      - scripts/discover.mjs
+      - config/ai-routing.json
   schedule:
     - cron: "17 13 * * *" # 9:17 AM in Trinidad (UTC-04:00)
   workflow_dispatch:
