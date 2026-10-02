@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "id": "event-ieee-ada-lovelace-day-2026-uwi-st-augustine",
+  "slug": "ieee-ada-lovelace-day-2026-uwi-st-augustine",
+  "kind": "event",
+  "title": "IEEE Ada Lovelace Day 2026",
+  "summary": "A free UWI St Augustine engineering event with talks on data science, AI and cybersecurity, a panel Q&A and networking.",
+  "description": "IEEE Women in Engineering Trinidad & Tobago is hosting an in-person Ada Lovelace Day programme at UWI St Augustine on Saturday 10 October 2026. The programme includes guest speakers from BOETT and the fields of data science, artificial intelligence and cybersecurity, followed by a moderated panel Q&A and networking. IEEE vTools lists no admission charge and registration is open.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-01T18:11:12-04:00",
+  "updatedAt": "2026-10-01T18:11:12-04:00",
+  "publishedAt": "2026-10-01T18:11:12-04:00",
+  "checkedAt": "2026-10-01T18:11:12-04:00",
+  "places": [
+    {
+      "name": "The University of the West Indies, St. Augustine Campus",
+      "area": "St. Augustine",
+      "region": "East-West Corridor",
+      "address": "Engineering Department, UWI St Augustine, Trinidad and Tobago",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": "IEEE vTools lists no admission charge; registration is open."
+  },
+  "validity": {
+    "startsAt": "2026-10-10T09:00:00-04:00",
+    "endsAt": "2026-10-10T13:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "engineering",
+    "technology",
+    "talks",
+    "networking",
+    "free"
+  ],
+  "sources": [
+    {
+      "url": "https://events.vtools.ieee.org/m/580076",
+      "publisher": "IEEE vTools",
+      "type": "official",
+      "checkedAt": "2026-10-01T18:11:12-04:00",
+      "supports": [
+        "offer",
+        "price",
+        "location",
+        "programme",
+        "registration"
+      ]
+    },
+    {
+      "url": "https://r9.ieee.org/wie/event/celebrating-ada-lovelace-day-2026-with-guest-speakers-from-boett-and-data-science-ai-and-cybersecurity/",
+      "publisher": "IEEE Region 9 Women in Engineering",
+      "type": "official",
+      "checkedAt": "2026-10-01T18:11:12-04:00",
+      "supports": [
+        "date",
+        "time",
+        "location",
+        "programme",
+        "host"
+      ]
+    }
+  ],
+  "research": {
+    "service": "OpenAI",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "High confidence in the 10 October 2026 date, UWI St Augustine location, programme and free admission from current IEEE pages. IEEE vTools machine-readable start/end metadata is inconsistent with the displayed event date and agenda; canonical validity follows the IEEE Region 9 displayed 10 October 9:00 AM–1:00 PM listing. The detailed agenda has formal closing at 11:30 AM followed by networking.",
+  "event": {
+    "format": "Talks, panel Q&A and networking",
+    "admission": "free"
+  }
+}
