@@ -186,6 +186,6 @@ If there is nothing meaningfully new, **send no notification**. Silence
 is the intended successful outcome of a check with no qualifying
 changes.
 
-## Repository submission from scheduled ChatGPT runs
+## Scheduled research and publication
 
-Before submitting new or materially changed finds, fetch the current [`ChatGPT publishing guide`](docs/CHATGPT_SCHEDULED_DISCOVERY.md) and [`agent contribution contract`](public/.well-known/cheap-thrills-contribute.json) from `vswee/cheap-thrills-trinidad` on `main`. Use the GitHub plugin to commit canonical find JSON on a unique branch, open a PR, and apply `agent-content` when using the authorised account. GitHub validates and publishes eligible contributions automatically. Report the PR URL as submitted; report publication only after confirming the PR is merged. A local shell is optional. No qualifying changes still means no PR and no notification.
+GitHub Actions is the primary unattended researcher and publisher, using this mandate and its configured providers. ChatGPT scheduled runs are research-only: fetch [`docs/CHATGPT_SCHEDULED_DISCOVERY.md`](docs/CHATGPT_SCHEDULED_DISCOVERY.md) from `main`, deduplicate against published and pending records, and preserve new qualifying proposals with sources in the task output. Do not create branches, commit records, open PRs, label or merge from the ChatGPT schedule. No new qualifying research means no notification. Owner-requested contributions can use the separate PR flow.

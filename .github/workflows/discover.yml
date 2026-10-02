@@ -18,6 +18,9 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -30,8 +33,9 @@ jobs:
           set +e
           (
             set -e
-            npm ci
+            npm ci --ignore-scripts
             npm run discover
+            npm run validate:content
             git config user.name "cheap-thrills-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add content/finds content/brands public/brands
@@ -40,7 +44,32 @@ jobs:
               exit 0
             fi
             git commit -m "chore(content): refresh Trinidad finds"
-            git push
+            # Revalidate after incorporating another publisher's commits. Never force-push.
+            published=false
+            for attempt in 1 2 3; do
+              git fetch origin main
+              base_sha="$(git rev-parse origin/main)"
+              if ! git rebase origin/main; then
+                git rebase --abort
+                echo "Publication stopped: concurrent content changes conflict."
+                exit 1
+              fi
+              PR_BASE_SHA="$base_sha" PR_HEAD_SHA=HEAD npm run validate:content
+              if git push origin HEAD:main; then
+                published=true
+                break
+              fi
+              git fetch origin main
+              if [ "$(git rev-parse origin/main)" = "$base_sha" ]; then
+                echo "Publication failed without a concurrent update; check GitHub permissions or connectivity."
+                exit 1
+              fi
+              echo "main advanced during publication; retrying validated update ($attempt/3)."
+            done
+            if [ "$published" != true ]; then
+              echo "Publication stopped after three concurrent updates."
+              exit 1
+            fi
           ) 2>&1 | tee "$log_file"
           result=${PIPESTATUS[0]}
           echo "exit_code=$result" >> "$GITHUB_OUTPUT"

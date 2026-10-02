@@ -1,6 +1,6 @@
 {
   "name": "Cheap Thrills Trinidad directory contributions",
-  "version": 1,
+  "version": 2,
   "website": "https://cheap-thrills-trinidad.flat18.app",
   "repository": "https://github.com/vswee/cheap-thrills-trinidad",
   "contributionGuide": "https://cheap-thrills-trinidad.flat18.app/contribute",
@@ -26,7 +26,7 @@
       "Do not invent prices, terms, dates, locations, dietary suitability, or URLs.",
       "Run npm run validate:content when a local checkout is available; otherwise wait for the PR content validation check before claiming acceptance."
     ],
-    "agentInstructions": "Research current qualifying Trinidad food deals or non-food events using public sources. Read this manifest, the relevant mandate, the contributor guide, the canonical schema, and nearby records. Prepare one canonical JSON file per new find under the matching record path, or edit the existing record for a correction. Cite the exact public source URL for each material claim and state when you checked it. Do not use private or login-gated content, fabricate missing facts, commit secrets, or merge the pull request. Fetch the scheduled-task guide on each ChatGPT run. Before creating a branch, inspect existing codex/chatgpt-finds-* branches and their PRs, following pagination. Deduplicate against pending records as well as main. Resume a still-qualifying committed contribution on its existing branch; do not create a replacement branch for a blocked PR. Attempt PR creation at most once per run. An OpenAI action-review rejection stops submission writes for that run; preserve the branch and commit, and do not switch write mechanisms to circumvent the rejection. Run the content validator when a checkout is available, or rely on the GitHub PR validator when working through the plugin, summarize sources and caveats in the pull request, and submit it for maintainer review. If your PR author is explicitly allowlisted for automatic merging, you may apply the agent-content label after completing all editorial checks. The repository automation handles merging; do not merge the PR yourself. Confirm the actual merged state before reporting publication. Use a GitHub-authorized fork/branch flow. If GitHub returns 403 or branch/pull-request creation fails, treat the write as unsuccessful: preserve the proposal and any confirmed branch, commit or PR references; report the exact failed stage without denying stages that already succeeded. Check GitHub before saying no PR exists and provide the files or diff for an authorized person to review. Claim a commit, push, or pull request only after verifying it on GitHub.",
+    "agentInstructions": "For public or explicitly owner-requested interactive contributions, follow docs/CONTRIBUTING_FINDS.md and the matching mandate. Deduplicate against main and pending contributions. Preserve canonical identity, source evidence, actual check times and researcher attribution. Resume an existing relevant branch or PR rather than creating duplicates. Commit only canonical find JSON and open a non-draft PR to main; allowlisted authors may opt in with agent-content after editorial review. Confirm each completed stage before reporting it. Stop on action-review rejection without changing endpoints to circumvent it. ChatGPT scheduled runs must instead follow scheduledDiscovery: research-only, with no GitHub writes. GitHub Actions is the independent unattended researcher and publisher.",
     "automation": {
       "optInLabel": "agent-content",
       "eligibility": "Explicitly allowlisted PR authors only; open, non-draft PRs to the default branch adding or modifying at most 25 canonical find JSON files.",
@@ -35,5 +35,12 @@
       "editorialResponsibility": "The authorised agent must verify all source claims before opting in. Schema validation does not verify factual evidence.",
       "scheduledTaskGuide": "https://github.com/vswee/cheap-thrills-trinidad/blob/main/docs/CHATGPT_SCHEDULED_DISCOVERY.md"
     }
+  },
+  "scheduledDiscovery": {
+    "primaryPublisher": "github_actions",
+    "workflow": ".github/workflows/discover.yml",
+    "scheduleUtc": "17 13 * * *",
+    "chatgptMode": "research_only",
+    "chatgptInstructions": "Fetch docs/CHATGPT_SCHEDULED_DISCOVERY.md each run. Preserve new source-backed proposals in task output. Do not create branches, commit, open PRs, label, merge or retry blocked writes from the ChatGPT schedule. GitHub independently researches and publishes its own validated output."
   }
 }
