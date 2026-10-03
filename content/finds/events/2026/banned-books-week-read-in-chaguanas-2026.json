@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 2,
+  "id": "event-banned-books-week-read-in-chaguanas-2026",
+  "slug": "banned-books-week-read-in-chaguanas-2026",
+  "kind": "event",
+  "title": "Banned Books Week Read-In",
+  "summary": "A free community read-in at Scribbles and Quills in Lange Park, Chaguanas, for Banned Books Week.",
+  "description": "Scribbles and Quills is hosting a free Banned Books Week Read-In on Wednesday 7 October 2026 at 5:00 PM. Attendees can bring a banned or challenged book, bring their current read, or choose a book from the shop and join an evening of reading, community and conversation.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-03T11:08:00-04:00",
+  "updatedAt": "2026-10-03T11:08:00-04:00",
+  "publishedAt": "2026-10-03T11:08:00-04:00",
+  "checkedAt": "2026-10-03T11:08:00-04:00",
+  "places": [
+    {
+      "name": "Scribbles and Quills",
+      "area": "Lange Park, Chaguanas",
+      "region": "Central Trinidad",
+      "address": "6 Gaston Street, Lange Park, Chaguanas, Trinidad and Tobago",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": "The organiser's current event listing explicitly describes the read-in as free."
+  },
+  "validity": {
+    "startsAt": "2026-10-07T17:00:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "books",
+    "community",
+    "reading",
+    "free"
+  ],
+  "sources": [
+    {
+      "url": "https://scribblesandquills.com/events/",
+      "publisher": "Scribbles and Quills",
+      "type": "official",
+      "checkedAt": "2026-10-03T11:08:00-04:00",
+      "supports": [
+        "offer",
+        "date",
+        "time",
+        "price",
+        "location",
+        "programme"
+      ]
+    }
+  ],
+  "research": {
+    "service": "OpenAI",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "High confidence from the organiser's current events calendar. The source explicitly states Wednesday 7 October 2026 at 5:00 PM, free admission, and the Scribbles and Quills address in Lange Park, Chaguanas. No end time is published, so endsAt is left null.",
+  "event": {
+    "format": "Community read-in",
+    "admission": "free"
+  }
+}
