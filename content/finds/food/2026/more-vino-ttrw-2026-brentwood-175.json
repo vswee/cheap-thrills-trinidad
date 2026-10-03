@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "id": "food-more-vino-ttrw-2026-brentwood-175",
+  "slug": "more-vino-ttrw-2026-brentwood-175",
+  "kind": "food",
+  "title": "More Vino Brentwood: TT$175 Restaurant Week four-course menu",
+  "summary": "More Vino's Brentwood branch has a TT$175 all-inclusive four-course Restaurant Week menu with seafood and sushi choices.",
+  "description": "For Trinidad & Tobago Restaurant Week 2026, More Vino offers a starter, one appetiser, one entree and one dessert for TT$175 with taxes included. The offer runs September 25 through October 4 and is available at Brentwood Mall for dine-in or takeaway. Pescatarian choices listed include shrimp and vegetable tempura, Thai green curry shrimp and the Emperor Salmon Roll. The published menu does not provide dairy-allergen details, so dairy-free suitability is unconfirmed and should be checked with the restaurant before ordering.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-03T15:10:00Z",
+  "updatedAt": "2026-10-03T15:10:00Z",
+  "publishedAt": "2026-10-03T15:10:00Z",
+  "checkedAt": "2026-10-03T15:10:00Z",
+  "places": [
+    {
+      "name": "More Vino",
+      "area": "Brentwood",
+      "region": "Central Trinidad",
+      "address": "Brentwood Mall, Chaguanas",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 175,
+    "fromAmount": null,
+    "label": "TT$175; all taxes included",
+    "terms": "Starter + 1 appetiser + 1 entree + 1 dessert. Available at Brentwood for dine-in or takeaway."
+  },
+  "validity": {
+    "startsAt": "2026-09-25T00:00:00-04:00",
+    "endsAt": "2026-10-04T23:59:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant-week",
+    "seafood",
+    "sushi",
+    "central-trinidad",
+    "multi-course"
+  ],
+  "sources": [
+    {
+      "url": "https://www.ttrwfestival.com/restaurants",
+      "publisher": "Trinidad & Tobago Restaurant Week",
+      "type": "official",
+      "checkedAt": "2026-10-03T15:10:00Z",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ]
+    },
+    {
+      "url": "https://www.restaurants10.com/TT/Port-of-Spain/24613201818/More-Vino",
+      "publisher": "More Vino",
+      "type": "social",
+      "checkedAt": "2026-10-03T15:10:00Z",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "dietary-fit",
+        "location",
+        "terms"
+      ]
+    }
+  ],
+  "research": {
+    "service": "OpenAI ChatGPT",
+    "model": "GPT-5.6 Sol"
+  },
+  "editorialNote": "Checked 2026-10-03. Current 2026 Restaurant Week offer ends 2026-10-04. Dairy-free status is not published; readers should confirm ingredients and preparation.",
+  "food": {
+    "items": [
+      "Shrimp & Vegetable Tempura",
+      "Thai Green Curry Shrimp",
+      "Emperor Salmon Roll"
+    ],
+    "dietFit": {
+      "pescatarian": "yes",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "The menu lists seafood and sushi choices suitable for pescatarians, but does not provide dairy-allergen information. Confirm batter, curry, sauces and sushi ingredients are dairy-free before ordering."
+  }
+}
