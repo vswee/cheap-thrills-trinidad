@@ -6,10 +6,10 @@
   "title": "Vámonos a Mundo Nuevo heritage experience",
   "summary": "Explore a heritage museum, gardens, an estate greenhouse and chocolate-making experiences on this full-day outing.",
   "description": "The National Trust's full-day Mundo Nuevo experience is scheduled for Saturday, October 3, 2026, from 8:00 AM to 5:00 PM. The advertised programme includes the Mundo Nuevo Heritage Museum, an estate walk and greenhouse, a garden visit, and chocolate-making, wine and sampling experiences. Tickets are TT$275 for non-members and TT$225 for members; lunch is an optional TT$60 extra. Confirm transport, meeting point, age requirements and availability with the organizer.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-24T17:29:48.593Z",
-  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-10-04T17:34:46.634Z",
   "publishedAt": "2026-09-24T17:29:48.593Z",
   "checkedAt": "2026-09-24T17:29:48.593Z",
   "places": [
@@ -60,7 +60,7 @@
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Current as checked on 2026-09-24. Price and trip logistics should be reconfirmed with the organizer.",
+  "editorialNote": "Current as checked on 2026-09-24. Price and trip logistics should be reconfirmed with the organizer. Advertised validity ended 2026-10-04.",
   "event": {
     "format": "Guided heritage, agriculture and nature day trip",
     "admission": "paid"

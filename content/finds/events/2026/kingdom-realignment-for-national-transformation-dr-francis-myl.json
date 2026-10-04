@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "id": "event-clr-james-auditorium-kingdom-realignment-for-national-transformation-dr-francis-myl",
+  "slug": "kingdom-realignment-for-national-transformation-dr-francis-myl",
+  "kind": "event",
+  "title": "Kingdom Realignment for National Transformation—Dr. Francis Myles",
+  "summary": "Lecture event",
+  "description": "A lecture by Dr. Francis Myles on Kingdom Realignment for National Transformation",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-04T17:34:46.634Z",
+  "updatedAt": "2026-10-04T17:34:46.634Z",
+  "publishedAt": "2026-10-04T17:34:46.634Z",
+  "checkedAt": "2026-10-04T17:34:46.634Z",
+  "places": [
+    {
+      "name": "CLR James Auditorium",
+      "area": "San Juan-Laventille",
+      "region": "North Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Unknown",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-07T19:00:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "lecture",
+    "religious"
+  ],
+  "sources": [
+    {
+      "url": "https://www.eventbrite.com/d/trinidad-and-tobago--chaguanas/free--events",
+      "publisher": "Eventbrite",
+      "type": "ticketing",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-10-04T17:34:46.634Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "New event found",
+  "event": {
+    "format": "Lecture",
+    "admission": "unknown"
+  }
+}

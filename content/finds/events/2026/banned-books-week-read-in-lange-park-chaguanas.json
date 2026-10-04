@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
-  "id": "event-banned-books-week-read-in-chaguanas-2026",
-  "slug": "banned-books-week-read-in-chaguanas-2026",
+  "id": "event-scribbles-and-quills-banned-books-week-read-in",
+  "slug": "banned-books-week-read-in-lange-park-chaguanas",
   "kind": "event",
   "title": "Banned Books Week Read-In",
   "summary": "Book reading event",
   "description": "A read-in event for Banned Books Week",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-10-03T11:08:00-04:00",
+  "createdAt": "2026-10-04T17:34:46.634Z",
   "updatedAt": "2026-10-04T17:34:46.634Z",
-  "publishedAt": "2026-10-03T11:08:00-04:00",
+  "publishedAt": "2026-10-04T17:34:46.634Z",
   "checkedAt": "2026-10-04T17:34:46.634Z",
   "places": [
     {
@@ -55,7 +55,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Existing event verified",
+  "editorialNote": "New event found",
   "event": {
     "format": "Read-in",
     "admission": "free"

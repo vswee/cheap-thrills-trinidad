@@ -6,10 +6,10 @@
   "title": "Tabaquite Heritage & Recreation Tour",
   "summary": "A full-day National Trust excursion pairs railway heritage, countryside scenery and a visit to Harry's Water Park.",
   "description": "The National Trust of Trinidad and Tobago is running a full-day Tabaquite tour on Saturday, October 3, 2026, from 7:00 AM to 5:00 PM. The itinerary includes Knolly's Tunnel and other railway heritage sites, the Low Dam viewpoint, a community school garden and farm, and bathing time at Harry's Water Park. The listed non-member price is TT$400 with lunch included; members pay TT$350. Confirm transport, meeting point and remaining spaces with the organizer before booking.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-24T17:29:48.593Z",
-  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-10-04T17:34:46.634Z",
   "publishedAt": "2026-09-24T17:29:48.593Z",
   "checkedAt": "2026-09-24T17:29:48.593Z",
   "places": [
@@ -59,7 +59,7 @@
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Current as checked on 2026-09-24. Price, stock and trip logistics should be reconfirmed with the organizer.",
+  "editorialNote": "Current as checked on 2026-09-24. Price, stock and trip logistics should be reconfirmed with the organizer. Advertised validity ended 2026-10-04.",
   "event": {
     "format": "Guided heritage and recreation tour",
     "admission": "paid"
