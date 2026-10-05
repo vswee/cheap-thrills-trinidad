@@ -6,10 +6,10 @@
   "title": "More Vino Brentwood: TT$175 Restaurant Week four-course menu",
   "summary": "More Vino's Brentwood branch has a TT$175 all-inclusive four-course Restaurant Week menu with seafood and sushi choices.",
   "description": "For Trinidad & Tobago Restaurant Week 2026, More Vino offers a starter, one appetiser, one entree and one dessert for TT$175 with taxes included. The offer runs September 25 through October 4 and is available at Brentwood Mall for dine-in or takeaway. Pescatarian choices listed include shrimp and vegetable tempura, Thai green curry shrimp and the Emperor Salmon Roll. The published menu does not provide dairy-allergen details, so dairy-free suitability is unconfirmed and should be checked with the restaurant before ordering.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-10-03T15:10:00Z",
-  "updatedAt": "2026-10-03T15:10:00Z",
+  "updatedAt": "2026-10-05T21:12:04.670Z",
   "publishedAt": "2026-10-03T15:10:00Z",
   "checkedAt": "2026-10-03T15:10:00Z",
   "places": [
@@ -72,7 +72,7 @@
     "service": "OpenAI ChatGPT",
     "model": "GPT-5.6 Sol"
   },
-  "editorialNote": "Checked 2026-10-03. Current 2026 Restaurant Week offer ends 2026-10-04. Dairy-free status is not published; readers should confirm ingredients and preparation.",
+  "editorialNote": "Checked 2026-10-03. Current 2026 Restaurant Week offer ends 2026-10-04. Dairy-free status is not published; readers should confirm ingredients and preparation. Advertised validity ended 2026-10-05.",
   "food": {
     "items": [
       "Shrimp & Vegetable Tempura",

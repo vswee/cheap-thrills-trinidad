@@ -6,10 +6,10 @@
   "title": "The Mythical Brew: Restaurant Week menu from $175",
   "summary": "Choose a multi-course Restaurant Week meal from $175 per person, with clearly marked dairy-free choices in Cunupia.",
   "description": "For Trinidad & Tobago Restaurant Week, The Mythical Brew offers a $175 per-person package with a mocktail, main course and dessert, or a $275 package that adds a starter. The flat rates include taxes and charges. The published menu states that dairy-free options are clearly marked. Ask the venue which dishes qualify and confirm availability before booking. Available all day from September 25 through October 4, 2026.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-24T17:29:48.593Z",
-  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-10-05T21:12:04.670Z",
   "publishedAt": "2026-09-24T17:29:48.593Z",
   "checkedAt": "2026-09-24T17:29:48.593Z",
   "places": [
@@ -60,7 +60,7 @@
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Current as checked on 2026-09-24. Contact the venue to confirm specific dietary selections before ordering.",
+  "editorialNote": "Current as checked on 2026-09-24. Contact the venue to confirm specific dietary selections before ordering. Advertised validity ended 2026-10-05.",
   "food": {
     "items": [
       "Items marked dairy-free on the Restaurant Week menu; ask the venue for the current selection"

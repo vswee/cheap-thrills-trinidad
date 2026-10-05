@@ -6,10 +6,10 @@
   "title": "Abraham's Grill Hut: TT$175 Restaurant Week seafood package",
   "summary": "A seafood-focused Restaurant Week package for one is TT$175 including taxes at this Cunupia spot.",
   "description": "Abraham's Grill Hut's official Trinidad & Tobago Restaurant Week menu lists a TT$175 Flavour Affair package. Its Seafood Affair serves one; the organizer says taxes are included. The special is offered during Restaurant Week, September 25 to October 4, 2026. The menu page does not list the seafood dish or its ingredients in text, so check the menu image and ask the restaurant about dairy in sauces, sides and preparation before ordering.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-24T17:29:48.593Z",
-  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-10-05T21:12:04.670Z",
   "publishedAt": "2026-09-24T17:29:48.593Z",
   "checkedAt": "2026-09-24T17:29:48.593Z",
   "places": [
@@ -60,7 +60,7 @@
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Current as checked on 2026-09-24. Ask the restaurant about dairy ingredients before ordering.",
+  "editorialNote": "Current as checked on 2026-09-24. Ask the restaurant about dairy ingredients before ordering. Advertised validity ended 2026-10-05.",
   "food": {
     "items": [
       "Seafood Affair package (specific seafood dish not named in the page text)"
