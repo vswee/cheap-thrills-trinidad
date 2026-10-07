@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "id": "event-national-trust-piparo-heritage-tour-2026",
+  "slug": "piparo-heritage-tour-piparo",
+  "kind": "event",
+  "title": "Piparo Heritage Tour",
+  "summary": "A full-day National Trust outing visits the Piparo Mud Volcano, Merikin heritage and Ras Shorty I's ranch.",
+  "description": "The National Trust of Trinidad and Tobago lists this Piparo heritage tour for Saturday, October 31, 2026, from 8:00 AM to 4:00 PM. The itinerary includes the Piparo Mud Volcano, the old Chadee temple and ranch, Blackman Ranch (home of the late Ras Shorty I), and the 4th Company Merikin Village. Tickets are TT$275 for non-members and TT$225 for members; lunch is not included. The organizer lists the tour as in stock; confirm transport and the meeting point before booking.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-07T01:07:26Z",
+  "updatedAt": "2026-10-07T01:07:26Z",
+  "publishedAt": "2026-10-07T01:07:26Z",
+  "checkedAt": "2026-10-07T01:07:26Z",
+  "places": [
+    {
+      "name": "Piparo (National Trust tour; meeting point to confirm)",
+      "area": "Piparo",
+      "region": "Central Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 275,
+    "fromAmount": 225,
+    "label": "TT$225 members; TT$275 non-members",
+    "terms": "Lunch is not included. Confirm transport and meeting point with the National Trust."
+  },
+  "validity": {
+    "startsAt": "2026-10-31T08:00:00-04:00",
+    "endsAt": "2026-10-31T16:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "heritage",
+    "geology",
+    "day-trip",
+    "central-trinidad"
+  ],
+  "sources": [
+    {
+      "url": "https://nationaltrust.tt/product/piparo-heritage-tour-october-2026/",
+      "publisher": "National Trust of Trinidad and Tobago",
+      "type": "official",
+      "checkedAt": "2026-10-07T01:07:26Z",
+      "supports": [
+        "date",
+        "time",
+        "price",
+        "location",
+        "itinerary",
+        "availability",
+        "lunch terms"
+      ]
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Official National Trust listing checked 2026-10-07 and shown in stock. Confirm transport, meeting point and remaining spaces with the organizer.",
+  "event": {
+    "format": "Guided full-day heritage tour",
+    "admission": "paid"
+  }
+}

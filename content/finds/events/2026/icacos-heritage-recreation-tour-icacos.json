@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "event-national-trust-icacos-heritage-recreation-tour-2026",
+  "slug": "icacos-heritage-recreation-tour-icacos",
+  "kind": "event",
+  "title": "Icacos Heritage & Recreation Tour",
+  "summary": "A National Trust day trip combines Icacos history, an oil-making demonstration and coastal stops.",
+  "description": "The National Trust of Trinidad and Tobago lists this full-day Icacos tour for Saturday, October 24, 2026, from 7:00 AM to 5:00 PM. The itinerary includes an oil-making demonstration at the Coconut Oil Factory, Great Icacos Lagoon, Columbus Bay, Icacos Point and sea bathing at Coral Point. Tickets are TT$300 for non-members and TT$250 for members; optional lunch costs an additional TT$60. The organizer lists the tour as in stock; confirm transport and the meeting point before booking.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-07T01:07:26Z",
+  "updatedAt": "2026-10-07T01:07:26Z",
+  "publishedAt": "2026-10-07T01:07:26Z",
+  "checkedAt": "2026-10-07T01:07:26Z",
+  "places": [
+    {
+      "name": "Icacos (National Trust tour; meeting point to confirm)",
+      "area": "Icacos",
+      "region": "South Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 300,
+    "fromAmount": 250,
+    "label": "TT$250 members; TT$300 non-members",
+    "terms": "Optional lunch costs TT$60 extra. Confirm transport and meeting point with the National Trust."
+  },
+  "validity": {
+    "startsAt": "2026-10-24T07:00:00-04:00",
+    "endsAt": "2026-10-24T17:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "heritage",
+    "outdoors",
+    "day-trip",
+    "south-trinidad",
+    "coast"
+  ],
+  "sources": [
+    {
+      "url": "https://nationaltrust.tt/product/icacos-heritage-and-recreation-tour-october-2026/",
+      "publisher": "National Trust of Trinidad and Tobago",
+      "type": "official",
+      "checkedAt": "2026-10-07T01:07:26Z",
+      "supports": [
+        "date",
+        "time",
+        "price",
+        "location",
+        "itinerary",
+        "availability",
+        "lunch terms"
+      ]
+    }
+  ],
+  "research": {
+    "service": "OpenAI Codex",
+    "model": "GPT-6"
+  },
+  "editorialNote": "Official National Trust listing checked 2026-10-07 and shown in stock. Confirm transport, meeting point and remaining spaces with the organizer.",
+  "event": {
+    "format": "Guided full-day heritage and recreation tour",
+    "admission": "paid"
+  }
+}

@@ -4,14 +4,14 @@
   "slug": "abraham-s-grill-hut-tt-175-restaurant-week-seafood-package-cun",
   "kind": "food",
   "title": "Abraham's Grill Hut: TT$175 Restaurant Week seafood package",
-  "summary": "A seafood-focused Restaurant Week package for one is TT$175 including taxes at this Cunupia spot.",
-  "description": "Abraham's Grill Hut's official Trinidad & Tobago Restaurant Week menu lists a TT$175 Flavour Affair package. Its Seafood Affair serves one; the organizer says taxes are included. The special is offered during Restaurant Week, September 25 to October 4, 2026. The menu page does not list the seafood dish or its ingredients in text, so check the menu image and ask the restaurant about dairy in sauces, sides and preparation before ordering.",
-  "status": "expired",
+  "summary": "A seafood-focused Restaurant Week package for one is TT$175 including taxes at this Cunupia spot, extended through October 11.",
+  "description": "Abraham's Grill Hut's official Trinidad & Tobago Restaurant Week menu lists a TT$175 Flavour Affair package. Its Seafood Affair serves one; the organizer says taxes are included. Restaurant Week's current extension notice keeps the Cunupia offer available through October 11, 2026. The menu page does not list the seafood dish or its ingredients in text, so check the menu image and ask the restaurant about dairy in sauces, sides and preparation before ordering.",
+  "status": "published",
   "confidence": "high",
   "createdAt": "2026-09-24T17:29:48.593Z",
-  "updatedAt": "2026-10-05T21:12:04.670Z",
+  "updatedAt": "2026-10-07T01:07:26Z",
   "publishedAt": "2026-09-24T17:29:48.593Z",
-  "checkedAt": "2026-09-24T17:29:48.593Z",
+  "checkedAt": "2026-10-07T01:07:26Z",
   "places": [
     {
       "name": "Abraham's Grill Hut",
@@ -30,7 +30,7 @@
   },
   "validity": {
     "startsAt": "2026-09-25T00:00:00-04:00",
-    "endsAt": "2026-10-04T23:59:00-04:00",
+    "endsAt": "2026-10-11T23:59:00-04:00",
     "recurrence": null,
     "timezone": "America/Port_of_Spain"
   },
@@ -53,14 +53,23 @@
         "location",
         "terms"
       ],
-      "checkedAt": "2026-09-24T17:29:48.593Z"
+      "checkedAt": "2026-10-07T01:07:26Z"
+    },
+    {
+      "url": "https://www.ttrwfestival.com/",
+      "publisher": "Trinidad & Tobago Restaurant Week",
+      "type": "official",
+      "checkedAt": "2026-10-07T01:07:26Z",
+      "supports": [
+        "extension through October 11, 2026"
+      ]
     }
   ],
   "research": {
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Current as checked on 2026-09-24. Ask the restaurant about dairy ingredients before ordering. Advertised validity ended 2026-10-05.",
+  "editorialNote": "Checked 2026-10-07. The official Restaurant Week site lists Abraham's Grill Hut among Central restaurants extended through October 11. The seafood package's exact dish and dairy content are not specified in page text; confirm before ordering.",
   "food": {
     "items": [
       "Seafood Affair package (specific seafood dish not named in the page text)"
