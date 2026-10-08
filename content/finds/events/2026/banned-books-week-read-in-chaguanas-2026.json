@@ -6,10 +6,10 @@
   "title": "Banned Books Week Read-In",
   "summary": "Book reading event",
   "description": "A read-in event for Banned Books Week",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-10-03T11:08:00-04:00",
-  "updatedAt": "2026-10-04T17:34:46.634Z",
+  "updatedAt": "2026-10-08T19:17:07.156Z",
   "publishedAt": "2026-10-03T11:08:00-04:00",
   "checkedAt": "2026-10-04T17:34:46.634Z",
   "places": [
@@ -55,7 +55,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Existing event verified",
+  "editorialNote": "Existing event verified Advertised validity ended 2026-10-08.",
   "event": {
     "format": "Read-in",
     "admission": "free"
