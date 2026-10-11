@@ -6,10 +6,10 @@
   "title": "IEEE Ada Lovelace Day 2026",
   "summary": "A free UWI St Augustine engineering event with talks on data science, AI and cybersecurity, a panel Q&A and networking.",
   "description": "IEEE Women in Engineering Trinidad & Tobago is hosting an in-person Ada Lovelace Day programme at UWI St Augustine on Saturday 10 October 2026. The programme includes guest speakers from BOETT and the fields of data science, artificial intelligence and cybersecurity, followed by a moderated panel Q&A and networking. IEEE vTools lists no admission charge and registration is open.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-10-01T18:11:12-04:00",
-  "updatedAt": "2026-10-01T18:11:12-04:00",
+  "updatedAt": "2026-10-11T18:04:42.455Z",
   "publishedAt": "2026-10-01T18:11:12-04:00",
   "checkedAt": "2026-10-01T18:11:12-04:00",
   "places": [
@@ -73,7 +73,7 @@
     "service": "OpenAI",
     "model": "GPT-5.6 Sol"
   },
-  "editorialNote": "High confidence in the 10 October 2026 date, UWI St Augustine location, programme and free admission from current IEEE pages. IEEE vTools machine-readable start/end metadata is inconsistent with the displayed event date and agenda; canonical validity follows the IEEE Region 9 displayed 10 October 9:00 AM–1:00 PM listing. The detailed agenda has formal closing at 11:30 AM followed by networking.",
+  "editorialNote": "High confidence in the 10 October 2026 date, UWI St Augustine location, programme and free admission from current IEEE pages. IEEE vTools machine-readable start/end metadata is inconsistent with the displayed event date and agenda; canonical validity follows the IEEE Region 9 displayed 10 October 9:00 AM–1:00 PM listing. The detailed agenda has formal closing at 11:30 AM followed by networking. Advertised validity ended 2026-10-11.",
   "event": {
     "format": "Talks, panel Q&A and networking",
     "admission": "free"
