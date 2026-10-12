@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "id": "event-avocat-waterfall-trinidad-rainforest-hike-to-avocat-waterfall",
+  "slug": "trinidad-rainforest-hike-to-avocat-waterfall-central-trinidad",
+  "kind": "event",
+  "title": "Trinidad: Rainforest Hike to Avocat Waterfall",
+  "summary": "Hike through a rainforest",
+  "description": "Experience views of the Caribbean mountains and hike through a rainforest to Avocat Waterfall.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-12T21:44:25.341Z",
+  "updatedAt": "2026-10-12T21:44:25.341Z",
+  "publishedAt": "2026-10-12T21:44:25.341Z",
+  "checkedAt": "2026-10-12T21:44:25.341Z",
+  "places": [
+    {
+      "name": "Avocat Waterfall",
+      "area": "Central Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 125,
+    "fromAmount": null,
+    "label": "Tour price",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-01T00:00:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "hike",
+    "nature"
+  ],
+  "sources": [
+    {
+      "url": "https://www.myguidetrinidadandtobago.com/events",
+      "publisher": "My Guide Trinidad and Tobago",
+      "type": "institutional",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-10-12T21:44:25.341Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "New hike available in Central Trinidad",
+  "event": {
+    "format": "in-person",
+    "admission": "paid"
+  }
+}

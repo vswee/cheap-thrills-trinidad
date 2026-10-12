@@ -6,10 +6,10 @@
   "title": "The Fresh Press Café: vegan Restaurant Week breakfast for $175",
   "summary": "A $175 breakfast package includes a vegan pancake main option and vegan ice cream, from September 25 to October 11.",
   "description": "The Fresh Press Café's Restaurant Week breakfast package is TT$175 per person with taxes included. The listed choices include Ital Vital vegan pancakes and vegan ice cream, alongside non-vegan alternatives, plus a drink. The offer runs September 25 through October 11, 2026. The cafe recommends reservations or preorders. This is in San Fernando, so it is a farther south option for a special breakfast outing.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-24T17:29:48.593Z",
-  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-10-12T21:44:25.341Z",
   "publishedAt": "2026-09-24T17:29:48.593Z",
   "checkedAt": "2026-09-24T17:29:48.593Z",
   "places": [
@@ -61,7 +61,7 @@
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Current as checked on 2026-09-24. Reservations and preorders are recommended by the organizer.",
+  "editorialNote": "Current as checked on 2026-09-24. Reservations and preorders are recommended by the organizer. Advertised validity ended 2026-10-12.",
   "food": {
     "items": [
       "Ital Vital vegan pancakes",
