@@ -45,6 +45,10 @@ function expireDatedFinds(existing) {
     item.value.updatedAt = nowIso;
     const reason = staleRecurringFood ? "Hidden after 21 days without a fresh validity check." : `Advertised validity ended ${day}.`;
     item.value.editorialNote = [item.value.editorialNote, reason].filter(Boolean).join(" ");
+    item.value.research ??= {
+      service: "Cheap Thrills Trinidad automated expiry",
+      model: staleRecurringFood ? "21-day recurring offer freshness check" : "advertised validity date check",
+    };
     fs.writeFileSync(item.file, `${JSON.stringify(item.value, null, 2)}\n`);
     changes += 1;
     console.log(`expired ${path.relative(root, item.file)} (${reason})`);
