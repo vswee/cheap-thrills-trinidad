@@ -6,10 +6,10 @@
   "title": "Crunchy BBQ Chicken Sandwich",
   "summary": "Crunchy BBQ Chicken Sandwich · TT$105.00 menu price at Jaxx International Grill.",
   "description": "HAND-BREADED, CRISPY BATTERED CHICKEN BREAST, DIPPED IN JAXX’S SIGNATURE HONEY-BOURBON GLAZE, MELTED CHEDDAR, LETTUCE, TOMATOES Listed menu price: TT$105.00. Confirm current price and branch participation before ordering.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -61,5 +61,10 @@
       "vegan": "unknown"
     },
     "dietNotes": "Dietary status is only marked when supported by the published menu description. Confirm ingredients and preparation with the restaurant."
+  },
+  "editorialNote": "Hidden after 21 days without a fresh validity check.",
+  "research": {
+    "service": "Cheap Thrills Trinidad automated expiry",
+    "model": "21-day recurring offer freshness check"
   }
 }

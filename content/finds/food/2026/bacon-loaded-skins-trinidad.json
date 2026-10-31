@@ -6,10 +6,10 @@
   "title": "Bacon Loaded Skins",
   "summary": "Potato skins with cheddar, bacon, sour cream and green onion; share plate. Posted menu price TT$95.",
   "description": "Potato skins with cheddar, bacon, sour cream and green onion; share plate. Listed price is a standing menu price, not a temporary discount. Confirm price, serving size, stock and branch participation before ordering.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-24T18:17:30.059Z",
-  "updatedAt": "2026-09-24T18:17:30.059Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-24T18:17:30.059Z",
   "checkedAt": "2026-09-24T18:17:30.059Z",
   "places": [
@@ -55,7 +55,7 @@
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published.",
+  "editorialNote": "Current menu listing checked 2026-09-24. This entry records posted menu pricing; it is not a claim of a limited-time discount. Dietary fit is conservative where ingredients are not fully published. Hidden after 21 days without a fresh validity check.",
   "food": {
     "items": [
       "Bacon Loaded Skins"

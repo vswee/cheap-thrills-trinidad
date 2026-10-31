@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "id": "event-the-factory-heartland-plaza-let-s-connect-halloween-speed-friending",
+  "slug": "let-s-connect-halloween-speed-friending-chaguanas",
+  "kind": "event",
+  "title": "Let's Connect- Halloween Speed Friending",
+  "summary": "Speed friending event",
+  "description": "Halloween speed friending event at The Factory- Heartland Plaza Chaguanas",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-31T17:56:11.367Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
+  "publishedAt": "2026-10-31T17:56:11.367Z",
+  "checkedAt": "2026-10-31T17:56:11.367Z",
+  "places": [
+    {
+      "name": "The Factory- Heartland Plaza",
+      "area": "Chaguanas",
+      "region": "Central Trinidad",
+      "address": "Heartland Plaza, Chaguanas",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Unknown",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-10-31T19:00:00-04:00",
+    "endsAt": "2026-11-01T00:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "social",
+    "halloween"
+  ],
+  "sources": [
+    {
+      "url": "https://trinbagoevents.com",
+      "publisher": "Trinbago Events",
+      "type": "other",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-10-31T17:56:11.367Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "New event found",
+  "event": {
+    "format": "Speed friending",
+    "admission": "unknown"
+  }
+}

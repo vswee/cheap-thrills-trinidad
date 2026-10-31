@@ -6,10 +6,10 @@
   "title": "Mr. Rango 2-for-1 Tuesday appetizers",
   "summary": "Get two of selected appetizers for the price of one, all day Tuesday.",
   "description": "The listed selection includes Jalapeño Rellenos, Bacon Jalapeño Cheese Fries, Salt & Pepper Tofu, Mama Julia Corn, Cajun Corn Ribs, Mozzarella Sticks, Onion Rings, and Chicken or Beef Nachos. Items are subject to tax.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-25T11:37:54Z",
-  "updatedAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-25T11:37:54Z",
   "checkedAt": "2026-09-25T11:37:54Z",
   "places": [
@@ -67,5 +67,5 @@
       ]
     }
   ],
-  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering. Hidden after 21 days without a fresh validity check."
 }

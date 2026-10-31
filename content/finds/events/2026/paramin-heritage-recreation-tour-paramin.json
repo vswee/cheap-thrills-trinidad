@@ -6,10 +6,10 @@
   "title": "Paramin Heritage & Recreation Tour",
   "summary": "An afternoon heritage outing combines the Paramin Rounders Tournament, mountain views and local seasoning stops.",
   "description": "The National Trust of Trinidad and Tobago lists this Paramin outing for Sunday, October 18, 2026, from 2:00 PM to 7:00 PM. The programme includes the Paramin Rounders Tournament, Barre la Vigie Lookout, and stops to discover and sample local seasonings and toolum. Tickets are TT$275 for non-members and TT$225 for members; lunch is not included. Contact the organizer to confirm transport, meeting point and availability.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-24T17:29:48.593Z",
-  "updatedAt": "2026-09-24T17:29:48.593Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-24T17:29:48.593Z",
   "checkedAt": "2026-09-24T17:29:48.593Z",
   "places": [
@@ -59,7 +59,7 @@
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Current as checked on 2026-09-24. Price and trip logistics should be reconfirmed with the organizer.",
+  "editorialNote": "Current as checked on 2026-09-24. Price and trip logistics should be reconfirmed with the organizer. Advertised validity ended 2026-10-31.",
   "event": {
     "format": "Guided heritage and recreation tour",
     "admission": "paid"

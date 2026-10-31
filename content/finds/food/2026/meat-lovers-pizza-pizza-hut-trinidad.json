@@ -6,10 +6,10 @@
   "title": "Meat Lovers Pizza",
   "summary": "Meat Lovers Pizza · TT$145.00 menu price at Pizza Hut Trinidad.",
   "description": "Listed on Pizza Hut Trinidad’s current online menu for TT$145.00. Check the ordering menu for full ingredients, promotions and participating branch availability before ordering.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-25T12:00:00.000Z",
-  "updatedAt": "2026-09-25T12:00:00.000Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-25T12:00:00.000Z",
   "checkedAt": "2026-09-25T12:00:00.000Z",
   "places": [
@@ -61,5 +61,10 @@
       "vegan": "no"
     },
     "dietNotes": "Confirm ingredients and preparation with the restaurant; ingredients can vary by branch."
+  },
+  "editorialNote": "Hidden after 21 days without a fresh validity check.",
+  "research": {
+    "service": "Cheap Thrills Trinidad automated expiry",
+    "model": "21-day recurring offer freshness check"
   }
 }

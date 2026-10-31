@@ -6,10 +6,10 @@
   "title": "Mr. Rango Sizzling Sunday — 10% off sizzling entrées",
   "summary": "Take 10% off listed sizzling entrées all day Sunday.",
   "description": "Mr. Rango lists a 10% discount on sizzling entrées on Sundays. Confirm eligibility, tax and location terms with the venue.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-25T11:37:54Z",
-  "updatedAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-25T11:37:54Z",
   "checkedAt": "2026-09-25T11:37:54Z",
   "places": [
@@ -67,5 +67,5 @@
       ]
     }
   ],
-  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering. Hidden after 21 days without a fresh validity check."
 }

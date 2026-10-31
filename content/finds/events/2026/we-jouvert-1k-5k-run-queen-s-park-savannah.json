@@ -6,10 +6,10 @@
   "title": "WE J'ouvert 1K & 5K Run/Walk",
   "summary": "A family-friendly 1K or 5K run/walk at Queen's Park Savannah with entry from TT$130 and finish-line activities.",
   "description": "WE J'ouvert Band is hosting a standalone 1K and 5K run/walk at Queen's Park Savannah on Saturday 24 October 2026. The 1K starts at 3:30 PM and costs TT$130; the 5K starts at 4:30 PM and costs TT$150. Both distances are open to runners and walkers of all paces and ages. The organiser describes the 1K as family-friendly and lists a bouncy castle, face painting, prizes and giveaways. Registration is open. Fees are non-refundable, and missing the advertised bib-collection window forfeits the bib and entry without refund, credit or transfer.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-10-01T02:05:59-04:00",
-  "updatedAt": "2026-10-01T02:05:59-04:00",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-10-01T02:05:59-04:00",
   "checkedAt": "2026-10-01T02:05:59-04:00",
   "places": [
@@ -59,7 +59,7 @@
     "service": "OpenAI",
     "model": "GPT-5.6 Sol"
   },
-  "editorialNote": "High confidence: the current official organiser page confirms the 24 October 2026 date, both start times, Queen's Park Savannah venue, TT$130/TT$150 entry prices, family activities, registration methods and refund/bib terms. No overall event end time is published.",
+  "editorialNote": "High confidence: the current official organiser page confirms the 24 October 2026 date, both start times, Queen's Park Savannah venue, TT$130/TT$150 entry prices, family activities, registration methods and refund/bib terms. No overall event end time is published. Advertised validity ended 2026-10-31.",
   "event": {
     "format": "1K and 5K run/walk",
     "admission": "paid"

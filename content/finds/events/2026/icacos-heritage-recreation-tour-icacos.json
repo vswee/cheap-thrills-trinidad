@@ -6,10 +6,10 @@
   "title": "Icacos Heritage & Recreation Tour",
   "summary": "A National Trust day trip combines Icacos history, an oil-making demonstration and coastal stops.",
   "description": "The National Trust of Trinidad and Tobago lists this full-day Icacos tour for Saturday, October 24, 2026, from 7:00 AM to 5:00 PM. The itinerary includes an oil-making demonstration at the Coconut Oil Factory, Great Icacos Lagoon, Columbus Bay, Icacos Point and sea bathing at Coral Point. Tickets are TT$300 for non-members and TT$250 for members; optional lunch costs an additional TT$60. The organizer lists the tour as in stock; confirm transport and the meeting point before booking.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-10-07T01:07:26Z",
-  "updatedAt": "2026-10-07T01:07:26Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-10-07T01:07:26Z",
   "checkedAt": "2026-10-07T01:07:26Z",
   "places": [
@@ -62,7 +62,7 @@
     "service": "OpenAI Codex",
     "model": "GPT-6"
   },
-  "editorialNote": "Official National Trust listing checked 2026-10-07 and shown in stock. Confirm transport, meeting point and remaining spaces with the organizer.",
+  "editorialNote": "Official National Trust listing checked 2026-10-07 and shown in stock. Confirm transport, meeting point and remaining spaces with the organizer. Advertised validity ended 2026-10-31.",
   "event": {
     "format": "Guided full-day heritage and recreation tour",
     "admission": "paid"

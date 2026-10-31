@@ -6,10 +6,10 @@
   "title": "Mr. Rango Taco Monday — 2 tacos for TT$39.95",
   "summary": "Two chicken, beef or fish tacos for TT$39.95, all day Monday.",
   "description": "Mr. Rango’s listed Taco Monday special is a pair of tacos. Items are subject to tax.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-25T11:37:54Z",
-  "updatedAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-25T11:37:54Z",
   "checkedAt": "2026-09-25T11:37:54Z",
   "places": [
@@ -67,5 +67,5 @@
       ]
     }
   ],
-  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering. Hidden after 21 days without a fresh validity check."
 }

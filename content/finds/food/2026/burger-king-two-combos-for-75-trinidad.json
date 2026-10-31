@@ -6,10 +6,10 @@
   "title": "Burger King — two selected combos for TT$75",
   "summary": "Choose two King’s Catch combos or two Plant Based Chicken Sandwich combos for TT$75, as titled on Burger King’s Trinidad TT Menus page.",
   "description": "This limited-time offer is listed for Burger King Trinidad. The item page displays TT$66.67 in the menu catalogue while the offer title states “2 for $75”; confirm the final checkout total and branch availability.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-25T11:37:54Z",
-  "updatedAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-25T11:37:54Z",
   "checkedAt": "2026-09-25T11:37:54Z",
   "places": [
@@ -67,5 +67,5 @@
       ]
     }
   ],
-  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering. Hidden after 21 days without a fresh validity check."
 }

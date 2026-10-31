@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "id": "event-vibes-event-space-unwine",
+  "slug": "unwine-bon-accord",
+  "kind": "event",
+  "title": "Unwine",
+  "summary": "Fete event",
+  "description": "Unwine fete event at Vibes Event Space Bon Accord, Tobago",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-10-31T17:56:11.367Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
+  "publishedAt": "2026-10-31T17:56:11.367Z",
+  "checkedAt": "2026-10-31T17:56:11.367Z",
+  "places": [
+    {
+      "name": "Vibes Event Space",
+      "area": "Bon Accord",
+      "region": "Tobago",
+      "address": "Vibes Event Space, Bon Accord, Tobago",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Unknown",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-10-31T20:00:00-04:00",
+    "endsAt": "2026-11-01T02:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "fete",
+    "party"
+  ],
+  "sources": [
+    {
+      "url": "https://trinbagoevents.com",
+      "publisher": "Trinbago Events",
+      "type": "other",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-10-31T17:56:11.367Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "New event found",
+  "event": {
+    "format": "Fete",
+    "admission": "unknown"
+  }
+}

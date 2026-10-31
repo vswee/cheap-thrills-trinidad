@@ -6,10 +6,10 @@
   "title": "OMG Sushi lunch special — TT$99",
   "summary": "Choose one roll (excluding Volcano), a soda or water, and two vegetable samosas or four potstickers for TT$99.",
   "description": "Available every day from 11am to 2pm for pickup or delivery.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-09-25T11:37:54Z",
-  "updatedAt": "2026-09-25T11:37:54Z",
+  "updatedAt": "2026-10-31T17:56:11.367Z",
   "publishedAt": "2026-09-25T11:37:54Z",
   "checkedAt": "2026-09-25T11:37:54Z",
   "places": [
@@ -69,5 +69,5 @@
       ]
     }
   ],
-  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering."
+  "editorialNote": "Checked against the linked TT Menus item page. Confirm availability with the venue before ordering. Hidden after 21 days without a fresh validity check."
 }
