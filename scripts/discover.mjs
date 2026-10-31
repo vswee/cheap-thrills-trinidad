@@ -82,6 +82,9 @@ function validateCandidate(candidate, kind) {
       throw new Error(`Candidate ${key} must be a non-empty string`);
     }
   }
+  if (!candidate.price || typeof candidate.price !== "object" || Array.isArray(candidate.price)) {
+    throw new Error("Candidate price must be an object");
+  }
   const normalizedCategories = normalizeCategories(candidate.categories);
   if (normalizedCategories.some((category, index) => category !== candidate.categories[index]) || normalizedCategories.length !== candidate.categories.length) {
     console.log(`normalized categories for ${candidate.title}: ${candidate.categories.join(", ")} → ${normalizedCategories.join(", ")}`);
@@ -587,7 +590,15 @@ async function main() {
         console.log(`deferred uncertain update until a later run finds stronger evidence: ${proposal.existingId}`);
         continue;
       }
-      const { record, target } = await convert(proposal, kind, existing, result.research);
+      let converted;
+      try {
+        converted = await convert(proposal, kind, existing, result.research);
+      } catch (error) {
+        if (!(error instanceof Error) || !error.message.startsWith("Schema validation failed for ")) throw error;
+        console.warn(`dropped invalid ${kind} proposal "${proposal.title}": ${error.message}`);
+        continue;
+      }
+      const { record, target } = converted;
       if (targets.has(target)) throw new Error(`Two proposals target the same record: ${target}`);
       targets.add(target);
       const current = fs.existsSync(target) ? fs.readFileSync(target, "utf8") : null;
