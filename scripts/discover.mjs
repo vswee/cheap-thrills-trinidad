@@ -73,6 +73,11 @@ function validateCandidate(candidate, kind) {
   for (const key of ["title", "summary", "description", "placeName", "area", "region", "price", "validity", "categories", "sources"]) {
     if (!(key in candidate)) throw new Error(`Candidate is missing ${key}`);
   }
+  for (const key of ["title", "summary", "description", "placeName", "area", "region"]) {
+    if (typeof candidate[key] !== "string" || !candidate[key].trim()) {
+      throw new Error(`Candidate ${key} must be a non-empty string`);
+    }
+  }
   const normalizedCategories = normalizeCategories(candidate.categories);
   if (normalizedCategories.some((category, index) => category !== candidate.categories[index]) || normalizedCategories.length !== candidate.categories.length) {
     console.log(`normalized categories for ${candidate.title}: ${candidate.categories.join(", ")} → ${normalizedCategories.join(", ")}`);
@@ -563,7 +568,13 @@ async function main() {
     console.log(`${kind}: ${proposals.length} proposed find(s)`);
     const targets = new Set();
     for (const proposal of proposals) {
-      validateCandidate(proposal, kind);
+      try {
+        validateCandidate(proposal, kind);
+      } catch (error) {
+        const detail = error instanceof Error ? error.message : String(error);
+        console.warn(`dropped invalid ${kind} proposal "${proposal?.title ?? "untitled"}": ${detail}`);
+        continue;
+      }
       if (proposal.confidence === "low") {
         console.log(`dropped low-confidence proposal: ${proposal.title}`);
         continue;
