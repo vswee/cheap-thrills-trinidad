@@ -6,10 +6,10 @@
   "title": "Facrp Forest Night Crawl",
   "summary": "Night crawl event",
   "description": "Facrp Forest Night Crawl event at Fondes amandes, St.Anns",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-10-31T17:56:11.367Z",
-  "updatedAt": "2026-10-31T17:56:11.367Z",
+  "updatedAt": "2026-11-01T18:26:34.797Z",
   "publishedAt": "2026-10-31T17:56:11.367Z",
   "checkedAt": "2026-10-31T17:56:11.367Z",
   "places": [
@@ -55,7 +55,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New event found",
+  "editorialNote": "New event found Advertised validity ended 2026-11-01.",
   "event": {
     "format": "Night crawl",
     "admission": "unknown"

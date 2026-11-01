@@ -6,10 +6,10 @@
   "title": "Trinidad: Pitch Lake and Chaguanas Sightseeing Tour",
   "summary": "Explore Central Trinidad",
   "description": "Visit Pitch Lake, the world's largest natural asphalt deposit, and explore the less-traveled region of Central Trinidad.",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-10-12T21:44:25.341Z",
-  "updatedAt": "2026-10-12T21:44:25.341Z",
+  "updatedAt": "2026-11-01T18:26:34.797Z",
   "publishedAt": "2026-10-12T21:44:25.341Z",
   "checkedAt": "2026-10-12T21:44:25.341Z",
   "places": [
@@ -56,7 +56,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New tour available in Central Trinidad",
+  "editorialNote": "New tour available in Central Trinidad Advertised validity ended 2026-11-01.",
   "event": {
     "format": "in-person",
     "admission": "paid"
