@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "event-skinner-park-sando-run-2026",
+  "slug": "sando-run-2026-san-fernando",
+  "kind": "event",
+  "title": "Sando Run 2026",
+  "summary": "Running event",
+  "description": "Sando Run 2026",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-06T19:57:36.826Z",
+  "updatedAt": "2026-11-06T19:57:36.826Z",
+  "publishedAt": "2026-11-06T19:57:36.826Z",
+  "checkedAt": "2026-11-06T19:57:36.826Z",
+  "places": [
+    {
+      "name": "Skinner Park",
+      "area": "San Fernando",
+      "region": "South Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-22T06:00:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "sports"
+  ],
+  "sources": [
+    {
+      "url": "https://trinbagoevents.com",
+      "publisher": "Trinbago Events",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-06T19:57:36.826Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "",
+  "event": {
+    "format": "running event",
+    "admission": "free"
+  }
+}

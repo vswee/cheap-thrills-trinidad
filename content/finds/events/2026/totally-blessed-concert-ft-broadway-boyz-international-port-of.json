@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "event-st-james-pentecostal-church-totally-blessed-concert-ft-broadway-boyz-international",
+  "slug": "totally-blessed-concert-ft-broadway-boyz-international-port-of",
+  "kind": "event",
+  "title": "Totally Blessed Concert ft. Broadway Boyz International",
+  "summary": "Concert event",
+  "description": "Totally Blessed Concert ft. Broadway Boyz International",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-06T19:57:36.826Z",
+  "updatedAt": "2026-11-06T19:57:36.826Z",
+  "publishedAt": "2026-11-06T19:57:36.826Z",
+  "checkedAt": "2026-11-06T19:57:36.826Z",
+  "places": [
+    {
+      "name": "St. James Pentecostal Church",
+      "area": "Port of Spain",
+      "region": "North Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-28T18:00:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "music"
+  ],
+  "sources": [
+    {
+      "url": "https://www.eventbrite.com/d/trinidad-and-tobago--chaguanas/free--events",
+      "publisher": "Eventbrite",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-06T19:57:36.826Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "",
+  "event": {
+    "format": "concert",
+    "admission": "free"
+  }
+}

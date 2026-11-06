@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "event-east-gates-mall-the-212-runway",
+  "slug": "the-212-runway-trincity",
+  "kind": "event",
+  "title": "The 212 Runway",
+  "summary": "Fashion event",
+  "description": "The 212 Runway event",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-06T19:57:36.826Z",
+  "updatedAt": "2026-11-06T19:57:36.826Z",
+  "publishedAt": "2026-11-06T19:57:36.826Z",
+  "checkedAt": "2026-11-06T19:57:36.826Z",
+  "places": [
+    {
+      "name": "East Gates Mall",
+      "area": "Trincity",
+      "region": "Central Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-14T16:00:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "fashion"
+  ],
+  "sources": [
+    {
+      "url": "https://www.eventbrite.com/d/trinidad-and-tobago--chaguanas/free--events",
+      "publisher": "Eventbrite",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-06T19:57:36.826Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "",
+  "event": {
+    "format": "fashion show",
+    "admission": "free"
+  }
+}

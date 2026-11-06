@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "event-chacachacare-island-chacachacare-island-lighthouse-and-salt-pond-hike",
+  "slug": "chacachacare-island-lighthouse-and-salt-pond-hike-north-trinid",
+  "kind": "event",
+  "title": "Chacachacare Island Lighthouse and Salt Pond Hike",
+  "summary": "Hiking event",
+  "description": "Chacachacare Island Lighthouse and Salt Pond Hike",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-06T19:57:36.826Z",
+  "updatedAt": "2026-11-06T19:57:36.826Z",
+  "publishedAt": "2026-11-06T19:57:36.826Z",
+  "checkedAt": "2026-11-06T19:57:36.826Z",
+  "places": [
+    {
+      "name": "Chacachacare Island",
+      "area": "North Trinidad",
+      "region": "North Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-22T08:30:00-04:00",
+    "endsAt": null,
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "hiking"
+  ],
+  "sources": [
+    {
+      "url": "https://trinbagoevents.com",
+      "publisher": "Trinbago Events",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-06T19:57:36.826Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "",
+  "event": {
+    "format": "hiking event",
+    "admission": "free"
+  }
+}
