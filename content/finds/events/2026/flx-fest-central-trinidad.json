@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "id": "event-trinidad-and-tobago-flx-fest",
+  "slug": "flx-fest-central-trinidad",
+  "kind": "event",
+  "title": "FLX FEST",
+  "summary": "Where fitness meets festival",
+  "description": "FLX FEST is a festival where fitness meets fun, with various activities and events to enjoy",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-06T20:35:49.824Z",
+  "updatedAt": "2026-11-06T20:35:49.824Z",
+  "publishedAt": "2026-11-06T20:35:49.824Z",
+  "checkedAt": "2026-11-06T20:35:49.824Z",
+  "places": [
+    {
+      "name": "Trinidad and Tobago",
+      "area": "Central Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-21T15:00:00-04:00",
+    "endsAt": "2026-11-21T22:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "festival",
+    "fitness"
+  ],
+  "sources": [
+    {
+      "url": "https://trinbagoevents.com",
+      "publisher": "Trinbago Events",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-06T20:35:49.824Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "This event is free and open to the public, and it combines fitness and festival activities",
+  "event": {
+    "format": "festival",
+    "admission": "free"
+  }
+}
