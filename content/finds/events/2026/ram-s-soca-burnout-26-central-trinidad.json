@@ -4,14 +4,14 @@
   "slug": "ram-s-soca-burnout-26-central-trinidad",
   "kind": "event",
   "title": "Ram's Soca Burnout '26",
-  "summary": "A soca burnout event with music and dancing",
-  "description": "Ram's Soca Burnout '26 is a soca burnout event with music and dancing, featuring various artists and DJs",
+  "summary": "Soca burnout event",
+  "description": "Soca event",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-06T20:35:49.824Z",
-  "updatedAt": "2026-11-06T20:35:49.824Z",
-  "publishedAt": "2026-11-06T20:35:49.824Z",
-  "checkedAt": "2026-11-06T20:35:49.824Z",
+  "createdAt": "2026-11-07T18:02:39.362Z",
+  "updatedAt": "2026-11-07T18:02:39.362Z",
+  "publishedAt": "2026-11-07T18:02:39.362Z",
+  "checkedAt": "2026-11-07T18:02:39.362Z",
   "places": [
     {
       "name": "National Cycling Velodrome Couva",
@@ -23,20 +23,20 @@
   ],
   "price": {
     "currency": "TTD",
-    "amount": 0,
+    "amount": null,
     "fromAmount": null,
-    "label": "Free",
+    "label": "Check ticket price on event",
     "terms": null
   },
   "validity": {
     "startsAt": "2026-11-21T15:30:00-04:00",
-    "endsAt": "2026-11-21T17:30:00-04:00",
+    "endsAt": null,
     "recurrence": null,
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
     "music",
-    "dance"
+    "soca"
   ],
   "sources": [
     {
@@ -48,16 +48,16 @@
         "date",
         "location"
       ],
-      "checkedAt": "2026-11-06T20:35:49.824Z"
+      "checkedAt": "2026-11-07T18:02:39.362Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "This event is free and open to the public, and it features soca music and dancing",
+  "editorialNote": "New event found",
   "event": {
     "format": "concert",
-    "admission": "free"
+    "admission": "paid"
   }
 }
