@@ -6,10 +6,10 @@
   "title": "Kingdom Realignment for National Transformation—Dr. Francis Myles",
   "summary": "Lecture event",
   "description": "A lecture by Dr. Francis Myles on Kingdom Realignment for National Transformation",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-10-04T17:34:46.634Z",
-  "updatedAt": "2026-10-04T17:34:46.634Z",
+  "updatedAt": "2026-11-08T18:21:47.059Z",
   "publishedAt": "2026-10-04T17:34:46.634Z",
   "checkedAt": "2026-10-04T17:34:46.634Z",
   "places": [
@@ -55,7 +55,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New event found",
+  "editorialNote": "New event found Advertised validity ended 2026-11-08.",
   "event": {
     "format": "Lecture",
     "admission": "unknown"
