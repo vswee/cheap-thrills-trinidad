@@ -5,13 +5,13 @@
   "kind": "event",
   "title": "FLX FEST",
   "summary": "Where fitness meets festival",
-  "description": "Fitness and festival event",
+  "description": "FLX FEST is a festival where fitness meets festival, happening on November 21, 2026, from 3:00 pm to 10:00 pm",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-07T18:02:39.362Z",
-  "updatedAt": "2026-11-07T18:02:39.362Z",
-  "publishedAt": "2026-11-07T18:02:39.362Z",
-  "checkedAt": "2026-11-07T18:02:39.362Z",
+  "createdAt": "2026-11-09T22:59:37.023Z",
+  "updatedAt": "2026-11-09T22:59:37.023Z",
+  "publishedAt": "2026-11-09T22:59:37.023Z",
+  "checkedAt": "2026-11-09T22:59:37.023Z",
   "places": [
     {
       "name": "Trinidad and Tobago",
@@ -23,14 +23,14 @@
   ],
   "price": {
     "currency": "TTD",
-    "amount": null,
+    "amount": 175,
     "fromAmount": null,
-    "label": "Check ticket price on event",
+    "label": "General admission",
     "terms": null
   },
   "validity": {
     "startsAt": "2026-11-21T15:00:00-04:00",
-    "endsAt": null,
+    "endsAt": "2026-11-21T22:00:00-04:00",
     "recurrence": null,
     "timezone": "America/Port_of_Spain"
   },
@@ -46,16 +46,17 @@
       "supports": [
         "offer",
         "date",
+        "price",
         "location"
       ],
-      "checkedAt": "2026-11-07T18:02:39.362Z"
+      "checkedAt": "2026-11-09T22:59:37.023Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New event found",
+  "editorialNote": "",
   "event": {
     "format": "festival",
     "admission": "paid"

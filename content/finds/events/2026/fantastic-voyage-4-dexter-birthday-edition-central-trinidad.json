@@ -4,14 +4,14 @@
   "slug": "fantastic-voyage-4-dexter-birthday-edition-central-trinidad",
   "kind": "event",
   "title": "Fantastic Voyage 4-Dexter Birthday Edition",
-  "summary": "Birthday celebration event",
-  "description": "Birthday party",
+  "summary": "Birthday celebration",
+  "description": "Fantastic Voyage 4-Dexter Birthday Edition is a birthday celebration happening on November 21, 2026, from 9:00 am to 2:00 pm",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-07T18:02:39.362Z",
-  "updatedAt": "2026-11-07T18:02:39.362Z",
-  "publishedAt": "2026-11-07T18:02:39.362Z",
-  "checkedAt": "2026-11-07T18:02:39.362Z",
+  "createdAt": "2026-11-09T22:59:37.023Z",
+  "updatedAt": "2026-11-09T22:59:37.023Z",
+  "publishedAt": "2026-11-09T22:59:37.023Z",
+  "checkedAt": "2026-11-09T22:59:37.023Z",
   "places": [
     {
       "name": "Harbour Master",
@@ -25,18 +25,18 @@
     "currency": "TTD",
     "amount": null,
     "fromAmount": null,
-    "label": "Check ticket price on event",
+    "label": "",
     "terms": null
   },
   "validity": {
     "startsAt": "2026-11-21T09:00:00-04:00",
-    "endsAt": null,
+    "endsAt": "2026-11-21T14:00:00-04:00",
     "recurrence": null,
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "party",
-    "birthday"
+    "birthday",
+    "celebration"
   ],
   "sources": [
     {
@@ -48,16 +48,16 @@
         "date",
         "location"
       ],
-      "checkedAt": "2026-11-07T18:02:39.362Z"
+      "checkedAt": "2026-11-09T22:59:37.023Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New event found",
+  "editorialNote": "",
   "event": {
     "format": "party",
-    "admission": "paid"
+    "admission": "unknown"
   }
 }

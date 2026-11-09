@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "id": "event-thinkartwork-get-up-stand-up-a-film-block-discussion-dedicated-to-environme",
+  "slug": "get-up-stand-up-a-film-block-discussion-dedicated-to-environme",
+  "kind": "event",
+  "title": "Get Up, Stand Up! A film block & discussion dedicated to environmental rights and resistance",
+  "summary": "Film block and discussion",
+  "description": "Get Up, Stand Up! A film block & discussion dedicated to environmental rights and resistance is a film block and discussion happening on November 21, 2026, from 1:30 pm to 3:00 pm",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-09T22:59:37.023Z",
+  "updatedAt": "2026-11-09T22:59:37.023Z",
+  "publishedAt": "2026-11-09T22:59:37.023Z",
+  "checkedAt": "2026-11-09T22:59:37.023Z",
+  "places": [
+    {
+      "name": "THINKARTWORK",
+      "area": "Central Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-21T13:30:00-04:00",
+    "endsAt": "2026-11-21T15:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "film",
+    "discussion"
+  ],
+  "sources": [
+    {
+      "url": "https://trinbagoevents.com",
+      "publisher": "Trinbago Events",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-09T22:59:37.023Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "",
+  "event": {
+    "format": "screening",
+    "admission": "unknown"
+  }
+}
