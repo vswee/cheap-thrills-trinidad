@@ -12,5 +12,6 @@ Marks are shown only to identify businesses named in directory listings. Busines
 - **Mr. Rango Cookhouse** — linked from the official site's CDN. [Source](https://mrrango.ttmenus.com/promotions/wings-wednesday/). Mr. Rango Cookhouse official source page. Official site-linked logo asset; copyright and trademark remain with Mr. Rango Cookhouse.
 - **OMG Sushi** — linked from the official site's CDN. [Source](https://omgsushi.ttmenus.com/specials/20-piece-combo/). OMG Sushi official source page. Official site-linked logo asset; copyright and trademark remain with OMG Sushi.
 - **Woodford Café** — linked from the official site's CDN. [Source](https://woodfordcafe.ttmenus.com/specials/lunch-for-2-mon-fri-11am-3pm/). Woodford Café official source page. Official site-linked logo asset; copyright and trademark remain with Woodford Café.
+- **500Express** — linked from the official site's CDN. [Source](https://www.500express.com/). 500Express official source page. Official site-linked logo asset; copyright and trademark remain with 500Express.
 
 Brands without a verified logo or official icon use a neutral initials tile generated from the listed venue name. It is a site-made fallback and does not claim to reproduce the business's own mark or colours.

@@ -223,6 +223,25 @@
       ],
       "mark": null,
       "checkedAt": "2026-10-11T18:05:06.256Z"
+    },
+    {
+      "id": "500express",
+      "name": "500Express",
+      "aliases": [
+        "500Express"
+      ],
+      "mark": {
+        "sourceType": "official-cdn",
+        "src": "https://www.500express.com/_next/image?url=%2Fimages%2Fbranding%2Fpalm_logo.png&amp;w=96&amp;q=75",
+        "width": 48,
+        "height": 48,
+        "mode": "standard",
+        "kind": "logo",
+        "sourcePage": "https://www.500express.com/",
+        "license": "Official site-linked logo asset; copyright and trademark remain with 500Express.",
+        "credit": "500Express official source page"
+      },
+      "checkedAt": "2026-11-10T20:29:39.767Z"
     }
   ]
 }
