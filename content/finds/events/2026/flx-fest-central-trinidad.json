@@ -8,10 +8,10 @@
   "description": "FLX FEST is a festival where fitness meets festival, happening on November 21, 2026, from 3:00 pm to 10:00 pm",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-09T22:59:37.023Z",
-  "updatedAt": "2026-11-09T22:59:37.023Z",
-  "publishedAt": "2026-11-09T22:59:37.023Z",
-  "checkedAt": "2026-11-09T22:59:37.023Z",
+  "createdAt": "2026-11-11T20:12:44.025Z",
+  "updatedAt": "2026-11-11T20:12:44.025Z",
+  "publishedAt": "2026-11-11T20:12:44.025Z",
+  "checkedAt": "2026-11-11T20:12:44.025Z",
   "places": [
     {
       "name": "Trinidad and Tobago",
@@ -49,14 +49,14 @@
         "price",
         "location"
       ],
-      "checkedAt": "2026-11-09T22:59:37.023Z"
+      "checkedAt": "2026-11-11T20:12:44.025Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "",
+  "editorialNote": "Found on Trinbago Events website",
   "event": {
     "format": "festival",
     "admission": "paid"
