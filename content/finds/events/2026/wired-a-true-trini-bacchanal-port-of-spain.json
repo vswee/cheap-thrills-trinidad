@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "id": "event-central-bank-auditorium-wired-a-true-trini-bacchanal",
+  "slug": "wired-a-true-trini-bacchanal-port-of-spain",
+  "kind": "event",
+  "title": "WIRED! A True Trini Bacchanal!",
+  "summary": "Comedy and theatre show",
+  "description": "WIRED! A True Trini Bacchanal! comedy and theatre show at Central Bank Auditorium in Port of Spain",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-12T20:49:44.859Z",
+  "updatedAt": "2026-11-12T20:49:44.859Z",
+  "publishedAt": "2026-11-12T20:49:44.859Z",
+  "checkedAt": "2026-11-12T20:49:44.859Z",
+  "places": [
+    {
+      "name": "Central Bank Auditorium",
+      "area": "Port of Spain",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-12T18:00:00-04:00",
+    "endsAt": "2026-11-12T20:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "comedy",
+    "theatre"
+  ],
+  "sources": [
+    {
+      "url": "https://whatson.tt/calendar",
+      "publisher": "WhatsOn.tt",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-11-12T20:49:44.859Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "New find, verified against WhatsOn.tt calendar",
+  "event": {
+    "format": "show",
+    "admission": "free"
+  }
+}

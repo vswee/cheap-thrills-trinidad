@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "id": "event-felicity-community-center-grounds-felicity-divali-lighting-up-bamboo-arches",
+  "slug": "felicity-divali-lighting-up-bamboo-arches-chaguanas",
+  "kind": "event",
+  "title": "Felicity Divali Lighting Up & Bamboo Arches",
+  "summary": "Divali lighting and bamboo arches",
+  "description": "Felicity community center and grounds Divali lighting up and bamboo arches",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-12T20:49:44.859Z",
+  "updatedAt": "2026-11-12T20:49:44.859Z",
+  "publishedAt": "2026-11-12T20:49:44.859Z",
+  "checkedAt": "2026-11-12T20:49:44.859Z",
+  "places": [
+    {
+      "name": "Felicity Community Center & Grounds",
+      "area": "Chaguanas",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-12T18:00:00-04:00",
+    "endsAt": "2026-11-12T23:59:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "culture",
+    "heritage"
+  ],
+  "sources": [
+    {
+      "url": "https://whatson.tt/calendar",
+      "publisher": "WhatsOn.tt",
+      "type": "official",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-11-12T20:49:44.859Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "New find, verified against WhatsOn.tt calendar",
+  "event": {
+    "format": "festival",
+    "admission": "free"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "id": "event-piarco-plaza-free-aerobics-burnout",
+  "slug": "free-aerobics-burnout-piarco",
+  "kind": "event",
+  "title": "FREE Aerobics Burnout",
+  "summary": "Free aerobics burnout",
+  "description": "Free aerobics burnout at Piarco Plaza",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-12T20:49:44.859Z",
+  "updatedAt": "2026-11-12T20:49:44.859Z",
+  "publishedAt": "2026-11-12T20:49:44.859Z",
+  "checkedAt": "2026-11-12T20:49:44.859Z",
+  "places": [
+    {
+      "name": "Piarco Plaza",
+      "area": "Piarco",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 0,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-12T17:30:00-04:00",
+    "endsAt": "2026-11-12T19:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "fitness"
+  ],
+  "sources": [
+    {
+      "url": "https://www.instagram.com/reel/DfftPb5hxia",
+      "publisher": "wahwedoing",
+      "type": "social",
+      "supports": [
+        "offer",
+        "date",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-11-12T20:49:44.859Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "New find, verified against Instagram post",
+  "event": {
+    "format": "aerobics",
+    "admission": "free"
+  }
+}
