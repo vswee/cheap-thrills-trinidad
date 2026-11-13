@@ -6,10 +6,10 @@
   "title": "FREE Aerobics Burnout",
   "summary": "Free aerobics burnout",
   "description": "Free aerobics burnout at Piarco Plaza",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-11-12T20:49:44.859Z",
-  "updatedAt": "2026-11-12T20:49:44.859Z",
+  "updatedAt": "2026-11-13T20:29:47.996Z",
   "publishedAt": "2026-11-12T20:49:44.859Z",
   "checkedAt": "2026-11-12T20:49:44.859Z",
   "places": [
@@ -55,7 +55,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New find, verified against Instagram post",
+  "editorialNote": "New find, verified against Instagram post Advertised validity ended 2026-11-13.",
   "event": {
     "format": "aerobics",
     "admission": "free"

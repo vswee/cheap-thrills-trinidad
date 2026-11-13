@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "food-touch-n-taste-restaurant-lounge-touch-n-taste-restaurant-lounge-99-lunch-specials",
+  "slug": "touch-n-taste-restaurant-lounge-99-lunch-specials-central-trin",
+  "kind": "food",
+  "title": "Touch N Taste Restaurant & Lounge $99 Lunch Specials",
+  "summary": "Daily lunch specials from 11 AM–3 PM",
+  "description": "Delicious, fresh meals for your midday cravings",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-13T20:29:47.996Z",
+  "updatedAt": "2026-11-13T20:29:47.996Z",
+  "publishedAt": "2026-11-13T20:29:47.996Z",
+  "checkedAt": "2026-11-13T20:29:47.996Z",
+  "places": [
+    {
+      "name": "Touch N Taste Restaurant & Lounge",
+      "area": "Central Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 99,
+    "fromAmount": null,
+    "label": "TTD",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "daily",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant",
+    "lunch-special"
+  ],
+  "sources": [
+    {
+      "url": "https://www.instagram.com/reel/DcEfI9oFGo_",
+      "publisher": "myinsider.tt",
+      "type": "social",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-13T20:29:47.996Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "Verified through Instagram post",
+  "food": {
+    "items": [
+      "fresh meals"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "unknown dietary fit"
+  }
+}

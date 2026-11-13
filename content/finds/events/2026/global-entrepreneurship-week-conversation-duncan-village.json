@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "event-borderlink-resources-limited-global-entrepreneurship-week-conversation",
+  "slug": "global-entrepreneurship-week-conversation-duncan-village",
+  "kind": "event",
+  "title": "Global Entrepreneurship Week Conversation",
+  "summary": "Entrepreneurship event",
+  "description": "Global Entrepreneurship Week Conversation",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-13T20:29:47.996Z",
+  "updatedAt": "2026-11-13T20:29:47.996Z",
+  "publishedAt": "2026-11-13T20:29:47.996Z",
+  "checkedAt": "2026-11-13T20:29:47.996Z",
+  "places": [
+    {
+      "name": "Borderlink Resources Limited",
+      "area": "Duncan Village",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": null,
+    "fromAmount": null,
+    "label": "Free",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": "2026-11-22T11:00:00-04:00",
+    "endsAt": "2026-11-22T13:00:00-04:00",
+    "recurrence": null,
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "business"
+  ],
+  "sources": [
+    {
+      "url": "https://www.eventbrite.com/d/trinidad-and-tobago/free--events",
+      "publisher": "Eventbrite",
+      "type": "ticketing",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-13T20:29:47.996Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "Free entrepreneurship event in Duncan Village",
+  "event": {
+    "format": "Seminar",
+    "admission": "free"
+  }
+}

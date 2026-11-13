@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-international-grill-tt-jaxx-international-grill-tt-weekday-lunch-deals",
+  "slug": "jaxx-international-grill-tt-weekday-lunch-deals-central-trinid",
+  "kind": "food",
+  "title": "Jaxx International Grill TT Weekday Lunch Deals",
+  "summary": "Weekday lunch deals $99+taxes, Mon–Fri 11am–3pm",
+  "description": "Dine-in/delivery options available",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-13T20:29:47.996Z",
+  "updatedAt": "2026-11-13T20:29:47.996Z",
+  "publishedAt": "2026-11-13T20:29:47.996Z",
+  "checkedAt": "2026-11-13T20:29:47.996Z",
+  "places": [
+    {
+      "name": "Jaxx International Grill TT",
+      "area": "Central Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 99,
+    "fromAmount": null,
+    "label": "TTD",
+    "terms": "plus taxes"
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Mon–Fri",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant",
+    "lunch-special"
+  ],
+  "sources": [
+    {
+      "url": "https://www.instagram.com/reel/DcEfI9oFGo_",
+      "publisher": "myinsider.tt",
+      "type": "social",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-13T20:29:47.996Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "Verified through Instagram post",
+  "food": {
+    "items": [
+      "lunch deals"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "unknown dietary fit"
+  }
+}

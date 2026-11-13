@@ -4,14 +4,14 @@
   "slug": "flx-fest-central-trinidad",
   "kind": "event",
   "title": "FLX FEST",
-  "summary": "Where fitness meets festival",
-  "description": "FLX FEST is a festival where fitness meets festival, happening on November 21, 2026, from 3:00 pm to 10:00 pm",
+  "summary": "Fitness meets festival",
+  "description": "Where fitness meets festival",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-11T20:12:44.025Z",
-  "updatedAt": "2026-11-11T20:12:44.025Z",
-  "publishedAt": "2026-11-11T20:12:44.025Z",
-  "checkedAt": "2026-11-11T20:12:44.025Z",
+  "createdAt": "2026-11-13T20:29:47.996Z",
+  "updatedAt": "2026-11-13T20:29:47.996Z",
+  "publishedAt": "2026-11-13T20:29:47.996Z",
+  "checkedAt": "2026-11-13T20:29:47.996Z",
   "places": [
     {
       "name": "Trinidad and Tobago",
@@ -35,8 +35,8 @@
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "festival",
-    "fitness"
+    "sports",
+    "festival"
   ],
   "sources": [
     {
@@ -49,16 +49,16 @@
         "price",
         "location"
       ],
-      "checkedAt": "2026-11-11T20:12:44.025Z"
+      "checkedAt": "2026-11-13T20:29:47.996Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Found on Trinbago Events website",
+  "editorialNote": "New festival experience in Central Trinidad",
   "event": {
-    "format": "festival",
+    "format": "Festival",
     "admission": "paid"
   }
 }

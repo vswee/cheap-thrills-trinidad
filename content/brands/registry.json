@@ -89,7 +89,8 @@
         "Jaxx",
         "Jaxx Grill",
         "Jaxx International Grill",
-        "Jaxx International Trinidad"
+        "Jaxx International Trinidad",
+        "Jaxx International Grill TT"
       ],
       "mark": {
         "sourceType": "official-cdn",
@@ -101,7 +102,7 @@
         "license": "Officially hosted brand asset; copyright and trademark remain with Jaxx International Grill.",
         "credit": "Jaxx International Grill official website"
       },
-      "checkedAt": "2026-09-25T12:00:00.000Z"
+      "checkedAt": "2026-11-13T20:31:29.080Z"
     },
     {
       "id": "abraham-s-grill-hut",
@@ -242,6 +243,15 @@
         "credit": "500Express official source page"
       },
       "checkedAt": "2026-11-10T20:29:39.767Z"
+    },
+    {
+      "id": "touch-n-taste-restaurant-lounge",
+      "name": "Touch N Taste Restaurant & Lounge",
+      "aliases": [
+        "Touch N Taste Restaurant & Lounge"
+      ],
+      "mark": null,
+      "checkedAt": "2026-11-13T20:31:29.350Z"
     }
   ]
 }
