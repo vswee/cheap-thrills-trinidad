@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 2,
+  "id": "food-creme-cafe-creme-cafe-hot-pie-and-drink",
+  "slug": "creme-cafe-hot-pie-and-drink-brentwood",
+  "kind": "food",
+  "title": "Crème Café Hot Pie and Drink",
+  "summary": "Weekday morning pie and drink special",
+  "description": "Choose from a Beef, Chicken or Veggie Pie, paired with your choice of Coffee, Tea or Juice",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-15T19:23:06.814Z",
+  "updatedAt": "2026-11-15T19:23:06.814Z",
+  "publishedAt": "2026-11-15T19:23:06.814Z",
+  "checkedAt": "2026-11-15T19:23:06.814Z",
+  "places": [
+    {
+      "name": "Crème Café",
+      "area": "Brentwood",
+      "region": "Chaguanas",
+      "address": "Brentwood Mall",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 25,
+    "fromAmount": null,
+    "label": "Hot Pie and Drink",
+    "terms": "Weekdays only, 8AM-11AM"
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Weekdays",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "bakery",
+    "cafe"
+  ],
+  "sources": [
+    {
+      "url": "https://www.facebook.com/cremecafett/videos/hot-pie-drink-for-just-25-start-your-weekday-mornings-the-delicious-way-at-cr%C3%A8me/964405233400197",
+      "publisher": "Crème Café",
+      "type": "social",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-11-15T19:23:06.814Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "Verified on Facebook, but dairy-free status of pie and drink options unknown",
+  "food": {
+    "items": [
+      "Beef Pie",
+      "Chicken Pie",
+      "Veggie Pie"
+    ],
+    "dietFit": {
+      "pescatarian": "no",
+      "dairyFree": "unknown",
+      "vegan": "yes"
+    },
+    "dietNotes": "Veggie Pie option available, but dairy-free status unknown"
+  }
+}

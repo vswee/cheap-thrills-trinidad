@@ -4,14 +4,14 @@
   "slug": "flx-fest-central-trinidad",
   "kind": "event",
   "title": "FLX FEST",
-  "summary": "Fitness meets festival",
-  "description": "Where fitness meets festival",
+  "summary": "Where fitness meets festival",
+  "description": "Fitness and festival event",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-13T20:29:47.996Z",
-  "updatedAt": "2026-11-13T20:29:47.996Z",
-  "publishedAt": "2026-11-13T20:29:47.996Z",
-  "checkedAt": "2026-11-13T20:29:47.996Z",
+  "createdAt": "2026-11-15T19:23:06.814Z",
+  "updatedAt": "2026-11-15T19:23:06.814Z",
+  "publishedAt": "2026-11-15T19:23:06.814Z",
+  "checkedAt": "2026-11-15T19:23:06.814Z",
   "places": [
     {
       "name": "Trinidad and Tobago",
@@ -36,7 +36,7 @@
   },
   "categories": [
     "sports",
-    "festival"
+    "recreation"
   ],
   "sources": [
     {
@@ -49,14 +49,14 @@
         "price",
         "location"
       ],
-      "checkedAt": "2026-11-13T20:29:47.996Z"
+      "checkedAt": "2026-11-15T19:23:06.814Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New festival experience in Central Trinidad",
+  "editorialNote": "",
   "event": {
     "format": "Festival",
     "admission": "paid"

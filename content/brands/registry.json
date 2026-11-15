@@ -251,7 +251,16 @@
         "Touch N Taste Restaurant & Lounge"
       ],
       "mark": null,
-      "checkedAt": "2026-11-13T20:31:29.350Z"
+      "checkedAt": "2026-11-15T19:24:24.920Z"
+    },
+    {
+      "id": "creme-cafe",
+      "name": "Crème Café",
+      "aliases": [
+        "Crème Café"
+      ],
+      "mark": null,
+      "checkedAt": "2026-11-15T19:24:24.609Z"
     }
   ]
 }

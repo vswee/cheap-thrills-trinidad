@@ -5,13 +5,13 @@
   "kind": "event",
   "title": "Ram's Soca Burnout '26",
   "summary": "Soca burnout event",
-  "description": "Ram's Soca Burnout '26",
+  "description": "Soca event",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-13T20:29:47.996Z",
-  "updatedAt": "2026-11-13T20:29:47.996Z",
-  "publishedAt": "2026-11-13T20:29:47.996Z",
-  "checkedAt": "2026-11-13T20:29:47.996Z",
+  "createdAt": "2026-11-15T19:23:06.814Z",
+  "updatedAt": "2026-11-15T19:23:06.814Z",
+  "publishedAt": "2026-11-15T19:23:06.814Z",
+  "checkedAt": "2026-11-15T19:23:06.814Z",
   "places": [
     {
       "name": "National Cycling Velodrome Couva",
@@ -25,7 +25,7 @@
     "currency": "TTD",
     "amount": null,
     "fromAmount": null,
-    "label": "Free",
+    "label": "Unknown",
     "terms": null
   },
   "validity": {
@@ -36,7 +36,7 @@
   },
   "categories": [
     "music",
-    "sports"
+    "entertainment"
   ],
   "sources": [
     {
@@ -48,16 +48,16 @@
         "date",
         "location"
       ],
-      "checkedAt": "2026-11-13T20:29:47.996Z"
+      "checkedAt": "2026-11-15T19:23:06.814Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Free soca burnout event in Central Trinidad",
+  "editorialNote": "",
   "event": {
     "format": "Concert",
-    "admission": "free"
+    "admission": "unknown"
   }
 }

@@ -6,10 +6,10 @@
   "title": "The 212 Runway",
   "summary": "Fashion event",
   "description": "The 212 Runway",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-11-13T20:29:47.996Z",
-  "updatedAt": "2026-11-13T20:29:47.996Z",
+  "updatedAt": "2026-11-15T19:23:06.814Z",
   "publishedAt": "2026-11-13T20:29:47.996Z",
   "checkedAt": "2026-11-13T20:29:47.996Z",
   "places": [
@@ -54,7 +54,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Free fashion event in Trincity",
+  "editorialNote": "Free fashion event in Trincity Advertised validity ended 2026-11-15.",
   "event": {
     "format": "Fashion show",
     "admission": "free"
