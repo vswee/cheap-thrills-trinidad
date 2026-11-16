@@ -8,10 +8,10 @@
   "description": "Totally Blessed Concert ft. Broadway Boyz International",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-13T20:29:47.996Z",
-  "updatedAt": "2026-11-13T20:29:47.996Z",
-  "publishedAt": "2026-11-13T20:29:47.996Z",
-  "checkedAt": "2026-11-13T20:29:47.996Z",
+  "createdAt": "2026-11-16T22:54:07.685Z",
+  "updatedAt": "2026-11-16T22:54:07.685Z",
+  "publishedAt": "2026-11-16T22:54:07.685Z",
+  "checkedAt": "2026-11-16T22:54:07.685Z",
   "places": [
     {
       "name": "St. James Pentecostal Church",
@@ -23,40 +23,41 @@
   ],
   "price": {
     "currency": "TTD",
-    "amount": null,
+    "amount": 0,
     "fromAmount": null,
-    "label": "Paid",
+    "label": "Free",
     "terms": null
   },
   "validity": {
     "startsAt": "2026-11-28T18:00:00-04:00",
-    "endsAt": "2026-11-28T20:00:00-04:00",
+    "endsAt": "2026-11-28T21:00:00-04:00",
     "recurrence": null,
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "music"
+    "music",
+    "concert"
   ],
   "sources": [
     {
       "url": "https://www.eventbrite.com/d/trinidad-and-tobago/free--events",
       "publisher": "Eventbrite",
-      "type": "ticketing",
+      "type": "official",
       "supports": [
         "offer",
         "date",
         "location"
       ],
-      "checkedAt": "2026-11-13T20:29:47.996Z"
+      "checkedAt": "2026-11-16T22:54:07.685Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Concert event in Port of Spain",
+  "editorialNote": "New event found",
   "event": {
-    "format": "Concert",
-    "admission": "paid"
+    "format": "concert",
+    "admission": "free"
   }
 }

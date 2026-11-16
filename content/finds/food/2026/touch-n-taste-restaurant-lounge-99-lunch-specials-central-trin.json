@@ -4,14 +4,14 @@
   "slug": "touch-n-taste-restaurant-lounge-99-lunch-specials-central-trin",
   "kind": "food",
   "title": "Touch N Taste Restaurant & Lounge $99 Lunch Specials",
-  "summary": "Daily lunch specials from 11 AM–3 PM",
+  "summary": "Daily lunch specials for $99",
   "description": "Delicious, fresh meals for your midday cravings",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-13T20:29:47.996Z",
-  "updatedAt": "2026-11-13T20:29:47.996Z",
-  "publishedAt": "2026-11-13T20:29:47.996Z",
-  "checkedAt": "2026-11-13T20:29:47.996Z",
+  "createdAt": "2026-11-16T22:54:07.685Z",
+  "updatedAt": "2026-11-16T22:54:07.685Z",
+  "publishedAt": "2026-11-16T22:54:07.685Z",
+  "checkedAt": "2026-11-16T22:54:07.685Z",
   "places": [
     {
       "name": "Touch N Taste Restaurant & Lounge",
@@ -25,7 +25,7 @@
     "currency": "TTD",
     "amount": 99,
     "fromAmount": null,
-    "label": "TTD",
+    "label": "lunch special",
     "terms": null
   },
   "validity": {
@@ -45,17 +45,17 @@
       "type": "social",
       "supports": [
         "offer",
-        "date",
+        "price",
         "location"
       ],
-      "checkedAt": "2026-11-13T20:29:47.996Z"
+      "checkedAt": "2026-11-16T22:54:07.685Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Verified through Instagram post",
+  "editorialNote": "Daily lunch specials for $99 at Touch N Taste Restaurant & Lounge in Central Trinidad",
   "food": {
     "items": [
       "fresh meals"

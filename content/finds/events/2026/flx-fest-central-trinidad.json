@@ -4,14 +4,14 @@
   "slug": "flx-fest-central-trinidad",
   "kind": "event",
   "title": "FLX FEST",
-  "summary": "Where fitness meets festival",
-  "description": "Fitness and festival event",
+  "summary": "Fitness and festival event",
+  "description": "Where fitness meets festival",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-15T19:23:06.814Z",
-  "updatedAt": "2026-11-15T19:23:06.814Z",
-  "publishedAt": "2026-11-15T19:23:06.814Z",
-  "checkedAt": "2026-11-15T19:23:06.814Z",
+  "createdAt": "2026-11-16T22:54:07.685Z",
+  "updatedAt": "2026-11-16T22:54:07.685Z",
+  "publishedAt": "2026-11-16T22:54:07.685Z",
+  "checkedAt": "2026-11-16T22:54:07.685Z",
   "places": [
     {
       "name": "Trinidad and Tobago",
@@ -23,9 +23,9 @@
   ],
   "price": {
     "currency": "TTD",
-    "amount": 175,
+    "amount": 0,
     "fromAmount": null,
-    "label": "General admission",
+    "label": "Free",
     "terms": null
   },
   "validity": {
@@ -35,8 +35,8 @@
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "sports",
-    "recreation"
+    "fitness",
+    "festival"
   ],
   "sources": [
     {
@@ -46,19 +46,18 @@
       "supports": [
         "offer",
         "date",
-        "price",
         "location"
       ],
-      "checkedAt": "2026-11-15T19:23:06.814Z"
+      "checkedAt": "2026-11-16T22:54:07.685Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "",
+  "editorialNote": "New event found",
   "event": {
-    "format": "Festival",
-    "admission": "paid"
+    "format": "festival",
+    "admission": "free"
   }
 }
