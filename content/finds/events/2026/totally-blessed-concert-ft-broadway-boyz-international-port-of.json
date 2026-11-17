@@ -4,39 +4,38 @@
   "slug": "totally-blessed-concert-ft-broadway-boyz-international-port-of",
   "kind": "event",
   "title": "Totally Blessed Concert ft. Broadway Boyz International",
-  "summary": "Concert event",
+  "summary": "Concert featuring Broadway Boyz International",
   "description": "Totally Blessed Concert ft. Broadway Boyz International",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-16T22:54:07.685Z",
-  "updatedAt": "2026-11-16T22:54:07.685Z",
-  "publishedAt": "2026-11-16T22:54:07.685Z",
-  "checkedAt": "2026-11-16T22:54:07.685Z",
+  "createdAt": "2026-11-17T21:45:58.363Z",
+  "updatedAt": "2026-11-17T21:45:58.363Z",
+  "publishedAt": "2026-11-17T21:45:58.363Z",
+  "checkedAt": "2026-11-17T21:45:58.363Z",
   "places": [
     {
       "name": "St. James Pentecostal Church",
       "area": "Port of Spain",
-      "region": "Trinidad",
+      "region": "North Trinidad",
       "address": null,
       "mapUrl": null
     }
   ],
   "price": {
     "currency": "TTD",
-    "amount": 0,
+    "amount": null,
     "fromAmount": null,
-    "label": "Free",
+    "label": "Check ticket price on event",
     "terms": null
   },
   "validity": {
     "startsAt": "2026-11-28T18:00:00-04:00",
-    "endsAt": "2026-11-28T21:00:00-04:00",
+    "endsAt": null,
     "recurrence": null,
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "music",
-    "concert"
+    "live-music-concerts"
   ],
   "sources": [
     {
@@ -46,18 +45,20 @@
       "supports": [
         "offer",
         "date",
-        "location"
+        "price",
+        "location",
+        "terms"
       ],
-      "checkedAt": "2026-11-16T22:54:07.685Z"
+      "checkedAt": "2026-11-17T21:45:58.363Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New event found",
+  "editorialNote": "",
   "event": {
-    "format": "concert",
-    "admission": "free"
+    "format": "Concert",
+    "admission": "paid"
   }
 }
