@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-international-grill-tt-jaxx-international-grill-tt-lunch-special",
+  "slug": "jaxx-international-grill-tt-lunch-special-central-trinidad",
+  "kind": "food",
+  "title": "JAXX International Grill TT Lunch Special",
+  "summary": "Lunch $99 Mon–Fri 11–3",
+  "description": "Lunch special from JAXX International Grill TT",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-19T21:34:08.323Z",
+  "updatedAt": "2026-11-19T21:34:08.323Z",
+  "publishedAt": "2026-11-19T21:34:08.323Z",
+  "checkedAt": "2026-11-19T21:34:08.323Z",
+  "places": [
+    {
+      "name": "JAXX International Grill TT",
+      "area": "Central Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 99,
+    "fromAmount": null,
+    "label": "lunch special",
+    "terms": null
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Mon–Fri",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "food"
+  ],
+  "sources": [
+    {
+      "url": "https://www.instagram.com/reel/DcEfI9oFGo_",
+      "publisher": "My Insider TT",
+      "type": "social",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-19T21:34:08.323Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "verified by current source",
+  "food": {
+    "items": [
+      "lunch special"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "unknown dietary fit"
+  }
+}

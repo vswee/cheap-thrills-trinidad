@@ -4,20 +4,20 @@
   "slug": "500express-saturday-lunch-chaguanas",
   "kind": "food",
   "title": "500Express Saturday Lunch",
-  "summary": "Trinidadian Saturday lunch at 500Express",
-  "description": "One lunch menu each Saturday, price varies, 12:00-2:00pm",
+  "summary": "Saturday lunch from 12:00-2:00pm",
+  "description": "One weekly menu, limited batch, pickup only",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-10T20:28:26.963Z",
-  "updatedAt": "2026-11-10T20:28:26.963Z",
-  "publishedAt": "2026-11-10T20:28:26.963Z",
-  "checkedAt": "2026-11-10T20:28:26.963Z",
+  "createdAt": "2026-11-19T21:34:08.323Z",
+  "updatedAt": "2026-11-19T21:34:08.323Z",
+  "publishedAt": "2026-11-19T21:34:08.323Z",
+  "checkedAt": "2026-11-19T21:34:08.323Z",
   "places": [
     {
       "name": "500Express",
       "area": "Chaguanas",
-      "region": "Central Trinidad",
-      "address": "Edinburgh 500",
+      "region": "Trinidad",
+      "address": null,
       "mapUrl": null
     }
   ],
@@ -25,8 +25,8 @@
     "currency": "TTD",
     "amount": null,
     "fromAmount": null,
-    "label": "Price varies",
-    "terms": "Saturday lunch, limited batch"
+    "label": "Saturday lunch",
+    "terms": "one weekly menu, limited batch, pickup only"
   },
   "validity": {
     "startsAt": null,
@@ -35,8 +35,7 @@
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "trinidadian",
-    "saturday-lunch"
+    "food"
   ],
   "sources": [
     {
@@ -45,28 +44,27 @@
       "type": "official",
       "supports": [
         "offer",
+        "date",
         "location",
         "terms"
       ],
-      "checkedAt": "2026-11-10T20:28:26.963Z"
+      "checkedAt": "2026-11-19T21:34:08.323Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Verify current Saturday lunch menu and price",
+  "editorialNote": "verified by official source",
   "food": {
     "items": [
-      "curry chicken",
-      "curry duck",
-      "BBQ"
+      "Saturday lunch"
     ],
     "dietFit": {
       "pescatarian": "unknown",
       "dairyFree": "unknown",
       "vegan": "unknown"
     },
-    "dietNotes": "Dietary fit unknown, ask about current menu"
+    "dietNotes": "unknown dietary fit"
   }
 }
