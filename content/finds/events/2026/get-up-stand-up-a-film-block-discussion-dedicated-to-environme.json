@@ -6,10 +6,10 @@
   "title": "Get Up, Stand Up! A film block & discussion dedicated to environmental rights and resistance",
   "summary": "Film and discussion event",
   "description": "Environmental rights and resistance event",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-11-15T19:23:06.814Z",
-  "updatedAt": "2026-11-15T19:23:06.814Z",
+  "updatedAt": "2026-11-21T20:06:17.689Z",
   "publishedAt": "2026-11-15T19:23:06.814Z",
   "checkedAt": "2026-11-15T19:23:06.814Z",
   "places": [
@@ -55,7 +55,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "",
+  "editorialNote": "Advertised validity ended 2026-11-21.",
   "event": {
     "format": "Film",
     "admission": "unknown"

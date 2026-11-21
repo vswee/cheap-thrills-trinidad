@@ -5,13 +5,13 @@
   "kind": "food",
   "title": "JAXX International Grill TT Lunch Special",
   "summary": "Lunch $99 Mon–Fri 11–3",
-  "description": "Lunch special from JAXX International Grill TT",
+  "description": "Fresh-made meals for your midday cravings!",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-19T21:34:08.323Z",
-  "updatedAt": "2026-11-19T21:34:08.323Z",
-  "publishedAt": "2026-11-19T21:34:08.323Z",
-  "checkedAt": "2026-11-19T21:34:08.323Z",
+  "createdAt": "2026-11-21T20:06:17.689Z",
+  "updatedAt": "2026-11-21T20:06:17.689Z",
+  "publishedAt": "2026-11-21T20:06:17.689Z",
+  "checkedAt": "2026-11-21T20:06:17.689Z",
   "places": [
     {
       "name": "JAXX International Grill TT",
@@ -25,7 +25,7 @@
     "currency": "TTD",
     "amount": 99,
     "fromAmount": null,
-    "label": "lunch special",
+    "label": "TTD",
     "terms": null
   },
   "validity": {
@@ -35,7 +35,8 @@
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "food"
+    "restaurant",
+    "lunch-special"
   ],
   "sources": [
     {
@@ -47,23 +48,23 @@
         "date",
         "location"
       ],
-      "checkedAt": "2026-11-19T21:34:08.323Z"
+      "checkedAt": "2026-11-21T20:06:17.689Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "verified by current source",
+  "editorialNote": "Verified by current social post",
   "food": {
     "items": [
-      "lunch special"
+      "lunch specials"
     ],
     "dietFit": {
       "pescatarian": "unknown",
       "dairyFree": "unknown",
       "vegan": "unknown"
     },
-    "dietNotes": "unknown dietary fit"
+    "dietNotes": "Dietary fit unknown"
   }
 }

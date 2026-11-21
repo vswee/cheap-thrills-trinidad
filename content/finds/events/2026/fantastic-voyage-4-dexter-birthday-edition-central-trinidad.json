@@ -6,10 +6,10 @@
   "title": "Fantastic Voyage 4-Dexter Birthday Edition",
   "summary": "Birthday celebration",
   "description": "Fantastic Voyage 4-Dexter Birthday Edition is a birthday celebration happening on November 21, 2026, from 9:00 am to 2:00 pm",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-11-09T22:59:37.023Z",
-  "updatedAt": "2026-11-09T22:59:37.023Z",
+  "updatedAt": "2026-11-21T20:06:17.689Z",
   "publishedAt": "2026-11-09T22:59:37.023Z",
   "checkedAt": "2026-11-09T22:59:37.023Z",
   "places": [
@@ -55,7 +55,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "",
+  "editorialNote": "Advertised validity ended 2026-11-21.",
   "event": {
     "format": "party",
     "admission": "unknown"
