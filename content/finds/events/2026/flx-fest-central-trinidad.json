@@ -6,10 +6,10 @@
   "title": "FLX FEST",
   "summary": "Fitness and festival event",
   "description": "Where fitness meets festival",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-11-16T22:54:07.685Z",
-  "updatedAt": "2026-11-16T22:54:07.685Z",
+  "updatedAt": "2026-11-22T20:21:40.973Z",
   "publishedAt": "2026-11-16T22:54:07.685Z",
   "checkedAt": "2026-11-16T22:54:07.685Z",
   "places": [
@@ -55,7 +55,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "New event found",
+  "editorialNote": "New event found Advertised validity ended 2026-11-22.",
   "event": {
     "format": "festival",
     "admission": "free"

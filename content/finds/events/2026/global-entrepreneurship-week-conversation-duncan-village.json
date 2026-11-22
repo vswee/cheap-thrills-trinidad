@@ -6,10 +6,10 @@
   "title": "Global Entrepreneurship Week Conversation",
   "summary": "Conversation about global entrepreneurship",
   "description": "Global Entrepreneurship Week Conversation",
-  "status": "published",
+  "status": "expired",
   "confidence": "high",
   "createdAt": "2026-11-17T21:45:58.363Z",
-  "updatedAt": "2026-11-17T21:45:58.363Z",
+  "updatedAt": "2026-11-22T20:21:40.973Z",
   "publishedAt": "2026-11-17T21:45:58.363Z",
   "checkedAt": "2026-11-17T21:45:58.363Z",
   "places": [
@@ -57,7 +57,7 @@
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "",
+  "editorialNote": "Advertised validity ended 2026-11-22.",
   "event": {
     "format": "Conversation",
     "admission": "free"
