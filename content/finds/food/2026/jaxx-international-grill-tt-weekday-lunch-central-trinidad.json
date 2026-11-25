@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-international-grill-tt-jaxx-international-grill-tt-weekday-lunch",
+  "slug": "jaxx-international-grill-tt-weekday-lunch-central-trinidad",
+  "kind": "food",
+  "title": "JAXX International Grill TT Weekday Lunch",
+  "summary": "Lunch for $99+taxes, Mon-Fri 11am-3pm",
+  "description": "JAXX International Grill TT offers weekday lunch deals for $99+taxes, available from 11am to 3pm, Monday through Friday.",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-25T22:32:41.530Z",
+  "updatedAt": "2026-11-25T22:32:41.530Z",
+  "publishedAt": "2026-11-25T22:32:41.530Z",
+  "checkedAt": "2026-11-25T22:32:41.530Z",
+  "places": [
+    {
+      "name": "JAXX International Grill TT",
+      "area": "Central Trinidad",
+      "region": "Trinidad",
+      "address": "MovieTowne, Port of Spain; Grand Bazaar, Valsayn; C3, San Fernando; Shops of Arima",
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 99,
+    "fromAmount": null,
+    "label": "Weekday Lunch",
+    "terms": "Plus taxes"
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Mon-Fri",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant",
+    "lunch"
+  ],
+  "sources": [
+    {
+      "url": "https://www.instagram.com/reel/DcEfI9oFGo_",
+      "publisher": "My Insider TT",
+      "type": "social",
+      "supports": [
+        "offer",
+        "price",
+        "location"
+      ],
+      "checkedAt": "2026-11-25T22:32:41.530Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "Verified with current source",
+  "food": {
+    "items": [
+      "lunch"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Dietary fit unknown"
+  }
+}
