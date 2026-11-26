@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "id": "food-jaxx-international-grill-tt-jaxx-international-grill-tt-lunch",
+  "slug": "jaxx-international-grill-tt-lunch-central-trinidad",
+  "kind": "food",
+  "title": "JAXX International Grill TT Lunch",
+  "summary": "Lunch $99 Mon–Fri 11–3",
+  "description": "Happy Hour 3 for $99 daily 5–9; Brunch Sat–Sun 10–3; Mimosas $175",
+  "status": "published",
+  "confidence": "high",
+  "createdAt": "2026-11-26T22:21:25.933Z",
+  "updatedAt": "2026-11-26T22:21:25.933Z",
+  "publishedAt": "2026-11-26T22:21:25.933Z",
+  "checkedAt": "2026-11-26T22:21:25.933Z",
+  "places": [
+    {
+      "name": "JAXX International Grill TT",
+      "area": "Central Trinidad",
+      "region": "Trinidad",
+      "address": null,
+      "mapUrl": null
+    }
+  ],
+  "price": {
+    "currency": "TTD",
+    "amount": 99,
+    "fromAmount": null,
+    "label": "Lunch $99",
+    "terms": "Mon–Fri 11–3"
+  },
+  "validity": {
+    "startsAt": null,
+    "endsAt": null,
+    "recurrence": "Mon–Fri",
+    "timezone": "America/Port_of_Spain"
+  },
+  "categories": [
+    "restaurant"
+  ],
+  "sources": [
+    {
+      "url": "https://www.instagram.com/reel/DcEfI9oFGo_",
+      "publisher": "My Insider TT",
+      "type": "social",
+      "supports": [
+        "offer",
+        "date",
+        "location"
+      ],
+      "checkedAt": "2026-11-26T22:21:25.933Z"
+    }
+  ],
+  "research": {
+    "service": "Cloudflare Workers AI",
+    "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+  },
+  "editorialNote": "Verify dietary fit and price with the venue",
+  "food": {
+    "items": [
+      "lunch"
+    ],
+    "dietFit": {
+      "pescatarian": "unknown",
+      "dairyFree": "unknown",
+      "vegan": "unknown"
+    },
+    "dietNotes": "Dietary fit unknown"
+  }
+}

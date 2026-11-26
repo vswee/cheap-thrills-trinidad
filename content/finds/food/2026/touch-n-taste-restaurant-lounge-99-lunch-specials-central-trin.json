@@ -4,14 +4,14 @@
   "slug": "touch-n-taste-restaurant-lounge-99-lunch-specials-central-trin",
   "kind": "food",
   "title": "Touch N Taste Restaurant & Lounge $99 Lunch Specials",
-  "summary": "Daily lunch specials from 11 AM–3 PM",
-  "description": "Delicious, fresh meals for your midday cravings!",
+  "summary": "Delicious, fresh meals for your midday cravings",
+  "description": "Daily from 11 AM–3 PM",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-21T20:06:17.689Z",
-  "updatedAt": "2026-11-21T20:06:17.689Z",
-  "publishedAt": "2026-11-21T20:06:17.689Z",
-  "checkedAt": "2026-11-21T20:06:17.689Z",
+  "createdAt": "2026-11-26T22:21:25.933Z",
+  "updatedAt": "2026-11-26T22:21:25.933Z",
+  "publishedAt": "2026-11-26T22:21:25.933Z",
+  "checkedAt": "2026-11-26T22:21:25.933Z",
   "places": [
     {
       "name": "Touch N Taste Restaurant & Lounge",
@@ -25,18 +25,17 @@
     "currency": "TTD",
     "amount": 99,
     "fromAmount": null,
-    "label": "TTD",
-    "terms": null
+    "label": "Lunch $99",
+    "terms": "Daily from 11 AM–3 PM"
   },
   "validity": {
     "startsAt": null,
     "endsAt": null,
-    "recurrence": "daily",
+    "recurrence": "Daily",
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "restaurant",
-    "lunch-special"
+    "restaurant"
   ],
   "sources": [
     {
@@ -48,17 +47,17 @@
         "date",
         "location"
       ],
-      "checkedAt": "2026-11-21T20:06:17.689Z"
+      "checkedAt": "2026-11-26T22:21:25.933Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Verified by current social post",
+  "editorialNote": "Verify dietary fit and price with the venue",
   "food": {
     "items": [
-      "lunch specials"
+      "lunch"
     ],
     "dietFit": {
       "pescatarian": "unknown",

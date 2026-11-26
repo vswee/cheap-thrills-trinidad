@@ -5,13 +5,13 @@
   "kind": "food",
   "title": "Nube Nueve’s Wine & Dine Wednesdays",
   "summary": "TT$150 for pasta, sauce, protein and wine",
-  "description": "Wine and dine on Wednesdays!",
+  "description": "Visit North & South. Call 237-9967 or 715-7574.",
   "status": "published",
   "confidence": "high",
-  "createdAt": "2026-11-21T20:06:17.689Z",
-  "updatedAt": "2026-11-21T20:06:17.689Z",
-  "publishedAt": "2026-11-21T20:06:17.689Z",
-  "checkedAt": "2026-11-21T20:06:17.689Z",
+  "createdAt": "2026-11-26T22:21:25.933Z",
+  "updatedAt": "2026-11-26T22:21:25.933Z",
+  "publishedAt": "2026-11-26T22:21:25.933Z",
+  "checkedAt": "2026-11-26T22:21:25.933Z",
   "places": [
     {
       "name": "Nube Nueve",
@@ -25,7 +25,7 @@
     "currency": "TTD",
     "amount": 150,
     "fromAmount": null,
-    "label": "TTD",
+    "label": "TT$150 for pasta, sauce, protein and wine",
     "terms": null
   },
   "validity": {
@@ -35,12 +35,11 @@
     "timezone": "America/Port_of_Spain"
   },
   "categories": [
-    "restaurant",
-    "wine-and-dine"
+    "restaurant"
   ],
   "sources": [
     {
-      "url": "https://www.tiktok.com/@myinsider.tt/video/7660158411408985361",
+      "url": "https://www.facebook.com/myinsidertt/videos/take-a-look-at-the-latest-food-deals-happening-in-trinidad-right-now-this-weekhi/1470720088153660",
       "publisher": "My Insider TT",
       "type": "social",
       "supports": [
@@ -48,19 +47,20 @@
         "date",
         "location"
       ],
-      "checkedAt": "2026-11-21T20:06:17.689Z"
+      "checkedAt": "2026-11-26T22:21:25.933Z"
     }
   ],
   "research": {
     "service": "Cloudflare Workers AI",
     "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
   },
-  "editorialNote": "Verified by current social post",
+  "editorialNote": "Verify dietary fit and price with the venue",
   "food": {
     "items": [
       "pasta",
       "sauce",
-      "protein"
+      "protein",
+      "wine"
     ],
     "dietFit": {
       "pescatarian": "unknown",
